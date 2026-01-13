@@ -81,19 +81,6 @@ git switch -c ime_prezime_indeks
 
 ## 6. Struktura projekta i izmene
 
-### 6.1 Dodavanje reda u `index.html`
-
-U fajlu `index.html` dodajte **jedan `<li>` red**, ispod označenog komentara:
-
-```html
-<li>
-    Ime Prezime —
-    <a href="students/ime_prezime_mi25005/index.html">mini-zadatak</a>
-</li>
-```
-
----
-
 ### 6.2 Kreiranje sopstvenog foldera
 
 Napravite folder:
