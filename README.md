@@ -149,7 +149,7 @@ Ako dobijete komentare na PR:
 
 ---
 
-## 11. Code review (OBAVEZNO)
+## 11. Code review 
 
 Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kolega.
 
