@@ -151,19 +151,6 @@ Ako dobijete komentare na PR:
 
 ## 11. Code review (OBAVEZNO)
 
-Svaki student mora da uradi **2 code review-a** na PR-ovima drugih kolega.
-
-Review mora sadržati:
-
-* bar **jedan konkretan komentar**, ili
-* approval uz kratko obrazloženje (1–2 rečenice)
-
-Komentari tipa **“LGTM” bez objašnjenja se ne priznaju**.
-
----
-
-### 11. Code review (OBAVEZNO)
-
 Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kolega.
 
 ---
@@ -184,6 +171,7 @@ Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kol
    * da li je dodat samo jedan `<li>` red u `index.html`
    * da li postoji folder `students/ime_prezime_mi25005/`
    * da li link u `<li>` vodi na postojeći `index.html`
+   * ....
 3. Kliknite na **plavi plus (`+`)** pored linije koda koju komentarišete.
 4. Upišite komentar (npr.:
 
@@ -202,14 +190,6 @@ Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kol
 3. Kliknite **Submit review**.
 
 > Review bez teksta (npr. samo “LGTM”) se **ne priznaje**.
-
----
-
-#### 11.4 Koliko review-a je potrebno
-
-* Svaki student mora da uradi **tačno 2 review-a**.
-* Ne review-ujte sopstveni Pull Request.
-* Preporuka: izaberite Pull Request-ove koji još nemaju review.
 
 ---
 
