@@ -86,11 +86,10 @@ git switch -c ime_prezime_indeks
 Napravite folder:
 
 ```bash
-students/ime_prezime_mi25005/
+studenti/ime_prezime_mi25005/
 ```
 
-U njemu napravite `index.html` sa vašim mini-zadatkom
-(sadržaj je slobodan, ali primeren predmetu).
+U njemu napravite sadržaj prema [uputstvu](https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html).
 
 ---
 
@@ -114,9 +113,13 @@ Kada Git pita:
 * **Username**: vaše GitHub korisničko ime
 * **Password**: nalepite **Personal Access Token**
 
+* Tokom rada može se više puta dodavati sadržaj (korišćenjem naredbi `add`, `commit` i `push`).
+
 ---
 
 ## 9. Pravljenje Pull Request-a
+
+Kada ste kompletno završili projekat i želite da predate svoj seminarski na pregled i ocenu, onda idete na ovaj korak. Pre ovog koraka možete više puta raditi `commit`, ali ako ste zavšili sve i ne planirate ništa novo da dodajte idete na ovaj korak, tj. na korak **broj 9**.
 
 1. Otvorite svoj fork na GitHub-u
 2. Kliknite **Compare & Pull Request**
