@@ -95,7 +95,7 @@ table th {
     gap: 30px;
     align-items: center;
 
-    background-color: white;
+    background-color: rgb(147, 168, 228);
     padding: 30px;
     border-radius: 15px;
 
@@ -107,7 +107,7 @@ table th {
     width: 180px;
     display: block;
 
-    background-color: white;
+    background-color: rgb(147, 168, 228);
     padding: 15px;
 
     border-radius: 12px;
@@ -125,7 +125,7 @@ table th {
 }
 
 form {
-    background-color: rgb(137, 73, 73);
+    background-color: rgb(147, 168, 228);
     padding: 30px;
     border-radius: 10px;
 }
