@@ -1,131 +1,26 @@
-<!DOCTYPE html>
-<html lang="sr">
-<head>
-    <meta charset="UTF-8">
-    <title>Akademska tema | Vukašin Novaković</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #87aed6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-
-        nav {
-            background-color: #003366;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        h1, h2 {
-            color: #003366;
-        }
-
-        p, ul {
-            max-width: 900px;
-        }
-
-        ul {
-            margin-bottom: 20px;
-        }
-
-        /* Graph CSS */
-        .chart {
-            display: flex;
-            align-items: flex-end;
-            gap: 8px;
-            width: 80%;
-            max-width: 700px;
-            height: 250px;
-            background: #e6eef7;
-            border: 1px solid #003366;
-            padding: 10px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-
-        .bar {
-            width: 40px;
-            background-color: #003366;
-            position: relative;
-            transition: 0.3s;
-            border-radius: 5px 5px 0 0;
-        }
-
-        .bar:hover {
-            background-color: #0055aa;
-            cursor: pointer;
-        }
-
-        /* Tooltip */
-        .bar:hover::after {
-            content: attr(data-value);
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #003366;
-            color: white;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-size: 14px;
-            white-space: nowrap;
-        }
-    </style>
-</head>
-<body>
-
-<nav>
-    <a href="index.html">Početna</a>
-    <a href="tema.html">Akademska tema</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
-
 <h1>Automatizovano kripto trgovanje i veštačka inteligencija</h1>
 
 <p>
 Automatizovano trgovanje predstavlja primenu računarskih sistema i
 matematičkih modela u finansijskim tržištima, a posebno u svetu
-kriptovaluta. Prvi ovakvi sistemi pojavili su se sedamdesetih
-godina dvadesetog veka, kada su korišćeni na klasičnim berzama
-akcija i deviza. Ti rani algoritmi bili su jednostavni i oslanjali
+kriptovaluta. Prvi ovakvi sistemi pojavili su se još sedamdesetih
+godina dvadesetog veka, kada su korišćeni na klasičnim berzama akcija i deviza. Ti rani algoritmi bili su jednostavni i oslanjali
 su se na osnovne tržišne signale.
 </p>
 
 <p>
-Sa pojavom kriptovaluta, pre svega Bitcoina, nastaju i prvi
-kriptotrading botovi. U početku su analizirali isključivo grafik
-cena i vremena, dok je kasniji razvoj programskih interfejsa (API)
+Sa pojavom kriptovaluta, pre svega Bitcoin-a, nastaju i prvi
+kripto trading botovi. U početku su analizirali isključivo grafikе
+cene i vremena, dok je kasniji razvoj programskih interfejsa (API)
 omogućio primenu složenijih strategija i automatizovano izvršavanje
 trgovačkih odluka.
 </p>
 
-<h2>Interaktivni grafikon cena Bitcoina</h2>
-
-<div class="chart">
-    <div class="bar" style="height:30%;" data-value="$30,000"></div>
-    <div class="bar" style="height:32%;" data-value="$32,000"></div>
-    <div class="bar" style="height:31%;" data-value="$31,000"></div>
-    <div class="bar" style="height:35%;" data-value="$35,000"></div>
-    <div class="bar" style="height:34%;" data-value="$34,000"></div>
-    <div class="bar" style="height:36%;" data-value="$36,000"></div>
-    <div class="bar" style="height:37%;" data-value="$37,000"></div>
-</div>
-
 <h2>Vrste mašina za kripto trgovanje</h2>
+
+<p>
+Danas se najčešće koriste četiri osnovne vrste trading botova:
+</p>
 
 <ul>
     <li><strong>Pravilno bazirani botovi</strong> – donose odluke na osnovu unapred definisanih pravila.</li>
@@ -134,14 +29,20 @@ trgovačkih odluka.
     <li><strong>AI/ML botovi</strong> – koriste veštačku inteligenciju i mašinsko učenje za analizu velikih količina podataka.</li>
 </ul>
 
-<h2>Značaj i uticaj</h2>
-
 <p>
 Najsavremeniji botovi koriste algoritme veštačke inteligencije koji,
 pored cena, analiziraju i globalne događaje, vesti i ponašanje tržišta,
-čime omogućavaju preciznije i brže donošenje odluka. Iako mogu doneti
-značajnu dobit, upotreba botova otvara i etička pitanja, kao i potrebu
-za razumevanjem ograničenja matematičkih modela.
+čime omogućavaju preciznije i brže donošenje odluka.
+</p>
+
+<h2>Značaj i uticaj</h2>
+
+<p>
+Automatizovano trgovanje je postalo posebno vidljivo u kriznim
+situacijama, kada su brze reakcije algoritama imale veliki uticaj
+na tržište. Iako ovi sistemi mogu doneti značajnu dobit, njihova
+upotreba otvara i etička i bezbednosna pitanja, kao i potrebu za
+razumevanjem ograničenja matematičkih modela.
 </p>
 
 <h2>Zaključak</h2>
@@ -149,9 +50,7 @@ za razumevanjem ograničenja matematičkih modela.
 <p>
 Primena računara, matematike i veštačke inteligencije u kripto
 trgovanju predstavlja jedan od najjasnijih primera savremene primene
-informatike u finansijama. Dalji razvoj mašinskog učenja i algoritamskog
-trgovanja imaće sve veću ulogu u oblikovanju budućih finansijskih tržišta.
+informatike u finansijama. Očekuje se da će dalji razvoj mašinskog
+učenja i algoritamskog trgovanja imati sve veću ulogu u oblikovanju
+budućih finansijskih tržišta.
 </p>
-
-</body>
-</html>
