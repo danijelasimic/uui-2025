@@ -125,7 +125,7 @@ table th {
 }
 
 form {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 30px;
     border-radius: 10px;
 }
