@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крускалов алгоритам - објашњен</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <a href="index.html">Кућа</a>
+        <a href="tema.html">Крускалов алгоритам</a>
+        <a href="rad.pdf">Крускалов алгоритам (Рад)</a>
+    </div>
+    <div class="block">
+        <h1>Крускалов алгоритам</h1>
+    </div>
+    <div class="block">
+        <h2>Опис алгоритма</h2>
+        <p>Као што смо рекли Крускалов алгоритам проналази минимално разапињуће стабло, односно шуму, за тежински граф.</p><br>
+        <h3>Кораци:</h3>
+        <ul>
+            <li>Сортирају се све ивице графа у неопадајућем редоследу</li>
+            <li>Итерирамо кроз ивице графа, <strong>уколико додавање ивице у стабло не прави циклус</strong>, додамо ивицу</li>
+            <li>На крају добијемо минимално разапињућу шуму уколико граф није повезан, односно минимално разапињуће стабло уколико је граф повезан</li>
+        </ul><br>
+        <h3>Слични алгоритми <em>(други алгоритми проналаска минималног разапињућег стабла)</em>:</h3>
+        <table>
+            <tr>
+                <th>Алгоритам</th>
+                <th>Временска комплексност</th>
+                <th>Година открића</th>
+            </tr>
+            <tr>
+                <td>Борувкин алгоритам</td>
+                <td>O(|E|log|V|)</td>
+                <td>1926</td>
+            </tr>
+            <tr>
+                <td>Примов алгоритам</td>
+                <td>O(|E|log|V|)</td>
+                <td>1957</td>
+            </tr>
+            <tr>
+                <td>Алгоритам обрнутог брисања</td>
+                <td>O(E log V (log log V)&sup3;)</td>
+                <td>1956</td>
+            </tr>
+        </table>
+    </div>
+    <div class="block">
+        <h2>Искуцај алгоритам</h2>
+        <form>
+            <input type="text" id="name" placeholder="Име">
+            <input type="email" id="email" placeholder="Адреса електронске поште">
+            <textarea placeholder="Код" rows="30"></textarea>
+            <button>Провери</button>
+        </form>
+    </div>
+</body>
+</html>
