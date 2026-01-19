@@ -32,7 +32,7 @@ nav a:hover {
 }
 
 /* KARTICA SA SLIKOM I TEKSTOM */
-.profile-card {
+.profil {
     display: flex;
     align-items: center;
     gap: 30px;
