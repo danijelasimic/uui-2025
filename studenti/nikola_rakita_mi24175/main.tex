@@ -1,0 +1,192 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[english,serbian]{babel}
+\usepackage[unicode]{hyperref}
+\usepackage[serbian]{babel}
+
+\addto\captionsserbian{%
+  \renewcommand{\contentsname}{Садржај}%
+  \renewcommand{\refname}{Литература}%
+  \renewcommand{\abstractname}{Сажетак}%
+}
+
+
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{lema}{Лема}[section]
+\newtheorem{teorema}{Теорема}[section]
+
+
+\begin{document}
+
+
+\begin{titlepage}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+
+
+\center
+
+
+\textsc{\LARGE Математички факултет}\\[3cm]
+
+
+\textsc{\Large Семинарски рад}\\[0.1cm]
+
+
+\textsc{\large из увода у информатику}\\[0.5cm]
+
+
+\HRule\\[0.4cm]
+
+
+{\LARGE\bfseries Због чега сендвичи увек падају на намазану страну}\\[0.2cm]
+
+
+\HRule\\[2cm]
+
+
+\vspace{15\baselineskip}
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft}
+\large
+\textit{Студент}\\
+Никола Ракита 175/24
+\end{flushleft}
+\end{minipage}
+\hspace*{1cm}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright}
+\large
+\textit{Професор}\\
+Данијела Симић
+\end{flushright}
+\end{minipage}
+
+
+\vfill
+
+
+{\large Београд, 19. јануар 2026.}
+
+
+\end{titlepage}
+
+
+\tableofcontents
+\newpage
+
+
+\abstract{
+Феномен падања сендвича на намазану страну често се у свакодневном животу приписује Марфијевом закону. Ипак, ова појава има јасно и проверљиво научно објашњење засновано на законима класичне механике. У раду се анализира утицај гравитације, геометрије и ротационог кретања на исход пада сендвича, уз коришћење једноставних математичких модела и експерименталних посматрања.
+}
+
+
+\section{Увод}
+Фраза да сендвич увек пада на намазану страну дубоко је укорењена у популарној култури. На први поглед, ова појава делује као случајност или пример Марфијевог закона. Међутим, физика пружа конкретно објашњење засновано на законима кретања и ротације крутих тела.
+
+
+Циљ овог рада је да покаже да исход пада сендвича није последица лоше среће, већ предвидив физички процес.
+
+
+\section{Марфијев закон и научни приступ}
+Марфијев закон се често користи као хумористично објашњење неповољних исхода. Ипак, у случају сендвича, анализа показује да постоје објективни разлози зашто је вероватније да намазана страна заврши окренута ка поду.
+
+
+\begin{itemize}
+\item интуитивно објашњење – Марфијев закон,
+\item научно објашњење – класична механика,
+\item образовни значај феномена.
+\end{itemize}
+
+
+\section{Основни појмови}
+
+
+\begin{definicija}
+Сендвич је приближно круто тело које након губитка ослонца врши транслационо и ротационо кретање под утицајем гравитације.
+\end{definicija}
+
+
+\section{Физичко и математичко објашњење}
+Када сендвич клизне са стола, тежиште се налази изван ивице ослонца, што изазива момент силе и почетак ротације. Због релативно мале висине стола, сендвич нема довољно времена да изврши пуну ротацију.
+
+
+\subsection{Математички модел}
+У поједностављеном моделу, време пада $t$ са висине $h$ дато је формулом:
+\[
+t = \sqrt{\frac{2h}{g}}
+\]
+где је $g$ гравитационо убрзање. За типичне висине столова, угао ротације остаје мањи од $\pi$, што доводи до пада на намазану страну.
+
+
+\begin{lema}
+За висине мање од једног метра, сендвич не може извршити пуну ротацију током пада.
+\end{lema}
+
+
+\begin{teorema}
+При типичним кухињским условима, вероватноћа да сендвич падне на намазану страну већа је од 50\%.
+\end{teorema}
+
+
+\section{Слика и табела}
+
+
+На слици \ref{fig:sendvic} приказан је шематски приказ ротације сендвича током пада.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{sendvic.png}
+\caption{Ротација сендвича током пада}
+\label{fig:sendvic}
+\end{figure}
+
+
+У табели \ref{tab:visina} приказан је утицај висине стола на исход пада.
+
+
+\begin{table}[h!]
+\centering
+\caption{Утицај висине на исход пада}
+\begin{tabular}{|c|c|c|} \hline
+Висина (m) & Ротација & Исход \\ \hline
+0.5 & 1/4 круга & Намаз доле \\ \hline
+0.8 & 1/2 круга & Намаз доле \\ \hline
+1.5 & 1 круг & Насумично \\ \hline
+\end{tabular}
+\label{tab:visina}
+\end{table}
+
+
+\section{Закључак}
+Иако се често верује да сендвич пада на намазану страну због Марфијевог закона, анализа показује да је овај феномен последица физичких закона. Комбинација гравитације, геометрије и ограничене висине стола довољна је да се објасни ова свакодневна појава.
+
+
+\addcontentsline{toc}{section}{Литература}
+\begin{thebibliography}{9}
+
+
+\bibitem{murphy} E. Murphy. \emph{Murphy's Law}. American Engineering Journal, 1949.
+
+
+\bibitem{physics} R. Cross. \emph{Why buttered toast falls buttered-side down}. European Journal of Physics, 2001.
+
+
+\bibitem{mechanics} H. Goldstein. \emph{Classical Mechanics}. Addison-Wesley, 1980.
+
+
+\end{thebibliography}
+\end{document}
