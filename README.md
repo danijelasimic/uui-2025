@@ -81,29 +81,15 @@ git switch -c ime_prezime_indeks
 
 ## 6. Struktura projekta i izmene
 
-### 6.1 Dodavanje reda u `index.html`
-
-U fajlu `index.html` dodajte **jedan `<li>` red**, ispod označenog komentara:
-
-```html
-<li>
-    Ime Prezime —
-    <a href="students/ime_prezime_mi25005/index.html">mini-zadatak</a>
-</li>
-```
-
----
-
 ### 6.2 Kreiranje sopstvenog foldera
 
 Napravite folder:
 
 ```bash
-students/ime_prezime_mi25005/
+studenti/ime_prezime_mi25005/
 ```
 
-U njemu napravite `index.html` sa vašim mini-zadatkom
-(sadržaj je slobodan, ali primeren predmetu).
+U njemu napravite sadržaj prema [uputstvu](https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html).
 
 ---
 
@@ -127,9 +113,13 @@ Kada Git pita:
 * **Username**: vaše GitHub korisničko ime
 * **Password**: nalepite **Personal Access Token**
 
+* Tokom rada može se više puta dodavati sadržaj (korišćenjem naredbi `add`, `commit` i `push`).
+
 ---
 
 ## 9. Pravljenje Pull Request-a
+
+Kada ste kompletno završili projekat i želite da predate svoj seminarski na pregled i ocenu, onda idete na ovaj korak. Pre ovog koraka možete više puta raditi `commit`, ali ako ste zavšili sve i ne planirate ništa novo da dodajte idete na ovaj korak, tj. na korak **broj 9**.
 
 1. Otvorite svoj fork na GitHub-u
 2. Kliknite **Compare & Pull Request**
@@ -159,20 +149,7 @@ Ako dobijete komentare na PR:
 
 ---
 
-## 11. Code review (OBAVEZNO)
-
-Svaki student mora da uradi **2 code review-a** na PR-ovima drugih kolega.
-
-Review mora sadržati:
-
-* bar **jedan konkretan komentar**, ili
-* approval uz kratko obrazloženje (1–2 rečenice)
-
-Komentari tipa **“LGTM” bez objašnjenja se ne priznaju**.
-
----
-
-### 11. Code review (OBAVEZNO)
+## 11. Code review 
 
 Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kolega.
 
@@ -194,6 +171,7 @@ Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kol
    * da li je dodat samo jedan `<li>` red u `index.html`
    * da li postoji folder `students/ime_prezime_mi25005/`
    * da li link u `<li>` vodi na postojeći `index.html`
+   * ....
 3. Kliknite na **plavi plus (`+`)** pored linije koda koju komentarišete.
 4. Upišite komentar (npr.:
 
@@ -212,14 +190,6 @@ Svaki student mora da uradi **2 code review-a** na Pull Request-ovima drugih kol
 3. Kliknite **Submit review**.
 
 > Review bez teksta (npr. samo “LGTM”) se **ne priznaje**.
-
----
-
-#### 11.4 Koliko review-a je potrebno
-
-* Svaki student mora da uradi **tačno 2 review-a**.
-* Ne review-ujte sopstveni Pull Request.
-* Preporuka: izaberite Pull Request-ove koji još nemaju review.
 
 ---
 
