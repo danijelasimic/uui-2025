@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="stilovi/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="slike/disc.png" />
+      <p>Emulatori za Playstation konzole</p>
+    </div>
+    <div class="main">
+      <div class="sidebar">
+        <nav>
+          <a href="#" class="active" data-src="strane/main.html"
+            >-- Glavna strana</a
+          >
+          <a href="#" data-src="strane/pcsx.html">-- PCSX</a>
+          <a href="#" data-src="strane/pcsx2.html">-- PCSX2</a>
+          <a href="#" data-src="strane/rpcs3.html">-- RPCS3</a>
+          <a href="#" data-src="strane/shadPS4.html">-- shadPS4</a>
+        </nav>
+      </div>
+      <div class="main-content">
+        <iframe id="contentFrame" src="strane/main.html"></iframe>
+
+        <script>
+          const links = document.querySelectorAll(".sidebar nav a");
+          const iframe = document.getElementById("contentFrame");
+
+          links.forEach((link) => {
+            link.addEventListener("click", (e) => {
+              links.forEach((l) => l.classList.remove("active"));
+
+              link.classList.add("active");
+
+              const src = link.getAttribute("data-src");
+              iframe.src = src;
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
