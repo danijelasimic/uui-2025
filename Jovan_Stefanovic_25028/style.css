@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Doto'; /* Your chosen name */
+  src: url('Doto.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap; /* Controls loading behavior */
+}
+
+body{
+    margin: 0;
+  letter-spacing: 1;
+    background-color: #100c02;
+    color:#fcf4e1;
+}
+.StaticHeader{
+    padding-left: 10px;
+    font-family: 'Doto';
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #100c02;
+}
+.StickyHeader{
+    position: sticky;
+    top: 0;
+    margin: 0px;
+    background-color: #100c02;
+    border-bottom:1px  double #2121DE;
+    border-top:1px double #2121DE;
+}
+.Nav{
+    font-size:25px;
+    
+    height: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Nav li{
+    display:flex;
+    list-style-type:none;
+    margin:auto;
+}
+
+a{
+    box-sizing: border-box;
+    font-family: 'Doto';
+    font-weight: 600;
+
+    position: relative;
+    color:yellow;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+a::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  height: 10px; 
+  border-bottom: #fcf4e1 dotted 3px;
+  border-right: yellow dotted 10px;
+  transition: width 0.6s steps(10);
+}
+a:hover::after{
+    box-sizing: border-box;
+    width: 0;
+}
+main{
+    height: 2000px;
+}
