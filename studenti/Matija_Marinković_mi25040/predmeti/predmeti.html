@@ -2,66 +2,84 @@
 <html lang="sr">
   <head>
     <meta charset="UTF-8" />
-    <title>Predmeti</title>
+    <title>Lični veb-sajt – Predmeti</title>
     <link rel="stylesheet" href="../style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../slike/moja-slika.jpg">
   </head>
   <body>
+
+    <nav class="navbar">
+      <div class="nav-container">
+          
+          <input type="checkbox" id="nav-toggle">
+          <label for="nav-toggle" class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+          </label>
+
+          <ul class="nav-links">
+              <li><a href="../index.html">Početna</a></li>
+              <li><a href="../o-meni.html">O meni</a></li>
+              <li><a href="./predmeti.html">Predmeti</a></li>
+          </ul>
+
+      </div>
+    </nav>
+
     <header>
-        <h1><a href="https://www.matf.bg.ac.rs/studije/osnovne-studije/osnovne-informatika/">Predmeti</a></h1>
-        <nav>
-        <a href="../index.html">Nazad na početnu</a>
-        </nav>
+        <h1><a href="https://www.matf.bg.ac.rs/studije/osnovne-studije/osnovne-informatika/" target="_blank">Predmeti</a></h1>
     </header>
 
-    <section>
+    <section class="table-section">
       <h2>Prvi semestar</h2>
-
-      <table>
-        <tr>
-          <th>Predmet</th>
-          <th>Profesor</th>
-          <th>Termin</th>
-          <th>Ocena</th>
-        </tr>
-        <tr>
-            <td><a href="https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html">Uvod u informatiku</a></td>
-            <td><a href="https://poincare.matf.bg.ac.rs/~danijela.simic" target="_blank">Danijela Simić</a></td>
-            <td>Sreda 8:00 – 10:00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="https://up.matf.bg.ac.rs/">Uvod u programiranje</a></td>
-            <td><a href="https://poincare.matf.bg.ac.rs/~predrag.janicic/" target="_blank">Predrag Janičić</a></td>
-            <td>Četvrtak 10:00 – 13:00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="https://poincare.matf.bg.ac.rs/~stefan.miskovic/dzp/">Digitalni zapis podataka</a></td>
-            <td><a href="https://poincare.matf.bg.ac.rs/~stefan.miskovic/" target="_blank">Stefan Mišković</a></td>
-            <td>Četvrtak 13:00 – 15:00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/laag.htm">Linear­na algebra i analitička geometrija</a></td>
-            <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/" target="_blank">Aleksandra Kostić Matijević</a></td>
-            <td>Utorak 12:00 – 15:00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/ds1.htm">Diskretne strukture 1</a></td>
-            <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/" target="_blank">Aleksandra Kostić Matijević</a></td>
-            <td>Utorak 9:00 – 12:00</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><a href="https://www.itkomunikacija.matf.bg.ac.rs/TehnickoINaucnoPisanje.html">Tehničko i naučno pisanje</a></td>
-            <td><a href="https://poincare.matf.bg.ac.rs/~jelena.graovac/" target="_blank">Jelena Graovac</a></td>
-            <td>Sreda 11:00 – 13:00</td>
-            <td></td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Predmet</th>
+            <th>Profesor</th>
+            <th>Termin</th>
+            <th>Ocena</th>
+          </tr>
+          <tr>
+              <td><a href="https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html">Uvod u informatiku</a></td>
+              <td><a href="https://poincare.matf.bg.ac.rs/~danijela.simic" target="_blank">Danijela Simić</a></td>
+              <td>Sreda 8:00 – 10:00</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><a href="https://up.matf.bg.ac.rs/">Uvod u programiranje</a></td>
+              <td><a href="https://poincare.matf.bg.ac.rs/~predrag.janicic/" target="_blank">Predrag Janičić</a></td>
+              <td>Četvrtak 10:00 – 13:00</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><a href="https://poincare.matf.bg.ac.rs/~stefan.miskovic/dzp/">Digitalni zapis podataka</a></td>
+              <td><a href="https://poincare.matf.bg.ac.rs/~stefan.miskovic/" target="_blank">Stefan Mišković</a></td>
+              <td>Četvrtak 13:00 – 15:00</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/laag.htm">Linear­na algebra i analitička geometrija</a></td>
+              <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/" target="_blank">Aleksandra Kostić Matijević</a></td>
+              <td>Utorak 12:00 – 15:00</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/ds1.htm">Diskretne strukture 1</a></td>
+              <td><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/" target="_blank">Aleksandra Kostić Matijević</a></td>
+              <td>Utorak 9:00 – 12:00</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td><a href="https://www.itkomunikacija.matf.bg.ac.rs/TehnickoINaucnoPisanje.html">Tehničko i naučno pisanje</a></td>
+              <td><a href="https://poincare.matf.bg.ac.rs/~jelena.graovac/" target="_blank">Jelena Graovac</a></td>
+              <td>Sreda 11:00 – 13:00</td>
+              <td></td>
+          </tr>
+        </table>
+      </div>
     </section>
     
     <footer>
