@@ -298,9 +298,13 @@ section:hover {
     .profil-image img {
         width: 180px;
     }
-
+    .navbar {
+        padding-left: 5px;
+    }
      .nav-container {
-        justify-content: center;
+        justify-content: flex-start;
+        display: flex;
+        width: 100%;
     }
 
     .menu-icon {
