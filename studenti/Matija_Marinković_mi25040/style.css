@@ -44,24 +44,7 @@ section {
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
     animation: fadeUp 1s ease;
-}
-
-.profil img {
-    width: 180px;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    border: 3px solid #00e5ff;
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.profil img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #00e5ff;
-}
-
-.profil a::after {
-    display: none;
+    transition: box-shadow 1s ease;
 }
 
 h2, h3,h4 {
@@ -154,6 +137,61 @@ footer {
         transform: translateY(0);
     }
 }
+#profil-link {
+    color: inherit;
+}
+#profil-link::after {
+    display: none;
+}
+section ul li {
+    padding-left: 10px;
+}
+
+section ul li::marker {
+    color: #00e5ff;
+}
+
+section:hover {
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.25);
+    transition: box-shadow 0.4s;
+}
+
+
+.profil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.profil-image img {
+    width: 220px;
+    border-radius: 10%;
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+    transition: transform 0.4s;
+}
+
+.profil-image img:hover {
+    transform: scale(1.08);
+}
+
+.profil-text {
+    max-width: 600px;
+}
+
+.profil-text h2 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.profil-text p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
 
 @media (max-width: 768px) {
     header h1 {
@@ -169,17 +207,12 @@ footer {
         display: block;
         margin: 10px 0;
     }
-}
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
 
-section ul li {
-    padding-left: 10px;
-}
-
-section ul li::marker {
-    color: #00e5ff;
-}
-
-section:hover {
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.25);
-    transition: box-shadow 0.4s;
+    .hero-image img {
+        width: 180px;
+    }
 }
