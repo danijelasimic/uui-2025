@@ -207,12 +207,12 @@ section:hover {
         display: block;
         margin: 10px 0;
     }
-    .hero {
+    .profil {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-image img {
+    .profil-image img {
         width: 180px;
     }
 }
