@@ -1,0 +1,285 @@
+/* Opšti stilovi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 50%, #b2ebf2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #26c6da 0%, #00acc1 50%, #0097a7 100%);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 3px solid #00838f;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Navigacija */
+nav {
+    background: linear-gradient(135deg, #b2ebf2 0%, #80deea 50%, #4dd0e1 100%);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    background: #80deea;
+    border: 2px solid #4dd0e1;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+nav a:hover {
+    background: #4dd0e1;
+    border-color: #26c6da;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Navigacija */
+nav {
+    background: linear-gradient(135deg, #b2ebf2 0%, #80deea 50%, #4dd0e1 100%);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    background: #80deea;
+    border: 2px solid #4dd0e1;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+nav a:hover {
+    background: #4dd0e1;
+    border-color: #26c6da;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Dugme za povratak */
+.back-btn {
+    display: inline-block;
+    margin: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: #80deea;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #4dd0e1;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #4dd0e1;
+    border-color: #26c6da;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Info sekcija */
+.info-section {
+    background: radial-gradient(circle, #ffffff 0%, #f0f9ff 40%, #e0f7fa 100%);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: 2px solid #80deea;
+}
+
+.info-section h2 {
+    color: #00838f;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.info-item {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
+    border-left: 4px solid #4dd0e1;
+}
+
+.info-item strong {
+    color: #00838f;
+}
+
+/* Links sekcija */
+.links-section {
+    background: radial-gradient(circle, #f0f9ff 0%, #e0f7fa 50%, #b2ebf2 100%);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: 2px solid #80deea;
+}
+
+.links-section h2 {
+    color: #00838f;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.link-card {
+    display: block;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    background: rgba(255,255,255,0.7);
+    border-radius: 5px;
+    border: 2px solid #80deea;
+    text-decoration: none;
+    color: #00838f;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.9);
+    border-color: #4dd0e1;
+}
+
+.link-card::before {
+    content: "🔗 ";
+    margin-right: 0.5rem;
+}
+
+/* Abstract sekcija */
+.abstract-section {
+    background: radial-gradient(circle, #ffffff 0%, #f0f9ff 40%, #e0f7fa 100%);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: 2px solid #80deea;
+}
+
+.abstract-section h2 {
+    color: #00838f;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.abstract-section p {
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Images sekcija */
+.images-section {
+    background: radial-gradient(circle, #f0f9ff 0%, #e0f7fa 50%, #b2ebf2 100%);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: 2px solid #80deea;
+}
+
+.images-section h2 {
+    color: #00838f;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.image-card {
+    background: rgba(255,255,255,0.7);
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #80deea;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.image-card p {
+    color: #00838f;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 50%, #00acc1 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    nav a { 
+        margin: 0.3rem; 
+        padding: 0.6rem 1rem; 
+    }
+    
+    .images-grid { 
+        grid-template-columns: 1fr; 
+    }
+}
