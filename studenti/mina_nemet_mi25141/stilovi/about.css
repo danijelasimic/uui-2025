@@ -1,0 +1,26 @@
+:root {
+  --bg-color: #cbd7db;
+  --bg-red: #58001d;
+  --bg-gray: #838383;
+  --border-gray: #334053;
+}
+
+body {
+  padding: 16px;
+}
+
+img {
+  width: 600px;
+}
+
+.img-container {
+  border: 1px solid var(--bg-gray);
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+}
