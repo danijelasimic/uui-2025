@@ -328,11 +328,14 @@ section:hover {
 
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease;
+        transition: max-height 1s ease;
+    }
+    .nav-links li {
+        margin: 3px 0px;
     }
 
     #nav-toggle:checked ~ .nav-links {
-        max-height: 300px;
+        max-height: 600px;
     }
     #nav-toggle:checked ~ .navigation{
         border-bottom: none;
@@ -349,4 +352,67 @@ section:hover {
     #nav-toggle:checked + .menu-icon span:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
     }
+}
+
+form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+}
+
+form p {
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    background-color: #111;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #888;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    background-color: #0b0b0b;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+form button {
+    background: linear-gradient(135deg, #00ffff, #0088ff);
+    color: #000;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
 }
