@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Edvard Snouden</h1>
+  <nav>
+    <a href="index.html">Uvod</a>
+    <a href="tema.html">Tema</a>
+    <a href="slucaj.html">Slučaj 2013</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+  <div class="form-container">
+    <h2>Kontakt forma</h2>
+
+    <form class="form" action="#" method="post">
+      <label class="label">
+        Ime
+        <input type="text" name="ime" placeholder="Marko Marković" class="field" required>
+      </label>
+
+      <label class="label">
+        Mejl
+        <input type="email" name="email" placeholder="marko@markovic.com" class="field" required>
+      </label>
+
+      <label class="label">
+        Poruka
+        <textarea name="poruka" placeholder="Šta misliš o privatnosti u informacionim sistemima?" class="message field" required></textarea>
+      </label>
+
+      <button type="submit" class="submitBtn">Pošalji</button>
+    </form>
+  </div>
+</main>
+
+</body>
+</html>
