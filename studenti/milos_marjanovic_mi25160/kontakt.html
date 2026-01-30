@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktirajte me za pitanja o Rivian-u i električnim vozilima.">
+    <meta name="author" content="Miloš Marjanović">
+    <title>Kontakt | Miloš Marjanović</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">RIVI<span>AN</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="vozila.html">Vozila</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <h1>Kontakt & <span>O meni</span></h1>
+        <p>Imate pitanja o Rivian-u ili električnim vozilima? Slobodno me kontaktirajte!</p>
+    </section>
+
+    <section id="about-me">
+        <h2>O meni</h2>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>Zdravo! Ja sam <strong>Miloš Marjanović</strong>, student i zaposlenik u kompaniji <em>Rivian</em>. Ova web prezentacija je moj projekat za predmet <strong>Uvod u informatiku</strong>.</p>
+                
+                <h3>Moje iskustvo u Rivian-u</h3>
+                <p>Rad u Rivian-u mi je omogućio da iz prve ruke vidim kako nastaju revolucionarna električna vozila. Svaki dan učim nešto novo o:</p>
+                
+                <ul class="feature-list">
+                    <li>Tehnologiji električnih vozila</li>
+                    <li>Inovativnom inženjeringu</li>
+                    <li>Održivoj proizvodnji</li>
+                    <li>Timskom radu u tech industriji</li>
+                </ul>
+                
+                <h3>Obrazovanje</h3>
+                <p>Trenutno sam student na fakultetu, gde izučavam informatiku i srodne oblasti. Kombinacija studija i rada mi omogućava da teorijsko znanje primenim u praksi.</p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <span class="badge">Student</span>
+                    <span class="badge">Rivian</span>
+                    <span class="badge">EV entuzijasta</span>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <div class="img-container">
+                    <img src="slike/profile.svg" alt="Profilna slika - Miloš Marjanović" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Pošaljite poruku</h2>
+        
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="ime">Ime i prezime *</label>
+                <input type="text" id="ime" name="ime" placeholder="Unesite vaše ime" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email adresa *</label>
+                <input type="email" id="email" name="email" placeholder="vasa@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="tema">Tema poruke</label>
+                <select id="tema" name="tema">
+                    <option value="opste">Opšte pitanje</option>
+                    <option value="rivian">Pitanje o Rivian-u</option>
+                    <option value="vozila">Pitanje o vozilima</option>
+                    <option value="karijera">Pitanje o karijeri</option>
+                    <option value="projekat">O ovom projektu</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="poruka">Vaša poruka *</label>
+                <textarea id="poruka" name="poruka" placeholder="Napišite vašu poruku ovde..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Pošalji poruku</button>
+        </form>
+    </section>
+
+    <section id="contact-info">
+        <h2>Ostali načini kontakta</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <h3>📧 Email</h3>
+                <p>Za direktnu komunikaciju možete me kontaktirati putem email-a:</p>
+                <p><a href="mailto:mi25160@alas.matf.bg.ac.rs"><strong>mi25160@alas.matf.bg.ac.rs</strong></a></p>
+            </div>
+            
+            <div class="card">
+                <h3>🔗 LinkedIn</h3>
+                <p>Povežite se sa mnom na LinkedIn-u:</p>
+                <p><a href="https://www.linkedin.com/in/milos-marjanovic/" target="_blank">LinkedIn</a></p>
+            </div>
+            
+            <div class="card">
+                <h3>🌐 Korisni linkovi</h3>
+                <p>Dodatni resursi o Rivian-u:</p>
+                <ul>
+                    <li><a href="https://rivian.com" target="_blank">Rivian Official</a></li>
+                    <li><a href="https://stories.rivian.com" target="_blank">Rivian Stories</a></li>
+                    <li><a href="https://rivian.com/careers" target="_blank">Karijere u Rivian-u</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Često postavljana pitanja</h2>
+        
+        <table>
+            <tr>
+                <th>Pitanje</th>
+                <th>Odgovor</th>
+            </tr>
+            <tr>
+                <td><strong>Da li je Rivian dostupan u Srbiji?</strong></td>
+                <td>Trenutno Rivian prodaje vozila samo u SAD i Kanadi, ali se očekuje širenje na druge tržišnice u budućnosti.</td>
+            </tr>
+            <tr>
+                <td><strong>Koja je cena R1T modela?</strong></td>
+                <td>Osnovna cena R1T počinje od oko $73,000 USD, sa dodatnim opcijama koje mogu povećati cenu.</td>
+            </tr>
+            <tr>
+                <td><strong>Koliki je domet Rivian vozila?</strong></td>
+                <td>Zavisno od verzije baterije, domet varira od 400 do 640+ km na jednom punjenju.</td>
+            </tr>
+            <tr>
+                <td><strong>Kako mogu raditi u Rivian-u?</strong></td>
+                <td>Posetite rivian.com/careers za otvorene pozicije. Kompanija zapošljava inženjere, dizajnere, i mnoge druge profile.</td>
+            </tr>
+        </table>
+    </section>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        <div class="highlight-box">
+            <h3>🙏 Hvala na poseti!</h3>
+            <p>Nadam se da ste uživali u ovoj prezentaciji o Rivian-u. Ako imate dodatna pitanja ili komentare, slobodno me kontaktirajte putem forme iznad.</p>
+            <br>
+            <a href="index.html" class="btn">Nazad na početnu</a>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Rivian Web Prezentacija</strong></p>
+        <p>Projekat za predmet <strong>Uvod u informatiku</strong></p>
+        <p>Autor: <strong>Miloš Marjanović | MI25160</strong></p>
+        <p>Više informacija: <a href="https://rivian.com" target="_blank">rivian.com</a></p>
+    </footer>
+</body>
+</html>

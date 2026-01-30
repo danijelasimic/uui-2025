@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 380">
+  <defs>
+    <linearGradient id="profBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3d3d"/>
+      <stop offset="100%" stop-color="#2d5a5a"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4a500"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="350" height="380" rx="12" fill="url(#profBg)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="290" cy="60" r="70" fill="#f4a500" opacity="0.08"/>
+  <circle cx="60" cy="320" r="80" fill="#f4a500" opacity="0.05"/>
+  
+  <!-- Avatar circle background -->
+  <circle cx="175" cy="125" r="75" fill="#2d5a5a"/>
+  <circle cx="175" cy="125" r="65" fill="#3d6a6a"/>
+  
+  <!-- Head/face -->
+  <ellipse cx="175" cy="105" rx="36" ry="40" fill="#e8c9a0"/>
+  
+  <!-- Hair - full, combed to the side -->
+  <!-- Main hair volume -->
+  <ellipse cx="180" cy="72" rx="38" ry="22" fill="#2a2a2a"/>
+  
+  <!-- Hair swept to the right side -->
+  <path d="M140,88 
+           Q140,70 155,62 
+           Q175,55 200,60 
+           Q218,65 218,80
+           Q215,72 200,68
+           Q175,64 155,70
+           Q145,75 140,88" 
+        fill="#2a2a2a"/>
+  
+  <!-- Extra volume on the right side (swept direction) -->
+  <path d="M195,62 Q215,58 220,72 Q218,65 205,62 Q195,60 195,62" fill="#1f1f1f"/>
+  
+  <!-- Hair top layer for depth -->
+  <path d="M150,75 Q165,60 190,58 Q210,60 215,72" stroke="#3a3a3a" stroke-width="2" fill="none"/>
+  <path d="M155,80 Q175,65 200,65 Q212,68 215,78" stroke="#3a3a3a" stroke-width="1.5" fill="none"/>
+  
+  <!-- Side hair -->
+  <rect x="139" y="85" width="4" height="18" fill="#2a2a2a"/>
+  <rect x="207" y="82" width="5" height="20" fill="#2a2a2a"/>
+  
+  <!-- Ears -->
+  <ellipse cx="138" cy="103" rx="5" ry="8" fill="#e8c9a0"/>
+  <ellipse cx="213" cy="103" rx="5" ry="8" fill="#e8c9a0"/>
+  
+  <!-- Eyes - brown -->
+  <ellipse cx="160" cy="98" rx="6" ry="7" fill="white"/>
+  <ellipse cx="190" cy="98" rx="6" ry="7" fill="white"/>
+  <circle cx="161" cy="99" r="3.5" fill="#3d2314"/>
+  <circle cx="191" cy="99" r="3.5" fill="#3d2314"/>
+  <circle cx="162" cy="97" r="1.2" fill="white"/>
+  <circle cx="192" cy="97" r="1.2" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M152,88 Q160,86 168,89" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M182,89 Q190,86 198,88" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <path d="M175,100 L175,110 L171,114" stroke="#d4a574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Beard -->
+  <path d="M142,108 L142,130 Q142,155 175,162 Q208,155 208,130 L208,108 Q200,115 175,118 Q150,115 142,108 Z" fill="#2a2a2a"/>
+  
+  <!-- Mustache -->
+  <ellipse cx="175" cy="119" rx="13" ry="4" fill="#1f1f1f"/>
+  
+  <!-- Smile -->
+  <path d="M166,127 Q175,134 184,127" stroke="#7a4a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Neck -->
+  <rect x="165" y="158" width="20" height="8" fill="#e8c9a0"/>
+  
+  <!-- Body/Shirt -->
+  <path d="M105,225 Q105,175 175,164 Q245,175 245,225 L245,245 L105,245 Z" fill="url(#shirt)"/>
+  
+  <!-- Collar -->
+  <path d="M150,172 L175,195 L200,172" stroke="#d97706" stroke-width="2" fill="none"/>
+  
+  <!-- Rivian logo on shirt -->
+  <rect x="145" y="198" width="60" height="20" rx="4" fill="#1a3d3d"/>
+  <text x="175" y="212" font-family="Georgia, serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">RIVIAN</text>
+  
+  <!-- Divider line -->
+  <line x1="50" y1="265" x2="300" y2="265" stroke="#3d6a6a" stroke-width="1"/>
+  
+  <!-- Name -->
+  <text x="175" y="295" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Miloš Marjanović</text>
+  
+  <!-- Role -->
+  <text x="175" y="320" font-family="Georgia, serif" font-size="11" fill="#f4a500" text-anchor="middle">Senior Software Engineer | Rivian</text>
+  
+  <!-- Index badge -->
+  <rect x="130" y="335" width="90" height="22" rx="11" fill="rgba(244,165,0,0.15)"/>
+  <text x="175" y="350" font-family="Georgia, serif" font-size="11" fill="#f4a500" text-anchor="middle">MI25160</text>
+</svg>

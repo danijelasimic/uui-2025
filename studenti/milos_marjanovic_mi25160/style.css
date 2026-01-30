@@ -1,0 +1,386 @@
+:root {
+    --zelena: #1A3D3D;
+    --zelena-svetla: #2D5A5A;
+    --narandzasta: #F4A500;
+    --bela: #FFFFFF;
+    --tamna: #1A1A1A;
+    --pozadina: #F5F5F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: var(--pozadina);
+    color: var(--tamna);
+    line-height: 1.6;
+}
+
+nav {
+    background-color: var(--zelena);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.nav-logo:hover {
+    text-decoration: none;
+}
+
+.nav-logo span {
+    color: var(--narandzasta);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none !important;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    background-color: var(--narandzasta);
+    color: var(--zelena);
+}
+
+.nav-links a.active {
+    background-color: var(--narandzasta);
+    color: var(--zelena);
+}
+
+#hero {
+    background: linear-gradient(to right, var(--zelena), var(--zelena-svetla));
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#hero h1 span {
+    color: var(--narandzasta);
+}
+
+#hero p {
+    font-size: 18px;
+    max-width: 550px;
+    margin: 0 auto 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--narandzasta);
+    color: var(--zelena);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #FFB82E;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 32px;
+    color: var(--zelena);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--narandzasta);
+    margin: 10px auto 0;
+}
+
+section h3 {
+    font-size: 22px;
+    color: var(--zelena);
+    margin-bottom: 10px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 800px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin: 20px 0;
+}
+
+th {
+    background-color: var(--zelena);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+ul, ol {
+    margin: 15px 0 15px 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--zelena);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--narandzasta);
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+section strong {
+    color: var(--zelena);
+}
+
+footer strong,
+.highlight-box strong {
+    color: inherit;
+}
+
+em {
+    color: var(--zelena-svetla);
+}
+
+a {
+    color: var(--narandzasta);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--narandzasta);
+}
+
+.stat-label {
+    color: var(--zelena);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.highlight-box {
+    background: linear-gradient(to right, var(--zelena), var(--zelena-svetla));
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.highlight-box h3 {
+    color: var(--narandzasta);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: var(--narandzasta);
+    color: var(--zelena);
+    border-radius: 15px;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background: var(--zelena);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: var(--narandzasta);
+}
+
+.vehicle-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
