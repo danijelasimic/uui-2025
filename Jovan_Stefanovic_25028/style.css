@@ -4,6 +4,18 @@
   font-style: normal;
   font-display: swap; /* Controls loading behavior */
 }
+@font-face {
+  font-family: 'Uni'; /* Your chosen name */
+  src: url('Resources/uni.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap; /* Controls loading behavior */
+}
+@font-face {
+  font-family: 'UniThick'; /* Your chosen name */
+  src: url('Resources/uniThick.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap; /* Controls loading behavior */
+}
 
 .DoubleBorder{
     border: 10px solid transparent;
@@ -19,9 +31,17 @@
 
 html{
     font-size: 16px;
+    font-family: 'Uni';
 }
-
+h1,h2,h3,h4,h5{
+    font-family: 'UniThick';
+    font-weight: 100;
+    margin-top: 1.5rem;
+    margin-bottom: 3px;
+}
 p{
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 1rem;
 }
 
@@ -100,7 +120,12 @@ a:hover::after{
 
 
 main{
-    height: 2000px;
     width: 100%;
     margin: 0 auto;
+    padding:0;
 }
+.Sekcija{
+    padding: 10px;
+    margin: 30px 0;
+}
+h2:first-child{margin-top: 0;}
