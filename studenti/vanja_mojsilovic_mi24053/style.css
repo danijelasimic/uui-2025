@@ -1,0 +1,99 @@
+body {
+    font-family: "Georgia", serif; 
+    background-color: #f3e5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #f48fb1; 
+    padding: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #d81b60; 
+}
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #6a1b9a; 
+}
+
+h2 {
+    color: #8e24aa; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #6a1b9a; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f8bbd0; 
+}
+
+footer {
+    background-color: #6a1b9a; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.kontakt-forma {
+    background-color: #f8bbd0; /* svetlo roze pozadina */
+    padding: 20px;
+    border: 2px solid #6a1b9a;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto; /* centrirano */
+    font-family: "Georgia", serif;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #6a1b9a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.kontakt-forma button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kontakt-forma button:hover {
+    background-color: #8e24aa;
+}
