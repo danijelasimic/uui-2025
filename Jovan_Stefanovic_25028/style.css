@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5{
     margin-bottom: 3px;
 }
 strong{color:rgb(255, 50, 50)}
-h2{color:rgb(255, 150, 0)}
+h2,.Orange{color:rgb(255, 150, 0)}
 h3{color:rgb(50, 255, 255)}
 
 p{
@@ -122,7 +122,13 @@ a:hover::after{
     box-sizing: border-box;
     width: 0;
 }
-
+.radioLayout{
+    display:flex;
+    align-items: center;
+}
+.radioLayout .radio{
+    margin: auto;
+}
 
 main{
     width: 100%;
