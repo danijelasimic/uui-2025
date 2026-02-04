@@ -4,204 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ružica Janičić - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 50%, #b2ebf2 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #26c6da 0%, #00acc1 50%, #0097a7 100%);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-bottom: 3px solid #00838f;
-        }
-
-        header h1 {
-            color: #fff;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            color: #fff;
-            font-size: 1.1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        nav {
-            background: linear-gradient(135deg, #b2ebf2 0%, #80deea 50%, #4dd0e1 100%);
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            margin: 0 0.5rem;
-            border-radius: 5px;
-            background: #80deea;
-            border: 2px solid #4dd0e1;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        nav a:hover {
-            background: #4dd0e1;
-            border-color: #26c6da;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-        }
-
-        .page {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .welcome-section {
-            background: radial-gradient(circle, #ffffff 0%, #f0f9ff 40%, #e0f7fa 100%);
-            padding: 3rem;
-            border-radius: 5px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            text-align: center;
-            border: 2px solid #80deea;
-        }
-
-        .welcome-section h2 {
-            color: #00838f;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .info-box {
-            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
-            padding: 2rem;
-            border-radius: 5px;
-            margin: 2rem 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-left: 5px solid #4dd0e1;
-        }
-
-        .subjects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .subject-card {
-            background: radial-gradient(circle, #f0f9ff 0%, #e0f7fa 50%, #b2ebf2 100%);
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 2px solid #80deea;
-            text-align: center;
-        }
-
-        .subject-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            background: radial-gradient(circle, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
-        }
-
-        .subject-card h3 {
-            color: #00838f;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        .subject-links {
-            display: none;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 2px solid #80deea;
-        }
-
-        .subject-links.active {
-            display: block;
-        }
-
-        .subject-links a {
-            display: block;
-            color: #00838f;
-            text-decoration: none;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            background: rgba(255,255,255,0.5);
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .subject-links a:hover {
-            background: rgba(255,255,255,0.8);
-            padding-left: 1rem;
-        }
-
-        .about-content {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f7fa 50%, #b2ebf2 100%);
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            line-height: 1.8;
-            border: 2px solid #80deea;
-        }
-
-        .about-content h2 {
-            color: #00838f;
-            margin-bottom: 1rem;
-        }
-
-        .about-content p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        footer {
-            background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 50%, #00acc1 100%);
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            nav a { margin: 0.3rem; padding: 0.6rem 1rem; }
-            .subjects-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -215,19 +18,20 @@
         <a href="#" onclick="showPage('about')">O meni</a>
         <a href="#" onclick="showPage('semester')">Prvi semestar</a>
         <a href="tema.html">Paskalina</a>
+        <a href="contact.html">Kontakt</a>
     </nav>
 
     <div class="container">
         <div id="home" class="page active">
             <div class="welcome-section">
                 <h2>Dobrodošli na moj sajt!</h2>
-                <p style="font-size: 1.2rem; color: #666; margin-top: 1rem;">
+                <p class="subtitle">
                     Ovde možete pronaći informacije o mom obrazovanju i projektima iz prvog semestra studija informatike.
                 </p>
             </div>
 
             <div class="info-box">
-                <h3 style="color: #cc0066; margin-bottom: 1rem;">Osnovne informacije</h3>
+                <h3>Osnovne informacije</h3>
                 <p><strong>Fakultet:</strong> Matematički fakultet</p>
                 <p><strong>Smer:</strong> Informatika</p>
                 <p><strong>Tok:</strong> 2</p>
@@ -238,47 +42,47 @@
 
         <div id="about" class="page">
             <div class="about-content">
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <img src="slike/slika.jpg" alt="Ružica Janičić" style="width: 200px; height: 200px; border-radius: 50%; border: 4px solid #80deea; box-shadow: 0 4px 8px rgba(0,0,0,0.2); object-fit: cover;">
+                <div class="profile-image-container">
+                    <img src="slike/slika.jpg" alt="Ružica Janičić" class="profile-image">
                 </div>
                 
                 <h2>O meni</h2>
                 <p>Zdravo! Ja sam Ružica Janičić, studentkinja prve godine informatike na Matematičkom fakultetu.</p>
-                <p>Upisala sam ovaj fakultet i smer zato što volim matematiku i informatiku, i volela bih da se time bavim u budućnnosti.</p>
+                <p>Upisala sam ovaj fakultet i smer zato što volim matematiku i informatiku, i volela bih da se time bavim u budućnosti.</p>
                 <p>U slobodno vreme volim da čitam, družim se sa prijateljima, slušam muziku i učim nove jezike.</p>
                 
-                <h2 style="margin-top: 2rem; margin-bottom: 1rem;">Ocene iz prvog semestra</h2>
-                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 5px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <h2 class="grades-title">Ocene iz prvog semestra</h2>
+                <table class="grades-table">
                     <thead>
-                        <tr style="background: linear-gradient(135deg, #b2ebf2 0%, #80deea 100%); color: #fff;">
-                            <th style="padding: 1rem; text-align: left; border-bottom: 2px solid #4dd0e1;">Predmet</th>
-                            <th style="padding: 1rem; text-align: center; border-bottom: 2px solid #4dd0e1;">Ocena</th>
+                        <tr>
+                            <th>Predmet</th>
+                            <th class="center">Ocena</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="border-bottom: 1px solid #e0f7fa;">
-                            <td style="padding: 0.8rem;">Uvod u programiranje</td>
-                            <td style="padding: 0.8rem; text-align: center; font-weight: bold; color: #00838f;">/</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e0f7fa;">
-                            <td style="padding: 0.8rem;">Uvod u informatiku</td>
-                            <td style="padding: 0.8rem; text-align: center; font-weight: bold; color: #00838f;">/</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e0f7fa;">
-                            <td style="padding: 0.8rem;">Linearna algebra i analitička geometrija</td>
-                            <td style="padding: 0.8rem; text-align: center; font-weight: bold; color: #00838f;">/</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e0f7fa;">
-                            <td style="padding: 0.8rem;">Diskretne strukture</td>
-                            <td style="padding: 0.8rem; text-align: center; font-weight: bold; color: #00838f;">/</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e0f7fa;">
-                            <td style="padding: 0.8rem;">Digitalni zapis</td>
-                            <td style="padding: 0.8rem; text-align: center; font-weight: bold; color: #00838f;">/</td>
+                        <tr>
+                            <td>Uvod u programiranje</td>
+                            <td class="center">/</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.8rem;">Tehničko i naučno pisanje</td>
-                            <td style="padding: 0.8rem; text-align: center; font-weight: bold; color: #00838f;">/</td>
+                            <td>Uvod u informatiku</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Linearna algebra i analitička geometrija</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Diskretne strukture</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Digitalni zapis</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Tehničko i naučno pisanje</td>
+                            <td class="center">/</td>
                         </tr>
                     </tbody>
                 </table>
@@ -286,37 +90,37 @@
         </div>
 
         <div id="semester" class="page">
-                <h2 style="color: #00838f; text-align: center; margin-bottom: 2rem;">Prvi semestar</h2>
+            <h2 class="semester-title">Prvi semestar</h2>
             
             <div class="subjects-grid">
                 <div class="subject-card" onclick="toggleSubject(this)">
                     <h3>Uvod u programiranje</h3>
-                    <p style="color: #666;">Prof. dr Mladen Nikolić</p>
+                    <p class="professor">Prof. dr Mladen Nikolić</p>
                 </div>
 
                 <div class="subject-card" onclick="toggleSubject(this)">
                     <h3>Uvod u informatiku</h3>
-                    <p style="color: #666;">Prof. dr Danijela Simić</p>
+                    <p class="professor">Prof. dr Danijela Simić</p>
                 </div>
 
                 <div class="subject-card" onclick="toggleSubject(this)">
                     <h3>Linearna algebra i analitička geometrija</h3>
-                    <p style="color: #666;">Prof. dr Zoran Rakić</p>
+                    <p class="professor">Prof. dr Zoran Rakić</p>
                 </div>
 
                 <div class="subject-card" onclick="toggleSubject(this)">
                     <h3>Diskretne strukture</h3>
-                    <p style="color: #666;">Prof. dr Aleksandra Kostić Matijević</p>
+                    <p class="professor">Prof. dr Aleksandra Kostić Matijević</p>
                 </div>
 
                 <div class="subject-card" onclick="toggleSubject(this)">
                     <h3>Digitalni zapis</h3>
-                    <p style="color: #666;">Prof. dr Stefan Mišković</p>
+                    <p class="professor">Prof. dr Stefan Mišković</p>
                 </div>
 
                 <div class="subject-card" onclick="toggleSubject(this)">
                     <h3>Tehničko i naučno pisanje</h3>
-                    <p style="color: #666;">Prof. dr Jelena Graovac</a></p>
+                    <p class="professor">Prof. dr Jelena Graovac</p>
                 </div>
             </div>
         </div>
