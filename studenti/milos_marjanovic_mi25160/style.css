@@ -334,6 +334,12 @@ a:hover {
     font-size: 14px;
 }
 
+.highlight-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .highlight-box {
     background: linear-gradient(to right, var(--zelena), var(--zelena-svetla));
     color: white;
@@ -344,6 +350,10 @@ a:hover {
 
 .highlight-box h3 {
     color: var(--narandzasta);
+}
+
+.badge-container {
+    margin-top: 1.5rem;
 }
 
 .badge {
