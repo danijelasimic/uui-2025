@@ -24,41 +24,6 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
 }
 
-.left-dropdown-full {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.left-dropdown-full .menu-icon {
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.left-dropdown-full .full-slide-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #CFE3D8;
-    border-radius: 12px;
-    padding: 10px 0;
-    margin-top: 10px;
-}
-
-.left-dropdown-full:hover .full-slide-menu {
-    display: flex;
-}
-
-.left-dropdown-full .full-slide-menu a {
-    padding: 10px 20px;
-    color: #2f3d37;
-    text-decoration: none;
-}
-
-.left-dropdown-full .full-slide-menu a:hover {
-    background-color: rgba(207, 227, 216, 0.5);
-    color: #2f7a5a;
-}
-
 .home-content {
     display: flex;
     align-items: center;
@@ -183,7 +148,6 @@ img:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.30);
 }
 
-/* ANIMACIJA  */
 @keyframes softIn {
     from {
         opacity: 0;
@@ -216,10 +180,6 @@ img:hover {
 .home-image img {
     width: 350px;
     max-width: none;
-}
-
-opdown a:hover {
-    color: #2f7a5a;
 }
 
 .contact-mail {
@@ -557,7 +517,6 @@ opdown a:hover {
     justify-content: center;
 }
 
-/*  TABELA FAVORITA */
 .favorites-table {
     width: 100%;
     border-collapse: collapse;
@@ -629,123 +588,8 @@ opdown a:hover {
     color: #2f3d37;
 }
 
-.schedule-table td.yellow {
-    background-color: #fffacd;
-}
-
-.schedule-table td.red {
-    background-color: #ff6961; 
-    color: white;
-}
-
-.schedule-table td.blue {
-    background-color: #87cefa; 
-    color: black;
-}
-
 .schedule-table td:hover {
     opacity: 0.85;
-}
-
-.semesters-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    overflow: visible;
-}
-
-.semesters-white-cloud {
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 25px;
-    padding: 60px 80px;  
-    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    gap: 70px;            
-    width: 100%;           
-    max-width: 1700px;     
-}
-
-.semesters-row {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-.semesters-row:first-child {
-    margin-bottom: 100px;
-}
-
-.semester-btn {
-    background-color: #CFE3D8;
-    border: none;
-    border-radius: 22px;
-    width: 230px;
-    height: 90px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.semester-btn:hover {
-    background-color: #2f7a5a;
-    color: white;
-    transform: translateY(-5px) scale(1.05);
-}
-
-.semester-dropdown {
-    position: relative;
-    outline: none; 
-}
-
-.semester-content {
-    position: absolute;        
-    top: 100%;                 
-    left: 50%;
-    transform: translateX(-50%); 
-
-    background-color: #f4f9f6;
-    border-radius: 16px;
-    padding: 12px 16px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    min-width: 800px;
-
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 999;              
-}
-
-.semester-toggle:checked + .semester-btn + .semester-content {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.semester-dropdown:focus-within .semester-content {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-/* Linkovi u dropdownu */
-.semester-content a {
-    padding: 10px 14px;
-    text-decoration: none;
-    color: #2f3d37;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: all 0.25s ease;
-}
-
-.semester-content a:hover {
-    background-color: #dfeee7;
-    color: #2f7a5a;
 }
 
 .slider-card {
@@ -1010,41 +854,6 @@ opdown a:hover {
     position: relative;             
 }
 
-.tnp-subitems {
-    display: flex;
-    flex-direction: column;
-    margin-left: 70px;     
-    gap: 6px;
-}
-
-.tnp-subitems a {
-    font-size: 0.9em;        
-    padding: 3px 0;
-    text-decoration: none;
-    color: #2f7a5a;        
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.tnp-subitems a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: #66bb6a;
-    transition: width 0.35s ease;
-}
-
-.tnp-subitems a:hover::after {
-    width: 100%;
-}
-
-.tnp-subitems a:hover {
-    color: #66bb6a;
-}
-
 #backToTop {
     position: fixed;
     bottom: 140px;
@@ -1063,4 +872,3 @@ opdown a:hover {
 #backToTop:hover {
     background-color: #2f7a5a;
 }
-
