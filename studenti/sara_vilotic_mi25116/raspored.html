@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Распоред - Сара</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page">
+
+<div class="background-box">
+
+    <!-- NAVIGACIJA -->
+    <div class="nav-toggle" id="navToggle">
+        <span class="menu-icon">☰</span>
+        <div class="nav-dropdown">
+            <div class="nav-white-cloud">
+                <div class="nav-table">
+                    <div class="nav-cell"><a href="index.html">Почетна</a></div>
+                    <div class="nav-cell"><a href="o-meni.html">О мени</a></div>
+                    <div class="nav-cell"><a href="akademska_tema.html">Академска тема</a></div>
+                    <div class="nav-cell"><a href="raspored.html">Распоред</a></div>
+                    <div class="nav-cell"><a href="semestri.html">Семестри</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIO DUGME -->
+    <div class="audio-wrapper" id="audioButton">
+        <img src="audio.jpg" alt="Audio" class="audio-icon">
+    </div>
+
+    <audio id="myAudio">
+        <source src="pesma.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="header2">
+        <h1>Мој распоред</h1>
+    </div>
+
+    <!-- RASPORED OBLAK -->
+    <div class="container">
+        <div class="card">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>08.15-09.00</th>
+                        <th>09.15-10.00</th>
+                        <th>10.15-11.00</th>
+                        <th>11.15-12.00</th>
+                        <th>12.15-13.00</th>
+                        <th>13.15-14.00</th>
+                        <th>14.15-15.00</th>
+                        <th>15.15-16.00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Понедељак</td>
+                        <td class="laag clickable-td" colspan="3" onclick="window.open('https://poincare.matf.bg.ac.rs/~aleksandra.kostic/laag.htm', '_blank')">
+                            Линеарна алгебра и аналитичка геометрија (вежбе)<br>HCAP3Б H103
+                        </td>
+                        <td></td>
+                        <td class="dzp clickable-td" onclick="window.open('https://poincare.matf.bg.ac.rs/~dara.milojkovic/dzp/', '_blank')">
+                            Дигитални запис података (вежбе)<br>Дара Милојковић H202
+                        </td>
+                        <td class="ds1 clickable-td" colspan="2" onclick="window.open('https://poincare.matf.bg.ac.rs/~aleksandra.kostic/ds1.htm', '_blank')">
+                            Дискретне структуре 1 (вежбе)<br>HCAP1 H153
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Уторак</td>
+                        <td></td>
+                        <td class="ds1 clickable-td" colspan="3" onclick="window.open('https://poincare.matf.bg.ac.rs/~aleksandra.kostic/ds1.htm', '_blank')">
+                            Дискретне структуре 1<br>Александра Костић Матијевић H253
+                        </td>
+                        <td class="laag clickable-td" colspan="3" onclick="window.open('https://poincare.matf.bg.ac.rs/~aleksandra.kostic/laag.htm', '_blank')">
+                            Линеарна алгебра и аналитичка геометрија<br>Александра Костић Матијевић H253
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Среда</td>
+                        <td class="ui clickable-td" colspan="2" onclick="window.open('https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html', '_blank')">
+                            Увод у информатику<br>Данијела Симић 718
+                        </td>
+                        <td></td>
+                        <td class="tnp clickable-td" colspan="2" onclick="window.open('https://www.itkomunikacija.matf.bg.ac.rs/TehnickoINaucnoPisanje.html', '_blank')">
+                            Техничко и научно писање<br>Јелена Граовац H201
+                        </td>
+                        <td class="up clickable-td" colspan="3" onclick="window.open('https://up.matf.bg.ac.rs/', '_blank')">
+                            Увод у програмирање (вежбе)<br>СКРИ5 H201
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Четвртак</td>
+                        <td></td>
+                        <td></td>
+                        <td class="up clickable-td" colspan="3" onclick="window.open('https://up.matf.bg.ac.rs/', '_blank')">
+                            Увод у програмирање<br>Предраг Јаничић H253
+                        </td>
+                        <td class="dzp clickable-td" colspan="2" onclick="window.open('https://poincare.matf.bg.ac.rs/~stefan.miskovic/dzp/', '_blank')">
+                            Дигитални запис података<br>Стефан Мишковић H153
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Петак</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+        <p><a href="https://docs.google.com/spreadsheets/d/1bFNjSYy7yIE_-N6AW8ckmfV3HBgmxfKNInvNiXHa91w/edit?gid=1090833917#gid=1090833917" target="_blank" class="green-link">Календар активности за академску годину</a>.</p>
+        <p><a href="https://enastava.matf.bg.ac.rs/~raspored/raspored_ispita_januar_1_2026/" target="_blank" class="green-link">Распоред испита у року Јануар 1</a>.</p>
+        <p><a href="https://enastava.matf.bg.ac.rs/~raspored/raspored_ispita_januar_2_2026/" target="_blank" class="green-link">Распоред испита у року Јануар 2</a>.</p>
+    </div>
+
+    <br>
+
+    <button id="backToTop">⬆ Врати се на врх</button>
+
+    <footer class="site-footer">
+        <p>© Сара Вилотић | <a href="https://www.matf.bg.ac.rs/" target="_blank" class="green-link">Математички факултет Универзитета у Београду</a></p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

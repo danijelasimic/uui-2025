@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Сара Вилотић</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background-box">
+
+    <div class="nav-toggle" id="navToggle">
+        <span class="menu-icon">☰</span>
+
+        <!-- MENI -->
+        <div class="nav-dropdown">
+            <div class="nav-white-cloud">
+                <div class="nav-table">
+                    <div class="nav-cell">
+                        <a href="index.html">Почетна</a>
+                    </div>
+                    <div class="nav-cell">
+                        <a href="o-meni.html">О мени</a>
+                    </div>
+                    <div class="nav-cell">
+                        <a href="akademska_tema.html">Академска тема</a>
+                    </div>
+                    <div class="nav-cell">
+                        <a href="raspored.html">Распоред</a>
+                    </div>
+                    <div class="nav-cell">
+                        <a href="semestri.html">Семестри</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio dugme -->
+    <div class="audio-wrapper" id="audioButton">
+        <img src="audio.jpg" alt="Audio" class="audio-icon">
+    </div>
+
+    <audio id="myAudio">
+        <source src="pesma.mp3" type="audio/mpeg">
+        Tvoj browser ne podržava audio.
+    </audio>
+
+    <div class="home-content">
+        <div class="right-column">
+            <div class="header">
+                <h1>Сара Вилотић</h1>
+                <p class="subtitle">Добро дошли на мој лични сајт!</p>
+            </div>
+
+            <div class="social-clouds">
+                <a href="https://github.com/mi25116" target="_blank" class="small-card">GitHub</a>
+                <a href="https://www.linkedin.com/" target="_blank" class="small-card">LinkedIn</a>
+                <a href="https://www.instagram.com/saravilotiic" target="_blank" class="small-card">Instagram</a>
+            </div>
+        </div>
+
+        <div class="left-column">
+            <img src="moja_slika.jpg" alt="Profilna slika">
+        </div>
+
+    </div>
+
+    <!-- KONTAKT FORMA -->
+    <div class="contact-form-container">
+        <div class="card">
+            <h2>Пошаљите ми поруку:</h2>
+            <form action="mailto:mi25116@alas.matf.bg.ac.rs" method="post" enctype="text/plain">
+                <label for="name">Име:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Ваш мејл:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Порука:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                <input type="submit" value="Пошаљи">
+            </form>
+        </div>
+    </div>
+
+    <button id="backToTop">⬆ Врати се на врх</button>
+
+    <footer class="site-footer">
+        <p>
+            © Сара Вилотић |
+            <a href="https://www.matf.bg.ac.rs/" target="_blank" class="green-link">
+                Математички факултет Универзитета у Београду
+            </a>
+        </p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
