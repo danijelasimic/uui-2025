@@ -1,0 +1,288 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin: 0;
+    background: #5f1359;   
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #9e248a; 
+    border-left: 6px solid #9e248a;
+    border-right: 6px solid #9e248a;
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    z-index: 3;
+    width: 100%;
+    clear: both;      
+}
+
+nav a{
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 100%;
+    transform: scale(1);        
+    transition: transform 0.3s ease;
+}
+
+nav a:hover{
+    color: white;
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: 0 8px 20px black;
+    border-radius: 40px; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #9e248a; 
+    min-width: 180px;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    margin-top: 15px;
+    padding: 15px 30px;
+    background-color: #9e248a;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #c13584;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown a {
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+     background-color: #ffffff;
+    color: #5f1359;
+    box-shadow: 0 0 25px black; 
+}
+
+
+h1, h2 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h2{
+    font-size: 30px;
+}
+
+
+p {
+    font-size: 30px;
+    color: white;
+}
+
+img{
+    width: 300px;
+    margin-top: 40px;
+    border-radius: 100px;
+    transform: scale(1);        
+    transition: transform 0.3s ease;
+    float: right;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 100px; 
+}
+.fakultet a {
+     margin: 5px 0;
+     color: #fff;
+     text-decoration: underline;
+}
+.fakultet a:hover{
+    color: #c13584;
+    text-decoration: underline;
+}
+
+ul {
+    font-size: 30px;
+}
+
+.kurs a {
+     margin: 5px 0;
+     color: #fff;
+     text-decoration: underline;
+}
+.kurs a:hover{
+    color: #c13584;
+    text-decoration: underline;
+}
+
+.kontakt {
+  margin-top: 20px;  
+  text-align: left; 
+}
+
+.kontakt a {   
+  margin: 5px 0;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.kontakt a:hover {
+  color: #c13584;
+  text-decoration: underline;
+}
+
+ol{
+    font-size: 25px;
+}
+
+caption{
+    font-size: 25px;
+}
+
+table{
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #9e248a;
+}
+
+table, th, td {
+    border: 25px;
+    padding: 30px;
+    color: beige;
+}
+
+label{
+    font-size: 20px;
+}
+
+textarea{
+    width: 700px;
+    height: 300px;
+}
+
+input{
+    width: 600px;
+    height: 70px;
+}
+
+.snimak a {   
+  margin: 5px 0;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.snimak a:hover {
+  color: #c13584;
+  text-decoration: underline;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-image: url('pozadina.gif'); 
+    background-size: cover;
+    background-repeat: repeat-y;
+    z-index: 1;
+    opacity: 65%;
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
+
+.container {
+    max-width: 900px;  
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+a {
+    color:white; 
+    text-decoration: none; 
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 15px; 
+}
+
+.kontakt-forma {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 750px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+input, textarea {
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 15px 30px;
+    background-color: #f8c8dc;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #5f1359;
+    box-shadow: 0 0 25px black;
+}
+.predmeti {
+  margin-top: 20px;  
+  text-align: left;
+}
+
+.predmeti a {   
+  margin: 5px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.predmeti a:hover {
+  color: #c13584;
+  text-decoration: none;
+}
