@@ -14,7 +14,7 @@ html {
   background-color: var(--bg-color);
 }
 
-body {
+.main-body {
   margin: 0;
 
   height: 100vh;
@@ -150,10 +150,56 @@ form {
   margin-bottom: 16px;
 }
 
+.p-16 {
+  padding: 16px;
+}
+
+.img-container {
+  width: 600px;
+  border: 1px solid var(--bg-gray);
+  padding: 16px;
+}
+
 h5 {
   margin: 0;
   padding: 0;
 
   margin-left: 4px;
   font-size: 18px;
+}
+
+.side-img {
+  float: left;
+  margin: 8px 8px 8px 0;
+  width: 400px;
+
+  border: 1px solid var(--bg-gray);
+  padding: 16px;
+}
+
+table {
+  font-size: 16px;
+
+  border-collapse: collapse;
+  width: 100%;
+
+  margin-bottom: 16px;
+}
+
+td,
+th {
+  border: 1px solid var(--bg-gray);
+  text-align: left;
+  padding: 8px;
+}
+
+.text-container {
+  padding: 8px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
 }
