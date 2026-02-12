@@ -5,17 +5,17 @@ Seminarski rad sadrži index.html stranu koja kontroliše navigaciju, kao i doda
 ## Sadržaj
 
 - [Strane](#strane)
-- [CSS fajlovi](#css)
-- [Dodatni fajlovi](#dodatni-fajlovi)
+- [CSS](#css)
+- [Dodatni dokumenti](#dodatni-dokumenti)
 
 ## Strane
 
 Na strani tema.html prikazana je glavna strana projekta dok se u ostalim stranama nalaze detalji za svaku podtemu.
 
-### CSS fajlovi
+### CSS
 
-CSS kod je podeljen na tri dela radi lakše čitljivosti i odvajanja logičkih celina.
+U style.css dokumentu nalaze se svi stilovi za strane unutar projekta.
 
-#### Dodatni fajlovi
+#### Dodatni dokumenti
 
 Unutar projekta nalazi se i favicon.png koji se koristi za samu ikonicu sajta. Rad.pdf sadrži akademsku temu generisanu na osnovu main.tex dokumenta koji se takođe nalazi u istom direktorijumu.
