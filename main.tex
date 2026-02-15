@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{caption}
+
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{lema}{Лема}[section]
+
+\title{Конгруенције}
+\author{Лука Мијатовић}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Увод у конгруенције}
+Теорија конгруенција представља један од темеља модерне теорије бројева. Увео ју је Карл Фридрих Гаус у свом делу \textit{Disquisitiones Arithmeticae}.
+
+\begin{definicija}
+Нека је $n \in \mathbb{N}$. Кажемо да су цели бројеви $a$ и $b$ \textbf{конгруентни по модулу} $n$ ако $n$ дели њихову разлику $a - b$. То записујемо као:
+$$ a \equiv b \pmod{n} $$
+\end{definicija}
+
+\begin{wrapfigure}[12]{l}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{wilson.jpeg} 
+    \caption*{Џон Вилсон (1741–1793)}
+\end{wrapfigure}
+
+\section{Вилсонова теорема}
+Вилсонова теорема даје неопходан и довољан услов да број буде прост.
+
+\begin{lema}
+Ако је $p$ прост број, тада је једини елемент $a \in \{1, 2, \dots, p-1\}$ који је сам себи инверзан по модулу $p$ (тј. $a^2 \equiv 1 \pmod{p}$) заправо $1$ или $p-1$.
+\end{lema}
+
+\begin{teorema}[Вилсонова теорема]
+Природан број $p > 1$ је прост ако и само ако важи:
+\begin{equation}
+(p-1)! \equiv -1 \pmod{p}
+\end{equation}
+\end{teorema}
+
+\leavevmode
+
+\subsection{Примена и примери}
+Примена ове теорије је огромна, посебно у \textbf{\textcolor{red}{криптографији}} и рачунарству.
+
+\begin{itemize}
+    \item Провера простности бројева.
+    \item Генерисање \textit{RSA} кључева.
+    \item Теорија група.
+\end{itemize}
+
+\section{Табеларни приказ остатака}
+У следећој табели приказани су остаци при дељењу са малим простим бројевима за вредност $(p-1)!$.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|r|}
+\hline
+\textbf{Број $p$} & \textbf{Формула $(p-1)!$} & \textbf{Остатак по модулу $p$} \\ \hline
+2 & $1! = 1$ & $1 \equiv -1 \pmod{2}$ \\ \hline
+3 & $2! = 2$ & $2 \equiv -1 \pmod{3}$ \\ \hline
+5 & $4! = 24$ & $24 \equiv -1 \pmod{5}$ \\ \hline
+\end{tabular}
+\caption*{Провера Вилсонове теореме за мале бројеве}
+\end{table}
+
+\section{Закључак}
+\textsf{Конгруенције нам омогућавају да на елегантан начин решавамо сложене проблеме дељивости. Иако је Вилсонова теорема од великог теоријског значаја, у пракси се за велике бројеве чешће користе други алгоритми због факторијела који брзо расте.}
+
+\begin{enumerate}
+    \item Први корак: Разумевање дељивости.
+    \item Други корак: Примена на просте бројеве.
+\end{enumerate}
+
+\end{document}
