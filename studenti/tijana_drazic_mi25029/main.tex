@@ -1,0 +1,144 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel}
+
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\geometry{margin=2.5cm}
+
+\newtheorem{definition}{Дефиниција}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лема}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+
+\vspace*{4cm}  
+
+{\LARGE Математички факултет}\\[2cm]
+{\Large Семинарски рад}\\[0.3cm]
+{\large Увод у информатику}\\[1cm]
+
+\rule{\linewidth}{0.4mm}\\[0.4cm]
+{\LARGE\bfseries Математички модели у машинском учењу}\\[0.4cm]
+\rule{\linewidth}{0.4mm}
+
+\vspace*{\fill}  
+
+\large
+Тијана Дражић \\[0.5cm]
+Београд, \today
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Увод}
+
+Машинско учење представља област рачунарства која се у великој мери
+ослања на \textbf{математичке моделе}. Један од основних и најчешће
+коришћених модела је \textit{линеарна регресија}, која служи за
+апроксимацију односа између података.
+
+\section{Линеарна регресија као математички модел}
+
+\subsection{Дефиниција модела}
+
+\begin{definition}
+Линеарна регресија је модел који описује зависност променљиве $y$
+од променљиве $x$ у облику функције
+\[
+y = ax + b
+\]
+где су $a$ и $b$ реални параметри.
+\end{definition}
+
+У оквиру дефиниције модела, могу се издвојити основни кораци примене:
+\begin{itemize}
+    \item Формулисање математичког односа
+    \item Одређивање параметара $a$ и $b$
+    \item Примена модела на реалне податке
+\end{itemize}
+
+\subsection{Функција грешке}
+
+Квалитет модела се мери функцијом грешке. За континуалне податке,
+користи се \textbf{средња квадратна грешка} дефинисана интегралом:
+$$ E(a,b) = \int_{-\infty}^{\infty} (ax + b - f(x))^2 \, dx $$
+
+У пракси, подаци су дискретни, па се интеграл замењује сумом:
+$$ E(a,b) = \frac{1}{n} \sum_{i=1}^{n} (ax_i + b - y_i)^2 $$
+
+
+\subsection{Оптимизација параметара}
+
+\begin{theorem}
+Функција грешке линеарне регресије има јединствен глобални минимум.
+\end{theorem}
+
+\begin{lemma}
+Минимум функције грешке добија се решавањем система линеарних једначина.
+\end{lemma}
+
+Ови резултати омогућавају ефикасну примену алгоритама у машинском учењу.
+
+
+\section{Илустрација модела}
+
+\noindent
+\begin{minipage}[c]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{slika1.png}
+    \captionof{figure}{Линеарна регресија над подацима}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.5\textwidth}
+Графички приказ регресионе праве омогућава визуелну процену
+тачности модела.
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Елемент} & \textbf{Улога у илустрацији} \\
+\hline
+$x_i$ & Тачке на хоризонталној оси (улазни подаци) \\
+$y_i$ & Тачке на вертикалној оси (излазне вредности) \\
+$a$ & Нагиб регресионе праве \\
+$b$ & Пресек са $y$-осом \\
+\hline
+\end{tabular}
+\captionof{table}{Елементи који се приказују на графику линеарне регресије}
+\end{center}
+
+\section{Примена модела}
+
+Примена модела у пракси подразумева следеће кораке:
+\begin{enumerate}
+    \item Прикупљање података
+    \item Тренирање модела
+    \item Процена резултата
+\end{enumerate}
+
+\section{Закључак}
+
+Линеарна регресија представља једноставан, али моћан математички модел
+који показује како се \textbf{интеграли, суме и линеарна алгебра}
+користе у савременом рачунарству и машинском учењу.
+
+\end{document}
