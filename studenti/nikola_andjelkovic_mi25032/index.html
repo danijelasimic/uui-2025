@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmi za sortiranje | Nikola Anđelković</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header>
+    <div class="header-content">
+        <h1>Analiza algoritama za sortiranje</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Početna</a></li>
+                <li><a href="tema.html">Detaljna analiza</a></li>
+                <li><a href="rad.pdf" target="_blank">PDF Rad</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section id="uvod">
+            <h2>Dobrodošli</h2>
+            <p>
+                Moje ime je <strong>Nikola Anđelković (32/2025)</strong>. Ovaj seminarski predstavlja sveobuhvatan pregled pet ključnih algoritama za sortiranje. Razumevanje ovih algoritama je osnova za optimizaciju koda i efikasno upravljanje memorijom u računarstvu.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="algoritmi-lista">
+            <h2>Algoritmi koje detaljno obrađujemo</h2>
+            <p>Seminarski pokriva sledećih pet algoritama podeljenih po njihovoj efikasnosti i načinu rada:</p>
+            <ul>
+                <li><strong>Bubble Sort</strong> – Osnovni algoritam zasnovan na zameni suseda.</li>
+                <li><strong>Insertion Sort</strong> – Efikasan za male i skoro sortirane nizove.</li>
+                <li><strong>Selection Sort</strong> – Algoritam koji minimizuje broj operacija upisa.</li>
+                <li><strong>Merge Sort</strong> – Stabilan algoritam zasnovan na rekurziji i spajanju.</li>
+                <li><strong>Quick Sort</strong> – Najbrži algoritam u opštem slučaju koji koristi pivot element.</li>
+            </ul>
+        </section>
+
+        <section id="poredjenje-tabela">
+            <h2>Tehničke karakteristike</h2>
+            <p>U tabeli ispod je dat uporedni prikaz složenosti za svih pet algoritama koje ćemo analizirati:</p>
+            <table>
+    <thead>
+        <tr>
+            <th>Algoritam</th>
+            <th>Najbolji slučaj</th>
+            <th>Prosečan slučaj</th>
+            <th>Najgori slučaj</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bubble Sort</td>
+            <td>O(n)</td>
+            <td>O(n<sup>2</sup>)</td>
+            <td>O(n<sup>2</sup>)</td>
+        </tr>
+        <tr>
+            <td>Insertion Sort</td>
+            <td>O(n)</td>
+            <td>O(n<sup>2</sup>)</td>
+            <td>O(n<sup>2</sup>)</td>
+        </tr>
+        <tr>
+            <td>Selection Sort</td>
+            <td>O(n<sup>2</sup>)</td>
+            <td>O(n<sup>2</sup>)</td>
+            <td>O(n<sup>2</sup>)</td>
+        </tr>
+        <tr>
+            <td>Merge Sort</td>
+            <td>O(n log n)</td>
+            <td>O(n log n)</td>
+            <td>O(n log n)</td>
+        </tr>
+        <tr>
+            <td>Quick Sort</td>
+            <td>O(n log n)</td>
+            <td>O(n log n)</td>
+            <td>O(n<sup>2</sup>)</td>
+        </tr>
+    </tbody>
+</table>
+
+ <div class="slika-kontejner">
+    <img src="slike/grafik.png" alt="Grafik poređenja n^2 i n log n">
+</div>
+        </section>
+
+        <section id="cilj">
+    <h2>Cilj seminarskog rada</h2>
+    <p>
+        Fokus seminarskog je na detaljnoj analizi i komparaciji efikasnosti algoritama kroz prizmu asimptotske složenosti. 
+        Cilj je demonstrirati praktičnu implementaciju u jeziku <strong>C++</strong>, uz prateću <strong>LaTeX</strong> dokumentaciju 
+        koja formalizuje teorijske osnove i pruža uvid u kriterijume za izbor optimalnog rešenja u realnim sistemima.
+    </p>
+</section>
+    </main>
+
+<footer>
+    <p>&copy; 2026 Nikola Anđelković 32/2025 | Matematički fakultet, Univerzitet u Beogradu</p>
+</footer>
+
+</body>
+</html>

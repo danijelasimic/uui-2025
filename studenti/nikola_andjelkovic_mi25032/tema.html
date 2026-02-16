@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detaljna analiza algoritama | Nikola Anđelković</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Analiza algoritama za sortiranje</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="tema.html" class="active">Detaljna analiza</a></li>
+                <li><a href="rad.pdf" target="_blank">PDF Rad</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <article class="algoritam-sekcija">
+        <h2>1. Selection Sort</h2>
+        <p>
+            Algoritam selection sort se ukratko može opisati na sledeći način: ako niz ima više od jednog elementa, zameni početni element sa najmanjim elementom niza i zatim analogno sortiraj ostatak niza (elemente iza početnog). U svakoj iteraciji se na svoju poziciju dovodi sledeći po veličini element niza, tj. u <em>i</em>-toj iteraciji se <em>i</em>-ti po veličini element dovodi na poziciju <em>i</em>.
+        </p>
+        <p>
+            Ovo se može realizovati tako što se pronađe pozicija <em>m</em> najmanjeg elementa od pozicije <em>i</em> do kraja niza i zatim se razmene element na poziciji <em>i</em> i element na poziciji <em>m</em>. Algoritam se zaustavlja kada se pretposlednji po veličini element dovede na pretposlednju poziciju u nizu.
+        </p>
+        <div class="primer">
+            <strong>Primer:</strong> Niz [64, 25, 12, 22, 11]<br>
+            1. Tražimo min u [64...11] -> to je 11. Razmena 64 i 11. Niz: [11, 25, 12, 22, 64]<br>
+            2. Tražimo min u [25...64] -> to je 12. Razmena 25 i 12. Niz: [11, 12, 25, 22, 64]<br>
+            3. Tražimo min u [25...64] -> to je 22. Razmena 25 i 22. Niz: [11, 12, 22, 25, 64]
+        </div>
+    </article>
+
+    <article class="algoritam-sekcija">
+        <h2>2. Bubble Sort</h2>
+        <p>
+            Algoritam Bubble sort u svakom prolazu kroz niz poredi uzastopne elemente i razmenjuje im mesta ukoliko su u pogrešnom poretku. Prolasci kroz niz ponavljaju se sve dok se ne napravi prolaz u kojem nije bilo razmena, što znači da je niz sortiran.
+        </p>
+        <p>
+            Nakon <em>k</em>-te iteracije spoljašnje petlje, <em>k</em>-ti najveći element je na svojoj finalnoj, ispravnoj poziciji. Bubble sort je na osnovu ovog svojstva i dobio ime (jer veliki elementi kao mehurići <strong>"isplivavaju"</strong> ka kraju niza). Smatra se veoma lošim algoritmom i ne treba ga koristiti u praksi.
+        </p>
+        <div class="primer">
+            Prikaži rad algoritma na primeru sortiranja niza (6 1 4 3 9):<br><br>
+            <strong>Prvi prolaz:</strong>
+            <ul>
+                <li>( .6 1 4 3 9 ) &rarr; ( 1 6 4 3 9 ), razmena jer je 6 > 1</li>
+                <li>( 1 .6 4 3 9 ) &rarr; ( 1 4 6 3 9 ), razmena jer je 6 > 4</li>
+                <li>( 1 4 .6 3 9 ) &rarr; ( 1 4 3 6 9 ), razmena jer je 6 > 3</li>
+                <li>( 1 4 3 .6 9 ) &rarr; ( 1 4 3 6 9 )</li>
+            </ul>
+            <strong>Drugi prolaz:</strong>
+            <ul>
+                <li>( 1 4 3 6 9 ) &rarr; ( 1 4 3 6 9 )</li>
+                <li>( 1 4 3 6 9 ) &rarr; ( 1 3 4 6 9 ), razmena jer je 4 > 3</li>
+                <li>( 1 3 4 6 9 ) &rarr; ( 1 3 4 6 9 )</li>
+                <li>( 1 3 4 6 9 ) &rarr; ( 1 3 4 6 9 )</li>
+            </ul>
+            <strong>Treći prolaz:</strong>
+            <ul>
+                <li>( 1 3 4 6 9 ) &rarr; ( 1 3 4 6 9 )</li>
+                <li>( 1 3 4 6 9 ) &rarr; ( 1 3 4 6 9 )</li>
+                <li>( 1 3 4 6 9 ) &rarr; ( 1 3 4 6 9 )</li>
+                <li>( 1 3 4 6 9 ) &rarr; ( 1 3 4 6 9 )</li>
+            </ul>
+            <p><em>Primetimo da je niz bio sortiran već nakon drugog prolaza, međutim, da bi se to utvrdilo, potrebno je bilo napraviti još jedan prolaz.</em></p>
+        </div>
+    </article>
+
+    <article class="algoritam-sekcija">
+        <h2>3. Insertion Sort (Sortiranje umetanjem)</h2>
+        <p>
+            Algoritam sortira niz tako što jedan po jedan element niza umeće na odgovarajuće mesto u do tada sortirani deo niza. Ako niz ima više od jednog elementa, sortiraj sve elemente ispred poslednjeg, a zatim umetni poslednji u taj sortirani podniz.
+        </p>
+        <p>
+            Iako ima kvadratnu vremensku složenost, često je kod kratkih nizova <strong>brži od naprednijih algoritama</strong>. Najgori slučaj nastupa kada je niz sortiran u obratnom redosledu.
+        </p>
+        <div class="primer">
+            <strong>Primer:</strong> Niz [12, 11, 13, 5, 6]<br>
+            1. Uzimamo 11, poredimo sa 12. 11 < 12 -> [11, 12, 13, 5, 6]<br>
+            2. Uzimamo 13, ostaje gde jeste -> [11, 12, 13, 5, 6]<br>
+            3. Uzimamo 5, umećemo na početak -> [5, 11, 12, 13, 6]
+        </div>
+    </article>
+
+    <article class="algoritam-sekcija">
+        <h2>4. Merge Sort (Sortiranje spajanjem)</h2>
+        <p>
+            Merge sort je algoritam zasnovan na strategiji <strong>"Podeli pa vladaj"</strong> (Divide and Conquer). On rekurzivno deli niz na dve polovine dok ne dođe do nivoa pojedinačnih elemenata, a zatim te elemente spaja u sortirane celine.
+        </p>
+        <p>
+            Ovaj algoritam je stabilan i garantuje vremensku složenost od O(n log n) u svim slučajevima, ali zahteva dodatni memorijski prostor za pomoćni niz.
+        </p>
+        <div class="primer">
+            <strong>Primer:</strong> Niz [38, 27, 43, 3]<br>
+            1. Podeli: [38, 27] i [43, 3]<br>
+            2. Podeli: [38], [27], [43], [3]<br>
+            3. Spoji (sortirano): [27, 38] i [3, 43]<br>
+            4. Finalno spoji: [3, 27, 38, 43]
+        </div>
+    </article>
+
+    <article class="algoritam-sekcija">
+        <h2>5. Quick Sort (Brzo sortiranje)</h2>
+        <p>
+            Quick sort takođe koristi "Podeli pa vladaj" strategiju. Bira se jedan element koji se naziva <strong>pivot</strong>. Algoritam zatim raspoređuje ostale elemente tako da su svi manji od pivota levo, a svi veći desno od njega.
+        </p>
+        <p>
+            Ovaj proces se rekurzivno primenjuje na levu i desnu stranu. Iako mu je najgora složenost O(n<sup>2</sup>), u praksi je najčešće brži od Merge sorta jer radi "u mestu" bez potrebe za dodatnom memorijom.
+        </p>
+        <div class="primer">
+            <strong>Primer:</strong> Niz [10, 80, 30, 90, 40, 50, 70]<br>
+            1. Pivot je 70.<br>
+            2. Elementi manji od 70 idu levo: [10, 30, 40, 50].<br>
+            3. Elementi veći od 70 idu desno: [80, 90].<br>
+            4. Rezultat: [10, 30, 40, 50, 70, 80, 90].
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2026 Nikola Anđelković 32/2025 | Matematički fakultet, Univerzitet u Beogradu</p>
+</footer>
+
+</body>
+</html>
