@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="O meni, predmeti i materijali — MI25120." />
+  <title>O meni i predmeti — MI25120</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="site-header" class="header">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true">◆</span>
+      <span class="brand-title">
+        <strong>Portfolio</strong>
+        <span>MI25120 · Informatika</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Glavna navigacija">
+      <a class="nav-link" href="index.html">Početna</a>
+      <a class="nav-link" href="tema.html">O meni</a>
+      <a class="nav-link" href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scroll-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head reveal">
+      <h1 class="title">O meni</h1>
+      <p class="lead">
+        Dobro došli na moju web prezentaciju! Zovem se Miloš, student sam prve godine Matematičkog fakulteta Univerziteta u Beogradu.
+      </p>
+    </section>
+
+    <section class="two-col reveal">
+      <figure class="profile reveal">
+        <img src="./slike/profil.jpg" alt="Profilna fotografija autora" />
+      </figure>
+
+      <div class="reveal">
+        <h2 class="subtitle">Osnovne informacije</h2>
+        <ul class="list">
+          <li><strong>Ime:</strong> Miloš</li>
+          <li><strong>Fakultet:</strong> Matematički fakultet</li>
+          <li><strong>Smer:</strong> Informatika</li>
+          <li><strong>Broj indeksa:</strong> MI25120</li>
+          <li><strong>Email:</strong> mi25120@alas.matf.bg.ac.rs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <h2 class="subtitle">Predmeti</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Semestar</th>
+              <th>Predmeti</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. semestar</td>
+              <td>
+                <ul>
+                  <li>Uvod u programiranje</li>
+                  <li>Uvod u informatiku</li>
+                  <li>Linearna algebra i analitička geometrija</li>
+                  <li>Diskretne strukture</li>
+                  <li>Digitalni zapis podataka</li>
+                  <li>Tehničko naučno pisanje</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>2. semestar</td>
+              <td>
+                <ul>
+                  <li>Analiza 1</li>
+                  <li>Uvod u algoritme</li>
+                  <li>Uvod u organizaciju i arhitekturu računara</li>
+                  <li>Diskretne strukture 2</li>
+                  <li>Zetetika</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="strip reveal">
+      <h3>Materijali</h3>
+      <p>
+        Više materijala možete pronaći u PDF dokumentu: 
+        <a class="link" href="rad.pdf" target="_blank">rad.pdf</a>
+      </p>
+    </section>
+  </main>
+
+  <div id="footer-sentinel" aria-hidden="true"></div>
+
+  <footer class="footer">
+    <div class="footer-mini">© 2026 · MI25120</div>
+    <div class="footer-expanded">
+      <div class="footer-inner">
+        <div>
+          <h4>O projektu</h4>
+          <p>Jednostavna web prezentacija o meni i predmetima na fakultetu.</p>
+        </div>
+
+        <div>
+          <h4>Navigacija</h4>
+          <p><a class="link" href="index.html">Početna</a></p>
+          <p><a class="link" href="tema.html">O meni</a></p>
+          <p><a class="link" href="kontakt.html">Kontakt</a></p>
+        </div>
+
+        <div>
+          <h4>Resursi</h4>
+          <p><a class="link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></p>
+          <p><a class="link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS Validator</a></p>
+          <p><a class="link" href="https://www.matf.bg.ac.rs/" target="_blank" rel="noopener">MATF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
