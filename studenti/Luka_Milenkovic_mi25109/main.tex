@@ -1,0 +1,150 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel}
+
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\geometry{margin=2.5cm}
+
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{teorema}{Теорема}
+\newtheorem{lema}{Лема}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+
+\vspace*{4cm}  
+
+{\LARGE Математички факултет}\\[2cm]
+{\Large Семинарски рад}\\[0.3cm]
+{\large Увод у информатику}\\[1cm]
+
+\rule{\linewidth}{0.4mm}\\[0.4cm]
+{\LARGE\bfseries Питагорина теорема}\\[0.4cm]
+\rule{\linewidth}{0.4mm}
+
+\vspace*{\fill}  
+
+\large
+Лука Миленковић \\[0.5cm]
+Београд, \today
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Увод}
+
+\begin{wrapfigure}{l}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{slike/pitagora.jpg}
+    \caption{Геометријски доказ питагорине теореме}
+\end{wrapfigure}
+
+\textbf{Питагорина теорема} представља једну од најпознатијих теорема у математици. 
+Она описује однос страница у \textit{правоуглом троуглу}. 
+Теорема је добила име по старогрчком математичару Питагори.
+
+Основна формула гласи:
+\[
+a^2 + b^2 = c^2
+\]
+
+где су $a$ и $b$ катете, а $c$ хипотенуза правоуглог троугла.
+
+\section{Математичке основе}
+
+\subsection{Дефиниције}
+
+\begin{definicija}
+Правоугли троугао је троугао који има један угао од $90^\circ$.
+\end{definicija}
+
+\begin{definicija}
+Хипотенуза је страница правоуглог троугла која лежи наспрам правог угла.
+\end{definicija}
+
+\subsection{Лема и теорема}
+
+\begin{lema}
+Површина квадрата странице $a$ једнака је $a^2$.
+\end{lema}
+
+\begin{proof}
+Површина квадрата израчунава се као производ странице са самом собом.
+\end{proof}
+
+\begin{teorema}[Питагорина теорема]
+У правоуглом троуглу збир квадрата над катетама једнак је квадрату над хипотенузом:
+\[
+a^2 + b^2 = c^2.
+\]
+\end{teorema}
+
+\begin{proof}
+Конструишемо квадрат над сваком страницом правоуглог троугла. 
+Збир површина квадрата над катетама једнак је површини квадрата над хипотенузом. 
+Доказ се може извести геометријски или алгебарски.
+\end{proof}
+
+\subsection{Кораци рачунања}
+Листа корака рачунања:
+\begin{enumerate}
+    \item Квадрирати катете
+    \item Сабрати добијене вредности
+    \item Израчунати квадратни корен
+\end{enumerate}
+
+На пример, ако је $a = 3$ и $b = 4$, онда је:
+\[
+c = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5.
+\]
+
+\section{Питагорине тројке}
+
+Питагорина тројка је уређена тројка природних бројева a, b, и c за које важи Питагорина теорема. Бројеви за које важи дата релација се обично записују у облику (a, b, c). Један од најстаријих познатих примера је тројка (3, 4, 5), која се може наћи у заоставштини древних Вавилонаца и Египћана.
+
+Уколико је (a, b, c) Питагорина тројка, онда је то и свака тројка облика (ka, kb, kc) где је k произвољан природан број. Основна Питагорина тројка је тројка у којој су бројеви a, b и c узајамно прости. 
+
+\subsection{Пример Питагориних тројки}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+$a$ & $b$ & $c$ \\ 
+\hline
+3 & 4 & 5 \\ 
+5 & 12 & 13 \\ 
+8 & 15 & 17 \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\section{Примена}
+
+\begin{itemize}
+    \item Геометрија
+    \item Архитектура
+    \item Физика
+\end{itemize}
+
+\section{Закључак}
+
+Питагорина теорема представља \textbf{основни резултат еуклидске геометрије}. 
+Њена примена је широка и обухвата бројне области науке и технике. 
+\textcolor{blue}{Њена једноставност и елеганција} чине је једним од 
+најлепших резултата математике.
+
+\end{document}
