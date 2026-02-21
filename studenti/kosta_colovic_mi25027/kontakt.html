@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="rs">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kosta Čolović</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="center">
+      <div class="menu">
+        <input type="checkbox" name="" id="menu" />
+        <div class="logo">
+          Kosta Čolović
+          <label for="menu"></label>
+        </div>
+
+        <div class="items">
+          <a href="index.html" class="item">Početna</a>
+          <a href="interesi.html" class="item">O meni</a>
+          <a href="kontakt.html" class="item">Kontakt</a>
+          <a href="tema.html" class="item">LaTeX rad</a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <h2>Kontaktirajte me</h2>
+      <div class="kontakt-forma">
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/mwpnvjep"
+          method="POST"
+        >
+          <label for="ime">Ime i prezime:</label>
+          <input type="text" id="ime" name="ime" required />
+
+          <label for="email">Email adresa:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="poruka">Poruka:</label>
+          <textarea id="poruka" name="poruka" rows="5" required></textarea>
+
+          <button type="submit">Pošalji</button>
+        </form>
+        <p id="form-status"></p>
+      </div>
+
+      <a
+        href="https://rs.linkedin.com/in/kosta-%C4%8Dolovi%C4%87"
+        target="_blank"
+        >Moj LinkedIn profil</a
+      >
+    </main>
+  </body>
+</html>
