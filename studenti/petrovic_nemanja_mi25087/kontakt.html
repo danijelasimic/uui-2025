@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakt stranica - Nemanja Petrović">
+    <title>Kontakt | Nemanja Petrović</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigacija -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html"><strong>NP</strong></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="tema.html">Akademski Rad</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+        <div class="nav-contact">
+            <span>mi25087@alas.bg.ac.rs</span>
+        </div>
+    </nav>
+
+    <!-- Hero sekcija za kontakt -->
+    <section class="contact-hero">
+        <div class="contact-bg">
+            <img src="slike/kontakt-bg.jpg" alt="Matematička pozadina">
+        </div>
+        <div class="contact-overlay"></div>
+        <div class="contact-hero-content">
+            <h1 class="contact-title">Kontaktirajte me</h1>
+            <p class="contact-subtitle">Stojim vam na raspolaganju za sva pitanja i saradnju</p>
+        </div>
+    </section>
+
+    <!-- Glavni kontakt sadržaj -->
+    <main class="contact-main">
+        <div class="container">
+            
+            <div class="contact-grid">
+                <!-- Kontakt informacije -->
+                <section class="contact-info-section">
+                    <h2>Informacije za kontakt</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h3>📧 Email adrese</h3>
+                            <p>
+                                <strong>Fakultetski email:</strong><br>
+                                <a href="mailto:mi25087@alas.bg.ac.rs">mi25087@alas.bg.ac.rs</a>
+                            </p>
+                            <p>
+                                <strong>Lični email:</strong><br>
+                                <a href="mailto:petrovicnemanjabusiness@gmail.com">petrovicnemanjabusiness@gmail.com</a>
+                            </p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>🎓 Obrazovanje</h3>
+                            <p>
+                                <strong>Matematički fakultet</strong><br>
+                                Studentski trg 16<br>
+                                11000 Beograd, Srbija
+                            </p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>📱 Društvene mreže</h3>
+                            <ul class="social-links">
+                                <li><a href="https://rs.linkedin.com/" target="_blank">LinkedIn</a></li>
+                                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                                <li><a href="https://x.com/" target="_blank">Twitter</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>⏰ Radno vreme</h3>
+                            <p>
+                                Ponedeljak - Petak: <strong>09:00 - 17:00</strong><br>
+                                Vikendom: <em>Neaktivan</em>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Kontakt forma -->
+                <section class="contact-form-section">
+                    <h2>Pošaljite poruku</h2>
+                    <p>Popunite formu ispod i odgovoriću vam u najkraćem mogućem roku.</p>
+                    
+                    <form class="contact-form" action="#" method="POST">
+                        <!-- Ime i prezime -->
+                        <div class="form-group">
+                            <label for="ime">Ime i prezime <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="ime" 
+                                name="ime" 
+                                placeholder="Unesite vaše ime i prezime"
+                                required
+                            >
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email adresa <span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="vas@email.com"
+                                required
+                            >
+                        </div>
+                        
+                        <!-- Telefon (opciono) -->
+                        <div class="form-group">
+                            <label for="telefon">Telefon (opciono)</label>
+                            <input 
+                                type="tel" 
+                                id="telefon" 
+                                name="telefon" 
+                                placeholder="+381 XX XXX XXXX"
+                            >
+                        </div>
+                        
+                        <!-- Tema -->
+                        <div class="form-group">
+                            <label for="tema">Tema poruke <span class="required">*</span></label>
+                            <select id="tema" name="tema" required>
+                                <option value="">Izaberite temu</option>
+                                <option value="sadradnja">Saradnja</option>
+                                <option value="pitanje">Pitanje</option>
+                                <option value="predlog">Predlog</option>
+                                <option value="ostalo">Ostalo</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Prioritet -->
+                        <div class="form-group">
+                            <label>Prioritet</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="prioritet" value="nizak" checked>
+                                    <span>Nizak</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="prioritet" value="srednji">
+                                    <span>Srednji</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="prioritet" value="visok">
+                                    <span>Visok</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Checkbox za newsletter -->
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="da">
+                                <span>Želim da primam obaveštenja o novim projektima</span>
+                            </label>
+                        </div>
+                        
+                        <!-- Poruka -->
+                        <div class="form-group">
+                            <label for="poruka">Vaša poruka <span class="required">*</span></label>
+                            <textarea 
+                                id="poruka" 
+                                name="poruka" 
+                                rows="6" 
+                                placeholder="Ovde unesite vašu poruku..."
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <!-- Dugmad -->
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-primary">
+                                <strong>Pošalji poruku</strong>
+                            </button>
+                            <button type="reset" class="btn-secondary">
+                                Obriši formu
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Mapa sekcija -->
+            <section class="location-section">
+                <h2>Lokacija fakulteta</h2>
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>Matematički fakultet</h3>
+                        <p>
+                            <strong>Adresa:</strong> Studentski trg 16, Beograd<br>
+                            <strong>Telefon:</strong> +381 11 202 73 00<br>
+                            <strong>Website:</strong> <a href="http://www.matf.bg.ac.rs" target="_blank">www.matf.bg.ac.rs</a>
+                        </p>
+                        <p>
+                            Fakultet se nalazi u samom centru Beograda, u neposrednoj blizini 
+                            Studentskog parka i Kalemegdana.
+                        </p>
+                    </div>
+                    <div class="location-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.789123456789!2d20.456789!3d44.818901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7ab03abcde%3A0x1234567890abcdef!2sStudentski%20trg%2016%2C%20Beograd!5e0!3m2!1ssr!2srs!4v1234567890"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Lokacija Matematičkog fakulteta"
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Često postavljana pitanja -->
+            <section class="faq-section">
+                <h2>Često postavljana pitanja</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Koliko brzo dobijam odgovor?</h3>
+                        <p>
+                            Trudim se da odgovorim na sve poruke u roku od <strong>24-48 sati</strong> 
+                            tokom radnih dana.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Da li primam ponude za saradnju?</h3>
+                        <p>
+                            Da, uvek sam otvoren za nove projekte i saradnje, posebno one koje 
+                            uključuju matematiku i programiranje.
+                        </p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Da li pružam instrukcije?</h3>
+                        <p>
+                            Povremeno pružam instrukcije iz matematike za srednjoškolce i 
+                            studente. Kontaktirajte me za više informacija.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Nemanja Petrović</strong></p>
+                    <p>Student Matematičkog fakulteta</p>
+                    <p>Broj indeksa: 87/2025</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Početna</a>
+                    <a href="tema.html">Akademski Rad</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </div>
+                <div class="footer-contact">
+                    <p>Webmail: <a href="mailto:mi25087@alas.bg.ac.rs">mi25087@alas.bg.ac.rs</a></p>
+                    <p>Email: <a href="mailto:petrovicnemanjabusiness@gmail.com">petrovicnemanjabusiness@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nemanja Petrović. Sva prava zadržana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Validacija forme
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const ime = document.getElementById('ime').value;
+            const email = document.getElementById('email').value;
+            const poruka = document.getElementById('poruka').value;
+            
+            if (ime && email && poruka) {
+                alert('Hvala na poruci! Odgovoriću vam u najkraćem mogućem roku.');
+                this.reset();
+            } else {
+                alert('Molimo popunite sva obavezna polja.');
+            }
+        });
+
+        // Animacija pri skrolovanju
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.contact-item, .faq-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
