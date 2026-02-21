@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Криптографија</title>
+	<link rel="stylesheet" type="text/css" href="stil.css">
+	<link rel="icon" type="image/x-icon" href="Slike/logomatf.png">
+</head>
+<body>
+
+<nav>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="index.html"><img src="Slike/home.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="tema.html"><img src="Slike/sifra.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="kriptografija.pdf"><img src="Slike/dokument.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="kontakt.html"><img src="Slike/contact-us.png" alt="Slika" class="ikona"></a>
+	</div>
+	<p class="text1">Почетна</p>
+	<p class="text2">Тема</p>
+	<p class="text3">Више</p>
+	<p class="text4">Контакт</p>
+</nav>
+
+<div id="kontenjer0">
+	<h1>Основни типови криптографије</h1>	
+	<img src="Slike/logomatf.png" alt="Slika" id="logomatf">
+</div>
+
+<div id="sve">
+	<div id="kontenjer4">
+		<div class="tuk">
+			<p class="naslov">Симетрична криптографија</p>
+			<p class="razrada">Симетрична криптографија користи исти кључ за шифровање и дешифровање поруке. То значи да пошиљалац и прималац морају на безбедан начин да размене тајни кључ пре почетка комуникације.</p>	
+			<p class="naslov">Карактеристике:</p>
+			<ul class="razrada">
+				<li>велика брзина обраде</li>
+				<li>погодна за велике количине података</li>
+				<li>проблем сигурне размене кључа</li>
+			</ul>
+		</div>		
+	</div>
+
+	<div id="kontenjer4">
+		<div class="tuk">
+			<p class="naslov">Асиметрична криптографија</p>
+			<p class="razrada">Код асиметричне криптографије користе се два кључа: јавни и приватни. Јавни кључ је доступан свима, док приватни остаје тајна власника.</p>
+			<p class="naslov">Карактеристике:</p>
+			<ul class="razrada">
+				<li>омогућава сигурну комуникацију без претходне размене тајног кључа</li>
+				<li>користи се за дигиталне потписе</li>
+				<li>спорија је у односу на симетричну</li>
+			</ul>
+		</div>		
+	</div>
+
+	<div id="kontenjer4">
+		<div class="tuk">
+			<p class="naslov">Хеш функције</p>
+			<p class="razrada">Хеш функције служе за претварање података у јединствен низ фиксне дужине. Оне се најчешће користе за чување лозинки и проверу интегритета података.</p>
+			<p class="naslov">Карактеристике:</p>
+			<ul class="razrada">
+				<li>нема повратног процеса дешифровања</li>
+				<li>брзе су за израчунавање</li>
+				<li>мала промена у улазу даје потпуно другачији резултат</li>
+			</ul>
+		</div>		
+	</div>
+
+	<div id="kontenjer1">
+		<div class="tuk">
+			<table>
+				<tr>
+  					<th>Метод</th>
+    				<th>Број кључева</th>
+    				<th>Брзина</th>
+    				<th>Типична примена</th>
+  				</tr>
+  				<tr>
+    				<td>Симетрична</td>
+   		 			<td>један</td>
+    				<td>веома брза</td>
+    				<td>енкрипција датотека</td>
+  				</tr>
+  				<tr>
+    				<td>Асиметрична</td>
+   		 			<td>два</td>
+    				<td>спорија</td>
+    				<td>дигитални сертификати</td>
+  				</tr>
+  				<tr>
+    				<td>Хеш функције</td>
+   		 			<td>нема</td>
+    				<td>веома брза</td>
+    				<td>лозинке</td>
+  				</tr>
+			</table>
+		</div>		
+	</div>
+
+</div>
+
+</body>
+<script>
+let nav = document.querySelector('nav');
+let sve = document.getElementById('sve');
+
+function ulaz() {
+    nav.style.width = "260px";
+    sve.style.left = "160px";
+}
+
+function izlaz() {
+   	 	nav.style.width = "100px";
+   		sve.style.left = "0px"; 
+}
+</script>
+</html>

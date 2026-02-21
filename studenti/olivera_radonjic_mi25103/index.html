@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming PC Shop - Početna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header style="padding: 0px; background:#0d1220;">
+        <img src="slike/naslov.png" alt="HARDVER SHOP Logo" style="height:110px; display:block;">
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Početna</a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-puzzle-piece"></i> Komponente ▼</button>
+                <div class="dropdown-content">
+                    <a href="komponente.html#gpu">Grafičke karte</a>
+                    <a href="komponente.html#cpu">Procesori</a>
+                    <a href="komponente.html#ram">Memorija & Storage</a>
+                </div>
+            </div>
+            <a href="o-nama.html"><i class="fa-solid fa-user"></i> O nama</a>
+            <a href="kontakt.html"><i class="fa-solid fa-mobile"></i> Prijava</a>
+        </div>
+
+        <div class="nav-cart">
+            <a href="korpa.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i> Korpa</a>
+            <button id="logout-btn" class="logout-link" style="display: none;">
+                <i class="fa-solid fa-right-from-bracket"></i> Odjavi se
+            </button>
+        </div>
+
+    </nav>
+
+    <div class="marquee">
+        <p>🔥 Promo: RTX 5090 Ti - 30% POPUST! &nbsp;&nbsp; | &nbsp;&nbsp;💻 Sastavi svoj High-End PC već danas!
+            &nbsp;&nbsp; | &nbsp;&nbsp;🖱️ Besplatna dostava za porudžbine preko 200€!</p>
+    </div>
+
+    <section style="text-align:center; padding:10px 10px;">
+        <h1>Dobrodošli u Gaming PC Shop</h1>
+        <p>Najbolje komponente za vaš savršeni gaming PC. Izaberite i sastavite svoj build!</p>
+        <img src="slike/pc.jpg" alt="Hero Gaming PC"
+            style="max-width:20%; border-radius:12px; margin-top:20px; box-shadow:0 0 20px rgba(0,0,0,0.7);">
+    </section>
+
+    <section style="padding:50px;">
+        <h2 style="text-align:center; margin-bottom:20px;">Featured Komponente</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="slike/gpu1.jpg" alt="NVIDIA GPU">
+                <div class="card-content">
+                    <h3>NVIDIA RTX 5090 Ti</h3>
+                    <p>Ultimate GPU za 4K gaming i ray tracing iskustvo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="slike/cpu1.jpg" alt="AMD CPU">
+                <div class="card-content">
+                    <h3>AMD Ryzen 9 7950X</h3>
+                    <p>Vrhunski procesor za multitasking i gaming performanse.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="slike/ram1.jpg" alt="DDR5 RAM">
+                <div class="card-content">
+                    <h3>Corsair 32GB DDR5</h3>
+                    <p>Brza i stabilna memorija za maksimalan FPS.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="slike/ssd1.jpg" alt="NVMe SSD">
+                <div class="card-content">
+                    <h3>Samsung 2TB NVMe SSD</h3>
+                    <p>Ultra brzi SSD za brzo učitavanje igara i sistema.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gaming PC Shop | Sva prava zadržana</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

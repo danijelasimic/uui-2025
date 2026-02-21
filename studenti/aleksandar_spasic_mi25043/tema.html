@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sr-latin">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Akademska tema</title>
+    </head>
+    <body>
+        <header>
+            <h1>Aleksandar Spasić</h1>
+        </header>
+        <nav class="navigacija">
+            <ul>
+                <li><a href="index.html">Početna strana</a></li>
+                <li><a href="licna.html">O meni</a></li>
+                <li><a href="tema.html">Akademska tema</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>Algoritam selection sort</h2>
+                <p>Algoritam <strong>selection sort</strong> se zasniva na sledećem: ako niz ima više od jednog elementa, zameni početni element sa najmanjim elemntom niza i zatim analogno sortiraj ostatak niza (tj. elemente iza početnog).</p>
+                <p>Efikasnost ovog algoritma je O(n^2). 
+                <p>Primer rada algoritma na sortiranju niza 64 25 12 22 11:</p>
+                <ul>
+                    <li> <strong>.64</strong> 25 12 22 11, <i>i</i> = 0, <i>m</i> = 4, <i>razmena elemenata 64 i 11</i>.</li>
+                    <li> 11 <strong>.25</strong> 12 22 64, <i>i</i> = 1, <i>m</i> = 3, <i>razmena elemenata 25 i 12</i>.</li>
+                    <li> 11 12 <strong>.25</strong> 22 64, <i>i</i> = 2, <i>m</i> = 3, <i>razmena elemenata 25 i 22</i>.</li>
+                    <li> 11 12 22 <strong>.25</strong> 64, <i>i</i> = 3, <i>m</i> = 3, <i>razmena elemenata 25 i 25</i>.
+                        <li> 11 12 22 25 .64, <i>i</i> = 4.</li>
+                </ul>
+            </section>
+            <section>
+                <p>Opis rada selection sort algoritma je detaljnije prikazan u ovom akademskom tekstu: <a href="rad.pdf" target="_blank">link</a>
+            </section>
+        </main>
+        <aside>
+            <img src="./slike/Selection-sort.png" alt="Ilustrovan prikaz rada selection sort algoritma">
+        </aside>
+    </body>
+</html>

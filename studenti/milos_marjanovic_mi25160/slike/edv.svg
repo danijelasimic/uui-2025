@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <defs>
+    <linearGradient id="citySky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5B86E5"/>
+      <stop offset="100%" stop-color="#89CFF0"/>
+    </linearGradient>
+    <linearGradient id="vanBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E5E7EB"/>
+      <stop offset="100%" stop-color="#9CA3AF"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="500" height="300" fill="url(#citySky)"/>
+  
+  <!-- Sun -->
+  <circle cx="420" cy="60" r="30" fill="#FCD34D"/>
+  <circle cx="420" cy="60" r="24" fill="#FDE68A"/>
+  
+  <!-- Clouds -->
+  <g fill="white" opacity="0.9">
+    <ellipse cx="80" cy="50" rx="35" ry="18"/>
+    <ellipse cx="110" cy="45" rx="28" ry="15"/>
+    <ellipse cx="55" cy="48" rx="22" ry="12"/>
+    
+    <ellipse cx="320" cy="70" rx="30" ry="15"/>
+    <ellipse cx="345" cy="65" rx="25" ry="13"/>
+  </g>
+  
+  <!-- City buildings - back -->
+  <rect x="20" y="140" width="50" height="90" fill="#6B7280"/>
+  <rect x="80" y="120" width="40" height="110" fill="#4B5563"/>
+  <rect x="130" y="150" width="55" height="80" fill="#6B7280"/>
+  <rect x="320" y="130" width="45" height="100" fill="#4B5563"/>
+  <rect x="375" y="145" width="60" height="85" fill="#6B7280"/>
+  <rect x="445" y="160" width="55" height="70" fill="#4B5563"/>
+  
+  <!-- Building windows -->
+  <g fill="#FDE68A" opacity="0.6">
+    <rect x="30" y="150" width="8" height="8"/>
+    <rect x="45" y="150" width="8" height="8"/>
+    <rect x="30" y="165" width="8" height="8"/>
+    <rect x="45" y="165" width="8" height="8"/>
+    <rect x="90" y="130" width="8" height="8"/>
+    <rect x="105" y="130" width="8" height="8"/>
+    <rect x="90" y="145" width="8" height="8"/>
+    <rect x="330" y="140" width="8" height="8"/>
+    <rect x="345" y="140" width="8" height="8"/>
+    <rect x="385" y="155" width="8" height="8"/>
+    <rect x="400" y="155" width="8" height="8"/>
+  </g>
+  
+  <!-- Ground/Street -->
+  <rect y="220" width="500" height="80" fill="#4B5563"/>
+  
+  <!-- Road -->
+  <rect x="0" y="230" width="500" height="55" fill="#374151"/>
+  <line x1="0" y1="257" x2="500" y2="257" stroke="#FCD34D" stroke-width="3" stroke-dasharray="20,15"/>
+  
+  <!-- Sidewalk -->
+  <rect x="0" y="220" width="500" height="12" fill="#9CA3AF"/>
+  
+  <!-- EDV Van -->
+  <g transform="translate(130, 160)">
+    <!-- Shadow -->
+    <ellipse cx="120" cy="95" rx="110" ry="10" fill="rgba(0,0,0,0.2)"/>
+    
+    <!-- Main cargo body -->
+    <rect x="75" y="15" width="160" height="70" rx="6" fill="url(#vanBody)"/>
+    
+    <!-- Cabin -->
+    <path d="M15,30 L15,85 L90,85 L90,15 L50,15 L15,30 Z" fill="url(#vanBody)"/>
+    
+    <!-- Cabin roof -->
+    <path d="M15,30 L50,15 L90,15 L90,30 Z" fill="#D1D5DB"/>
+    
+    <!-- Windshield -->
+    <path d="M22,38 L53,20 L82,20 L82,60 L22,60 Z" fill="#89CFF0"/>
+    <path d="M26,40 L54,23 L65,23 L37,40 Z" fill="white" opacity="0.4"/>
+    
+    <!-- Side window -->
+    <rect x="28" y="45" width="30" height="22" rx="2" fill="#89CFF0"/>
+    
+    <!-- Amazon smile logo -->
+    <path d="M120,45 Q165,70 210,45" stroke="#FF9900" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="112" cy="42" r="5" fill="#FF9900"/>
+    
+    <!-- Cargo door -->
+    <line x1="175" y1="20" x2="175" y2="80" stroke="#9CA3AF" stroke-width="2"/>
+    <rect x="167" y="45" width="6" height="12" rx="1" fill="#6B7280"/>
+    <rect x="180" y="45" width="6" height="12" rx="1" fill="#6B7280"/>
+    
+    <!-- Headlight bar - Rivian signature -->
+    <rect x="13" y="38" width="5" height="32" rx="2" fill="#FCD34D"/>
+    
+    <!-- Rear lights -->
+    <rect x="230" y="25" width="5" height="25" rx="2" fill="#EF4444"/>
+    <rect x="230" y="55" width="5" height="20" rx="2" fill="#FCD34D"/>
+    
+    <!-- Front wheel -->
+    <g transform="translate(55, 85)">
+      <circle r="22" fill="#1F2937"/>
+      <circle r="17" fill="#374151"/>
+      <circle r="11" fill="#1F2937"/>
+      <circle r="5" fill="#4B5563"/>
+      <circle r="2" fill="#FCD34D"/>
+    </g>
+    
+    <!-- Rear wheel -->
+    <g transform="translate(195, 85)">
+      <circle r="22" fill="#1F2937"/>
+      <circle r="17" fill="#374151"/>
+      <circle r="11" fill="#1F2937"/>
+      <circle r="5" fill="#4B5563"/>
+      <circle r="2" fill="#FCD34D"/>
+    </g>
+    
+    <!-- Rivian badge -->
+    <rect x="30" y="68" width="35" height="12" rx="2" fill="#1A3D3D"/>
+    <text x="47" y="77" font-family="Arial, sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">RIVIAN</text>
+    
+    <!-- Side mirror -->
+    <ellipse cx="18" cy="40" rx="7" ry="5" fill="#9CA3AF"/>
+  </g>
+  
+  <!-- Some packages being delivered hint -->
+  <g transform="translate(400, 200)">
+    <rect x="0" y="0" width="25" height="20" fill="#D97706" rx="2"/>
+    <rect x="30" y="5" width="20" height="15" fill="#D97706" rx="2"/>
+  </g>
+</svg>

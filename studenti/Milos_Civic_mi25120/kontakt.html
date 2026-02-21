@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kontakt — demonstrativna forma (MI25120)." />
+  <title>Kontakt — MI25120</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="site-header" class="header">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true">◆</span>
+      <span class="brand-title">
+        <strong>Portfolio</strong>
+        <span>MI25120 · Informatika</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Glavna navigacija">
+      <a class="nav-link" href="index.html">Početna</a>
+      <a class="nav-link" href="tema.html">Veštine &amp; Projekti</a>
+      <a class="nav-link" href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scroll-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head reveal">
+      <h1 class="title">Kontakt</h1>
+      <p class="lead">Forma je demonstrativna — služi za prikaz HTML elemenata, stilizacije i UX detalja.</p>
+    </section>
+
+    <section class="grid reveal-group reveal">
+      <article class="card reveal">
+        <h3>📌 Info</h3>
+        <p class="muted">
+          Ne objavljujem privatne podatke u javnom repozitorijumu. Kontakt je preko forme (demo) ili linkova.
+        </p>
+        <ul class="list">
+          <li><strong>Fokus:</strong> Web, QA, analitika</li>
+          <li><strong>Lokacija:</strong> Beograd (opšti podatak)</li>
+          <li><strong>Status:</strong> student (MI25120)</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3>🔗 Brzi linkovi</h3>
+        <ul class="list">
+          <li><a class="link" href="tema.html">Veštine &amp; Projekti</a></li>
+          <li><a class="link" href="index.html">Početna</a></li>
+          <li><a class="link" href="https://www.latex-project.org/" target="_blank" rel="noopener">LaTeX</a></li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3>✅ Cilj forme</h3>
+        <p>
+          Da pokaže elemente: <strong>form</strong>, <strong>input</strong>, <strong>textarea</strong>, <strong>button</strong> i njihove
+          <em>hover/focus</em> stilove.
+        </p>
+        <p class="muted">Nema backend — nema slanja poruka.</p>
+      </article>
+    </section>
+
+    <section class="card reveal mt-md">
+      <h2 class="subtitle">Pošalji poruku (demo)</h2>
+
+      <form id="contact-form" class="form" action="#" method="post">
+        <div class="form-row">
+          <label for="ime">Ime</label>
+          <input id="ime" name="ime" type="text" placeholder="Unesi ime" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="primer@email.com" required />
+        </div>
+
+        <div class="form-row">
+          <label for="tema">Tema</label>
+          <input id="tema" name="tema" type="text" placeholder="Npr. web projekat / QA / saradnja" />
+        </div>
+
+        <div class="form-row">
+          <label for="poruka">Poruka</label>
+          <textarea id="poruka" name="poruka" rows="5" placeholder="Napiši poruku..." required></textarea>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" type="submit">Pošalji</button>
+          <button class="btn btn-ghost" type="reset">Očisti</button>
+        </div>
+
+        <p class="note">*Ne unosi privatne podatke. Forma je demonstrativna.</p>
+      </form>
+    </section>
+
+    <section class="strip reveal">
+      <h3>FAQ</h3>
+      <ul class="list">
+        <li><strong>Da li forma radi?</strong> Ne — nema backend, samo UI prikaz.</li>
+        <li><strong>Zašto nema privatnih podataka?</strong> Projekat je javan u repozitorijumu.</li>
+        <li><strong>Šta dalje?</strong> LaTeX deo (main.tex → rad.pdf) + Git predaja.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer-sentinel" aria-hidden="true"></div>
+
+  <footer class="footer">
+    <div class="footer-mini">© 2026 · MI25120</div>
+
+    <div class="footer-expanded">
+      <div class="footer-inner">
+        <div>
+          <h4>O projektu</h4>
+          <p>Portfolio &amp; Case Studies (HTML + CSS + lokalni resursi). Fokus: UX čistoća, tipografija i mikro-interakcije.</p>
+          <p class="muted">Kontakt forma je demonstrativna.</p>
+        </div>
+
+        <div>
+          <h4>Navigacija</h4>
+          <p><a class="link" href="index.html">Početna</a></p>
+          <p><a class="link" href="tema.html">Veštine &amp; Projekti</a></p>
+          <p><a class="link" href="kontakt.html">Kontakt</a></p>
+        </div>
+
+        <div>
+          <h4>Resursi</h4>
+          <p><a class="link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></p>
+          <p><a class="link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS Validator</a></p>
+          <p><a class="link" href="https://www.matf.bg.ac.rs/" target="_blank" rel="noopener">MATF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

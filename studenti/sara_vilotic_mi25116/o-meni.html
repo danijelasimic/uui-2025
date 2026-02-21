@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>О мени - Сара</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page">
+    <div class="background-box">
+
+        <!-- NAVIGACIJA -->
+        <div class="nav-toggle" id="navToggle">
+            <span class="menu-icon">☰</span>
+            <div class="nav-dropdown">
+                <div class="nav-white-cloud">
+                    <div class="nav-table">
+                        <div class="nav-cell"><a href="index.html">Почетна</a></div>
+                        <div class="nav-cell"><a href="o-meni.html">О мени</a></div>
+                        <div class="nav-cell"><a href="akademska_tema.html">Академска тема</a></div>
+                        <div class="nav-cell"><a href="raspored.html">Распоред</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header2">
+            <h1>Нешто више о мени</h1>
+        </div>
+
+        <!-- AUDIO DUGME -->
+        <div class="audio-wrapper" id="audioButton">
+            <img src="slike/audio.jpg" alt="Audio" class="audio-icon">
+        </div>
+
+        <audio id="myAudio">
+            <source src="dodatno/pesma.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- PRVI OBLACIC -->
+        <div class="container about-container">
+            <div class="card about-card">
+                <h2>Кратки опис</h2>
+                <p>
+                    Ја сам Сара Вилотић, студент
+                    <a href="https://www.matf.bg.ac.rs/" target="_blank" class="green-link">
+                        Математичког факултета у Београду
+                    </a>.
+                    Рођена сам у Шапцу, где сам завршила Шабачку гимназију, смер за ученике са посебним способностима
+                    за рачунарство и информатику. Током основне и средње школе, тренирала сам одбојку и пливање.
+                </p>
+            </div>
+        </div>
+
+        <!-- DRUGI OBLACIC SA SLIKAMA -->
+        <div class="container about-container">
+            <div class="card slider-card">
+                <div class="slider">
+                    <button class="slider-btn left" onclick="prevSlide()">❮</button>
+                    <img src="slike/trkaliste.png" class="slide active">
+                    <img src="slike/gimnazija.png" class="slide">
+                    <img src="slike/trg.jpg" class="slide">
+                    <img src="slike/tvrdjava.jpg" class="slide">
+                    <button class="slider-btn right" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRECI OBLACIC -->
+        <div class="container about-container">
+            <div class="card basketball-card">
+                <img src="slike/boston.png" alt="Boston Celtics">
+                <p>
+                    У слободно време волим да гледам кошарку, поготово НБА. Велики сам фан
+                    <a href="https://www.nba.com/celtics/" target="_blank" class="green-link">
+                        <b>Boston Celtics</b>
+                    </a>
+                    и
+                    <a href="https://kkcrvenazvezda.rs/" target="_blank" class="green-link">
+                        <b>Црвене звезде</b>
+                    </a>.
+                    Моји омиљени играчи су
+                    <a href="https://www.nba.com/stats/player/951/career" target="_blank" class="green-link"><b>Ray Allen</b></a>,
+                    <a href="https://www.nba.com/stats/player/202738/career" target="_blank" class="green-link"><b>Isaiah Thomas</b></a>,
+                    <a href="https://www.euroleaguebasketball.net/euroleague/players/joel-bolomboy/009035/" target="_blank" class="green-link"><b>Joel Bolomboy</b></a>,
+                    <a href="https://www.nba.com/stats/player/893/career" target="_blank" class="green-link"><b>Michael Jordan</b></a>
+                    и
+                    <a href="https://www.nba.com/stats/player/201565/career" target="_blank" class="green-link"><b>Derrick Rose</b></a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- CETVRTI OBLACIC -->
+        <div class="container about-container">
+            <div class="card about-card">
+                <h2>Моји фаворити</h2>
+                <table class="favorites-table">
+                    <thead>
+                        <tr>
+                            <th>Филмови</th>
+                            <th>Серије</th>
+                            <th>Књиге</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fight Club</td>
+                            <td>Peaky Blinders</td>
+                            <td>Свештеникова кћи</td>
+                        </tr>
+                        <tr>
+                            <td>She's the Man</td>
+                            <td>The Gentlemen</td>
+                            <td>Рат и мир</td>
+                        </tr>
+                        <tr>
+                            <td>Лајање на звезде</td>
+                            <td>Lupin</td>
+                            <td>Беле ноћи</td>
+                        </tr>
+                        <tr>
+                            <td>Se7en</td>
+                            <td>Gossip Girl</td>
+                            <td>Браћа Карамазови</td>
+                        </tr>
+                        <tr>
+                            <td>She's All That</td>
+                            <td>Bridgerton</td>
+                            <td>Опсада цркве Светог Спаса</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button id="backToTop">⬆ Врати се на врх</button>
+
+        <footer class="site-footer">
+            <p>
+                © Сара Вилотић |
+                <a href="https://www.matf.bg.ac.rs/" target="_blank" class="green-link">
+                    Математички факултет Универзитета у Београду
+                </a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        const navToggle = document.getElementById("navToggle");
+        const navDropdown = navToggle.querySelector(".nav-dropdown");
+
+        navToggle.addEventListener("click", () => {
+            navDropdown.classList.toggle("active");
+            navToggle.classList.toggle("active");
+        });
+
+        const audioButton = document.getElementById("audioButton");
+        const audio = document.getElementById("myAudio");
+
+        audioButton.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                audioButton.classList.add("active");
+            } else {
+                audio.pause();
+                audioButton.classList.remove("active");
+            }
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
