@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="tema.html">Bubble Sort</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+</nav>
+
+
+    <section>
+
+        <h2>Kako funkcioniše Bubble Sort?</h2>
+        <p>
+            Bubble Sort je jednostavan algoritam sortiranja koji prolazi kroz niz više puta.
+            U svakom prolazu upoređuje susedne elemente i zamenjuje ih ako su u pogrešnom redosledu.
+            Najveći element "ispliva" na kraj niza nakon svakog prolaza.
+        </p>
+
+
+        <h2>Koraci algoritma</h2>
+
+        <ol>
+            <li>Prođi kroz niz od početka do kraja.</li>
+            <li>Uporedi susedne elemente.</li>
+            <li>Ako je levi element veći od desnog – zameni ih.</li>
+            <li>Ponovi postupak dok niz ne bude sortiran.</li>
+        </ol>
+
+
+        <h2>Primer rada</h2>
+        <p>
+            Niz: 5 3 8 4
+        </p>
+
+        <p>
+            1. prolaz:<br>
+            5 i 3 → zamena → 3 5 8 4<br>
+            5 i 8 → nema zamene<br>
+            8 i 4 → zamena → 3 5 4 8
+        </p>
+
+        <p>
+            2. prolaz:<br>
+            3 i 5 → nema zamene<br>
+            5 i 4 → zamena → 3 4 5 8
+        </p>
+
+        <p>
+            Sortiran niz: 3 4 5 8
+        </p>
+
+        <h2>C++ Primer Koda</h2>
+
+<pre>
+void bubbleSort(int niz[], int n) {
+    for(int i = 0; i < n - 1; i++) {
+        for(int j = 0; j < n - i - 1; j++) {
+            if(niz[j] > niz[j + 1]) {
+                swap(niz[j], niz[j + 1]);
+            }
+        }
+    }
+}
+</pre>
+
+        <br>
+
+<a href="tekst.pdf" target="_blank">
+    <button type="button">PDF</button>
+</a>
+
+
+<a href="main.tex" target="_blank">
+    <button type="button">Latex</button>
+</a>
+
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+html {
+    background-color: #000000; /* crna boja kao fallback */
+    background-image: url(slike/pozadina.jpg); /* pozadinska slika */
+    background-size: cover;       /* da pokrije celu stranu */
+    background-position: center;  /* centrirana */
+    background-repeat: no-repeat; /* bez ponavljanja */
+}
+
+
+#glava {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url(slike/header.gif); /* crna boja header panela */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+
+body {
+    padding-top: 205px;
+}
+
+#naslov {
+    border: 1px solid #006400; /* tamno zelena ivica */
+    border-radius: 2px;
+    background-image: url(slike/serveri.jpg); /* pozadina serveri.jpg */
+    background-size: cover;
+    background-position: center;
+    padding: 32px 24px;
+    margin: 20px;
+    margin-right: 35px;
+    font-family: 'Times New Roman', serif;
+}
+
+a {
+    display: inline-block;
+    padding: 20px;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent;
+    color: #00d600; /* tamno zelena linkovi */
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    border-bottom-color: white;
+}
+
+h1 {
+    /* Прегледач има подразумевану маргину на елементу. */
+    background-color: #000000d3;
+    margin: 0;
+    border-radius: 5px;
+}
+
+#naslovna {
+    object-fit: cover;
+
+    /* Величина слике */
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+#showoff {
+    float: right;
+    width: 360px;
+    height: 360px;
+    background-color: #0000009f;
+    border: 10px solid #000000;
+    margin-top: 125px;
+    margin-right: 150px;
+}
+
+p {
+    text-decoration: solid;
+    font-size: 50px;
+    margin-left: 50px;
+    color: #fff;
+}
+
+#slogan {
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-right: 1050px;
+    padding-right: 50px;
+    border: 5px solid #000000;
+    background-color: #03a803;
+    text-align: center;
+}
+
+#github {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin-top: 100px;
+    padding-right: 200px;
+    padding-left: 20px;
+    border: 2px solid #000000;
+    border-left: 0px;
+    background-color: #2c2a2aee;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+p.prvi {
+    margin-left: 1250px;
+    margin-top: 100px;
+    padding: 25px;
+    font-size: 30px;
+    background-color: #006400;
+}
+
+#pod {
+    margin-top: 150px;
+    width: 99%;
+    background-color: #006400; /* crna boja footer panela */
+    color: #fff;
+    padding: 10px;
+    padding-bottom: 25px;
+    border-bottom: 5px solid black;
+}
+
+#insta, #tiktak, #facebook, #youtube {
+    width: 40px;
+    height: 40px;
+    margin-top: 7px;
+}

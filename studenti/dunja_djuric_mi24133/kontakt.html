@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Мој сајт</title>
+    <link rel="icon" type="image/gif" href="slike/favicon.gif">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title-div">
+        <h1>Добродошли на мој сајт!</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Почетна страна</a></li>
+            <li><a href="kontakt.html">Контакт</a></li>
+            <li><a href="tema.html">Академска тема</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="content-box">
+            <h2>Контактирајте ме!</h2>
+            <p>  ✉:<a href="mailto:mi24133@alas.matf.bg.ac.rs">mi24133@alas.matf.bg.ac.rs</a></p>
+            <form>
+                <input type="text" placeholder="Унесите ваше име (ако желите)">
+                <input type="email" id="emailInput" placeholder="Унесите вашу имејл адресу" required>
+                <textarea id="messageArea" placeholder="Унесите поруку (нпр. препоруке за читање (˶ˆᗜˆ˵) )" rows="7" required></textarea>
+                <button type="submit">Пошаљи</button>
+            </form>
+        </div>
+
+        <div class="image-box">
+            <img src="slike/ribice.png" width="250px" height="auto" class="slika"  alt="slika fraktala" title="slika riba">
+        </div>
+        <img src="slike/koral.png" class="slika" id="koral" alt="slika korala" title="slika korala">
+    </div>   
+    <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+        }
+        else
+        {
+            alert("Порука је послата!");
+        }
+    });
+    
+       
+    </script>
+</body>
+
+</html>

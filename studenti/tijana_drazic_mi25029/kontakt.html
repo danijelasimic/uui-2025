@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="nav-kontejner">
+        <div class="logo">Информатика у машинском учењу</div>
+        <nav id="nav">
+            <ul class="nav-linkovi">
+                <li><a href="index.html">Почетна</a></li>
+                <li><a href="ml.html">Примене</a></li>
+                <li><a href="tema.html">Академски део</a></li>
+                <li><a href="kontakt.html">Контакт</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h1>Контакт</h1>
+    <form class="kontakt">
+        <div class="kontakt-polje">
+            <label for="ime">Име и презиме</label>
+            <input type="text" id="ime" required>
+        </div>
+
+        <div class="kontakt-polje">
+            <label for="email">Емаил</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="kontakt-polje">
+            <label for="naslov">Наслов поруке</label>
+            <input type="text" id="naslov">
+        </div>
+
+        <div class="kontakt-polje">
+            <label for="poruka">Порука</label>
+            <textarea id="poruka" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Пошаљи поруку</button>
+    </form>
+</main>
+
+<footer class="donja-linija">
+    <span>Математички факултет, <a href="https://www.matf.bg.ac.rs/" target="_blank">Универзитет у Београду</a></span>
+    <span>Тијана Дражић</span>
+</footer>
+
+</body>
+</html>

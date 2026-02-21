@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[serbian]{babel}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Историја тркачких аутомобила и савремени рачунарски системи}}
+\author{Александра Митић}
+\date{17.2.2026.}
+
+\addto\captionsserbian{\renewcommand{\contentsname}{Садржај}}
+\addto\captionsserbian{\renewcommand{\refname}{Литература}}
+
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{teorema}{Теорема}
+\newtheorem{lema}{Лема}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Увод}
+
+Историја тркачких аутомобила представља спој инжењерства, физике и рачунарских наука. 
+Од првих механичких возила крајем XIX века до модерних болида у \textbf{Формули 1} 
+\cite{auto_history}, развој технологије је омогућио значајан напредак у брзини и безбедности.
+
+\section{Историјски развој тркачких аутомобила}
+
+\subsection{Почеци ауто-трка}
+
+Прве организоване трке одржане су крајем XIX века у Француској \cite{auto_history}. 
+Рани модели су били потпуно механички, без електронских система.
+
+\begin{wrapfigure}{l}{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.43\textwidth]{early-sport-car-picture.jpg}
+    \caption{Рани модел тркачког аутомобила}
+\end{wrapfigure}
+
+Развој мотора са унутрашњим сагоревањем омогућио је повећање снаге. 
+Основна формула снаге мотора може се приказати као:
+
+\[
+P = F \cdot v
+\]
+
+где је $P$ снага, $F$ сила, а $v$ брзина \cite{f1tech}.
+
+\subsection{Ера аеродинамике}
+
+Средином XX века почиње примена аеродинамичких принципа \cite{f1tech}. 
+Отпор ваздуха израчунава се формулом:
+
+\[
+F_d = \frac{1}{2} \rho v^2 C_d A
+\]
+
+где је $\rho$ густина ваздуха, $C_d$ коефицијент отпора, а $A$ површина.
+
+\section{Савремени рачунарски системи у аутомобилима}
+
+\subsection{Хардвер у модерним болидима}
+
+Данашњи тркачки аутомобили садрже више од 100 сензора и сложене електронске контролне јединице (ECU) \cite{embedded}. 
+\textit{Микропроцесори} анализирају податке у реалном времену \cite{embedded}.
+
+\textcolor{blue}{Савремени системи омогућавају оптимизацију перформанси током саме трке \cite{f1tech}.}
+
+\begin{definicija}
+Електронска контролна јединица (ECU) је уграђени систем који управља радом мотора и прикупља податке са сензора.
+\end{definicija}
+
+\begin{lema}
+Ако се повећа прецизност мерења сензора, повећава се и ефикасност управљања мотором \cite{embedded}.
+\end{lema}
+
+\begin{teorema}
+Интеграција рачунарских система у тркачке аутомобиле доводи до статистички значајног побољшања перформанси у односу на чисто механичке системе \cite{f1tech}.
+\end{teorema}
+
+\subsection{Типови система}
+
+Постоје различити типови система:
+
+\begin{itemize}
+    \item Системи за контролу мотора
+    \item Телеметријски системи\footnote{Прикупљају податке са сензора у реалном времену и шаљу их инжењерском тиму.}
+    \item Безбедносни системи\footnote{Системи који обезбеђују сигурност возача и стабилност возила, нпр. ABS и системи за спречавање клизања.}
+\end{itemize}
+
+
+Нумерисана листа развојних фаза:
+
+\begin{enumerate}
+    \item Механички период
+    \item Електромеханички период
+    \item Дигитални период
+\end{enumerate}
+
+\section{Поређење технологија}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Период & Тип система & Максимална брзина \\ \hline
+1900 & Механички & 80 km/h \\ \hline
+1950 & Аеродинамички & 250 km/h \\ \hline
+2024 & Дигитални + ECU & 370 km/h \\ \hline
+\end{tabular}
+\caption{Развој технологије кроз време \cite{auto_history}}
+\end{table}
+
+\section{Закључак}
+
+Развој тркачких аутомобила показује како инжењерство и рачунарство заједно обликују будућност транспорта. 
+Од једноставних механичких конструкција до сложених дигиталних система, 
+евидентно је да је \textbf{рачунарска технологија} постала кључни фактор успеха \cite{embedded}.
+
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{f1tech}
+Carroll Smith (1978). \textit{Tune to Win: The art and science of race car development and tuning}. Aero Publishers, Inc.
+
+\bibitem{auto_history}
+Karl Ludvigsen (2018). \textit{Classic Grand Prix Cars: The Glorious Prehistory of Formula 1: 1906-1960}. Bentley Publishers.
+
+\bibitem{embedded}
+M. Kathiresh (2022) \textit{Automotive Embedded Systems: Key Technologies, Innovations, and Applications (EAI/Springer Innovations in Communication and Computing)}.
+
+\end{thebibliography}
+
+\end{document}

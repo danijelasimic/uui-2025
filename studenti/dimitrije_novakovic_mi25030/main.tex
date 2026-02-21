@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{\textbf{Како функционише Интернет}}
+\author{Димитрије Новаковић \\ Број индекса: 30/2025}
+\date{\today}
+
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{teorema}{Теорема}
+\newtheorem{lema}{Лема}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Увод}
+
+\textbf{\textcolor{blue}{Интернет}} представља глобалну комуникациону инфраструктуру
+засновану на TCP/IP протоколима.
+
+\section{Основни концепти}
+
+\begin{definicija}
+IP адреса је јединствени идентификатор уређаја у мрежи.
+\end{definicija}
+
+\begin{lema}
+Сваки пакет садржи изворну и одредишну IP адресу.
+\end{lema}
+
+\begin{teorema}
+TCP протокол гарантује поузданост преноса коришћењем механизма потврде.
+\end{teorema}
+
+\subsection{Математички модел преноса}
+
+Количина података:
+
+\[
+Q = B \cdot t
+\]
+
+где је:
+\begin{itemize}
+\item $B$ — брзина преноса,
+\item $t$ — време преноса.
+\end{itemize}
+
+\section{Табела протокола}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Протокол & Намена \\
+\hline
+HTTP & Пренос веб садржаја \\
+TCP & Поуздан транспорт \\
+UDP & Брзи транспорт без гаранције \\
+DNS & Превођење домена \\
+\hline
+\end{tabular}
+\caption{Кључни интернет протоколи}
+\end{table}
+
+\section{Илустрација мреже}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{slike/mreza.png}
+\caption{Структура рачунарске мреже клијент-сервер}
+\end{figure}
+
+\section{Закључак}
+
+\textit{Интернет} представља један од најзначајнијих технолошких система
+савременог друштва и омогућава глобалну комуникацију.
+
+\end{document}
