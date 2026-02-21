@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehničke Specifikacije</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tema-bg">
+    <header>
+        <div class="container header-content">
+            <h1>TEHNIČKA <span class="accent-text">DOMINACIJA</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">POČETNA</a></li>
+                    <li><a href="tema.html" class="active">TEHNOLOGIJA</a></li>
+                    <li><a href="galerija.html">GALERIJA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container transparent-box">
+        <section class="specs-section">
+            <h2><span class="accent-blue">Rat Klasa:</span> Prototip vs. Serija</h2>
+            <p>Osnovna razlika u svetu trkanja je između MotoGP-a (Formule 1 na dva točka, gde su motori unikatni prototipovi) i WorldSBK-a (gde se trkaju modifikovane verzije motora koje možete kupiti u salonu). Iako na oko slični, ispod oklopa su drastično drugačiji.</p>
+            <p>U sledećoj tebeli navodimo neke od razlika:</p>
+
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Parametar</th>
+                        <th>MotoGP (Prototip)</th>
+                        <th>WorldSBK (Serijski)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Agregat</strong></td>
+                        <td>1000cc, V4 ili Inline-4, unikat</td>
+                        <td>1000cc, baziran na serijskom</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Snaga (KS)</strong></td>
+                        <td>Preko 300 KS</td>
+                        <td>Oko 240-250 KS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Minimalna Težina</strong></td>
+                        <td>157 kg</td>
+                        <td>168 kg</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kočnice</strong></td>
+                        <td>Karbon-keramika (do 900°C)</td>
+                        <td>Čelični diskovi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Menjač</strong></td>
+                        <td>Seamless (bez prekida snage)</td>
+                        <td>Standardni Quickshifter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="details-section split-columns">
+            <div class="col">
+                <h3>Aerodinamička Revolucija</h3>
+                <p>Poslednjih pet godina, aerodinamika je postala ključna. Ogromna krilca na prednjem delu oklopa nisu tu zbog estetike. Ona generišu silu potiska (downforce). Pri brzini od 300 km/h, ova krilca mogu stvoriti dodatnih 50-60 kg pritiska na prednji točak, sprečavajući podizanje prednjeg točka pri ubrzanju i omogućavajući kasniјe i stabilnije kočenje.</p>
+            </div>
+            <div class="col">
+                <h3>Digitalni Mozak (IMU)</h3>
+                <p>Srce modernog trkačkog motora je IMU (Inertial Measurement Unit). Ovaj senzor meri kretanje motora u 6 osa (nagib, poniranje, rotaciju...). Podaci se šalju u ECU jedinicu koja zatim u realnom vremenu prilagođava isporuku snage (Traction Control) kako bi sprečila "high-side" padove i maksimizovala ubrzanje iz krivine.</p>
+            </div>
+        </section>
+
+        <section class="kontakt-sekcija">
+            <h3><span class="accent-text">Kontakt</span></h3>
+            <p>Želite da se prijavite za nas newsletter? Ostavite vas kontakt.</p>
+            <form action="#" method="get" class="dark-form">
+                <div class="form-group">
+                    <label for="ime">Vaše Ime:</label>
+                    <input type="text" id="ime" name="ime" placeholder="npr. Valentino Rosi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="ime@racing.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="poruka">Komentar:</label>
+                    <textarea id="poruka" name="poruka" rows="3" placeholder="Volim Tim Hondu!"></textarea>
+                </div>
+
+                <button type="submit" class="race-button">POŠALJI</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+             <p>&copy; 2026 Seminarski projekat.</p>
+        </div>
+    </footer>
+</body>
+</html>

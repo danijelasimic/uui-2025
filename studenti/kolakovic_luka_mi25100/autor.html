@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O autoru i pouka priče</title>
+    <meta name="description" content="Informacije o autoru seminarskog rada i pouke priče o Maloneu Lamu.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="page">
+        <header class="nav">
+            <div class="nav-inner">
+                <div class="nav-brand">
+                    KOLAKOVIĆ <span>LUKA</span> · 25100
+                </div>
+                <nav class="nav-links" aria-label="Glavna navigacija">
+                    <a class="nav-link" href="index.html">Početna</a>
+                    <a class="nav-link" href="tema.html">Tema</a>
+                    <a class="nav-link nav-link-active" href="autor.html">O autoru</a>
+                    <a class="nav-link" href="#" onclick="var a=document.getElementById('bg-music'); if(a.paused){a.play();this.classList.add('nav-link-active');}else{a.pause();this.classList.remove('nav-link-active');} return false;">Muzika</a>
+                    <audio id="bg-music" loop>
+                        <source src="./muzika/muzika.mp3" type="audio/mpeg">
+                    </audio>
+                </nav>
+            </div>
+        </header>
+
+        <main class="shell">
+            <div class="breadcrumbs">
+                <a href="index.html">Početna</a> / <span>O autoru</span>
+            </div>
+
+            <section class="section" aria-labelledby="o-autoru">
+                <div class="section-header">
+                    <h1 id="o-autoru" class="section-title glitch" data-text="O autoru rada">
+                        O autoru rada
+                    </h1>
+                    <p class="section-kicker">ko stoji iza ove studije slučaja</p>
+                </div>
+                <div class="section-body">
+                    <p>
+                        Autor rada je student <em>Matematičkog Fakulteta</em>,<br> Luka Kolaković (broj indeksa 25100).
+                        Stranice su osmišljene tako da kombinuju narativni pristup priči o Maloneu
+                        Lamu sa sistematičnom analizom napada, pranja novca i istrage koja je usledila.
+                    </p>
+                    <p>
+                        Ideja je bila da se izveštaj sa par javnih izvora prilagodi na srpski jezik u formi priče kao da ste vi Malone Lam, glavni lik dela.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="pouka-price">
+                <div class="section-header">
+                    <h2 id="pouka-price" class="section-title glitch" data-text="Pouka priče">
+                        Pouka priče
+                    </h2>
+                    <p class="section-kicker">šta korisnici mogu da nauče</p>
+                </div>
+                <div class="grid-two section-body">
+                    <div>
+                        <p>
+                            Priča o Maloneu Lamu pokazuje da se najveće finansijske štete često ne
+                            dešavaju zbog tehničkih propusta u protokolu, već zbog ljudskih slabosti.
+                            Socijalni inženjering, zloupotreba poverenja i pritisak u realnom vremenu
+                            doveli su do toga da žrtva sama otključa sopstvene zaštitne mehanizme.
+                        </p>
+                        <p>
+                            Kritične greške uključuju deljenje ekrana sa nepoznatim osobama, čuvanje
+                            privatnih ključeva i bekapa u cloud servisima i oslanjanje na telefonske
+                            pozive bez dodatne verifikacije identiteta. Kada jednom poverenje pukne,
+                            naknadno „krpljenje“ sigurnosti uglavnom dolazi prekasno.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="code-label">Ključne poruke</div>
+                        <ul class="list">
+                            <li>Ne deliti ekran ni sa kim ko traži pristup nalozima ili novčaniku.</li>
+                            <li>Ne čuvati privatne ključeve i seed fraze u običnim cloud servisima (OneDrive).</li>
+                            <li>Svaki poziv „podrške“ proveriti preko zvaničnih kanala.</li>
+                            <li>Digitalni tragovi su neizbrisivi – on-chain analiza (ZachXBT) može razotkriti i najkompleksnije pranje novca.</li>
+                            <li>
+                                Pohlepa i osećaj nedodirljivosti kratko traju, a posledice su dugoročne
+                                i često završavaju zatvorom i konfiskacijom imovine.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div>Seminarski projekat · Luka Kolaković 25100 · Malone Lam studija slučaja</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
