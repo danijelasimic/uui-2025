@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komponente - Gaming PC Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header style="padding: 0px; background:#0d1220;">
+        <img src="slike/naslov.png" alt="HARDVER SHOP Logo" style="height:110px; display:block;">
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Početna</a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-puzzle-piece"></i> Komponente ▼</button>
+                <div class="dropdown-content">
+                    <a href="komponente.html#gpu">Grafičke karte</a>
+                    <a href="komponente.html#cpu">Procesori</a>
+                    <a href="komponente.html#ram">Memorija & Storage</a>
+                </div>
+            </div>
+            <a href="o-nama.html"><i class="fa-solid fa-user"></i> O nama</a>
+            <a href="kontakt.html"><i class="fa-solid fa-mobile"></i> Prijava</a>
+        </div>
+
+        <div class="nav-search">
+            <input type="text" id="nav-search" placeholder="🔍 Pretraži komponente...">
+        </div>
+
+        <div class="nav-cart">
+            <a href="korpa.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i> Korpa</a>
+            <button id="logout-btn" class="logout-link" style="display: none;">
+                <i class="fa-solid fa-right-from-bracket"></i> Odjavi se
+            </button>
+        </div>
+    </nav>
+
+    <section style="text-align:center; padding:40px 20px;">
+        <h1>Naše Komponente</h1>
+        <p>Izaberite svoje favorite i sastavite idealan gaming PC build.</p>
+    </section>
+
+    <section style="padding:20px;">
+        <h2 id="gpu" style="text-align:center; margin-bottom:20px;">GPU - Grafičke karte</h2>
+        <div class="grid">
+            <div class="card" data-id="gpu1">
+                <img src="slike/gpu1.jpg" alt="NVIDIA RTX 5090 Ti">
+                <div class="card-content">
+                    <h3>NVIDIA RTX 5090 Ti</h3>
+                    <p>Ultimativni GPU za 4K gaming i ray tracing.</p>
+                    <p class="cena">Cena: 2499 €</p>
+                    <div class="card-buttons">
+                        <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i> KORPA</button>
+                        <a href="proizvod.html?id=gpu1" class="vidi-btn"><i class="fa-solid fa-eye"></i> Vidi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="gpu2">
+                <img src="slike/gpu2.jpg" alt="AMD Radeon RX 8900">
+                <div class="card-content">
+                    <h3>AMD Radeon RX 8900</h3>
+                    <p>Odličan balans performansi i cene za hardcore gaming.</p>
+                    <p class="cena">Cena: 1199 €</p>
+                    <div class="card-buttons">
+                        <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i> KORPA</button>
+                        <a href="proizvod.html?id=gpu2" class="vidi-btn"><i class="fa-solid fa-eye"></i> Vidi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="cpu" style="text-align:center; margin-top:40px;">CPU - Procesori</h2>
+        <div class="grid">
+            <div class="card" data-id="cpu1">
+                <img src="slike/cpu1.jpg" alt="AMD Ryzen 9 7950X">
+                <div class="card-content">
+                    <h3>AMD Ryzen 9 7950X</h3>
+                    <p>Vrhunski procesor za multitasking i gaming performanse.</p>
+                    <p class="cena">Cena: 650 €</p>
+                    <div class="card-buttons">
+                        <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i> KORPA</button>
+                        <a href="proizvod.html?id=cpu1" class="vidi-btn"><i class="fa-solid fa-eye"></i> Vidi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="cpu2">
+                <img src="slike/cpu2.jpg" alt="Intel Core i9-13900K">
+                <div class="card-content">
+                    <h3>Intel Core i9-13900K</h3>
+                    <p>Performanse na nivou premium build-a za gaming i streaming.</p>
+                    <p class="cena">Cena: 620 €</p>
+                    <div class="card-buttons">
+                        <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i> KORPA</button>
+                        <a href="proizvod.html?id=cpu2" class="vidi-btn"><i class="fa-solid fa-eye"></i> Vidi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="ram" style="text-align:center; margin-top:40px;">RAM & Storage</h2>
+        <div class="grid">
+            <div class="card" data-id="ram1">
+                <img src="slike/ram1.jpg" alt="Corsair 32GB DDR5">
+                <div class="card-content">
+                    <h3>Corsair 32GB DDR5</h3>
+                    <p>Brza memorija za maksimalan FPS.</p>
+                    <p class="cena">Cena: 150 €</p>
+                    <div class="card-buttons">
+                        <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i> KORPA</button>
+                        <a href="proizvod.html?id=ram1" class="vidi-btn"><i class="fa-solid fa-eye"></i> Vidi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-id="ssd1">
+                <img src="slike/ssd1.jpg" alt="Samsung 2TB NVMe SSD">
+                <div class="card-content">
+                    <h3>Samsung 2TB NVMe SSD</h3>
+                    <p>Ultra brzi SSD za brzo učitavanje igara i sistema.</p>
+                    <p class="cena">Cena: 180 €</p>
+                    <div class="card-buttons">
+                        <button class="buy-btn"><i class="fa-solid fa-cart-shopping"></i> KORPA</button>
+                        <a href="proizvod.html?id=ssd1" class="vidi-btn"><i class="fa-solid fa-eye"></i> Vidi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gaming PC Shop | Sva prava zadržana</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
