@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sr">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+  <head>
+    <title> Algoritam </title>
+  </head>
+  <nav>
+    <ul class="navigation">
+      <li class="title"> <b> Veb sajt </b> </li>
+      <li> <a class="page-link" href="index.html"> Glavna strana </a> </li>
+      <li> <a class="page-link" href="kontakt.html"> Kontakt </a> </li>
+      <li> <a class="page-link" href="tema.html"> Algoritam </a> </li>
+    </ul>
+  </nav>
+  <body>
+    <div class="container">
+      <div class="box first-box">
+        <h1> Najniži zajednički predak dva čvora u stablu </h1>
+        <div class="row">
+          <div class="column">
+            <h2> Problem </h2>
+            <p> Dat je graf sa <var>n</var> čvorova. 
+            Za dva data čvora <var>u</var> i <var>v</var> potrebno je odrediti najnižeg zajedničkog pretka
+            (eng. <em>Lowest Common Ancestor - LCA</em>).</p> 
+            <p> <b> Za primer sa slike: </b> </p>
+            <table>
+              <tr> 
+                <td> <b> <var> u </var> </b> </td>
+                <td> <b> <var> v </var> </b> </td>
+                <td> <b> LCA </b> </td>
+              </tr>
+              <tr> 
+                <td> 5 </td>
+                <td> 6 </td>
+                <td> 1 </td>
+              </tr>
+              <tr> 
+                <td> 8 </td>
+                <td> 6 </td>
+                <td> 3 </td>
+              </tr>
+              <tr> 
+                <td> 8 </td>
+                <td> 9 </td>
+                <td> 7 </td>
+              </tr>
+              <tr> 
+                <td> 4 </td>
+                <td> 9 </td>
+                <td> 1 </td>
+              </tr>
+            </table>
+          </div>
+          <div class="column-image">
+            <img src="slike/graf.png" alt="Primer stabla">
+          </div>
+        </div>
+        <h2> Algoritam </h2>
+        <ul>
+          <li> Obilaskom stabla algoritmom pretrage u dubinu računaju se:
+            <ol>
+              <li> matrica <var>predak[n][m]</var>, gde je <var>predak[i][j]</var> predak čvora <var>i</var> na rastojanju <var>2<sup>j</sup></var>;</li>
+              <li> nizovi <var>ulaz[n]</var> i <var>izlaz[n]</var>, gde <var>ulaz[i]</var> i <var>izlaz[i]</var> predstavljaju vremena ulaska i izlaska iz podstabla čvora <var>i</var>.</li>
+            </ol>
+          </li>
+          <li>
+            Koristeći vremena ulaska i izlaska iz podstabla, proverava se da li je jedan čvor predak drugog.
+            Ukoliko jeste, taj čvor je traženi najniži zajednički predak i algoritam se zaustavlja.
+            Ukoliko nije, algoritam se nastavlja.
+          </li>
+          <li>
+            Pomoću matrice <var>predak[n][m]</var> i tehnike binarnog skoka nalazimo najvišeg pretka čvora <var>u</var>
+            koji nije predak čvora <var>v</var> i taj čvor je sada čvor <var>u</var>. Njegov roditelj tj. čvor
+            <var>predak[u][0]</var> je najniži zajednički predak čvorova <var>u</var> i <var>v</var>. 
+          </li>
+        </ul>
+      </div>
+      <div class="box">
+        <h2>Detaljniji pregled algoritma u radu:</h2>
+        <iframe src="rad.pdf" class="pdf"></iframe>
+      </div>
+    </div>
+  </body>
+</html>

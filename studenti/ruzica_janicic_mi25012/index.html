@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ružica Janičić - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ružica Janičić</h1>
+        <p>Matematički fakultet, smer Informatika</p>
+        <p>Tok 2, Grupa V | Indeks: 012/2025</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">Početna</a>
+        <a href="#" onclick="showPage('about')">O meni</a>
+        <a href="#" onclick="showPage('semester')">Prvi semestar</a>
+        <a href="tema.html">Paskalina</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="page active">
+            <div class="welcome-section">
+                <h2>Dobrodošli na moj sajt!</h2>
+                <p class="subtitle">
+                    Ovde možete pronaći informacije o mom obrazovanju i projektima iz prvog semestra studija informatike.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Osnovne informacije</h3>
+                <p><strong>Fakultet:</strong> Matematički fakultet</p>
+                <p><strong>Smer:</strong> Informatika</p>
+                <p><strong>Tok:</strong> 2</p>
+                <p><strong>Grupa:</strong> V</p>
+                <p><strong>Broj indeksa:</strong> 012/2025</p>
+            </div>
+        </div>
+
+        <div id="about" class="page">
+            <div class="about-content">
+                <div class="profile-image-container">
+                    <img src="slike/slika.jpg" alt="Ružica Janičić" class="profile-image">
+                </div>
+                
+                <h2>O meni</h2>
+                <p>Zdravo! Ja sam Ružica Janičić, studentkinja prve godine informatike na Matematičkom fakultetu.</p>
+                <p>Upisala sam ovaj fakultet i smer zato što volim matematiku i informatiku, i volela bih da se time bavim u budućnosti.</p>
+                <p>U slobodno vreme volim da čitam, družim se sa prijateljima, slušam muziku i učim nove jezike.</p>
+                
+                <h2 class="grades-title">Ocene iz prvog semestra</h2>
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Predmet</th>
+                            <th class="center">Ocena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Uvod u programiranje</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Uvod u informatiku</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Linearna algebra i analitička geometrija</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Diskretne strukture</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Digitalni zapis</td>
+                            <td class="center">/</td>
+                        </tr>
+                        <tr>
+                            <td>Tehničko i naučno pisanje</td>
+                            <td class="center">/</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="semester" class="page">
+            <h2 class="semester-title">Prvi semestar</h2>
+            
+            <div class="subjects-grid">
+                <div class="subject-card" onclick="toggleSubject(this)">
+                    <h3>Uvod u programiranje</h3>
+                    <p class="professor">Prof. dr Mladen Nikolić</p>
+                </div>
+
+                <div class="subject-card" onclick="toggleSubject(this)">
+                    <h3>Uvod u informatiku</h3>
+                    <p class="professor">Prof. dr Danijela Simić</p>
+                </div>
+
+                <div class="subject-card" onclick="toggleSubject(this)">
+                    <h3>Linearna algebra i analitička geometrija</h3>
+                    <p class="professor">Prof. dr Zoran Rakić</p>
+                </div>
+
+                <div class="subject-card" onclick="toggleSubject(this)">
+                    <h3>Diskretne strukture</h3>
+                    <p class="professor">Prof. dr Aleksandra Kostić Matijević</p>
+                </div>
+
+                <div class="subject-card" onclick="toggleSubject(this)">
+                    <h3>Digitalni zapis</h3>
+                    <p class="professor">Prof. dr Stefan Mišković</p>
+                </div>
+
+                <div class="subject-card" onclick="toggleSubject(this)">
+                    <h3>Tehničko i naučno pisanje</h3>
+                    <p class="professor">Prof. dr Jelena Graovac</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Ružica Janičić | Matematički fakultet - Informatika</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        function toggleSubject(card) {
+            const links = card.querySelector('.subject-links');
+            if (links) {
+                links.classList.toggle('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+
+\addto\captionsserbian{\renewcommand{\contentsname}{САДРЖАЈ}}
+\addto\captionsserbian{\renewcommand{\abstractname}{САЖЕТАК}}
+\addto\captionsserbian{\renewcommand{\refname}{ЛИТЕРАТУРА}}
+
+
+\usepackage{graphicx}
+\usepackage{color, xcolor}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{дефиниција}{Дефиниција}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=red,filecolor=red,linkcolor=blue,urlcolor=blue}
+
+\begin{document}
+
+\begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+
+\center 
+	
+\textsc{\LARGE Математички факултет}\\[3cm] 
+	
+\textsc{\Large Семинарски рад}\\[0.1cm]
+	
+\textsc{\large из увода у информатику}\\[0.5cm] 
+	
+\HRule\\[0.4cm]
+	
+{\LARGE\bfseries Етика и ризици дипфејк технологије}\\[0.2cm] 
+	
+\HRule\\[2cm]
+
+\vspace{17\baselineskip}
+\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Студент}\\
+			Младена Рогановић, 68/2025
+		\end{flushleft}
+	\end{minipage}
+\hspace*{1cm}
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Професор}\\
+			Данијела Симић
+		\end{flushright}
+	\end{minipage}
+	
+	
+\vfill\vfill\vfill\vfill 
+	
+{\large Beograd, \today} 
+	
+\vfill 
+	
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\abstract {У раду се разматра дипфаке технологија као савремени производ развоја вештачке интелигенције, са посебним освртом на принципе њеног рада, области примене и етичке, друштвене и правне изазове које она носи. Објашњен је начин функционисања генеративних супарничких мрежа и приказане су могућности употребе деепфаке технологије у образовању, медицини, уметности и филмској\\ индустрији, где она може имати значајне позитивне ефекте. \\Истовремено, анализирани су и ризици који проистичу из њене злоупотребе, попут повреде приватности, нарушавања угледа,\\ манипулације информацијама и угрожавања поверења у дигиталне медије. Посебна пажња посвећена је етичким дилемама и недовољној усаглашености постојећих правних оквира брзом развоју ове\\ технологије. Циљ рада је да укаже на потребу за одговорном применом дипфаке технологије, развојем друштвене свести, као и усавршавањем етичких смерница и законске регулативе, како би се њени позитивни потенцијали искористили, а негативне последице свеле на минимум.}
+
+\section{Увод}
+
+Развој \textbf{вештачке интелигенције} довео је до појаве технологија које значајно утичу на начин на који се ствара и перципира дигитални садржај. Једна од најпознатијих и најконтроверзнијих технологија тог типа јесте \textit{дипфејк}.
+
+Ова технологија омогућава креирање изузетно уверљивих, али лажних аудио и видео записа, што отвара бројна \textcolor{red}{етичка}, \textcolor{orange}{правна} и \textcolor{blue}{друштвена} питања.
+
+\section{Основе дипфејк технологије}
+
+\subsection{Начин функционисања}
+
+Дипфејк се најчешће заснива на примени генеративних супарничких мрежа (GAN), које се састоје од два модела:
+\begin{itemize}
+    \item \textbf{генератора}, који ствара лажне садржаје,
+    \item \textbf{дискриминатора}, који покушава да их препозна \cite{1,5}.
+\end{itemize}
+
+\begin{дефиниција}
+Дипфејк технологија представља примену алгоритама машинског учења ради креирања синтетичких медијских садржаја који имитирају стварне људе.
+\end{дефиниција}
+
+\section{Примене технологије}
+
+\subsection{Позитивни аспекти}
+
+Предности дипфејк технологије могу се сагледати кроз следеће области:
+\begin{enumerate}
+    \item образиявње и симулације
+    \item уметност и дигитална креативност
+    \item медицина и професионални тренинг
+\end{enumerate}
+
+\subsection{Пример поређења}
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Област} & \textbf{Начин примене} \\
+\hline
+Образовање & Интерактивне симулације \\
+Медији & Дигитална продукција \\
+Медицина & Обука медицинског кадра \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Изазови и етичка питања}
+
+Иако доноси бројне могућности, дипфејк технологија носи и одређене проблеме:
+\begin{itemize}
+    \item злоупотреба идентитета
+    \item нарушавање приватности
+    \item губитак поверења у медије
+\end{itemize}
+
+Посебно је важно истаћи да \textbf{неодговорна употреба} може имати дугорочне последице по друштво\cite{6}.
+
+\section{Закључак}
+
+Дипфејк технологија представља моћан алат савременог дигиталног доба. Иако омогућава иновације у различитим областима, неопходно је њено одговорно коришћење, уз развој јасних етичких и правних оквира, како би се спречиле потенцијалне злоупотребе.
+\newpage
+\section{Додатак}
+У овом поглављу сам додала пример неке математичке формуле, како би се допунио формат тражен за документ.\\
+\begin{center}
+    $ \displaystyle \sum_{i=1}^{n} \pi i^2 $
+\end{center}
+
+\addcontentsline{toc}{section}{Литература}
+\appendix
+\iffalse
+\bibliography{семинарски} 
+\bibliographystyle{plain}
+\fi
+
+\begin{thebibliography}{9}
+
+\bibitem{1} I. Kalpokas and J. Kalpokiene, \emph{Deepfakes: A Realistic Assessment of Potentials, Risks and Policy Regulation}. Springer, Cham, 2022.
+
+ \bibitem{2} S. Taneja, S. Gupta, M. Kukreti, and A. S. Chauhan, Eds., \emph{Mastering Deepfake Technology: Strategies for Ethical Management and Security}. River Publishers, 2025.
+
+ \bibitem{3} A. Raina and G. Mann, “Exploring the Ethics of Deepfake Technology in Media: Implications for Trust and Information Integrity,” \emph{J. Interdiscip. Ethics Res.}, vol. 4, no. 3, 2024.
+
+ \bibitem{4} S. L. Burton and D. P. Harvie, “Deepfakes: Unmasking the Technological, Societal, and Ethical Dimensions,” \emph{Journal of Interdisciplinary Ethics and Research}, vol. 9, no. 2, 2025.
+
+ \bibitem{5} D. K. Citron and R. Chesney, “The Distinct Wrong of Deepfakes,” \emph{Philosophy \& Technology}, vol. 34, pp. 1311–1332, 2021.
+
+ \bibitem{6} I. Čučilović, “Deepfake tehnologija – krivičnopravne implikacije,” \emph{Crimen: Časopis za krivične nauke}, 2024.
+ 
+\end{thebibliography}
+
+
+
+\end{document}

@@ -1,0 +1,128 @@
+\documentclass[12pt,a4paper]{article}
+
+% Paketi za podršku jeziku i pismu
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel}
+
+% Paketi za matematiku, grafiku i boje
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+% Podešavanje hiperlinkova da budu crni (akademski izgled)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+}
+
+% Definisanje okruženja na srpskom (ćirilica)
+\theoremstyle{definition}
+\newtheorem{definicija}{Дефиниција}[section]
+\theoremstyle{plain}
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{lema}{Лема}[section]
+
+% Podaci o dokumentu
+\title{\textbf{Теорија мртвог интернета}\\ \large Анализа аутоматизованог мрежног саобраћаја}
+\author{Немања Петровић, 87/2025}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\renewcommand{\contentsname}{Садржај}
+\tableofcontents
+\vspace{1cm}
+
+\section{Увод у теорију}
+
+\begin{wrapfigure}{l}{0.4\textwidth}
+  \vspace{-10pt}
+  \begin{center}
+    % NAPOMENA: Slika mora postojati u folderu 'slike'
+    \includegraphics[width=0.38\textwidth]{slike/tema-bg.jpg}
+  \end{center}
+  \vspace{-15pt}
+  \caption{Мрежа конекција}
+  \vspace{-10pt}
+\end{wrapfigure}
+
+\textbf{Теорија мртвог интернета} (енгл. \textit{Dead Internet Theory}) је концепт који сугерише да је \textcolor{blue}{већина садржаја на интернету генерисана од стране алгоритама} и ботова, а не од стране стварних људи. Ова теорија је постала посебно актуелна развојем напредних језичких модела.
+
+Према овој теорији, интернет какав познајемо пролази кроз фазу симулације, где се ствара \textit{илузија људске активности} кроз континуирану интеракцију различитих алгоритама.
+
+\section{Анализа и математички модел}
+
+Да бисмо боље разумели ову појаву, неопходно је формализовати концепте рачунарског саобраћаја.
+
+\begin{definicija}
+\textbf{Ботовски саобраћај} представља скуп свих мрежних захтева $B$ у укупном саобраћају $U$, таквих да су иницирани аутоматизованим скриптама без директне људске интервенције.
+\end{definicija}
+
+Можемо поставити математички модел раста количине вештачког садржаја у времену $t$. Нека је $C_{ai}(t)$ количина аутоматизованог садржаја. Њен раст се често моделује експоненцијалном функцијом:
+\begin{equation}
+    C_{ai}(t) = C_0 \cdot e^{k \cdot t}
+\end{equation}
+где је $C_0$ почетна количина садржаја, а $k$ константа која представља стопу технолошког напретка. Уколико посматрамо удео ботовског саобраћаја у укупном саобраћају $C_{total}$, добијамо граничну вредност:
+
+\begin{equation}
+    \lim_{t \to \infty} \frac{C_{ai}(t)}{C_{total}(t)} = 1
+\end{equation}
+
+\begin{lema}
+Ако стопа генерисања аутоматизованог садржаја $k_{ai}$ строго доминира над стопом људског генерисања $k_{h}$ ($k_{ai} > k_{h}$), удео људског садржаја тежи нули како време тежи бесконачности.
+\end{lema}
+
+\begin{teorema}[О асимптотској доминацији]
+У затвореном систему размене информација, уколико је капацитет производње података од стране вештачке интелигенције експоненцијалан, свака линеарна или полиномијална продукција од стране људи биће асимптотски занемарљива.
+\end{teorema}
+
+\subsection{Статистички подаци}
+
+У табели испод су приказане процене присуства ботова на популарним платформама, базиране на доступним истраживањима.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Платформа} & \textbf{Проценат ботова} & \textbf{АИ садржај} \\
+\midrule
+Twitter/X & $\approx 15\%$ & $\approx 25\%$ \\
+Facebook & $\approx 20\%$ & $\approx 30\%$ \\
+Instagram & $\approx 10\%$ & $\approx 35\%$ \\
+YouTube & \textcolor{red}{$\approx 25\%$} & \textcolor{red}{$\approx 40\%$} \\
+\bottomrule
+\end{tabular}
+\caption{Процена удела аутоматизованог саобраћаја по платформама}
+\end{table}
+
+\section{Аргументи и импликације}
+
+Расправа о тачности ове теорије води се кроз различите аргументе.
+
+\textbf{Аргументи који подржавају теорију (неуређена листа):}
+\begin{itemize}
+    \item Експлозија генерисаног садржаја након појаве великих језичких модела.
+    \item Преваленција \textit{spam} ботова и аутоматизованих коментара.
+    \item Пад квалитета и релевантности резултата на интернет претраживачима.
+\end{itemize}
+
+\textbf{Кључне импликације за друштво (уређена листа):}
+\begin{enumerate}
+    \item \textbf{Дезинформације:} Брзо ширење непроверених информација.
+    \item \textbf{Приватност:} Масовно прикупљање података од стране мрежних паука.
+    \item \textbf{Аутентичност:} Губитак поверења у дигиталне идентитете.
+\end{enumerate}
+
+\section{Закључак}
+
+Иако се Теорија мртвог интернета често посматра као радикална, она служи као важно упозорење. Разумевање алгоритама који обликују нашу дигиталну стварност кључно је за очување људске аутентичности у онлајн простору. Математички модели јасно указују на то да без филтрирања и регулативе, \textcolor{blue}{\textbf{вештачки генерисан садржај неминовно постаје доминантан}}.
+
+\end{document}
