@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  /*sadržaj + padding + border = ukupna širina*/
+  margin: 0;
+  /*uklanjam šta browser dodaje po default-u*/
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /*font i rezervni fontovi*/
+  min-height: 100vh;
+  background-image: url("slike/nebo.jpg");
+  background-size: cover;
+  /*slika pokriva ceo ekran*/
+  background-position: center;
+  background-attachment: fixed;
+  /*sadržaj se pomera, slika je fiksirana na ekranu*/
+  color: #333;
+}
+
+/* TAMNI OVERLAY; tu je da potamni pozadinsku sliku, bez potamnjivanja ostatka stranice */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+  /*šalje overlay iza bodija*/
+}
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(135deg,
+      rgba(0, 51, 102, 0.75),
+      rgba(0, 0, 0, 0.45));
+  color: white;
+  padding: 1.5rem 1rem;
+}
+
+/* HEADER GRID */
+.header-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  /*definišem 3 kolone(2 za emoji-je i jednu za naslov), emoji uzimaju koliko im treba mesta, naslov ostatak */
+  align-items: center;
+  gap: 1rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 1.8rem;
+}
+
+.emoji {
+  font-size: 2.5rem;
+}
+
+/* NAV */
+.main-nav {
+  margin-top: 1rem;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*ako nema mesta(manji je ekran), elementi prelaze u sledeći red*/
+  gap: 1.2rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  /*uklanja plavu boju i podvlačenje linkova*/
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  /*animacija promene boje teksta, kada prevučem preko linkova u nav-u za 0.3 sekunde boja pređe iz bele u narandžastu */
+}
+
+.main-nav a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+/* =========================== index.html ============================ */
+
+.content {
+  max-width: 65rem;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.15));
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #1a73e8;
+  /*#043b84*/
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.content p.highlight {
+  padding: 1rem;
+  border-left: 0.4rem solid #fb7b04;
+  border-radius: 0.5rem;
+}
+
+
+.highlight:nth-of-type(1) {
+  background-color: rgba(255, 235, 230, 0.3);
+}
+
+.highlight:nth-of-type(2) {
+  background-color: rgba(230, 245, 255, 0.3);
+}
+
+.highlight:nth-of-type(3) {
+  background-color: rgba(240, 255, 230, 0.3);
+}
+
+.highlight:nth-of-type(4) {
+  background-color: rgba(255, 250, 210, 0.3);
+}
+
+
+/* ======================= modeli.html ============================= */
+
+.content-modeli {
+  max-width: 65rem;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.15));
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-modeli h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #1a73e8;
+  text-align: center;
+}
+
+.content-modeli p {
+  margin-bottom: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+}
+
+.content-modeli p:nth-of-type(1) {
+  background-color: rgba(255, 245, 230, 0.3);
+}
+
+.content-modeli p:nth-of-type(2) {
+  background-color: rgba(230, 245, 255, 0.3);
+}
+
+
+.content-modeli p.highlight {
+  background-color: rgba(255, 230, 200, 0.35);
+  border-left: 0.4rem solid #ff9800;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+
+/* SLIKA */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+
+/* ===== KONTAKT FORMA ===== */
+
+.form-container {
+  max-width: 50rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(12, 127, 243, 0.345);
+  /*rgba(12, 128, 243, 0.75)*/
+  /*rgba(1, 38, 76, 0.75)*/
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.contact-form {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #555;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #003366;
+}
+
+.contact-form button {
+  align-self: center;
+  padding: 0.6rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #003366;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0055aa;
+}
+
+.istaknuto {
+  color: #0e045d;
+}
+
+/* ==================istorija.html======================*/
+
+.table-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  overflow: visible;
+  /* da tooltip ne bude isečen */
+  position: relative;
+}
+
+.rainbow-table {
+  width: 100%;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  /* za pozadinu i zaokružene ivice */
+  background: linear-gradient(135deg,
+      rgba(255, 182, 193, 0.35),
+      rgba(255, 218, 185, 0.35),
+      rgba(255, 255, 204, 0.35),
+      rgba(204, 255, 204, 0.35),
+      rgba(204, 229, 255, 0.35),
+      rgba(229, 204, 255, 0.35));
+  border-collapse: collapse;
+  /* uklanja dvostruke linije */
+}
+
+.rainbow-table th,
+.rainbow-table td {
+  background-color: transparent;
+  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px dotted #000;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 15rem;
+  background-color: rgba(51, 51, 51, 0.95);
+  color: #fff;
+  text-align: left;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  /*ovaj i prethodni red su tu da bi tekst bio centriran, za razliku od text-align funkcioniše bez obzira na širinu tooltipa*/
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: normal;
+  /*da tekst ne bi bio u jednom redu, po potrebi prelazi u druge*/
+  z-index: 1000;
+  /*tooltip tekst mora da bude iznad ostalih delova stranice, zato mu je z indeks veliki*/
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Poslednja 3 reda idu iznad, na gore se prikazuju */
+tr:last-child .tooltiptext,
+tr:nth-last-child(2) .tooltiptext,
+tr:nth-last-child(3) .tooltiptext {
+  top: auto;
+  bottom: 100%;
+}
+
+
+/* PRIKAZ NA MOBILNOM TELEFONU */
+@media (max-width: 40rem) {
+
+  .header-content {
+    grid-template-columns: 1fr;
+  }
+
+  .emoji {
+    display: none; /*izbacujem emoji-je da ne bi zauzimali mesto*/
+  }
+
+  .header-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .main-nav ul {
+    gap: 0.85rem;
+  }
+
+  .contact-form {
+    gap: 1rem;
+  }
+
+}
