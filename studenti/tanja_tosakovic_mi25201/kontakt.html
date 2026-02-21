@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-content">
+      <span class="emoji">✉️</span>
+      <h1>Kontakt</h1>
+      <span class="emoji">📬</span>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Uvod</a></li>
+        <li><a href="istorija.html">Istorija</a></li>
+        <li><a href="modeli.html">Modeli</a></li>
+        <li><a href="rad.pdf">PDF rad</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-container">
+
+    <form class="contact-form" action="#" method="post">
+
+      <div class="form-group">
+        <label for="ime">Ime i prezime</label>
+        <input type="text" id="ime" name="ime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email adresa</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="poruka">Poruka</label>
+        <textarea id="poruka" name="poruka" rows="5" required></textarea>
+      </div>
+
+      <button type="submit">Pošalji poruku</button>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>
