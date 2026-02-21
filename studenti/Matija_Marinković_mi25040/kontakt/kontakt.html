@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lični veb-sajt – Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../slike/moja-slika.jpg">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <input type="checkbox" id="nav-toggle">
+
+        <label for="nav-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Početna</a></li>
+            <li><a href="../o-meni.html">O meni</a></li>
+            <li><a href="../predmeti/predmeti.html">Predmeti</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <h1>Kontakt</h1>
+    <p>Slobodno me kontaktirajte putem forme ispod</p>
+</header>
+
+<section>
+
+    <form action="https://formsubmit.co/mi25040@alas.matf.bg.ac.rs" method="POST">
+        <!-- Honeypot polje protiv botova -->
+        <input type="text" name="_honey" style="display:none">
+        <!-- Relativni redirect posle slanja -->
+        <input type="hidden" name="_next" id="nextInput" value="">
+        
+
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="Nova poruka sa sajta">
+
+        <p>
+            <label for="ime">Ime i prezime</label><br>
+            <input type="text" id="ime" name="ime" required>
+        </p>
+
+        <p>
+            <label for="email">Email adresa</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="poruka">Poruka</label><br>
+            <textarea id="poruka" name="poruka" rows="6" required></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Pošalji poruku</button>
+        </p>
+    </form>
+</section>
+
+    <footer>
+        <p>© 2026 Lični veb-sajt</p>
+    </footer>
+    <script>
+        let putanja = window.location.pathname;
+        putanja = window.location.origin + putanja.substring(0, putanja.lastIndexOf('/') + 1) + 'hvala.html';
+        document.getElementById('nextInput').value = putanja;
+    </script>
+</body>
+</html>

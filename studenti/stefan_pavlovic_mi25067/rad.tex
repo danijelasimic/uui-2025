@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[serbianc]{babel}
+\usepackage{graphicx,wrapfig}
+\usepackage{subfig}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{float}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}[theorem]{Лема}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Дефиниција}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\title{Крускалов Алгоритам}
+\author{Стефан Павловић}
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Увод}
+Крускалов алгоритам проналази минимално разапињуће стабло за повезан тежински граф. Уколико је граф није повезан алгоритам проналази минималну разапињућу шуму. Временска комплексност му је $O(E \log V)$. Алгоритам је открио Џозеф Крускал. 
+\par
+Примене минималног разапињућег стабла:
+\begin{itemize}
+    \item Постављање каблова
+    \item Рутирање путања у мрежама
+    \item Мрежа испорука
+    \item Пројектовање путева
+    \item Кластеризација података
+    \item Многе друге
+\end{itemize}
+\section{Крускалов алгоритам}
+
+\begin{definition}[Минимално разапињуће стабло]
+Нека је $G = (V, E)$ повезан тежински граф. Разапињуће стабло $T = (V, E_T)$ графа $G$ се назива \textbf{минимално разапињуће стабло} ако за свако друго разапињуће стабло $T' = (V, E_{T'})$ важи:
+$$w(T) = \sum_{e \in E_T} w(e) \leq \sum_{e \in E_{T'}} w(e) = w(T')$$
+\end{definition}
+
+\begin{lemma}[Лема о сигурној грани]
+Нека је $A$ скуп грана које припадају неком минималном разапињућем стаблу графа $G$. Ако грана $e$ минималне тежине повезује две различите компоненте графа $(V, A)$, онда $A \cup \{e\}$ такође припада неком минималном разапињућем стаблу.
+\end{lemma}
+
+\begin{theorem}[Коректност Крускаловог алгоритма]
+Крускалов алгоритам производи минимално разапињуће стабло за сваки повезан тежински граф.
+\end{theorem}
+
+Како алгоритам функционише:
+
+\begin{enumerate}
+    \item Сортирају се све ивице графа у неопадајућем редоследу
+    \item Итерирамо кроз ивице графа, уколико додавање ивице у стабло не прави циклус, додамо ивицу
+    \item На крају добијемо минимално разапињућу шуму уколико граф није повезан, односно минимално разапињуће стабло уколико је граф повезан
+\end{enumerate}
+
+\subsection{Други алгоритми минималног разапињућег стабла}
+Неки други алгоритми минималног разапињућег \textcolor{blue}{стабла} (\textit{шуме}) су:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Алгоритам & Временска комплексност & Година открића \\
+\hline
+Борувкин алгоритам & $O(E \log V)$ & 1926 \\
+\hline
+Примов алгоритам & $O(E \log V)$ & 1957 \\
+\hline
+Алгоритам обрнутог брисања & \textcolor{red}{$O(E \log V (\log \log V)^3)$} & 1956 \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Једна занимљивост је да је алгоритам обрнутог брисања такође открио \textbf{Џозеф Крускал}.
+
+\subsection{Џозеф Бернард Крускал млађи}
+
+\begin{wrapfigure}{r}{3.5cm}
+\begin{center}
+\includegraphics[width=3.5cm]{slike/kruskal.jpeg}
+\end{center}
+\caption{Џозеф Бернард Крускал млађи}
+\label{fig:for_disk}
+\end{wrapfigure}
+
+Џозеф Бернард Крускал млађи (1928-2010) је био Амерички математичар. Основне и мастер студије је завршио на универзитету у Чикагу док је докторирао на универзитету Принстон. Радио је у Беловој лабораторији од 1959. до 1993. године.
+
+\section{Закључак}
+Крускалов алгоритам је један од најзначајнијих алгоритама за проналажење минималног разапињућег стабла и има широк спектар примена.
+
+\end{document}
