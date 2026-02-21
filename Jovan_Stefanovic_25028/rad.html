@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Poređenje algoritama sortiranja</title>
+    <meta name="description" content="Sažetak rada o vremenskoj složenosti algoritama sortiranja">
+</head>
+
+<body>
+    <div class="Header">
+        <ul class="PlainHeader">
+            <li>Glavna Stranica</a></li>
+            <li>Page:2/3</li>
+        </ul>
+
+        <div class="FancyHeader SingleBorder">
+            <ul class="Nav">
+                <li><a href="index.html">Glavna</a></li>
+                <li><a href="rad.html">Rad</a></li>
+                <li><a href="forma.html">Forma</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="">
+        <h1>Poređenje vremenske složenosti algoritama sortiranja</h1>
+
+        <section id="uvod" class="DoubleBorder Sekcija">
+            <h2>Uvod</h2>
+            <p>
+                Algoritmi sortiranja su osnovni deo mnogih računarskih problema.
+                Njihova efikasnost se meri vremenskom složenošću, koja opisuje koliko operacija algoritam izvršava u
+                zavisnosti od veličine ulaza.
+            </p>
+            <h2>Osnovni pojmovi</h2>
+            <p>
+                Vremenska složenost je funkcija <strong>T(n)</strong> koja opisuje broj osnovnih operacija u zavisnosti
+                od
+                veličine niza n.
+                Najčešće osnovna operacija kod sortiranja je <em>poređenje elemenata</em>.
+            </p>
+        </section>
+
+        </section>
+
+        <section id="algoritmi-kvadratne" class="DoubleBorder Sekcija">
+            <h2>Algoritmi kvadratne složenosti</h2>
+
+            <p>Ovi algoritmi imaju složenost proporcionalnu kvadratu veličine ulaza, najčešće <strong>O(n²)</strong>.</p>
+
+            <h3>Bubble sort</h3>
+            <p>
+                Prolazi niz i menja mesta 
+                susednim elementima dok niz ne bude sortiran.
+            </p>
+
+            <h3>Selection sort</h3>
+            <p>
+                Pronalazi najmanji element u nesortiranom 
+                delu niza i postavlja ga na odgovarajuće mesto u nizu.
+            </p>
+
+            <h3>Insertion sort</h3>
+            <p>
+                Ubacuje nove elemente sa desne,
+                nesortirane, strane niza u levu, sortiranu,
+                stranu niza dok leva strana ne postane ceo niz.
+                jako brz za male ili delimično sortirane nizove.
+            </p>
+
+            <h3>Tabela kvadratnih algoritama</h3>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Algoritam</th>
+                    <th>Formula složenosti</th>
+                    <th>Napomena</th>
+                </tr>
+                <tr>
+                    <td>Bubble sort</td>
+                    <td>T(n) = n(n-1)/2</td>
+                    <td>najgori i prosečan slučaj su spori</td>
+                </tr>
+                <tr>
+                    <td>Selection sort</td>
+                    <td>T(n) = n(n-1)/2</td>
+                    <td>Broj poređenja ne zavisi od rasporeda elemenata već je uvek kvadratan</td>
+                </tr>
+                <tr>
+                    <td>Insertion sort</td>
+                    <td>T(n) = O(n²) (najgori), O(n) (najbolji)</td>
+                    <td>Efikasan za male ili već delimično sortirane nizove</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="algoritmi-logaritamske" class="DoubleBorder Sekcija">
+            <h2>Algoritmi logaritamske složenosti</h2>
+            <p>
+                Ovi algoritmi imaju složenost proporcionalnu prozivodu velicine ulaza i njegovog logaritma,
+                najčešće <strong>O(n log(n))</strong>.
+            </p>
+            <h3>Teorijska donja granica</h3>
+            <p>
+                Nijedan algoritam zasnovan samo na poređenju elemenata ne može imati složenost bolju od <strong>O(n log n)</strong> u
+                najgorem slučaju.
+            </p>
+
+            <h3>Merge sort</h3>
+            <p>
+                Koristi pristup "podeli pa vladaj". Niz se deli na polovine dok se ne dobiju nizovi dužine 1, zatim se
+                spajaju u sortiran niz.
+                Formula vremenske složenosti: <strong>T(n) = 2T(n/2) + n</strong>.
+            </p>
+
+            <h3>Quick sort</h3>
+            <p>
+                Quick sort je efikasan algoritam koji koristi pristup "podeli pa vladaj". 
+Algoritam bira jedan element niza, tzv. <em>pivot</em>, i raspoređuje ostale elemente tako da su svi manji od pivota levo, a svi veći desno. 
+Zatim se ista procedura rekurzivno primenjuje na leve i desne podnizove dok ceo niz ne bude sortiran. 
+            </p>
+
+            <h3>Tabela efikasnih algoritama</h3>
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Algoritam</th>
+                    <th>Formula složenosti</th>
+                    <th>Napomena</th>
+                </tr>
+                <tr>
+                    <td>Merge sort</td>
+                    <td>T(n) = O(n log n)</td>
+                    <td>složenost optimalna za sve ulaze.</td>
+                </tr>
+                <tr>
+                    <td>Quick sort</td>
+                    <td>O(n log n) prosečno, O(n²) najgore</td>
+                    <td>Brz u proseku, ali loš pivot može biti problem</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="zakljucak" class="DoubleBorder Sekcija">
+            <h2>Zaključak</h2>
+            <p>
+                Jednostavni algoritmi (Bubble, Selection, Insertion) su edukativni, dok Merge i Quick sort predstavljaju
+                praktičan izbor za velike nizove u stvarnim primenama.
+            </p>
+        </section>
+    </main>
+
+</body>
+
+</html>

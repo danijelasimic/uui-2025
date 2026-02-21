@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malone Lam – Analiza napada i pranja novca</title>
+    <meta name="description" content="Detaljna analiza napada Malone Lam slučaja, faza socijalnog inženjeringa, pranja novca i izvora.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="page">
+        <header class="nav">
+            <div class="nav-inner">
+                <div class="nav-brand">
+                    KOLAKOVIĆ <span>LUKA</span> · 25100
+                </div>
+                <nav class="nav-links" aria-label="Glavna navigacija">
+                    <a class="nav-link" href="index.html">Početna</a>
+                    <a class="nav-link nav-link-active" href="tema.html">Tema</a>
+                    <a class="nav-link" href="autor.html">O autoru</a>
+                    <a class="nav-link" href="#" onclick="var a=document.getElementById('bg-music'); if(a.paused){a.play();this.classList.add('nav-link-active');}else{a.pause();this.classList.remove('nav-link-active');} return false;">Muzika</a>
+                    <audio id="bg-music" loop>
+                        <source src="./muzika/muzika.mp3" type="audio/mpeg">
+                    </audio>
+                </nav>
+            </div>
+        </header>
+
+        <main class="shell">
+            <div class="breadcrumbs">
+                <a href="index.html">Početna</a> / <span>Tema</span>
+            </div>
+
+            <section class="section" aria-labelledby="osnova-teme">
+                <div class="section-header">
+                    <h1 id="osnova-teme" class="section-title glitch" data-text="Malone Lam kao studija slučaja">
+                        Malone Lam kao studija slučaja
+                    </h1>
+                    <p class="section-kicker">od narativne priče do akademske analize</p>
+                </div>
+                <div class="section-body">
+                    <p>
+                        Priča sa početne strane nije samo dramatičan opis jedne večeri na Discordu.
+                        Ona predstavlja uvod u realan bezbednosni problem: kako kombinacija
+                        socijalnog inženjeringa, loših navika korisnika i niza manjih propusta može
+                        da dovede do najveće person-to-person krađe kriptovalute u istoriji.
+                    </p>
+                    <p>
+                        U nastavku stranice fokus je na sistematičnoj analizi ključnih faza napada:
+                        od inicijalnog kontakta, preko eskalacije pristupa, do slojevitog pranja
+                        novca i konačnog kolapsa cele grupe kada se u priču uključuju istražitelji.
+                    </p>
+                    <div class="pill-row">
+                        <span class="pill pill--mono">analiza tokova</span>
+                        <span class="pill pill--accent pill--mono">upravljački lanci</span>
+                        <span class="pill pill--mono">indikatori sumnjivih aktivnosti</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="faznost-napada">
+                <div class="section-header">
+                    <h2 id="faznost-napada" class="section-title glitch" data-text="Faze napada i pranja novca">
+                        Faze napada i pranja novca
+                    </h2>
+                    <p class="section-kicker">od prvog poziva do navodnog „čistog“ novca</p>
+                </div>
+                <div class="section-body">
+                    <p>
+                        Napad iz ove studije slučaja može se podeliti na nekoliko jasno uočljivih
+                        faza. Svaka faza ima svoje tehničke i psihološke komponente, ali i specifične
+                        tragove koji ostaju na blockchainu.
+                    </p>
+                    <ol class="list">
+                        <li>Priprema cilja kroz prikupljanje podataka (baze podataka Genesis poverilaca).</li>
+                        <li>Prvi kontakt preko telefona i sticanje poverenja lažnom podrškom (Google/Gemini).</li>
+                        <li>Dobijanje pristupa imejlu, cloud nalogu, a zatim bekapu ključeva (AnyDesk/OneDrive).</li>
+                        <li>Premeštanje velikih iznosa u novčanike koje kontrolišu napadači.</li>
+                        <li>Pranje novca kroz servise kao što su TH Swap i eXch, i Monero valutu.</li>
+                    </ol>
+                    <div class="table-wrap">
+                        <table aria-label="Poređenje faza napada i kontrolnih mehanizama">
+                            <thead>
+                                <tr>
+                                    <th>Faza</th>
+                                    <th>Opis</th>
+                                    <th>Moguća zaštita</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Priprema</td>
+                                    <td>Pronalaženje ciljeva, javni profili, povezanost sa Genesis kreditorima.</td>
+                                    <td>Minimalno javno izlaganje finansijskih informacija.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kontakt</td>
+                                    <td>Lažni pozivi koji se predstavljaju kao podrška poznatih servisa.</td>
+                                    <td>Direktna provera identiteta kroz zvanične kanale.</td>
+                                </tr>
+                                <tr>
+                                    <td>Preuzimanje</td>
+                                    <td>Instalacija AnyDesk-a, reset lozinki i izrada bekapa ključeva.</td>
+                                    <td>Zabrana deljenja ekrana i čuvanja ključeva u cloudu.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pranje</td>
+                                    <td>Korišćenje servisa niske bezbednosti (TH Swap, eXch) i Monero valute.</td>
+                                    <td>Monitoring neuobičajeno velikih transakcija i tokova (on-chain analiza).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="kontakt">
+                <div class="section-header">
+                    <h2 id="kontakt" class="section-title glitch" data-text="Kontakt forma za izveštavanje">
+                        Kontakt forma za izveštavanje
+                    </h2>
+                    <p class="section-kicker">simulacija prijave sumnjive aktivnosti</p>
+                </div>
+                <div class="section-body">
+                    <p>
+                        U realnom svetu, finansijske institucije i berze moraju da imaju jasne
+                        kanale preko kojih se prijavljuju sumnjive aktivnosti. Ispod je jednostavna
+                        kontakt forma koja imitira takav kanal. Podaci se u ovom projektu ne šalju
+                        nigde, već služe za ilustraciju HTML formi.
+                    </p>
+                    <form action="#" method="post">
+                        <div>
+                            <label for="ime">Ime i prezime</label>
+                            <input type="text" id="ime" name="ime" required>
+                        </div>
+                        <div>
+                            <label for="email">Imejl adresa</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="tip">Tip prijave</label>
+                            <input type="text" id="tip" name="tip" placeholder="npr. sumnjiva transakcija, phishing poziv">
+                        </div>
+                        <div>
+                            <label for="poruka">Opis sumnjive aktivnosti</label>
+                            <textarea id="poruka" name="poruka" required></textarea>
+                        </div>
+                        <button class="btn" type="submit">Pošalji prijavu</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="izvori">
+                <div class="section-header">
+                    <h2 id="izvori" class="section-title glitch" data-text="Izvori i dalje čitanje">
+                        Izvori i dalје čitanje
+                    </h2>
+                    <p class="section-kicker">spoljašnji i unutrašnji linkovi</p>
+                </div>
+                <div class="section-body">
+                    <p>
+                        Iako je narativ na ovoj prezentaciji prilagođen i pojednostavljen, osnovni
+                        motivi i obrasci oslanjaju se na stvaran slučaj velike kripto prevare i
+                        istrage. Sledeći linkovi vode ka primerima zvaničnih saopštenja i analiza.
+                    </p>
+                    <ul class="list">
+                        <li>
+                            Spoljašnji izvor:
+                            <a href="https://www.justice.gov/usao-dc/pr/indictment-charges-two-230-million-cryptocurrency-scam">
+                                Krivična prijava za kripto prevaru od 230 miliona dolara
+                            </a>
+                        </li>
+                        <li>
+                            Spoljašnji izvor:
+                            <a href="https://www.binance.com/ar-AE/square/post/18004506906578">
+                                Tekst sa Binance platforme o kripto prevari i zaštiti
+                            </a>
+                        </li>
+                        <li>
+                            Spoljašnji izvor:
+                            <a href="https://www.justice.gov/usao-dc/pr/additional-12-defendants-charged-rico-conspiracy-over-263-million-cryptocurrency-thefts">
+                                Saopštenje o RICO optužnici vezanoj za kripto krađu
+                            </a>
+                        </li>
+                        <li>
+                            Unutrašnji link:
+                            <a href="index.html#start">Povratak na početak priče na početnoj strani</a>
+                        </li>
+                    </ul>
+                    <p class="muted">
+                        Napomena: svi spoljašnji linkovi služe isključivo kao referenca za dalјe
+                        čitanje i nisu nužni za praćenje toka ove priče.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div>Seminarski projekat · Luka Kolaković 25100 · Malone Lam studija slučaja</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,462 @@
+/* ===== Global Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0d1220;
+    color: #f0f0f0;
+}
+
+a { text-decoration: none; color: #c77dff; transition: 0.3s; }
+a:hover { color: #00eaff; }
+
+/* ===== Navigation ===== */
+nav {
+    background: linear-gradient(90deg, #131a2c, #1a2238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.nav-links { display: flex; gap: 25px; align-items: center; }
+.nav-search input {
+    padding: 10px 20px;
+    width: 650px;
+    border-radius: 25px;
+    border: 1px solid #c77dff;
+    background: #0d1220;
+    color: white;
+    outline: none;
+}
+
+/* ===== Dropdown ===== */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn {
+    background: none; border: none; color: #c77dff;
+    font-family: 'Inter', sans-serif; font-size: 16px; cursor: pointer;
+}
+.dropdown-content {
+    display: none; position: absolute; background: #1a2238;
+    min-width: 180px; border-radius: 8px; top: 25px;
+}
+.dropdown-content a { color: white; padding: 12px 16px; display: block; border-bottom: 1px solid #2c2c3c; }
+.dropdown:hover .dropdown-content { display: block; }
+
+/* ===== Grid & Cards ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+}
+.card {
+    background: linear-gradient(135deg, #1a2238, #131a2c);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-content { padding: 15px; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 0 20px #c77dff; }
+
+/* ===== Kontakt Forma (Vraćen stari izgled) ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #131a2c;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+form label {
+    font-weight: bold;
+    color: #c77dff;
+    margin-bottom: -10px;
+    font-size: 14px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #1a2238;
+    color: #f0f0f0;
+    resize: none;
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #c77dff;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #c77dff;
+    color: #0d1220;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Orbitron', sans-serif;
+}
+
+button:hover { background: #00eaff; }
+
+/* ===== Marquee ===== */
+.marquee { 
+    background: #252d44; 
+    color: #a0f0ff;      
+    border-top: 1px solid #333c5a;
+    border-bottom: 1px solid #333c5a;
+    overflow: hidden; 
+    white-space: nowrap; 
+    padding: 8px 0; 
+    margin: 20px 0; /* Prvi broj je razmak gore i dole, drugi je levo i desno */
+    border-radius: 4px;
+}
+.marquee p { 
+    display: inline-block; 
+    padding-left: 100%; 
+    animation: marquee 35s linear infinite; /* Sporije je prijatnije */
+    font-weight: 500; /* Umesto bold, stavi medium težinu */
+    margin: 0; 
+    letter-spacing: 1px; /* Malo razmakni slova za bolju čitljivost */
+}
+@keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
+
+/* Headings & Footer */
+h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: #c77dff; }
+footer { text-align: center; padding: 30px; background: #131a2c; margin-top: 50px; }
+
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+/* Dodaj ovo negde oko .card-content */
+.price {
+    display: block;
+    color: #00eaff; /* Cyan boja da odskače */
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 10px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px; /* Razmak između dugmića */
+    margin-top: 15px;
+}
+
+.card-buttons .buy-btn {
+    flex: 2; /* Dugme za korpu neka bude malo šire */
+}
+
+.details-btn {
+    flex: 1;
+    background: #333; /* Tamno siva za kontrast */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-btn:hover {
+    background: #444;
+    color: #00eaff;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.qty-btn {
+    background: #c77dff; /* Tvoja ljubičasta */
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.qty-btn:hover {
+    background: #00eaff; /* Cyan na hover */
+    color: #0d1220;
+}
+
+/* Stil za dugmiće sa ikonicama */
+.qty-icon-btn {
+    background: none;
+    border: none;
+    color: #c77dff; /* Tvoja ljubičasta */
+    font-size: 2rem; /* Veličina ikonice */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    padding: 0;
+}
+
+.qty-icon-btn:hover {
+    color: #00eaff; /* Menja boju u cyan na hover */
+}
+
+/* Centriranje celog kontrolera */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#kolicina-input {
+    width: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    background: #1a2238;
+    border: 1px solid #c77dff;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+
+/* Stil za glavno dugme "Dodaj u korpu" da bude ispod */
+.buy-btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+/* Kontejner koji drži sliku i info (već ga imaš, samo dodaj/izmeni ovo) */
+#proizvod-kontejner {
+    display: flex;
+    background: #1a2238;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1200px; /* Povećali smo maksimalnu širinu celog bloka */
+    width: 90%;
+    margin: 0 auto;
+    align-items: flex-start; /* Poravnava sliku i tekst uz vrh */
+    gap: 50px; /* Razmak između velike slike i teksta */
+    margin-top: 50px; /* Ovo pravi razmak od nav bara */
+    margin-bottom: 50px;
+}
+
+/* POVEĆANA SLIKA */
+#detalji-slika {
+    width: 600px !important; /* Ovde direktno kontrolišeš veličinu. Možeš staviti i 700px ako želiš još veće */
+    height: auto;
+    max-height: 500px; /* Ograničavamo visinu da ne ode previše van ekrana */
+    border-radius: 15px;
+    object-fit: contain; /* OBAVEZNO: Da se vidi cela grafička/procesor bez sečenja */
+    background: #0d1220; /* Blaga pozadina ako je slika providna ili drugačijih proporcija */
+    border: 2px solid #c77dff; /* Svetleći ljubičasti okvir */
+    box-shadow: 0 0 30px rgba(199, 125, 255, 0.3); /* Gaming sjaj oko slike */
+}
+
+/* Desna strana sa tekstom */
+.product-details-right {
+    flex: 1; /* Zauzima ostatak prostora desno */
+    display: flex;
+    flex-direction: column;
+}
+
+#detalji-naslov {
+    font-size: 2.5rem; /* Veći naslov proizvoda */
+    margin-bottom: 15px;
+}
+
+#detalji-cena {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Kontejner forme - centriranje */
+#kontakt-forma {
+    max-width: 500px; /* Ograničavamo širinu da ne bude preširoka */
+    margin: 0 auto;   /* Centriramo celu formu na sredinu ekrana */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;        /* Pravimo jednak razmak između svakog polja */
+    text-align: left; /* Tekst labela ide ulevo */
+}
+
+/* Grupa Label + Input */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Razmak između naslova polja i samog polja */
+}
+
+/* Sva polja (input, email, textarea) da budu iste širine */
+#kontakt-forma input, 
+#kontakt-forma textarea {
+    width: 100%;       /* Uzima punu širinu kontejnera */
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05); /* Tamna providna pozadina */
+    border: 1px solid rgba(199, 125, 255, 0.3); /* Tanki ljubičasti okvir */
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    box-sizing: border-box; /* Ključno: sprečava da padding "izgura" polje van ivica */
+    transition: 0.3s;
+}
+
+/* Efekat kada se klikne u polje (kao na tvojoj slici) */
+#kontakt-forma input:focus, 
+#kontakt-forma textarea:focus {
+    outline: none;
+    border-color: #c77dff;
+    box-shadow: 0 0 10px rgba(199, 125, 255, 0.5);
+}
+
+/* Dugme "Pošalji" */
+#kontakt-forma .buy-btn {
+    width: 100%; /* Da dugme bude široko kao i polja */
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.input-group label {
+    display: block;      /* Osigurava da label uvek bude iznad */
+    margin-bottom: 8px;  /* Odmiče naslov od polja za kucanje */
+    font-weight: bold;   /* Čini tekst malo uočljivijim */
+}
+
+.input-group input, 
+.input-group textarea {
+    margin-bottom: 5px;  /* Blagi razmak ispod samog polja */
+}
+
+.logout-link {
+    background: none;
+    border: none;
+    color: #ff4d4d; /* Crvena boja za odjavu */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.logout-link:hover {
+    color: #ff8080;
+    text-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+}
+
+.prosecna-ocena {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.star-rating i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 5px;
+    transition: transform 0.2s;
+}
+
+.star-rating i:hover {
+    transform: scale(1.2);
+}
+
+/* --- FIX ZA LEPŠI IZGLED (Nalepiti na kraj fajla) --- */
+
+/* 1. Zaključavanje grida na 4 komponente */
+.grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+}
+
+/* 2. Sređivanje dugmadi da budu u liniji i lepša */
+.card-buttons {
+    display: flex !important;
+    gap: 10px !important;
+    margin-top: 15px !important;
+}
+
+.buy-btn {
+    flex: 2 !important;
+    background: #c77dff !important;
+    color: #0d1220 !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+}
+
+.vidi-btn, .details-btn {
+    flex: 1 !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s !important;
+}
+
+.vidi-btn:hover, .details-btn:hover {
+    border-color: #00eaff !important;
+    color: #00eaff !important;
+    background: rgba(0, 234, 255, 0.1) !important;
+}
+
+/* 3. Popravka "unakženog" dugmeta u korpi */
+.korpa-tabela button {
+    padding: 5px 12px !important;
+    font-size: 12px !important;
+    background: #ff4d4d !important;
+    width: auto !important;
+    height: auto !important;
+    color: white !important;
+}
+
+/* 4. Usporen meni (0.8s) */
+.dropdown-content {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.8s ease-in-out !important;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}

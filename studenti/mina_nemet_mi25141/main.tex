@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{datetime}
+\geometry{margin=2cm}
+
+\title{\textbf{Емулaција PlayStation конзола}}
+\author{Мина Немет}
+\newdateformat{mydate}{\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
+
+\date{\mydate\today}
+
+\addto\captionsserbian{%
+  \renewcommand{\contentsname}{Садржај}%
+}
+
+
+% Definisanje teoreme, definicije i leme
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{lema}{Лема}[section]
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Увод}
+Емулaција \textbf{PlayStation} конзола постаје све релевантнији хоби с обзиром на то да је људима ефикасније и економичније да ретро игрице покрећу помоћу емулатора на својим локалним машинама. \textit{Емулатори} управо омогућавају такво покретање старих игара на савременим рачунарима.
+
+\section{Технички аспект емулaције}
+\subsection{Хардверска емулација}
+Емулaтори морају да симулирају \textcolor{blue}{CPU}, \textcolor{red}{GPU} и меморију конзоле.
+
+\subsection{Софтверска емулација}
+\begin{itemize}
+    \item Интерпретатори инструкција
+    \item Управљачи улазних уређаја
+\end{itemize}
+
+\subsection{Табела карактеристика конзола}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Конзола & CPU фреквенција & GPU меморија \\
+\hline
+PS1 & 33.8688 MHz & 2 MB \\
+PS2 & 294 MHz & 4 MB \\
+PS3 & 3.2 GHz & 256 MB \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Емулaција у пракси}
+\subsection{Примери емулатора}
+\begin{enumerate}
+    \item \textbf{PCSX} --- за PS1
+    \item \textbf{PCSX2} --- за PS2
+    \item \textbf{RPCS3} --- за PS3
+\end{enumerate}
+
+\subsection{Илустрација}
+\begin{figure}[h!]
+\flushleft
+\includegraphics[width=0.4\textwidth]{slike/ps1.jpg}
+\caption{Симболична слика PlayStation конзоле}
+\end{figure}
+
+\section{Математички модел}
+Емулaција често захтева пресликавање физичких својстава конзоле у дигитални облик. На пример, формула за рачунање циклуса процесора емулатора на основу процесора изворне конзоле могла би бити:
+\[
+\text{emulator\_cycles} = \text{console\_cycles} \times \frac{\text{emulator\_clock\_speed}}{\text{console\_clock\_speed}}
+\]
+
+\section{Теоремe и дефиниције}
+\begin{definicija}
+Емулaтор је софтвер који омогућава покретање програма намењених другом хардверском окружењу.
+\end{definicija}
+
+\begin{lema}
+Сваки \textit{инструкцијски скуп} оригиналне конзоле може бити симулиран на рачунару са довољно меморије и процесорске снаге.
+\end{lema}
+
+\begin{teorema}
+Ако емулaтор правилно симулира CPU, GPU и меморију, све оригиналне игре ће се покретати без грешака.
+\end{teorema}
+
+\section{Закључак}
+Емулaција PlayStation конзола је комплексна комбинација \textbf{хардверских} и \textit{софтверских} решења. Иако постоје изазови, као што су \textcolor{blue}{перформансе} и компатибилност, емулaтори омогућавају очување дигиталне културне баштине.
+
+\end{document}
