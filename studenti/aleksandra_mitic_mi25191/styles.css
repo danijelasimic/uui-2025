@@ -1,0 +1,353 @@
+body {
+    font-family: 'Orbitron', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    position: relative;
+    background-image: url('https://uploads.onecompiler.io/44chu39c6/44chu3t4b/cyber%20gif.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+}
+
+header img.profile-photo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0;
+    border: 3px solid black;
+}
+
+nav {
+    background-color: #000000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 15px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0099cc;
+    font-weight: bold;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.header-text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+.header-text h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.header-text p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.header-text a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-text a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+footer {
+    background-color: #4b6cb7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+.about-header {
+    position: relative;
+    background-image: url('https://uploads.onecompiler.io/44chu39c6/44chu3t4b/Blade%20Runner%202049%20(2017)%20directed%20by%20Denis%20Villeneuve%20(5_6).gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-header h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 50px;
+    color: #00ffff;                  
+    text-shadow: 0 0 8px #00ffff;  
+    z-index: 1;
+    margin: 0;
+}
+
+
+.about-section {
+    background-color: #35063e;       
+    color: #ffffff;                  
+    font-family: 'Audiowide', sans-serif; 
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #0099cc;      
+    border-radius: 5px;
+}
+
+
+.about-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.about-section li {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-section li ul {
+    padding-left: 20px;
+}
+
+
+.about-section a, footer a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.about-section a:hover, footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* TEMA.HTML STYLES */
+/* ===== GLOBAL RESET ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #ffffff;
+    font-family: 'Audiowide', sans-serif;
+}
+
+/* ===== HEADER ===== */
+/* ===== HEADER ===== */
+#tema-header {
+    position: relative;
+    background-image: url('https://uploads.onecompiler.io/44chu39c6/44chu3t4b/car-gif2.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay for better contrast */
+#tema-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 20, 40, 0.6)
+    );
+}
+
+#tema-header h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 42px;
+    color: #ff7a00; /* neon orange */
+    text-shadow:
+        0 0 8px #ff7a00,
+        0 0 20px #ff7a00;
+    letter-spacing: 2px;
+}
+
+#tema-header a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid #1e90ff; /* electric blue */
+    color: #1e90ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#tema-header a:hover {
+    background-color: #ff7a00;
+    border-color: #ff7a00;
+    color: #000;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #050505;
+    border-bottom: 2px solid #1e90ff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7a00;
+    text-shadow: 0 0 10px #ff7a00;
+}
+
+/* ===== MAIN CONTENT ===== */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #0d0d0d;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+}
+
+/* Headings */
+section h2,
+section h3 {
+    color: #ff7a00;
+    text-shadow: 0 0 8px #ff7a00;
+}
+
+/* Paragraph spacing */
+section p {
+    line-height: 1.6;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #1e90ff;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #0a1a2a;
+    color: #ff7a00;
+}
+
+/* ===== FORM ===== */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    background-color: #111;
+    color: #ffffff;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: 1px solid #1e90ff;
+    background-color: #000;
+    color: #1e90ff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #ff7a00;
+    border-color: #ff7a00;
+    color: #000;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid #1e90ff;
+    color: #1e90ff;
+}
