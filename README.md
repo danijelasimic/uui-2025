@@ -91,6 +91,12 @@ studenti/ime_prezime_mi25005/
 
 U njemu napravite sadržaj prema [uputstvu](https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html).
 
+U glavni `index.html` dodajte red sa linkom ka svom radu. Na primer,
+
+```html
+<a href="studenti/DanijelaSimic_mr05004/index.html">Danijela Simić</a>
+```
+
 ---
 
 ## 7. Add i commit
