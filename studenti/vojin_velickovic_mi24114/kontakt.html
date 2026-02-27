@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt | Kvantna Tehnologija</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        .contact-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: rgba(10, 25, 47, 0.95); 
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #64ffda;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            margin-top: 30px;
+        }
+
+        .contact-info { flex: 1; }
+        .contact-image { flex: 1; border-radius: 10px; overflow: hidden; }
+        .contact-image img { width: 100%; display: block; filter: brightness(0.7); }
+
+        form { text-align: left; }
+
+        label {
+            color: #64ffda;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 8px 0;
+            background: #112240; 
+            border: 1px solid #233554;
+            border-radius: 8px;
+            color: #ffffff !important; 
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        
+        input::placeholder, textarea::placeholder {
+            color: #8892b0;
+            opacity: 1;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #64ffda;
+            background: #1d2d50; 
+            outline: none;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .btn-send {
+            background: #64ffda;
+            color: #0a192f; 
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: 0.3s;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        .btn-send:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper { flex-direction: column; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Početna</a>
+        <a href="tema.html">Kvantna Tehnologija</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align: center; color: #0a192f; margin-bottom: 10px;">Povežite se sa nama</h2>
+        <p style="text-align: center; color: #555; margin-bottom: 30px;">Imate pitanja o kvantnim računarima? Pišite nam!</p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <form>
+                    <label>Vaše ime</label>
+                    <input type="text" placeholder="Unesite Vaše ime i prezime...">
+                    
+                    <label>E-mail adresa</label>
+                    <input type="email" placeholder="primer@email.com">
+                    
+                    <label>Poruka</label>
+                    <textarea rows="5" placeholder="Napišite Vašu poruku ovde..."></textarea>
+                    
+                    <button type="button" class="btn-send">Pošalji Upit</button>
+                </form>
+            </div>
+
+            <div class="contact-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="Kvantna komunikacija">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    <a href="https://www.matf.bg.ac.rs/" target="_blank" class="footer-link">Matematički fakultet</a> 
+    | 
+    <a href="https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html" target="_blank" class="footer-link">Smer Informatika</a> 
+    | 2025
+</footer>
+</body>
+</html>
