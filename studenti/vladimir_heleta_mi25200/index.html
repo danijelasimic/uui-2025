@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Увод у информатику</title>
+  <link rel="stylesheet" href="stil.css">
+</head>
+
+<body>
+<header>
+  <h1>Сајт за УУИ</h1>
+</header>
+
+<nav>
+  <a href="index.html">Почетна</a>
+  <a href="vh.html">О мени</a>
+  <a href="tnp.html">О настави</a>
+  <a href="studenti/vladimir_heleta_mi25200/index.html">Vladimir Heleta</a>
+  <button onclick="myFunction()">Тамни режим</button>
+</nav>
+
+<section class="container">
+
+  <div class="article">
+    <h2>Укратко о мени</h2>
+    <p>
+      Име: Владимир<br>
+      Презиме: Хелета<br>
+      Имејл: vanja.heleta@gmail.com<br>
+      Смер: Информатика<br>
+      Бр. индекса: 200/2025
+    </p>
+  </div>
+
+  <div class="article">
+    <h2>Листа предмета</h2>
+
+    <div class="semestri">
+      <div class="semestar">
+        <div class="mini-naslov">Први семестар</div>
+        <ul>
+          <li>Линеарна алгебра</li>
+          <li>Увод у програмирање</li>
+          <li>Увод у информатику</li>
+          <li>Дискретне структуре</li>
+          <li>Техничко и научно писање</li>
+          <li>Дигитални запис података</li>
+        </ul>
+      </div>
+
+      <div class="semestar">
+        <div class="mini-naslov">Други семестар</div>
+        <ul>
+          <li>Увод у алгоритме</li>
+          <li>Архитектура рачунара</li>
+          <li>Дискретне структуре 2</li>
+          <li>Анализа 1</li>
+          <li>Зететика</li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="tnp.html" class="link">Још</a>
+  </div>
+  <div class="article">
+    <img src="vh.jpg" alt="ja">
+    <a href="vh.html" class="link"></a>
+  </div>
+</section>
+
+<script>
+function myFunction() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>

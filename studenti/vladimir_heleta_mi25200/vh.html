@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Лична страна</title>
+  <link rel="stylesheet" href="stil.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Лична страна</h1>
+</header>
+
+<nav>
+  <a href="index.html">Почетна</a>
+  <a href="vh.html">О мени</a>
+  <a href="tnp.html">О настави</a>
+  <button onclick="myFunction()">Тамни режим</button>
+</nav>
+
+<section class="container">
+
+  <div class="article">
+    <h2>О мени</h2>
+
+    <p>
+      Здраво, зовем се Владимир Хелета и студент сам И смера
+	  на Математичком факултету. 
+      Овде се налази пар кратких информација о мени, о мојим
+	  интересовањима, хобијима, и омиљеним жанровима
+	  музике и филмова.
+      
+    </p>
+
+    <p>
+      Разлог зашто сам изабрао ове студије је
+	  моја заинтересованост за технологију, било
+	  хардвер или софтвер, иако нисам велики љубитељ
+	  математике.
+    </p>
+  </div>
+
+  <div class="article">
+    <h2>Интересовања</h2>
+
+    <ul>
+      <li>Програмирање</li>
+      <li>Хардвер рачунара и телефона</li>
+      <li>Учење прављења софтвера и игара</li>
+      <li>Модерна и средњовековна историја</li>
+    </ul>
+  </div>
+
+  <div class="article">
+    <h2>Хобији</h2>
+
+    <ul>
+      <li>Спорт, омиљени кошарка</li>
+      <li>Видео игре, омиљена World of Warcraft</li>
+      <li>Књиге, American Psycho</li>
+    </ul>
+  </div>
+
+  <div class="article">
+    <h2>Музка и филмови</h2>
+
+    <p>
+      <strong>Музика:</strong><br>
+      Омиљени жанр ми је рок. Иако немам стриктно омиљени
+	  бенд, неки које слушам су: Linkin Park, Creed, System of a Down
+    </p>
+
+    <p>
+      <strong>Филмови и серије:</strong><br>
+      Омиљени филм ми је Gladiator, а омиљена серија
+	  Better Call Saul
+    </p>
+  </div>
+
+</section>
+
+<script>
+function myFunction() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
