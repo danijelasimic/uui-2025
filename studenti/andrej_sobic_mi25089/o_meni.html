@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>O meni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="glavna-navigacija">
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="tema.html">Akademska tema</a></li>
+            <li><a href="o_meni.html" class="aktivna">O meni</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>O meni</h1>
+        <p class="subtitle">Lične informacije i interesovanja</p>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>Osnovne informacije</h2>
+            <p>
+                Zovem se Andrej Šobić i student sam Matematičkog fakulteta
+                Univerziteta u Beogradu.<br>
+                Završio sam smer za učenike sa posebnim sposobnostima za računarstvo i informatiku u Osmoj beogradskoj gimnaziji. U slobodno vreme igram igrice, slažem rubikove kocke, slušam muziku, gledam serije i filmove, treniram i provodim vreme sa mojim bližnjima.
+            </p>
+        </section>
+
+        <section>
+            <h2>Interesovanja i hobiji</h2>
+            <p>
+                Interesujem se za programiranje, matematiku i rad sa računarima.
+                Hobiji su mi slaganje Lego kockica, rubikovih kocki kao i slagalica.
+                Najviše se trenutno zanimam za to kako AI uči i razvija se.
+            </p>
+        </section>
+
+        <section>
+            <h2>Omiljene stvari</h2>
+            <ol>
+                <li>Muzika bez koje ne bi mogao da prođe ni jedan dan (najviše pop i rep).</li>
+                <li>Omiljeni film mi je <em>Iron Man 3</em>, a omiljena serija mi je <em>takt op.Destiny</em>.</li>
+                <li>Najzanimljivija rubikova kocka mi je square 1.</li>
+                <li>Logički i matematički problemi.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Kontaktirajte me</h2>
+            <form id="kontakt-forma" action="#" method="post">
+                <div class="polje">
+                    <label for="korisnik_ime">Vaše ime:</label>
+                    <input type="text" id="korisnik_ime" name="korisnik_ime" placeholder="Unesite ime" required>
+                </div>
+                
+                <div class="polje">
+                    <label for="poruka">Poruka:</label>
+                    <textarea id="poruka" name="poruka" rows="4" placeholder="Napišite nešto..." required></textarea>
+                </div>
+                
+                <button type="submit">Pošalji poruku</button>
+            </form>
+        </section>
+
+        <section>
+            <a class="dugme" href="index.html">Nazad na početnu stranu</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 • Andrej Šobić</p>
+    </footer>
+
+</body>
+</html>
