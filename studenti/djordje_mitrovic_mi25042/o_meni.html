@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Lični podaci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glavna-navigacija">
+    <div class="nav-sadrzaj">
+        <a href="index.html">Početna</a>
+        <a href="o_meni.html">O meni</a>
+        <a href="tema.html">Tema</a>
+    </div>
+</nav>
+    <header>
+        <h1>O meni</h1>
+    </header>
+
+    <section>
+      <section class="uvod-hobiji">
+   <h2>Zdravo! Ja sam Đorđe Mitrović, student Matematičkog fakulteta. </h2>
+<p>Moji hobiji uključuju sport, igrice, i muziku.</p>
+</section>
+
+<div class="hobi">
+        <img src="slike/djokovic.jpg" alt="Sport">
+        <p>Pratim sve sportove, ali od malih nogu su me najviše zanimali tenis i fudbal, i u zadnjih pet godina 
+            i košarka.</p>
+    </div>
+
+    <div class="hobi">
+        <img src="slike/lol.jpg" alt="Igrice">
+        <p>Igram takmičarske igrice jer sam takvog i duha. Većinom "League Of Legends", ali sam igrao i mnoge druge
+            kao što su "Rocket League", "Minecraft"...</p>
+    </div>
+
+    <div class="hobi">
+        <img src="slike/kanje.jpg" alt="Muzika">
+        <p>Muziku smatram najlepšim vidom umetnosti, od žanrova slušam skoro sve. Omiljeni izvođači
+             su mi Ceca i Kanye West.</p>
+    </div>
+    </section>
+    <section class="kontakt-sekcija">
+    <h2 class="centriran-naslov">Kontaktirajte me</h2>
+    <form action="#">
+        <div class="forma-grupa">
+            <label for="ime">Ime i prezime:</label>
+            <input type="text" id="ime" name="ime" placeholder="Unesite Vaše ime..." required>
+        </div>
+        
+        <div class="forma-grupa">
+            <label for="email">E-mail adresa:</label>
+            <input type="email" id="email" name="email" placeholder="primer@mail.com" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label for="poruka">Vaša poruka:</label>
+            <textarea id="poruka" name="poruka" rows="5" placeholder="Vaša poruka..."></textarea>
+        </div>
+
+        <button type="submit" class="dugme-forma">Pošalji poruku</button>
+    </form>
+</section>
+
+
+</body>
+
+
+</html>
