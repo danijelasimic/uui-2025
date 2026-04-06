@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mihajlo Janićijević</title>
+  <link rel="stylesheet" href="stilPredmeti.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <a href="#" class="nav-logo"></a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Početna</a>
+      </li>
+      <li class="nav-item">
+        <a href="omeni.html" class="nav-link">O meni</a>
+      </li>
+      <li class="nav-item">
+        <a href="predmeti.html" class="nav-link active">Predmeti i materijali</a>
+      </li>
+      <li class="nav-item">
+        <a href="akademskatema.html" class="nav-link">Akademska Tema</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+<h1 style="margin-bottom: 2rem;">Predmeti i materijali</h1>
+
+<div class="accordion">
+<div class="accordion-item">
+<button class="accordion-header" onclick="toggleSemestar(this)">
+<span>I Semestar</span>
+<span class="accordion-icon">▼</span>
+</button>
+<div class="accordion-content">
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Uvod u programiranje</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Uvod u informatiku</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Linearna algebra i analitička geometrija</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis"><a href="LAAG.pdf">Skripta teorije</a> - Aleksandar Spasić, Mihajlo Janićijević</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Diskretne strukture</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Materijali dostupni uskoro!</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Digitalni zapis podataka</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Tehničko naučno pisanje</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Materijali dostupni na sledećem linku: <a href="tnp.html">TNP</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<button class="accordion-header" onclick="toggleSemestar(this)">
+<span>II Semestar</span>
+<span class="accordion-icon">▼</span>
+</button>
+<div class="accordion-content">
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Analiza 1</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Uvod u algoritme</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Uvod u organizaciju i arhitekturu računara</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Diskretne strukture 2</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+
+<div class="predmet-item">
+<button class="predmet-header" onclick="togglePredmet(this)">
+<span>Zetetika</span>
+<span class="predmet-icon">►</span>
+</button>
+<div class="predmet-content">
+<p class="predmet-opis">Trenutno nema dostupnih materijala za ovaj predmet.</p>
+<div class="materijali">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<script>
+function toggleSemestar(button) {
+  const item = button.parentElement;
+  const content = item.querySelector('.accordion-content');
+  const icon = button.querySelector('.accordion-icon');
+  
+  content.classList.toggle('active');
+  
+  if (content.classList.contains('active')) {
+    icon.style.transform = 'rotate(180deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+}
+
+function togglePredmet(button) {
+  const item = button.parentElement;
+  const content = item.querySelector('.predmet-content');
+  const icon = button.querySelector('.predmet-icon');
+  
+  content.classList.toggle('active');
+  
+  if (content.classList.contains('active')) {
+    icon.style.transform = 'rotate(90deg)';
+  } else {
+    icon.style.transform = 'rotate(0deg)';
+  }
+}
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
+});
+</script>
+
+</body>
+</html>
