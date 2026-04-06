@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mihajlo Janićijević</title>
+  <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+  
+  <nav class="navbar">
+  <div class="nav-container">
+    <button class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+    <a href="#" class="nav-logo"></a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Početna</a>
+      </li>
+      <li class="nav-item">
+        <a href="omeni.html" class="nav-link active">O meni</a>
+      </li>
+      <li class="nav-item">
+        <a href="predmeti.html" class="nav-link">Predmeti i materijali</a>
+      </li>
+      <li class="nav-item">
+        <a href="akademskatema.html" class="nav-link">Akademska Tema</a>
+      </li>
+    </ul>
+  </div>
+</nav> 
+
+<main class="container">
+    <header class="podaci">
+      <img src="profilna.jpg"  class="profilna">
+      <div>
+        <h1>Mihajlo Janićijević</h1>
+        <p class="subtitle1" >Matematički fakultet</p>
+        <p class="subtitle">Broj indeksa: 2/2025</p>
+        <p class="subtitle">Smer: Informatika</p>
+        <p class="subtitle">Email: <a href="mailto:mi25002@alas.matf.bg.ac.rs" class="link">mi25002@alas.matf.bg.ac.rs</a></p>
+        
+      </div>
+      
+    </header>
+    <div class="linija"></div>
+    <section class="section">
+      <h2>Više o meni:</h2>
+      <p>Student sam informatike na matematičkom fakultetu. Moja interesovanja su u oblasti informatike, specifično veštačke inteligencije. Posebno me zanimaju teme koje povezuju realne probleme i praktična rešenja.  </p>
+<br>
+<p>Tokom dosadašnjeg školovanja radio sam na projektima i radovima koji se bave veštačke inteligencije, sa kojima sam se i takmičio.</p>
+<br>
+<p>Prethodnu deceniju, bio sam polaznik Centra za talente Nikola Tesla, sa kojim i dalje saradjujem.</p><br>
+<p>Pored akademskih interesovanja, bavim se i muzikom — sviram gitaru — i generalno se interesujem za muziku.</p><br><p> Ova prezentacija je mesto gde delim informacije o sebi, kao i dosadašnje projekte i materijale kako bi kolege imale pristup njima.</p>
+    </section>
+
+    
+
+
+
+  </main>
+
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
