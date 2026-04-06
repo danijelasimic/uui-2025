@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kontakt</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="dva.html">O meni</a>
+    <a href="tema.html">Fibonačijev niz</a>
+    <a href="raspored.html">Raspored</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="https://www.matf.bg.ac.rs/" target="_blank">MATF</a>
+</nav>
+
+<h1>Kontakt</h1>
+
+<div id="box">
+    <p>Možete me kontaktirati na sledeće adrese:</p>
+
+    <ul>
+        <li>Lični email: <a href="mailto:ivazivanovic2007bb@gmail.com">ivazivanovic2007bb@gmail.com</a></li>
+        <li>Fakultetski email: <a href="mailto:mi25065@matf.bg.ac.rs">mi25065@matf.bg.ac.rs</a></li>
+    </ul>
+
+   <p> Možete mi ostaviti i kratku poruku: </p>
+    <form onsubmit="alert('Hvala! Vaša poruka je poslata.'); return false;">
+        <label>Ime:</label>
+        <input type="text" name="ime" placeholder="Vaše ime" required>
+
+        <label>Poruka:</label>
+        <textarea name="poruka" rows="5" placeholder="Vaša poruka" required></textarea>
+
+        <button type="submit">Pošalji</button>
+    </form>
+</div>
+
+</body>
+</html>
