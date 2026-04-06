@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILOVEYOU malver</title>
+    <meta name="description" content="Pocetna strana sajta o ILOVEYOU malveru.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="vrh">
+        <div class="container">
+            <h1>ILOVEYOU malver</h1>
+            <p class="podnaslov">Seminarski rad o jednom od najpoznatijih malvera u istoriji</p>
+
+            <nav class="navigacija">
+                <ul>
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="tema.html">Tema</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="rad.pdf">Seminarski rad (PDF)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="kartica">
+            <h2>O sajtu</h2>
+            <p>
+                Ovaj sajt je posvecen temi <strong>ILOVEYOU malvera</strong>, poznatog i kao
+                <em>Love Letter</em>. 
+            </p>
+            <p>
+                ILOVEYOU malver se pojavio 2000. godine i veoma brzo se prosirio
+                putem elektronske poste, izazivajuci veliku globalnu stetu. 
+            </p>
+        </section>
+
+        <section class="kartica">
+            <h2>Na ovom sajtu se nalaze:</h2>
+            <ul>
+                <li>kratak uvod u temu,</li>
+                <li>opis načina rada malvera,</li>
+                <li>pregled posledica na različitim sistemima,</li>
+                <li>tabelarni prikaz bitnih činjenica,</li>
+                <li>kontakt formu.</li>
+            </ul>
+        </section>
+
+        <section class="kartica slika-sekcija">
+            <h2>Pismo</h2>
+            <img src="slike/Primer_pisma.png" alt="Primer ILOVEYOU pisma">
+            <p>
+                Ovako je izgledalo "pismo" koje je sadržalo malver.
+            </p>
+        </section>
+
+        <section class="kartica">
+            <h2>Brzi pregled</h2>
+            <table>
+                <tr>
+                    <th>Osobina</th>
+                    <th>Opis</th>
+                </tr>
+                <tr>
+                    <td>Naziv</td>
+                    <td>ILOVEYOU</td>
+                </tr>
+                <tr>
+                    <td>Godina pojave</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>Način širenja</td>
+                    <td>Email poruke i prilog</td>
+                </tr>
+                <tr>
+                    <td>Posledica</td>
+                    <td>Brisanje i zamena fajlova, širenje na kontakte</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="kontakt" class="kartica">
+            <h2>Kontakt forma</h2>
+            <form>
+                <label for="ime">Ime i prezime:</label><br>
+                <input type="text" id="ime" name="ime" placeholder="Unesite ime i prezime"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Unesite email"><br><br>
+
+                <label for="poruka">Poruka:</label><br>
+                <textarea id="poruka" name="poruka" rows="6" cols="40" placeholder="Unesite poruku"></textarea><br><br>
+
+                <button type="submit">Pošalji</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2026 - Seminarski rad iz uvoda u informatiku</p>
+        <p><a href="#vrh">Povratak na vrh strane</a></p>
+    </footer>
+
+</body>
+</html>
