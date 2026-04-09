@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Увод у информатику</title>
+  <link rel="stylesheet" href="stil.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Информације о предавањима</h1>
+</header>
+
+<nav>
+  <a href="index.html">Почетна</a>
+  <a href="vh.html">О мени</a>
+  <a href="tnp.html">О настави</a>
+  <button onclick="myFunction()">Тамни режим</button>
+</nav>
+
+<section class="container">
+
+  <div class="article">
+    <h2>Предавања</h2>
+
+
+    <p>
+      <strong>Термин предавања:</strong><br>
+      Среда, 8:15 – 10:00<br>
+    </p>
+  </div>
+
+  <div class="article">
+    <h2>Материјали</h2>
+
+    <ul class="lista">
+      <li>
+        <a href="https://drive.google.com/file/d/1t8LCCp-iC7_Q9xBDRwNrC4gv9EgSwLvM/view?usp=sharing" class="link" target="_blank">
+          Семинарски рад (Latex)
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</section>
+
+<script>
+function myFunction() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
