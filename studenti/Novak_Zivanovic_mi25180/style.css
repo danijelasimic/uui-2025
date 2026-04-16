@@ -1,0 +1,165 @@
+body {
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav#nav {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+p {
+    width: 70%;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 20px auto;
+    background: linear-gradient(45deg, #4CAF50, #2e7d32);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #66bb6a, #1b5e20);
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+ul, ol {
+    width: 60%;
+    margin: 10px auto;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(45deg, #2196F3, #0d47a1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #42a5f5, #002171);
+}
+
+section {
+    width: 80%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+}
+
+ul li, ol li {
+    margin: 8px 0;
+}
+
+table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(45deg, #4CAF50, #2e7d32);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d0f0d0;
+}
+
+section {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
