@@ -1,0 +1,158 @@
+/* Reset margina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Trebuchet, Candara, Arial, sans-serif;
+}
+
+h2 {
+	color: #156648;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+	justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #2bc38b;
+	text-decoration: underline;
+	transform: scale(1.1);
+}
+
+/* Glavni layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #2bc38b;
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.btnlink {
+	text-decoration: none;
+	color: #000;
+}
+
+.btnlink:hover {
+	text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+	color: #156648;
+}
+
+/* Glavni tekst */
+.content {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1, .content h2 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.content ul {
+	padding: 10px;
+}
+
+table {
+	width: 100%;
+}
+
+/* Forma */
+.contact-form{
+	background:white;
+	width:350px;
+	border-radius:12px;
+}
+
+.form-group{
+	margin-bottom:15px;
+	display:flex;
+	flex-direction:column;
+}
+
+label{
+	margin-bottom:5px;
+	font-size:14px;
+	color: #156648;
+}
+
+input, textarea{
+	padding:10px;
+	border:1px solid #000;
+	border-radius:6px;
+	font-size:14px;
+	transition:0.3s;
+}
+
+input:focus, textarea:focus{
+	outline:none;
+	border-color: #156648;
+	box-shadow:0 0 5px #156648;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    border-top: 1px solid #d1d5db;
+}
