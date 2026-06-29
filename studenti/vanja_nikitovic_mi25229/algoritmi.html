@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriptografija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Kriptografija</h1>
+
+    <nav class = "navbar">
+        <ul>
+            <li><a href = "index.html">Uvod</a></li>
+            <li><a href = "algoritmi.html">Algoritmi</a></li>
+            <li><a href = "integritet.html">Integritet</a></li>
+            <li><a href = "test_znanja.html">Test znanja</a></li>
+            <li><a href = "rad.pdf">Seminarski rad</a></li>
+
+            <button id="size_button_plus">A+</button>
+            <button id="size_button_minus">A-</button>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <h3>Algoritmi enkripcije</h3>
+
+        <p>
+            Kriptografski algoritmi predstavljaju osnovne mehanizme za zaštitu podataka u savremenim informacionim sistemima. Njihova uloga je da omoguće transformaciju podataka u oblik koji je nečitljiv neovlašćenim korisnicima, ali istovremeno dostupan onima koji poseduju odgovarajuće ključeve. Na ovaj način se ostvaruje tajnost komunikacije, kao jedan od osnovnih ciljeva kriptografije.
+        <br><br>
+            Algoritmi enkripcije se, prema načinu korišćenja ključeva, dele na dve osnovne grupe: simetrične i asimetrične algoritme. Ova podela je direktno vezana za način na koji se ključevi koriste za šifrovanje i dešifrovanje podataka.
+        </p>
+
+        <h3 id="division">Podela algoritama enkripcije</h3>
+
+        <section class="S2">
+
+            <h3 class="division">Simetrična enkripcija</h3>
+
+            <p>
+                Simetrična enkripcija koristi isti ključ za šifrovanje i dešifrovanje podataka. To znači da i pošiljalac i primalac moraju posedovati isti tajni ključ pre početka komunikacije.
+                
+                <p>Kako funkcioniše:</p>
+
+                <ul>
+                    <li>poruka (plaintext) se šifruje pomoću ključa</li>
+                    <li>nastaje šifrovani tekst (ciphertext)</li>
+                    <li>primalac koristi isti ključ za dešifrovanje</li>
+                </ul>
+
+                <p>Prednosti:</p>
+
+                <ul>
+                    <li>veoma brza i efikasna</li>
+                    <li>pogodna za velike količine podataka</li>
+                    <li>široko korišćena u praksi (npr. AES)</li>
+                </ul>
+
+                <p>Mane:</p>
+
+                <ul>
+                    <li>problem bezbedne razmene ključa</li>
+                    <li>ako neko dođe do ključa → cela komunikacija je kompromitovana</li>
+                </ul>
+
+                Simetrična enkripcija u praksi se koristi za razmenu podataka i poruka.
+            </p>
+
+        </section>
+
+        <section class="S2">
+
+            <h3 class="division">Asimetrična enkripcija</h3>
+
+            <p>
+                Asimetrična enkripcija koristi dva ključa: javni ključ (public key) i privatni ključ (private key).
+                Javni ključ je dostupan svima, dok se privatni čuva u tajnosti.
+
+                <p>Kako funkcioniše:</p>
+
+                <ul>
+                    <li>poruka se šifruje javnim ključem</li>
+                    <li>dešifruje se privatnim ključem</li>
+                </ul>
+                ili obrnuto (kod potpisa).
+
+                <p>Prednosti:</p>
+
+                <ul>
+                    <li>nema potrebe za tajnom razmenom ključa</li>
+                    <li>omogućava digitalne potpise i autentifikaciju</li>
+                    <li>koristi se za bezbednu razmenu ključeva</li>
+                </ul>
+
+                <p>Mane:</p>
+
+                <ul>
+                    <li>sporija od simetrične enkripcije</li>
+                    <li>zahteva više računarskih resursa</li>
+                    <li>koristi duže ključeve</li>
+                </ul>
+
+                Asimetrična enkripcija u praksi se koristi za razmenu ključeva.
+            </p>
+
+        </section>
+
+        
+        <h3 id="table_title">Kriptografski algoritami</h3>
+
+        <table>
+            <tr>
+                <th>Algoritam</th>
+                <th>Tip</th>
+                <th>Namena</th>
+                <th>Karakteristike</th>
+                <th>Prednosti</th>
+                <th>Mane</th>
+                <th>Kada se koristi</th>
+            </tr>
+            <tr>
+                <td>AES (Advanced Encryption Standard)</td>
+                <td>Simetrični</td>
+                <td>Šifrovanje podataka</td>
+                <td>Koristi isti ključ za enkripciju i dekripciju</td>
+                <td>Veoma brz, efikasan</td>
+                <td>Problem razmene ključa</td>
+                <td>HTTPS, disk enkripcija, Wi-Fi</td>
+            </tr>
+            <tr>
+                <td>RSA (Rivest-Shamir-Adleman)</td>
+                <td>Asimetrični</td>
+                <td>Šifrovanje, razmena ključeva, potpis</td>
+                <td>Javni i privatni ključ</td>
+                <td>Visoka sigurnost, fleksibilan</td>
+                <td>Spor, veliki ključevi</td>
+                <td>TLS, digitalni potpisi</td>
+            </tr>
+            <tr>
+                <td>DH (Diffie-Hellman)</td>
+                <td>Asimetrični</td>
+                <td>Razmena ključeva</td>
+                <td>Ključ se ne šalje direktno</td>
+                <td>Bezbedna razmena ključa</td>
+                <td>MITM napad bez zaštite</td>
+                <td>TLS handshake</td>
+            </tr>
+            <tr>
+                <td>DHE (Ephemeral DH)</td>
+                <td>Asimetrični</td>
+                <td>Razmena ključeva</td>
+                <td>Privremeni ključevi po sesiji</td>
+                <td>Perfect Forward Secrecy</td>
+                <td>Složeniji, sporiji</td>
+                <td>HTTPS (moderni sistemi)</td>
+            </tr>
+            <tr>
+                <td>DSA (Digital Signature Algorithm)</td>
+                <td>Asimetrični</td>
+                <td>Digitalni potpis</td>
+                <td>Koristi se samo za potpis</td>
+                <td>Brz za verifikaciju</td>
+                <td>Ne šifruje podatke</td>
+                <td>Autentifikacija</td>
+            </tr>
+            <tr>
+                <td>ECC (Elliptic Curve Cryptography)</td>
+                <td>Asimetrični</td>
+                <td>Šifrovanje, potpis</td>
+                <td>Kraći ključevi</td>
+                <td>Efikasniji od RSA</td>
+                <td>Složeniji za implementaciju</td>
+                <td>Mobilni uređaji, TLS</td>
+            </tr>
+        </table>
+    </main>
+
+    <script src="tekst_velicina.js"></script>
+    
+     
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriptografija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Kriptografija</h1>
+
+    <nav class = "navbar">
+        <ul>
+            <li><a href = "index.html">Uvod</a></li>
+            <li><a href = "algoritmi.html">Algoritmi</a></li>
+            <li><a href = "integritet.html">Integritet</a></li>
+            <li><a href = "test_znanja.html">Test znanja</a></li>
+            <li><a href = "rad.pdf">Seminarski rad</a></li>
+
+            <button id="size_button_plus">A+</button>
+            <button id="size_button_minus">A-</button>
+        </ul>
+    </nav>
+
+    <main id="content" class="questions">
+        <h2>Test znanja</h2>
+
+        <form id="question_form">
+            <section>
+                <h3>1. Koja od navedenih metoda obezbeđuje tajnost komunikacije?</h3>
+
+                <label class="answer">
+                    <input type="radio" name="question1" value="a">
+                    <h5>Digitalni potpis</h5>
+                </label>
+
+                <label class="correct_answer">
+                    <input type="radio" name="question1" value="b">
+                    <h5>Enkricija podataka</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="question1" value="c">
+                    <h5>Setifikati</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="question1" value="d">
+                    <h5>Heš funkcija</h5>
+                </label>
+
+            </section>
+
+            <section>
+                <h3>2. Koji od navedenih algoritama spadaju u asimetrične kriptografske algoritme(tri tačna odgovora)?</h3>
+
+                <label class="correct_answer">
+                    <input type="checkbox" name="question2" value="a">
+                    <h5>Diffie-Hellman(DH)</h5>
+                </label>
+
+                <label class="correct_answer">
+                    <input type="checkbox" name="question2" value="b">
+                    <h5>ECC</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="checkbox" name="question2" value="c">
+                    <h5>AES</h5>
+                </label>
+
+                <label class="correct_answer">
+                    <input type="checkbox" name="question2" value="d">
+                    <h5>RSA</h5>
+                </label>
+
+            </section>
+
+            <section>
+                <h3>3. Koja je osnovna funkcija kriptografkse heš funkcije?</h3>
+
+                <label class="answer">
+                    <input type="radio" name="question3" value="a">
+                    <h5>Šifrovanje poruke pomoću ključa</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="question3" value="b">
+                    <h5>Razmena tajnog ključa između učesnika</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="question3" value="c">
+                    <h5>Verifikacija identiteta korisnika</h5>
+                </label>
+
+                <label class="correct_answer">
+                    <input type="radio" name="question3" value="d">
+                    <h5>Generisanje sažetka poruke fiksne dužine</h5>
+                </label>
+
+            </section>
+
+            <section>
+                <h3>4. Koji od navedenih mehanizama obezbeđuju integritet podataka(dva tačna odgovora)?</h3>
+
+                <label class="correct_answer">
+                    <input type="checkbox" name="question4" value="a">
+                    <h5>Heš funkcije</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="checkbox" name="question4" value="b">
+                    <h5>Diffie-Hellman</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="checkbox" name="question4" value="c">
+                    <h5>AES algoritam</h5>
+                </label>
+
+                <label class="correct_answer">
+                    <input type="checkbox" name="question4" value="d">
+                    <h5>MAC(Message Authentication Code)</h5>
+                </label>
+
+            </section>
+
+            <section>
+                <h3>5. Koji tip napada omogućava napadaču da presretne komunikaciju, čita i menja poruke između dve strane, predstavljajući se kao legitimni učesnik?</h3>
+
+                <label class="answer">
+                    <input type="radio" name="question5" value="a">
+                    <h5>Phishing napad</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="question5" value="b">
+                    <h5>DoS napad</h5>
+                </label>
+
+                <label class="correct_answer">
+                    <input type="radio" name="question5" value="c">
+                    <h5>Man in the middle(MITM)</h5>
+                </label>
+
+                <label class="answer">
+                    <input type="radio" name="question5" value="d">
+                    <h5>Replay napad</h5>
+                </label>
+
+            </section>
+
+            <button type="button" id="check_result">Proveri odgovore</button>
+        </form>
+
+        <div id="result"></div>        
+    </main>
+
+    <script src="test_znanja.js"></script>
+    <script src="tekst_velicina.js"></script>
+
+    
+     
+</body>
+</html>

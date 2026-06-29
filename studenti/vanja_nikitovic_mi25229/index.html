@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriptografija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Kriptografija</h1>
+
+    <nav class = "navbar">
+        <ul>
+            <li><a href = "index.html">Uvod</a></li>
+            <li><a href = "algoritmi.html">Algoritmi</a></li>
+            <li><a href = "integritet.html">Integritet</a></li>
+            <li><a href = "test_znanja.html">Test znanja</a></li>
+            <li><a href = "rad.pdf">Seminarski rad</a></li>
+
+            <button id="size_button_plus">A+</button>
+            <button id="size_button_minus">A-</button>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <h3>Šta je kriptografija?</h3>
+        <p>
+           Kriptografija je naučna oblast koja se bavi zaštitom informacija od neovlašćenog pristupa, zloupotrebe i izmene. Njeni koreni sežu još u antičko doba, kada su se koristile jednostavne metode za prikrivanje poruka, dok danas predstavlja ključni deo savremenih informacionih sistema i digitalne komunikacije.
+           Sa razvojem interneta, elektronskog poslovanja i digitalnih servisa, potreba za sigurnim prenosom i čuvanjem podataka postala je neizostavna. Kriptografija omogućava da se informacije prenose preko nesigurnih kanala (kao što je internet), a da pri tome ostanu zaštićene od prisluškivanja, falsifikovanja i neovlašćenih izmena.
+           Savremena kriptografija se zasniva na matematičkim algoritmima i koristi različite tehnike kao što su enkripcija (šifrovanje), dekripcija (dešifrovanje), digitalni potpisi i sertifikati. Ove tehnike zajedno obezbeđuju osnovne sigurnosne ciljeve svakog informacionog sistema.
+        </p>
+
+        <h3>Osnovni ciljevi kriptografije</h3>
+
+        <p>
+            Da bi komunikacija bila sigurna, potrebno je obezbediti tri ključna svojstva:
+            <br>
+        </p>
+
+
+        <section class = "S1">
+        
+            <h4>1. Tajnost (poverljivost)</h4>
+
+            <img src = "slike/blue_lock.jpg" class= "img" alt="blue_lock">
+
+            <p>
+            Tajnost znači da informacija može biti dostupna samo onima kojima je namenjena, dok je svima ostalima nečitljiva.
+            Ovo se postiže primenom algoritama enkripcije, koji pretvaraju originalnu poruku (otvoreni tekst) u nečitljiv oblik (šifrat). Samo osoba koja poseduje odgovarajući ključ može izvršiti dekripciju i doći do originalne informacije.
+            Drugim rečima, čak i ako neko presretne podatke, bez ključa oni za njega nemaju nikakvo značenje.
+            </p>
+
+        </section>
+
+       <section class = "S1">
+        
+            <h4>2. Autentičnost</h4>
+
+            <img src = "slike/authentication.jpg" class= "img" alt="authentication_icon">
+            
+            <p>
+            Autentičnost podrazumeva da možemo biti sigurni u identitet pošiljaoca poruke — odnosno da znamo ko je zaista poslao određene podatke.
+            Ovo se obezbeđuje korišćenjem digitalnih potpisa i digitalnih sertifikata. Digitalni potpis omogućava proveru da je poruku zaista poslala određena osoba, dok sertifikati povezuju identitet korisnika sa njegovim kriptografskim ključem.
+            Na taj način sprečava se lažno predstavljanje i omogućava poverenje u komunikaciji.
+            </p>
+
+        </section>
+
+        <section class = "S1">
+        
+            <h4>3. Integritet</h4>
+
+            <img src = "slike/integrity.jpg" class= "img" alt="integrity_icon">
+            
+            <p>
+            Integritet znači da podaci nisu izmenjeni tokom prenosa ili skladištenja.
+            Drugim rečima, primalac mora biti siguran da je primljena poruka identična onoj koja je poslata. Ako bi došlo do bilo kakve izmene (bilo namerne ili slučajne), to mora biti otkriveno.
+            Integritet se obezbeđuje različitim kriptografskim tehnikama, uključujući funkcije za proveru (hash funkcije) i digitalne potpise, koji omogućavaju detekciju bilo kakvih promena u podacima.
+            </p>
+
+        </section>
+
+        
+
+    </main>
+
+    <script src="tekst_velicina.js"></script>
+     
+</body>
+</html>
