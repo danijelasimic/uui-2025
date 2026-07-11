@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt | Mihajlo Končar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Kontakt</h1>
+    <nav>
+        <ul class="meni">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="tema.html">Tema</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h2>Pošaljite upit</h2>
+        <p>
+            Ako imate pitanja u vezi ovog projekta ili želite povratnu informaciju, 
+            možete koristiti formu ispod. Svi podaci se čuvaju samo u svrhu studentske prezentacije.
+        </p>
+
+        <form action="#" method="post">
+            <label for="ime">Ime i prezime:</label><br>
+            <input type="text" id="ime" name="ime" placeholder="Vaše ime" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="vas.email@primer.com" required><br>
+
+            <label for="poruka">Poruka:</label><br>
+            <textarea id="poruka" name="poruka" rows="5" placeholder="Vaša poruka" required></textarea><br>
+
+            <button type="submit">Pošalji</button>
+        </form>
+    </article>
+
+    <aside>
+        <p><strong>Napomena:</strong> Ova forma je za demonstraciju u okviru studentskog projekta. Vaši podaci neće biti deljeni sa trećim licima.</p>
+    </aside>
+</main>
+
+<footer>
+    <p>© 2026 Mihajlo Končar</p>
+</footer>
+
+</body>
+</html>
