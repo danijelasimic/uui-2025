@@ -1,0 +1,280 @@
+body{
+	margin: 0;
+	background-color: #0f172a;
+}
+
+nav{
+	width: 100px;
+	height: 100%;
+	margin-top: 100px;
+	background-color: #0f172a;
+	position: fixed;
+	border-right: 5px solid #22345e;
+	transition: 0.5s;
+}
+
+h1{
+	font: 35px Aachen, bold;
+	color: #e2e8f0;
+}
+
+.text1{
+	position: absolute;
+	font: 30px Aachen, bold;
+	color: #0f172a;
+	margin-left: 105px;
+	margin-top: -320px;
+	user-select: none;
+}
+.text2{
+	position: absolute;
+	font: 30px Aachen, bold;
+	color: #0f172a;
+	margin-left: 105px;
+	margin-top: -230px;
+	user-select: none;
+}
+.text3{
+	position: absolute;
+	font: 30px Aachen, bold;
+	color: #0f172a;
+	margin-left: 105px;
+	margin-top: -140px;
+	user-select: none;
+}
+.text4{
+	position: absolute;
+	font: 30px Aachen, bold;
+	color: #0f172a;
+	margin-left: 105px;
+	margin-top: -50px;
+	user-select: none;
+}
+
+.ikonica{
+	width: 50px;
+	height: 50px;
+	background-color: #234687;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 20px;
+	border: 10px solid #0f172a;
+	border-radius: 20px;
+}
+
+.ikona{
+	width: 46px;
+	height: 46px;
+	margin-top: 2px;
+	margin-left: 2px;
+}
+
+.ikonica:hover{
+	border: 10px solid #1f3057;
+	transition: 0.5s;
+	width: 210px;
+
+}
+
+.ikonica:not( :hover ){
+	border: 10px solid #0f172a;
+	transition: 0.5s;
+
+}
+
+#logomatf{
+	position: relative;
+	float: right;
+	width: 130px;
+	height: 90px;
+	margin-top: -80px;
+	margin-right: 10px;
+}
+
+.tuk{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	height: 85%;
+	float: left;
+}
+.tuks{
+	margin-left: 5%;
+	margin-right: 70%;
+	width: 25%;
+	height: 85%;
+	float: left;
+}
+
+#slika{
+	width: 60%;
+	float: right;
+	margin-right: 5%;
+	margin-top: -300px;
+	border-radius: 30px;
+	box-shadow: 2px 5px;
+}
+
+.naslov{
+	font: 35px Aachen, bold;
+	color: #e2e8f0;
+}
+
+.razrada{
+	font: 23px Aachen, bold;
+	color: #e2e8f0;
+}
+.tekstForma{
+	font: 35px Aachen, bold;
+	color: #e2e8f0;
+}
+
+.polje{
+	width: 95%;
+	height: 30px;
+	background-color: #234687;
+	display: inline;
+	font: 25px Aachen, bold;
+	color: #e2e8f0;
+	border-radius: 10px;
+}
+
+.vecepolje{
+	width: 95%;
+	height: 100px;
+	background-color: #234687;
+	display: inline;
+	font: 25px Aachen, bold;
+	color: #e2e8f0;
+	border-radius: 10px;
+}
+
+.dugme{
+	width: 150px;
+	height: 50px;
+	margin-top: 20px;
+	background-color: #234687;
+	display: inline;
+	font: 25px Aachen, bold;
+	color: #e2e8f0;
+	border-radius: 10px;
+}
+
+#sve{
+	position: absolute;
+	margin-top: 200px;
+	margin-left: 100px;
+	transition: 0.5s;
+}
+/*kontenjeri*/
+#kontenjer0{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	background-color: #234687;
+	border-bottom: 3px solid #22345e;
+	text-align: center;
+	z-index: 1;
+}
+
+#kontenjer1{
+	width: 1000px;
+	height: 260px;
+	background-color: #273b6b;
+	margin-left: 70px;
+	box-shadow: 5px 10px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+}
+
+#kontenjer2{
+	width: 1000px;
+	height: 320px;
+	background-color: #273b6b;
+	margin-left: 70px;
+	box-shadow: 5px 10px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+}
+
+#kontenjer3{
+	width: 1000px;
+	height: 200px;
+	background-color: #273b6b;
+	margin-left: 70px;
+	box-shadow: 5px 10px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+}
+
+#kontenjer4{
+	width: 1000px;
+	height: 410px;
+	background-color: #273b6b;
+	margin-left: 70px;
+	box-shadow: 5px 10px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+}
+
+#kontenjer-slika{
+	width: 1000px;
+	height: 500px;
+	background-color: #273b6b;
+	margin-left: 70px;
+	box-shadow: 5px 10px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+}
+
+#kontenjer-forma{
+	width: 500px;
+	height: 600px;
+	background-color: #273b6b;
+	margin-left: 70px;
+	box-shadow: 5px 10px;
+	border-radius: 30px;
+	margin-bottom: 50px;
+}
+/*Link*/
+a:link {
+  color: #FFFFFF;
+}
+
+a:visited {
+  color: #FFFFFF;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0f172a;
+  transition: 0.2s;
+}
+
+a:active {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/*Tabela*/
+table{
+  border: 4px solid #0f172a;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  color: #e2e8f0;
+  font: 20px Aachen;
+  margin-top: 3%;
+}
+
+th{
+	height: 40px;
+  border: 2px solid #0f172a;
+  border-collapse: collapse;
+  background-color: #0f172a;
+}
+
+td {
+  border: 2px solid #0f172a;
+  border-collapse: collapse;
+  height: 50px;
+}

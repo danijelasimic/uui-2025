@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Modeli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-content">
+      <span class="emoji">🌧️</span>
+      <h1>Modeli za prognozu vremena</h1>
+      <span class="emoji">⚡</span>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Uvod</a></li>
+        <li><a href="istorija.html">Istorija</a></li>
+        <li><a href="rad.pdf">PDF rad</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content-modeli">
+
+    <h2>Numerički modeli</h2>
+    <p>
+      <strong><span class="istaknuto">Numerički modeli za prognozu vremena zasnovani su na osnovnim matematičkim
+          jednačinama koje opisuju fiziku i dinamiku
+          kretanja i procese koji se odvijaju u atmosferi, okeanu, ledu i kopnu.</span></strong>
+      Računanje prognoze vremena mora početi sa "poznatim stanjem" atmosfere, koje se naziva početnim uslovom.
+      Informacije za
+      početne uslove dolaze od satelita, radara, meteoroloških balona, stanica, izveštaja koje dostavljaju komercijalni
+      brodovi i avioni.
+      Postoje globalni i regionalni modeli za prognozu vremena. Globalni pokrivaju čitavu Zemlju, dok regionalni
+      prestavljaju modele
+      za ograničenu oblast.
+      Za razliku od globalnih, regionalini modeli zahtevaju i bočne granične uslove, koje dobijaju iz globalnog modela.
+      Regionalni modeli obično imaju finije razlaganje(veću rezoluciju) od globalnih modela.
+      <em>Globalni modeli obrađuju ogromnu količinu podataka i zahtevaju veliki broj proračuna. Zbog toga su ovim
+        modelima
+        potrebni brzi računari sa velikim memorijskim prostorom, tzv superračunari.</em>
+      Zbog složenosti i haotičnosti(male greške u početnim uslovima vremenom rastu) atmosfere, numeričke prognoze nisu
+      uvek dovoljno tačne.
+      Izvori grešaka su razni. Mnogi procesi nisu u potpunosti shvaćeni ili su previše složeni za modeliranje sa
+      trenutnom računarskom snagom.
+      Pored toga, merenja je nedovoljno i postoje greške u merenjima(instrumenti nisu savršeni). Zbog toga su razvijeni
+      ansambl sistemi za numeričku prognozu
+      vremena. Umesto da se model startuje jednom, pokreće se više puta iz početnih uslova koji se malo razlikuju.
+      Pojedinačna rešenja su članovi ansambla. Raspon
+      između izračunatih prognoza daje informacije o raspodeli verovatnoće prognostičkih promenljivih.
+    </p>
+
+    <h2>ML/AI modeli</h2>
+    <p>
+      Sa razvojem veštačke inteligencije (AI), pojavile su se nove mogućnosti u oblasti
+      prognoziranja vremena. Algoritmi mašinskog i dubokog učenja omogućavaju
+      prepoznavanje složenih obrazaca u velikim vremensko-prostornim skupovima
+      podataka, čime se poboljšava tačnost prognoza i skraćuje vreme reakcije.
+      <strong><em><span class="istaknuto">Posebno obećavajući pristupi uključuju integraciju tradicionalnih numeričkih
+            modela i AI metoda u hibridne sisteme, koji kombinuju fizičko razumevanje
+            procesa i snagu prediktivne analize podataka.</span></em></strong>
+    </p>
+
+    <img src="slike/hibridni.png" alt="hibridni model">
+
+    <p>
+      Detaljniji opis matematičke osnove numeričkih modela i računarskih tehnika dostupan je u pratećem
+      <a href="rad.pdf">PDF dokumentu.</a>.
+    </p>
+
+  </main>
+</body>
+
+</html>

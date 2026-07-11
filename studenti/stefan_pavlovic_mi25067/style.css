@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px;
+}
+
+.header,
+.block {
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: rgb(240, 255, 242);
+  color: rgb(0, 166, 72);
+  border: 1px solid rgb(0, 166, 72);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+}
+
+.header img {
+  width: 20%;
+  float: left;
+}
+
+.header .text {
+  width: 80%;
+  float: left;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.header .text h1 {
+  margin: 0;
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(0, 61, 26);
+  transition: 0.3s;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.header .links {
+  width: 100%;
+}
+
+.header .links div {
+  width: 100%;
+  padding: 10px;
+  float: left;
+}
+
+.header .links a {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 25px;
+  background-color: rgb(0, 166, 72);
+  color: azure;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.header .links a:hover {
+  transform: translateY(-10px);
+}
+
+.block p {
+  font-size: 18px;
+}
+
+.block table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.block td,
+.block th {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.block tr:hover {
+  background-color: #ddd;
+}
+
+.block th {
+  background-color: rgb(0, 166, 72);
+  color: white;
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.block form {
+  width: 100%;
+}
+
+.block form input {
+  width: 50%;
+  float: left;
+  padding: 8px;
+  border-radius: 25px;
+  border: 1px solid rgb(0, 61, 26);
+  color: rgb(0, 166, 72);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.block form #name:hover {
+  background-color: rgb(0, 61, 26);
+  color: #fff;
+}
+
+.block form #email:hover {
+  background-color: rgb(0, 166, 72);
+  color: #fff;
+}
+
+.block form textarea {
+  width: 100%;
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid rgb(0, 61, 26);
+  color: rgb(0, 166, 72);
+  resize: vertical;
+}
+
+.block form button {
+  width: 50%;
+  margin: 25px 25%;
+  padding: 10px;
+  background-color: rgb(0, 61, 26);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid rgb(0, 166, 72);
+  transition: 0.3s;
+}
+
+.block form button:hover {
+  background-color: rgb(0, 166, 72);
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(240, 255, 242);
+  border-radius: 0 0 20px 20px;
+}
+
+.navigation a {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 166, 72);
+  border: 1px solid rgb(0, 166, 72);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.navigation a:hover {
+  background-color: rgb(0, 166, 72);
+  color: rgb(0, 61, 26);
+  transform: translateY(-3px);
+}

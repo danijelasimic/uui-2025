@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vaša Korpa - Gaming Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Početna</a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-puzzle-piece"></i> Komponente ▼</button>
+                <div class="dropdown-content">
+                    <a href="komponente.html#gpu">Grafičke karte</a>
+                    <a href="komponente.html#cpu">Procesori</a>
+                    <a href="komponente.html#ram">Memorija & Storage</a>
+                </div>
+            </div>
+            <a href="o-nama.html"><i class="fa-solid fa-user"></i> O nama</a>
+            <a href="kontakt.html"><i class="fa-solid fa-mobile"></i> Prijava</a>
+        </div>
+
+        <div class="nav-cart">
+            <a href="korpa.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i> Korpa</a>
+            <button id="logout-btn" class="logout-link" style="display: none;">
+                <i class="fa-solid fa-right-from-bracket"></i> Odjavi se
+            </button>
+        </div>
+    </nav>
+    <section style="padding: 50px; min-height: 80vh;">
+        <h1 style="text-align: center; margin-bottom: 30px;">Vaša Korpa</h1>
+
+        <div id="korpa-prazna" style="text-align: center; display: none;">
+            <h2>Vaša korpa je trenutno prazna. 🎮</h2>
+            <a href="komponente.html" class="buy-btn" style="display: inline-block; margin-top: 20px;">Idi u
+                prodavnicu</a>
+        </div>
+
+        <div id="korpa-sadrzaj">
+            <table
+                style="width: 100%; border-collapse: collapse; background: #1a2238; border-radius: 15px; overflow: hidden;">
+                <thead>
+                    <tr style="background: #c77dff; color: #0d1220; text-align: left;">
+                        <th style="padding: 20px;">Proizvod</th>
+                        <th style="padding: 20px;">Cena (po kom)</th>
+                        <th style="padding: 20px;">Količina</th>
+                        <th style="padding: 20px;">Ukupno</th>
+                        <th style="padding: 20px;">Akcija</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-proizvodi">
+                </tbody>
+            </table>
+
+            <div style="margin-top: 30px; text-align: right; background: #1a2238; padding: 20px; border-radius: 15px;">
+                <h2 id="ukupna-cena-korpe">Ukupno za uplatu: 0 €</h2>
+                <button id="plati-btn" class="buy-btn">PLATI</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-recenzija"
+        style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 2000;">
+        <div
+            style="background: #1a2238; padding: 40px; border-radius: 20px; text-align: center; border: 2px solid #c77dff; max-width: 500px;">
+            <h2>Hvala na kupovini! 🚀</h2>
+            <p>Ocenite proizvode koje ste kupili:</p>
+            <div id="recenzija-lista" style="margin: 20px 0;"></div>
+            <button onclick="window.location.href='index.html'" class="buy-btn">Završi</button>
+        </div>
+    </div>
+
+    <script src="korpa.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

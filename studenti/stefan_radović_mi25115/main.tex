@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath,amsthm,amssymb} % dodato amssymb
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\newtheorem{teorema}{Теорема}
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{lema}{Лема}
+
+\title{Кратак академски рад}
+\author{Стефан Радовић}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Увод}
+Ово је кратак академски текст у \LaTeX-у. Документ је на ћирилици и садржи формуле, табеле, листе, слике и теореме. \textbf{Информатика} и \textit{математика} ме инспиришу, а \textcolor{blue}{креативност} и \textcolor{red}{технологију} желим да спојим.
+
+\section{Математика}
+Формула:
+
+
+
+\[
+E = mc^2
+\]
+
+
+
+\subsection{Пример теореме}
+\begin{teorema}
+За свако $n \in \mathbb{N}$ важи $n < n+1$.
+\end{teorema}
+
+\subsection{Пример дефиниције}
+\begin{definicija}
+\emph{Природни бројеви} су $1,2,3,\dots$.
+\end{definicija}
+
+\subsection{Пример леме}
+\begin{lema}
+Ако је $n$ паран, онда је $n^2$ паран.
+\end{lema}
+
+\section{Табела и листе}
+\begin{tabular}{|c|c|}
+\hline
+Предмет & Семестар \\ \hline
+Увод у програмирање & I \\ 
+Анализа 1 & II \\ \hline
+\end{tabular}
+
+\begin{enumerate}
+\item Први
+\item Други
+\end{enumerate}
+\begin{itemize}
+\item Музика
+\item Игре
+\end{itemize}
+
+\section{Слика}
+\includegraphics[width=0.25\textwidth]{slike/slika.png}
+Текст поред слике описује моје интересовање за \LaTeX{}.
+
+\section{Закључак}
+Приказани су основни елементи: садржај, формуле, табеле, листе, слике и теореме. Циљ је био да се покаже како се може направити академски текст који је истовремено лепо форматиран и функционалан.
+\end{document}

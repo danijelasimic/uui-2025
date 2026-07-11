@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #b30059;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffd1e8;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    color: #b30059;
+    border-bottom: 2px solid #b30059;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+#intro {
+    border: 2px solid #b30059;
+    padding: 15px;
+}
+
+#intro {
+    display: flex;        
+    align-items: center;  
+    gap: 20px;          
+}
+
+#intro .intro-text {
+    flex: 2;              
+}
+
+#intro .intro-image {
+    flex: 1;           
+}
+
+#intro .intro-image img {
+    width: 100%;          
+    border-radius: 8px;  
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #b30059;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+form {
+    border: 2px solid #b30059;
+    padding: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    background-color: #b30059;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #800040;
+}

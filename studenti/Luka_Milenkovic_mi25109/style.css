@@ -1,0 +1,215 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background-color: #0E0E0E;
+    color: #E0E0E0;
+}
+
+header {
+    background-color: #141414;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #D62828;
+}
+
+header h1 {
+    margin: 0;
+    color: #F5F5F5;
+}
+
+.header-flex {
+    background-color: #141414;
+    padding: 20px 40px;
+    border-bottom: 2px solid #D62828;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    border: 2px solid #D62828;
+    object-fit: cover;
+}
+
+.header-flex h1 {
+    margin: 0;
+    color: #F5F5F5;
+}
+
+nav {
+    background-color: #141414;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: #E0E0E0;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #F94144;
+}
+
+.container {
+    background-color: #181818;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.profile {
+    width: 150px;
+    border-radius:20%;
+    border: 3px solid #D62828;
+    display: block;
+    margin: 15px auto;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+.large-image {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 16px;
+    border: 3px solid #D62828;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease;
+}
+
+.large-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(214, 40, 40, 0.4);
+}
+
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: separate;
+    border-radius: 12px;
+    border-left: 4px solid #D62828;
+}
+
+th {
+    background-color: #141414;
+    color: #D62828;
+    border-bottom: 1px solid #252525;
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 18px;
+}
+
+td {
+    background-color: #141414;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    border-bottom: 2px solid #252525;
+}
+
+/* LINKS */
+a {
+    color: #D62828;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #F94144;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #141414;
+    text-align: center;
+    padding: 12px;
+    border-top: 2px solid #D62828;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+.kontakt {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #181818;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    border-top: 3px solid #D62828;
+}
+
+.kontakt h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #D62828;
+}
+
+/* Forma layout */
+.kontakt form {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt label {
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #E0E0E0;
+}
+
+.kontakt input,
+.kontakt textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #252525;
+    background-color: #121212;
+    color: #E0E0E0;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+/* Fokus efekat */
+.kontakt input:focus,
+.kontakt textarea:focus {
+    border-color: #D62828;
+    box-shadow: 0 0 8px rgba(214, 40, 40, 0.4);
+}
+
+/* Dugme */
+.kontakt button {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #D62828;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.kontakt button:hover {
+    background-color: #F94144;
+    transform: translateY(-2px);
+}

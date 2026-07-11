@@ -1,0 +1,158 @@
+.box {
+    background-color: #ffeac9;
+    color: #3d093b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 800px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 5px 5px #a2a2b4;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+.first-box {
+    margin-top: 65px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navigation {
+    list-style-type: none;
+    background-color: #5c0e59;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    justify-content: center;
+}
+
+.page-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: larger;    
+}
+
+.title {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.page-link:hover {
+    background-color: #7e197a;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+ 
+input[type="submit"] {
+    height: 40px;
+    width: 150px;
+    background-color: #5c0e59;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #7e197a;
+    box-shadow: 0 0 2px 2px #a2a2b4;
+}
+
+.link-on-page {
+    color: #3d093b;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+.link-on-page:hover {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline wavy;
+    color:#7e197a;
+}
+
+.row {
+    top: 0;
+    display: flex;
+}
+
+.column {
+    top: 0;
+    flex: 50%;
+    width: 50%;
+}
+
+.column-image {
+    top: 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border: 2px solid;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid;
+    padding: 5px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.pdf {
+    width: 100%;
+    height: 1000px;
+}

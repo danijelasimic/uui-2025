@@ -1,0 +1,175 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+\usepackage{hyphenat}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel}
+\usepackage{amsmath, amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{microtype}  
+\usepackage{float}  
+\usepackage{wrapfig}
+\usepackage[unicode]{hyperref}
+
+
+
+
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{teorema}{Теорема}[section]
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+
+\center 
+	
+\textsc{\LARGE Математички факултет}\\[3cm] 
+	
+\textsc{\Large Семинарски рад}\\[0.1cm]
+	
+\textsc{\large из увода у информатику}\\[0.5cm] 
+	
+\HRule\\[0.4cm]
+	
+{\LARGE\bfseries Bubble sort}\\[0.2cm] 
+	
+\HRule\\[2cm]
+
+\vspace{17\baselineskip}
+		
+
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Студент}\\
+			Стефан Спасић 33/2025
+		\end{flushleft}
+	\end{minipage}
+\hspace*{1cm}
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Професор}\\
+			др Данијела Симић
+		\end{flushright}
+	\end{minipage}
+	
+	
+\vfill\vfill\vfill\vfill 
+	
+{\large Београд, \today} 
+	
+\vfill 
+	
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+
+\section{Увод}
+
+\textbf{Bubble Sort} (енг.~\textit{bubble sort}) је једноставан алгоритам
+сортирања који више пута пролази кроз низ и упоређује суседне елементе.
+
+\textcolor{blue}{Основна идеја} алгоритма је да већи елементи „испливају“
+на крај низа.
+
+\section{Опис алгоритма}
+
+\begin{definicija}
+Bubble Sort је алгоритам који понавља поређење суседних елемената
+и замењује их ако нису у правилном поретку.
+\end{definicija}
+
+Алгоритам се састоји из следећих корака:
+
+\subsection{Кораци алгоритма}
+
+\begin{enumerate}
+    \item Проћи кроз цео низ.
+    \item Упоредити суседне елементе.
+    \item Ако је леви већи од десног, извршити замену.
+    \item Поновити поступак док низ не буде сортиран.
+\end{enumerate}
+
+\subsection{Особине алгоритма}
+
+\begin{itemize}
+    \item Једноставан за имплементацију
+    \item Стабилан алгоритам
+    \item Неефикасан за велике скупове података
+\end{itemize}
+
+\section{Математичка анализа}
+
+Број поређења у најгорем случају:
+
+\[
+(n - 1) + (n - 2) + \dots + 1 = \frac{n(n-1)}{2}
+\]
+
+Временска сложеност је:
+
+\[
+O(n^2)
+\]
+
+\begin{teorema}
+У најбољем случају, када је низ већ сортиран,
+временска сложеност алгоритма је $O(n)$.
+\end{teorema}
+
+\section{Пример и табела}
+
+Нека је дат низ $[5, 3, 8, 4]$.
+
+\begin{table}[h!]
+\centering
+\caption{Пролази алгоритма}
+\begin{tabular}{|c|c|}
+\hline
+Пролаз & Стање низа \\ \hline
+1 & 3 5 4 8 \\ \hline
+2 & 3 4 5 8 \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Илустрација}
+
+\begin{wrapfigure}{l}{0.45\textwidth}
+\centering
+\includegraphics[width=0.42\textwidth]{images/slika.jpg}
+\caption{Слика алгоритма}
+\label{fig:bubble}
+\end{wrapfigure}
+
+Слика приказује симболичан начин функционисања алгоритма Bubble Sort.
+На сваком пролазу алгоритам пореди суседне елементе и врши њихову
+замену уколико нису у правилном поретку. 
+
+Већи елементи постепено „испливавају“ ка крају низа,
+док се мањи померају ка почетку. Овај процес се понавља
+све док се низ у потпуности не сортира.
+
+Иако је алгоритам једноставан за разумевање и имплементацију,
+његова временска сложеност $O(n^2)$ чини га неефикасним
+за велике скупове података.
+
+
+\section{Закључак}
+
+Bubble Sort је \textbf{једноставан} и \textit{образовно користан} алгоритам.
+Иако има \textcolor{red}{квадратну временску сложеност},
+често се користи у настави ради разумевања основа сортирања.
+
+\end{document}

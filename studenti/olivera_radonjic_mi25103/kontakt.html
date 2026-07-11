@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Gaming PC Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header style="padding: 0px; background:#0d1220;">
+        <img src="slike/naslov.png" alt="Logo" style="height:110px; display:block;">
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Početna</a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-puzzle-piece"></i> Komponente ▼</button>
+                <div class="dropdown-content">
+                    <a href="komponente.html#gpu">Grafičke karte</a>
+                    <a href="komponente.html#cpu">Procesori</a>
+                    <a href="komponente.html#ram">Memorija & Storage</a>
+                </div>
+            </div>
+            <a href="o-nama.html"><i class="fa-solid fa-user"></i> O nama</a>
+            <a href="kontakt.html"><i class="fa-solid fa-mobile"></i> Prijava</a>
+        </div>
+
+        <div class="nav-cart">
+            <a href="korpa.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i> Korpa</a>
+            <button id="logout-btn" class="logout-link" style="display: none;">
+                <i class="fa-solid fa-right-from-bracket"></i> Odjavi se
+            </button>
+        </div>
+    </nav>
+
+    <section style="text-align:center; padding:40px 20px;">
+        <h1>Ulogujte se</h1>
+        <p>...</p>
+    </section>
+
+    <form id="kontakt-forma">
+        <div class="input-group">
+            <label>Ime i Prezime:</label>
+            <input type="text" id="ime-prezime" placeholder="Vaše ime" required>
+        </div>
+
+        <div class="input-group">
+            <label>Adresa stanovanja:</label>
+            <input type="text" id="adresa" placeholder="Ulica i broj, Grad" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Vaš email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Dodatne informatcije:</label>
+            <textarea id="poruka" rows="4" placeholder="Dodatne informacije"></textarea>
+        </div>
+
+        <button type="submit" class="buy-btn">POŠALJI</button>
+    </form>
+
+    <section style="text-align:center; padding:20px;">
+        <h2>Gde nas možete pronaći</h2>
+        <p>Adresa: Ulica Gaming 10, Beograd</p>
+        <p>Telefon: +381 11 1234567</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gaming PC Shop | Sva prava zadržana</p>
+    </footer>
+    <script src="kontakt.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

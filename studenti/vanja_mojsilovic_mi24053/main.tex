@@ -1,0 +1,141 @@
+
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+\usepackage{amsmath, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}  % za slike
+\usepackage{hyperref}  % za linkove
+\usepackage{float}     % precizno pozicioniranje slika
+\usepackage{titlesec}
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=cyan,
+    citecolor=blue
+}
+
+\title{\textbf{Ојлерови графови и Флеријев алгоритам}}
+\author{Вања Мојсиловић}
+\date{\today}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Дефиниција}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лема}
+
+% Glavni naslovi: plavi i veći
+\titleformat{\section}[block]
+  {\normalfont\bfseries\LARGE\color{blue}}{\thesection}{1em}{}
+
+% Podnaslovi: crni i normalne veličine
+\titleformat{\subsection}[runin]{\normalfont\bfseries\color{black}}{\thesubsection}{1em}{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Ојлерови мултиграфови}
+
+\begin{definition}
+\textbf{Мултиграф} је граф који може да садржи више од једне гране између истих чворова.
+\end{definition}
+
+За мултиграф кажемо да је \textbf{Ојлеров} ако садржи затворену стазу која сваком граном пролази једном. Такву стазу називамо \emph{Ојлерова стаза}. Мултиграф је \emph{полуојлеров} ако садржи стазу која сваком граном пролази једном. Јасно је да сваки Ојлеров мултиграф истовремено представља и полуојлеров.
+
+Ојлеров пут је пут у графу који обилази сваку грану тачно једном, а Ојлеров циклус почиње и завршава се у истом чвору.
+
+\begin{theorem}[Ојлерова теорема]
+Нетривијалан повезан мултиграф је \textbf{Ојлеров} ако и само ако су сви чворови парног степена.
+\end{theorem}
+
+\begin{theorem}
+Нетривијалан повезан мултиграф је полуојлеров ако и само ако садржи 0 или 2 чвора непарног степена.
+\end{theorem}
+
+\begin{lemma}
+Сваки Ојлеров граф је такође полуојлеров.
+\end{lemma}
+
+\subsection{Седам Кенигсбершких мостова}
+
+Ојлер је 1741. године објавио научни рад о 7 кенингсбершких мостова, који се сматра и првим радом из теорије графова.  
+Проблем може бити формулисан математички:
+
+С обзиром на граф на слици, да ли је могуће да се изгради пут (или циклус, то је пут који почиње и завршава се у истом чвору), који посети сваку грану тачно једном?  
+
+Ојлер је проблем решио тако што је конструисао припадни мултиграф чији чворови одговарају обалама реке и речним острвима, а гране мостовима. Два чвора мултиграфа спојена су са онолико грана колико мостова спаја одговарајуће делове града. Тај мултиграф илустрован је на сликама испод:
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.45\textwidth]{slike/sedam_mostova.jpeg}}
+\caption{\emph{Седам Кенигсбершких мостова}}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=0.45\textwidth]{slike/most.png}}
+\caption{\emph{Припадни мултиграф седам мостова}}
+\end{figure}
+
+\subsection{Ојлерова формула у графовима}
+
+У контексту Ојлерових графова и планарног графа можемо користити \textbf{Ојлерову формулу}:
+
+\[
+V - E + F = 2
+\]
+
+gde su:
+\begin{itemize}
+    \item $V$ -- број чворова (\textcolor{blue}{vertices}),
+    \item $E$ -- број grana (\textcolor{green}{edges}),
+    \item $F$ -- број лица (faces) у планарном графу.
+\end{itemize}
+
+Ова формула је корисна за анализу структуре графова и одређивање да ли одређени граф може имати Ојлерову стазу или циклус.
+
+\section{Флеријев алгоритам}
+
+Флеријев алгоритам проналази Ојлеров пут или циклус у мултиграфу. Основни кораци су:
+
+\begin{itemize}
+    \item Изабрати произвољан чвор $v_0$, ако тражимо \textbf{Ојлеров пут}, $v_0$ мора бити један од два чвора непарног степена.
+    \item Додајемо гране у стазу, избегавајући мостове осим ако нема друге опције.
+    \item Понављамо док све гране не буду коришћене.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|c|p{10cm}|}
+\hline
+K & Опис корака \\
+\hline
+К1 & Изабрати произвољан чвор $v_0$, $w=v_0$ (ако тражимо \textbf{Ојлеров пут}, $v_0$ мора бити један од два чвора непарног степена) \\
+К2 & Нека је одабрана стаза $w=v_0, e_1, v_1, e_2, \dots, e_i, v_i$. Наредну грану $e_{i+1}$ одабрати из скупа $E \setminus \{e_1, e_2, \dots, e_i\}$ тако да је $e_{i+1}$ инцидентна са $v_i$ и при томе није мост графа $G_i = G - \{e_1, e_2, \dots, e_i\}$, осим ако нема друге могућности. \\
+К3 & КРАЈ када К2 не може да се извршава. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Напомена:} Кључно правило алгоритма је "\textbf{не прелази мост осим ако мораш}", како би се осигурало да не останеш заробљен у једном делу графа док у другом још увек има неискоришћених грана.
+
+\section{Закључак}
+
+Ојлерови и полуојлерови мултиграфови, као и Флеријев алгоритам, имају значајну примену у практичним проблемима теорије графова и алгоритамском планирању. Користе се за \textbf{оптимизацију рута}, \textbf{планирање мрежа} и различите алгоритамске задатке.
+
+\section*{Литература}
+\begin{itemize}
+\item З. Станић, \textit{Дискретне структуре 2}, Математички факултет, Универзитет у Београду.\\
+\href{http://poincare.matf.bg.ac.rs/~zstanic//ds2/DS2-2021.pdf}{\textcolor{cyan}{http://poincare.matf.bg.ac.rs/~zstanic//ds2/DS2-2021.pdf}}
+\item \href{http://old.matf.bg.ac.rs/p/jelena/cas/4399/materijali-za-vezbe/}{\textcolor{cyan}{http://old.matf.bg.ac.rs/p/jelena/cas/4399/materijali-za-vezbe/}}
+\item \href{https://en.wikipedia.org/wiki/Eulerian_path}{\textcolor{cyan}{https://en.wikipedia.org/wiki/Eulerian_path}}
+\end{itemize}
+
+\end{document}

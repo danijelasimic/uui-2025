@@ -1,0 +1,272 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+header, .header{
+  background: #111;
+  color: #fff;
+  padding: 18px 16px;
+  text-align: center;
+}
+
+header h1, .header h1{
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a{
+  color: #4da3ff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+nav a:hover{
+  background: rgba(77,163,255,0.12);
+}
+
+main{
+  padding: 30px 16px;
+}
+
+.container{
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.wrap, .main-container, .section-container, .form-container{
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.card,
+.text-container,
+.list-container,
+.table-container,
+.form,
+.main-container,
+.section-container{
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.main-container{
+  padding: 28px;
+  gap: 24px;
+}
+
+.content, .text-container{
+  padding: 28px;
+}
+
+h2{
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+h3{
+  font-size: 1.15rem;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+p{
+  line-height: 1.7;
+  margin-bottom: 12px;
+  max-width: 78ch;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px;
+}
+
+.img-container img{
+  width: 280px;
+  border-radius: 12px;
+}
+
+.latex-container, .links{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.latex-container a, .links a{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f0f6ff;
+  color: #0b5dbb;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid rgba(11,93,187,0.25);
+}
+
+.latex-container a:hover, .links a:hover{
+  background: #e3efff;
+}
+
+ul, ol{
+  margin: 10px 0 14px 22px;
+  line-height: 1.7;
+}
+
+li{
+  margin-bottom: 6px;
+}
+
+.section-container{
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.list-container, .table-container{
+  padding: 18px 18px 8px 18px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+table, #table, #tabela{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 0.98rem;
+}
+
+th, td, #table th, #table td, #tabela th, #tabela td{
+  border: 1px solid rgba(0,0,0,0.18);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th, #table th, #tabela th{
+  background: #f3f3f3;
+  font-weight: 800;
+}
+
+.form-container{
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.form-container h2{
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.form{
+  padding: 28px;
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.field{
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.message{
+  resize: none;
+  min-height: 170px;
+}
+
+.submitBtn{
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.submitBtn:hover{
+  opacity: 0.92;
+}
+
+@media (min-width: 900px){
+  .main-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .text-container{
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .content{
+    padding: 0;
+  }
+}
+
+@media (max-width: 899px){
+  .main-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container{
+    padding: 18px 18px 0 18px;
+  }
+
+  .text-container{
+    padding: 18px;
+  }
+}

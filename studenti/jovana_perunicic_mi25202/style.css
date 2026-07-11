@@ -1,0 +1,108 @@
+html {
+  background-color: #b7ffff;
+}
+
+body {
+  margin: 0 10%;
+  background-color: #fffab0;
+  padding: 0 20px 20px 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1 {
+  padding: 15px 0px;
+}
+
+h3 {
+  margin: 0px;
+}
+
+img {
+  max-width: 500px;
+}
+
+p {
+  width: 700px;
+}
+
+table, th, td {
+  border: 1px solid lightblue;
+}
+th {
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+a:link {
+  text-decoration: none;
+  color: blue; 
+}
+
+a:visited {
+  text-decoration: none;
+  color: purple;
+}
+
+a:hover {
+  text-decoration: none;
+  color: pink;
+}
+
+a:active {
+  text-decoration: none;
+  color: red;
+}
+
+#navbar ul { 
+	margin: 10px; 
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+	background-color: #b7ffff; 
+} 
+ 
+#navbar ul li {  
+	display: inline; 
+} 
+ 
+#navbar ul li a { 
+	text-decoration: none; 
+	padding: .2em 1em; 
+	color: #000; 
+	background-color: #b7ffff; 
+} 
+ 
+#navbar ul li a:hover { 
+	color: #b7ffff; 
+	background-color: #fff; 
+}
+
+input {
+  width: 30%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+button {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 0px 0px 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}

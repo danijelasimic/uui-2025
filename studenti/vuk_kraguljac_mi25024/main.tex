@@ -1,0 +1,126 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black]{hyperref}
+\usepackage{polyglossia}
+\setdefaultlanguage{serbian}
+\usepackage{amsmath, amsthm}
+\usepackage{amssymb}
+
+
+\newtheorem{teorema}{Теорема}
+\newtheorem{lema}{Лема}
+\newtheorem{definicija}{Дефиниција}
+
+\title{Кардиналност скупова}
+\author{Вук Крагуљац}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+
+\center 
+	
+\textsc{\LARGE Математички факултет}\\[3cm] 
+	
+\HRule\\[0.4cm]
+	
+{\LARGE\bfseries Кардиналност скупова}\\[0.2cm] 
+	
+\HRule\\[2cm]
+
+\vspace{17\baselineskip}
+		
+\begin{minipage}{0.4\textwidth}
+    \begin{flushleft}
+        \large
+        \textit{Студент}\\
+        Вук Крагуљац 24/2025
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+    \begin{flushright}
+        \large
+        \textit{Професор}\\
+        др Данијела Симић
+    \end{flushright}
+\end{minipage}
+	
+\vfill
+	
+{\large Београд, \today} 
+	
+\vfill 
+	
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\begin{abstract}
+Кардиналност скупа представља \textbf{меру величине} скупа, односно број његових елемената.  
+Појам кардиналности је од фундаменталног значаја у савременој математици, нарочито у теорији скупова.
+
+У овом раду разматрамо основне идеје и појмове кардиналности, као што су:
+\begin{itemize}
+    \item Коначни скупови
+    \item Пребројиви скупови
+    \item Непребројиви скупови
+\end{itemize}
+као и разлике између различитих врста бесконачности.
+
+\end{abstract}
+
+\section{Пребројиви скупови}
+\begin{definicija}
+Непразан скуп $A$ је \textit{коначан} ако постоји природан број $n$ такаб да постоји бијекција $f: A \to \mathbb{N}_{n}$ . Тада $A$ има n елемената (у ознаци $|A| = n$). Ако скуп није коначан, онда је бесконачан.
+\end{definicija}
+\begin{definicija}
+Скуп $A$ је пребројив ако постоји бијекција \\ \mbox{$f: A \to \mathbb{N}$} . Ако је скуп коначан или пребројив, онда је \textit{највише пребројив}, иначе је непребројив.
+\end{definicija}
+
+\section{Кардиналност скупова}
+\begin{definicija}
+Скуп $A$ је мање или једнаке кардиналности од скупа $B$ (у ознаци $|A| \leq |B|$) ако постоји инјективна функција из $A$ у $B$. Скупови $A$ и $B$ су исте кардиналности (у ознаци $|A| = |B|$) ако постоји бијекција између њих.
+\end{definicija}
+\begin{teorema}
+\textcolor{red}{Кантор-Бернштајнова теорема}: Ако постоји инјекција из $A$ у $B$ и инјекција из $B$ у $A$, тада постоји бијекција између та два скупа.
+\end{teorema}
+\begin{lema}
+Нека је $A \subseteq B \subseteq C$ и $|A| = |C|$. Тада је $|B| = |A|$.
+\end{lema}
+
+\newpage
+\subsection{Примери кардиналности}
+
+\begin{table}[h]
+\centering
+\caption{Примери скупова и њихових кардиналности}
+\begin{tabular}{|c|c|}
+\hline
+Скуп & Кардиналност \\
+\hline
+$\{1,2,3\}$ & $3$ \\
+$\mathbb{N}$ & $\aleph_0$ \\
+$\mathbb{R}$ & $2^{\aleph_0}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Скуп природних бројева и скуп целих бројева су исте кардиналности.
+\begin{figure}[h]
+\begin{minipage}{0.35\linewidth}
+    \includegraphics[width=\linewidth]{slike/z_u_n.jpg}
+\end{minipage}\hfill
+\begin{minipage}{0.6\linewidth}
+    На слици је приказана бијекција која слика скуп $\mathbb{N}$ у $\mathbb{Z}$
+\end{minipage}
+\end{figure}
+
+\section{Закључак}
+У овом кратком раду анализирали смо кардиналност скупова, основне дефиниције, примере и важне теореме.  
+Посебно је значајно да постоје различите "величине" бесконачности, што представља један од најдубљих резултата теорије скупова и модерне математике.
+\end{document}

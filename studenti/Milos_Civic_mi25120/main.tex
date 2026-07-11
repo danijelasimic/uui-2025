@@ -1,0 +1,98 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{serbian}
+\setmainfont{Times New Roman}
+
+\usepackage{amsmath, amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Definicije okruženja
+\newtheorem{teorema}{Теорема}
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{lema}{Лема}
+
+\title{Семинарски рад из Увода у информатику}
+\author{Милош, број индекса MI25120}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Увод}
+Добро дошли у мој академски текст. Овај рад је написан у \LaTeX-у и служи као демонстрација основних могућности: форматирање текста, математичке формуле, табеле, листе и уметање слика.  
+
+\textbf{Циљ} је да се прикаже како се користе основни елементи.  
+\textit{Напомена:} текст је на ћирилици.  
+\textcolor{blue}{Ово је пример текста у плавој боји.}
+
+\section{Математика}
+\subsection{Формуле}
+Једна од најпознатијих формула у физици је:
+\[
+E = mc^2
+\]
+где је $E$ енергија, $m$ маса, а $c$ брзина светлости.
+
+\subsection{Теорема, дефиниција и лема}
+\begin{definicija}
+Скуп је основни појам математике који представља колекцију објеката.
+\end{definicija}
+
+\begin{teorema}
+Ако је $A \subseteq B$ и $B \subseteq C$, онда је $A \subseteq C$.
+\end{teorema}
+
+\begin{lema}
+За сваки природан број $n$ важи $n < n+1$.
+\end{lema}
+
+\section{Табела и листе}
+\subsection{Табела}
+Пример једноставне табеле:
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Семестар & Предмети \\ \hline
+1. & Увод у програмирање, Увод у информатику, Линеарна алгебра \\ \hline
+2. & Анализа 1, Увод у алгоритме, Архитектура рачунара \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Листе}
+Нумерисана листа:
+\begin{enumerate}
+    \item Први елемент
+    \item Други елемент
+    \item Трећи елемент
+\end{enumerate}
+
+Ненумерисана листа:
+\begin{itemize}
+    \item Један
+    \item Два
+    \item Три
+\end{itemize}
+
+\section{Слика}
+На слици испод је симболичан пример (може бити иста као у HTML делу):
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.45\textwidth]{slike/profil.jpg}
+\caption{Профилна фотографија — пример уметања слике}
+\end{figure}
+
+\section{Закључак}
+У овом раду приказали смо основне могућности \LaTeX-а: форматирање текста, математичке формуле, табеле, листе, слике и дефинисање теорема.  
+
+\textbf{Закључак:} \LaTeX{} је моћан алат за академско писање и омогућава јасну структуру и професионалан изглед текста.  
+\textit{Додатно:} овај рад показује да се уз мало труда може направити комплетан академски документ који испуњава све задате критеријуме.
+
+\end{document}

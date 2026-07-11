@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="p-16">
+    <h3>Kratak uvod u emulaciju konzola za video igre</h3>
+    <div class="text-container">
+      <p>
+        Emulator je softver koji oponaša dizajn i funkcionalnost nekog hardvera.
+        Dozvoljava ljudima da pokreću softver dizajniran za specifičan hardver
+        na kompletno drugačijem sistemu. Terminologija <b>simulatora</b> i
+        <b>emulatora</b> se često upotrebljava sinonimno. No ipak, razlikuju se
+        u mnogim aspektima. Simulacija ima za cilj da oponaša originalni softver
+        na drugoj mašini dok emulator zapravo pokreće originalni softver na
+        "pogrešnom", to jest, hardveru konstruisanom putem kompjuterskog koda.
+      </p>
+      <img class="side-img" src="./slike/game.jpg" alt="Slika emulirane igrice"/>
+      <p>
+        Primer ove razlike je ako bismo imali igru koja je dizajnirana za
+        konzolu, pri čemu je konzola bila originalna ciljna grupa. Programeri
+        ove igre su zatim želeli da naprave verziju koja bi se pokretala na
+        kućnom računaru. Da bi to uradili, koristili bi deo originalnog izvornog
+        koda za konzolnu verziju i ponovo kreirali druge delove koda da bi
+        napravili novu verziju igre. Ova verzija bi imala isti izgled i osećaj
+        na kućnom računaru kao što je imala na konzoli. Ovako funkcioniše
+        pristup simulatora. Sa emulatorom dizajniranim da emulira originalnu
+        konzolu na kućnom računaru, pokrenuli biste originalnu verziju, čime
+        biste dobili isti izgled i osećaj.
+      </p>
+      <p>
+        Simulatori za određeni program generalno daju bolje rezultate od onoga
+        što se postiže emulacijom. Iako razlika u rezultatima između emulacije i
+        simulacije može dostići tačku u kojoj korisniku nije očigledno koja je
+        metoda korišćena. Glavna prednost pisanja emulatora u odnosu na
+        simulator je to što ćete moći da pokrenete mnogo različitih programa
+        dizajniranih za taj hardver, dok će simulator generalno biti jednokratna
+        stvar. Izuzetno je težak zadatak, ako ne i skoro nemoguć, pokrenuti
+        program za jedan sistem na drugom "pogrešnom" sistemu bez korišćenja
+        emulacije ili originalnog izvornog koda.
+      </p>
+      <p>
+        Grana u kojoj emulacija ima jako bitnu ulogu je upravo emulacija konzola
+        za video igre. Kao što je ranije i spomenuto, emulacija najviše vredi
+        ako emuliranjem samog sistema imamo pristup velikoj količini softvera za
+        taj specifičan sistem. Upravo su konzole idealan kandidat za poduhvat
+        kao što je emulacija. Posebno PlayStation poseduje specifičnu
+        arhitekturu i niz jedinstvenih hardverskih komponenti, zbog čega bez
+        prave emulacije praktično nije moguće pokrenuti originalne igre na
+        modernim računarima. Zbog toga su emulatori kao što su <b>PCSX2</b> ili
+        <b>RPCS3</b> izuzetno složeni projekti. Oni moraju verno reprodukovati
+        ponašanje konzole, omogućavajući da se na potpuno drugačijem sistemu
+        pokrenu igre koje su originalno pisane za PlayStation hardver. Upravo tu
+        se vidi koliko je kompleksan, ali i važan, zadatak emulacije u odnosu na
+        simulacije.
+      </p>
+    </div>
+
+    <div>
+      <br />
+      <br />
+      <h4>Popularni emulatori za Playstation konzole</h4>
+      <table>
+        <tr>
+          <th>Originalna konzola</th>
+          <th>Ime</th>
+          <th>Platforme</th>
+          <th>Najnovija verzija</th>
+          <th>Licensa</th>
+        </tr>
+        <tr>
+          <td>Playstation</td>
+          <td>DuckStation</td>
+          <td>Windows, Linux, macOS</td>
+          <td>Najnovija verzija</td>
+          <td>Licensa</td>
+        </tr>
+        <tr>
+          <td>Playstation</td>
+          <td>Mednafen</td>
+          <td>Windows, Linux, macOS, FreeBSD</td>
+          <td>Najnovija verzija</td>
+          <td>Licensa</td>
+        </tr>
+        <tr>
+          <td>Playstation 2</td>
+          <td>LRPS2</td>
+          <td>Windows, Linux, macOS</td>
+          <td>1.22.2</td>
+          <td>GPLv3</td>
+        </tr>
+        <tr>
+          <td>Playstation 2</td>
+          <td>iris</td>
+          <td>Windows, Linux, macOS</td>
+          <td>Najnovija verzija</td>
+          <td>Licensa</td>
+        </tr>
+      </table>
+    </div>
+
+    <h4>Emulacija Playstation konzola</h4>
+    <div class="text-container">
+      <embed src="./rad.pdf" width="100%" height="1100px" />
+    </div>
+  </body>
+</html>

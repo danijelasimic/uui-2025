@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Фибоначи – живот и дело</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="about-page">
+    <div class="background-box">
+
+        <!-- NAVIGACIJA -->
+        <div class="nav-toggle" onclick="this.classList.toggle('active')">
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="nav-dropdown">
+                <div class="nav-white-cloud">
+                    <div class="nav-table">
+                        <div class="nav-cell"><a href="index.html">Почетна</a></div>
+                        <div class="nav-cell"><a href="o-meni.html">О мени</a></div>
+                        <div class="nav-cell"><a href="akademska_tema.html">Академска тема</a></div>
+                        <div class="nav-cell"><a href="raspored.html">Распоред</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header2">
+            <h1>Леонардо Фибоначи</h1>
+            <p class="subtitle">Математичар који је променио Европу</p>
+        </div>
+
+        <div class="home-content card">
+
+            <div class="left-column1 card">
+                <img src="slike/fibonaci.jpg" alt="Леонардо Фибоначи">
+            </div>
+
+            <div class="right-column1 card">
+                <p>
+                    <strong>Леонардо из Пизе</strong>, познатији као Фибоначи,
+                    био је италијански математичар из 13. века.
+                    Најпознатији је по увођењу <em>арапских бројева</em>
+                    у Европу и по низу који данас носи његово име.
+                </p>
+
+                <div class="card">
+                    <h2>Шта је Фибоначијев низ?</h2>
+                    <p>
+                        <strong>Фибоначијев низ</strong> је бесконачан низ бројева у коме
+                        је сваки наредни члан једнак збиру претходна два.
+                        Низ почиње бројевима 0 и 1:
+                    </p>
+                    <p class="formula">0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...</p>
+                    <p>Математички, низ се дефинише формулом:</p>
+                    <p class="formula">F<sub>n</sub> = F<sub>n−1</sub> + F<sub>n−2</sub></p>
+                    <p>
+                        Иако је правило веома једноставно, последице овог низа
+                        су изузетно дубоке и појављују се у бројним областима
+                        математике и науке.
+                    </p>
+                </div>
+
+                <p>
+                    У свом делу <em>Liber Abaci</em> (1202) представио је
+                    практичне методе рачунања које су биле револуционарне
+                    за трговину, банкарство и науку.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Фибоначи калкулатор</h2>
+            <p>Укуцајте број <em>n</em> да видите n-ти Фибоначијев број:</p>
+            <input type="number" id="fibInput" min="0" placeholder="n">
+            <button id="fibButton">Израчунај</button>
+            <p id="fibResult"></p>
+        </div>
+
+        <!-- ZECEVI -->
+        <div class="card">
+            <h2>Како је настао Фибоначијев низ?</h2>
+            <p>
+                Проблем је гласио: ако један пар зечева сваког месеца добија нови пар,
+                колико ће парова бити након одређеног броја месеци?
+                Решење овог проблема довело је до низа у коме је сваки број збир претходна два,
+                данас познатог као Фибоначијев низ.
+            </p>
+            <img src="slike/zecevi.jpg" alt="Фибоначијеви зечеви" class="centered-image">
+        </div>
+
+        <div class="card">
+            <h2>Фибоначијев низ и златни пресек</h2>
+            <p>
+                Једна од најзанимљивијих особина Фибоначијевог низа
+                јесте његова веза са <strong>златним пресеком</strong>.
+                Однос два узастопна члана низа све више се приближава
+                броју φ (фи),
+            </p>
+            \[\varphi = \frac{1 + \sqrt{5}}{2} = 1.6180339887...\]
+            <p>
+                Златни пресек се сматра естетски најпријатнијим односом
+                и вековима се користи у уметности, архитектури и дизајну.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Фибоначијева спирала</h2>
+            <p>
+                Фибоначијева спирала је визуелни приказ низа у природи и уметности.
+                Свако наредно поље у спирали има димензије које одговарају члановима
+                Фибоначијевог низа, што резултује естетски пријатним закривљеним обликом.
+                Ова спирала се често примењује у архитектури, дизајну и анализи природних
+                облика као што су шкољке, цвеће и галаксије.
+            </p>
+            <img src="slike/fibonacijev.jpg" alt="Фибоначијева спирала" class="centered-image">
+        </div>
+
+        <div class="card">
+            <h2>Фибоначијев низ око нас</h2>
+            <p class="intro">
+                Фибоначијев низ се не јавља само у природи, већ и у нашем окружењу.
+                Ево неких области у којима га можемо уочити:
+            </p>
+            <ul class="fibonacci-list">
+                <li><b>Архитектура:</b> Партенон, Аја Софија, Нотр Дам</li>
+                <li><b>Уметност:</b> Мона Лиза, Последња вечера, Нојферт</li>
+                <li><b>Музика:</b> Страдивариусова виолина</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Примена у информатици</h2>
+            <p>
+                У информатици, Фибоначијев низ се користи
+                за анализу алгоритама, рекурзију и оптимизацију.
+                Познати су Фибоначијеви алгоритми претраге
+                и структуре података засноване на овом низу.
+            </p>
+            <p>
+                Због своје једноставне дефиниције, низ је
+                често први пример који се користи за
+                објашњавање рекурзивних функција у програмирању.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Зашто је Фибоначи важан?</h2>
+            <p>
+                Фибоначи није само математичар који је описао један низ.
+                Он је човек који је променио начин на који Европа рачуна,
+                размишља и развија науку.
+            </p>
+            <p>
+                Његов рад представља мост између античког знања
+                и модерне математике, а Фибоначијев низ и данас
+                инспирише научнике, уметнике и програмере широм света.
+            </p>
+        </div>
+
+        <div class="card">
+            У следећем
+            <a href="kratki_seminarski.pdf" target="_blank" class="green-link">LaTeX документу</a>,
+            представљена је скраћена верзија рада са основним информацијама и примерима,
+            ради лакшег прегледа и брзог разумевања.
+        </div>
+
+        <br>
+        <button id="backToTop">⬆ Врати се на врх</button>
+
+        <footer class="site-footer">
+            <p>
+                © Сара Вилотић |
+                <a href="https://www.matf.bg.ac.rs/" target="_blank" class="green-link">
+                    Математички факултет Универзитета у Београду
+                </a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        function fibonacci(n) {
+            if (n === 0) return 0;
+            if (n === 1) return 1;
+            let a = 0, b = 1, temp;
+            for (let i = 2; i <= n; i++) {
+                temp = a + b;
+                a = b;
+                b = temp;
+            }
+            return b;
+        }
+
+        const fibButton = document.getElementById("fibButton");
+        const fibInput = document.getElementById("fibInput");
+        const fibResult = document.getElementById("fibResult");
+
+        fibButton.addEventListener("click", () => {
+            const n = parseInt(fibInput.value);
+            if (isNaN(n) || n < 0) {
+                fibResult.textContent = "Укуцајте не-негативан број!";
+            } else {
+                fibResult.innerHTML = `F<sub>${n}</sub> = ${fibonacci(n)}`;
+            }
+        });
+
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 200) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

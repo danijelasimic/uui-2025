@@ -1,0 +1,155 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\addto\captionsserbian{\renewcommand{\contentsname}{Садржај}}
+
+\definecolor{myblack}{RGB}{0,0,0}
+\renewcommand{\cfttoctitlefont}{\Large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\patchcmd{\tableofcontents}{\contentsname}{\hfill\contentsname\hfill}{}{}
+
+\title{\textbf{Историја рачунарства}}
+\author{Лана Петровић}
+\date{\today}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Дефиниција}[section]
+
+\theoremstyle{plain}
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{lema}{Лема}[section]
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Увод}
+
+Историја рачунарства је прича о људској потреби за бржим и прецизнијим рачунањем.  
+Од најранијих механичких уређаја до модерних суперрачунара, рачунари су прошли кроз више етапа развоја.  
+\textbf{Основни циљ} сваке ере је био исти: да се убрза обрада података и смањи број грешака.
+
+\section{Рани рачунари}
+
+\subsection{Абакус и механичке машине}
+
+\begin{definicija}
+\textbf{Абакус} је један од првих алата за рачунање, који се користио још у антици.
+\end{definicija}
+
+У 17. веку појављују се механичке машине за рачуњање, као што је \textit{Pascalina} Блеза Паскала.
+
+\subsection{Тјуринг и идеја рачунара}
+
+\begin{teorema}
+Тјурингова машина може симулирати било који алгоритам, што значи да је основни модел савременог рачунара.
+\end{teorema}
+
+\begin{lema}
+Сваки алгоритам који се може описати као низ корака може се реализовати на Тјуринговој машини.
+\end{lema}
+
+\section{Рачунари 20. века}
+
+\subsection{Фон Нојманова архитектура}
+
+\begin{definicija}
+\textbf{Фон Нојманова архитектура} је концепт рачунарског система у коме се програм и подаци чувају у истој меморији.
+\end{definicija}
+
+Фон Нојманова архитектура је била основа за већину рачунара током 20. века.
+
+\subsection{Прва генерација рачунара}
+
+\begin{itemize}
+    \item Коришћени су електронски вакуумски тијуби.
+    \item Велики су и скупи.
+    \item Нису били поуздани.
+\end{itemize}
+
+\section{Математички пример}
+
+Позната формула из теорије информација:
+
+\[
+E = mc^2
+\]
+
+Али, у рачунарству је важна и сложеност алгоритама, нпр.:
+
+\[
+T(n) = O(n \log n)
+\]
+
+\section{Табела: генерације рачунара}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l c c}
+\toprule
+\textbf{Генерација} & \textbf{Технологија} & \textbf{Карактеристике} \\
+\midrule
+1. генерација & вакуумски тијуби & велики и непоуздани \\
+2. генерација & транзистори & мањи и поузданији \\
+3. генерација & интегрисани кругови & већа брзина \\
+4. генерација & микропроцесори & персонални рачунари \\
+5. генерација & вештачка интелигенција & паметни системи \\
+\bottomrule
+\end{tabular}
+\caption{Генерације рачунара}
+\end{table}
+
+\section{Листе}
+
+\subsection{Непоредне листе}
+
+\begin{itemize}
+    \item Кључни изуми:
+    \begin{itemize}
+        \item Абакус
+        \item Механичке рачунске машине
+        \item Тјурингова машина
+        \item Први електронски рачунари
+    \end{itemize}
+\end{itemize}
+
+\subsection{Поређане листе}
+
+\begin{enumerate}
+    \item Рани рачунари
+    \item Механичке машине
+    \item Електронски рачунари
+    \item Модерни рачунари
+\end{enumerate}
+
+\section{Слика}
+
+\begin{wrapfigure}{l}{0.35\textwidth}
+    \vspace{-10pt}
+    \includegraphics[width=0.34\textwidth]{ENIAC.jpg}
+    \caption{Еволуција рачунара}
+    \vspace{-10pt}
+\end{wrapfigure}
+
+На слици је приказана еволуција рачунара од механичких уређаја до модерних рачунара.  
+\textcolor{blue}{Прва генерација} је била велика и непоуздана, док \textcolor{red}{четврта генерација} доноси персоналне рачунаре.
+
+\section{Закључак}
+
+Историја рачунарства показује да је свака нова генерација рачунара донела веће могућности и брже обраде података.  
+\textbf{Развој рачунара} није само технички процес, већ и друштвени — рачунари су променили начин рада, учења и комуникације.  
+\textit{Будућност} рачунарства ће вероватно донети још интелигентније системе и нове технологије.
+
+\end{document}

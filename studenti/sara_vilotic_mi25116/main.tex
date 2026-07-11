@@ -1,0 +1,173 @@
+\documentclass[12pt,a4paper]{article}
+
+% ================ Пакети =================
+\usepackage[T2A]{fontenc}
+\usepackage[serbian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{caption}
+\geometry{a4paper, margin=2.5cm}
+
+% ================== ТЕОРЕМЕ ==================
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{lema}{Лема}[section]
+
+\addto\captionsserbian{%
+  \renewcommand{\figurename}{Слика}%
+  \renewcommand{\tablename}{Табела}%
+  \renewcommand{\contentsname}{Садржај}%
+}
+
+\title{\textbf{Фибоначијев низ и његове примене}}
+\author{{Сара Вилотић} \\
+Математички факултет, Универзитет у Београду \\
+Број индекса: 116/2025
+}
+\date{фебруар, 2026.}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Увод}
+Фибоначијев низ представља један од најпознатијих нумеричких низова у математици. Његова примена се може уочити у:
+\begin{itemize}
+    \item природи
+    \item уметности
+    \item архитектури
+    \item информатици
+\end{itemize}
+
+У овом раду биће дати основни појмови, формуле и неки примери.
+
+% ================== ОСНОВНИ ПОЈМОВИ ==================
+\section{Основни појмови}
+
+\begin{definicija}
+Фибоначијев низ је дефинисан рекурзивном формулом:
+\[
+F_n = F_{n-1} + F_{n-2}, \quad n \geq 2
+\]
+при чему су почетни чланови:
+\[
+F_0 = 0, \quad F_1 = 1, \quad F_2 = 1.
+\]
+\end{definicija}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+$n$ & $F_n$ \\
+\hline
+0 & 0 \\
+1 & 1 \\
+2 & 1 \\
+3 & 2 \\
+4 & 3 \\
+5 & 5 \\
+6 & 8 \\
+7 & 13 \\
+8 & 21 \\
+9 & 34 \\
+\hline
+\end{tabular}
+\caption{Првих 10 Фибоначијевих бројева}
+\label{tab:fibonacci10}
+\end{table}
+
+\subsection{Математичке особине}
+За велике вредности, $n$ тежи броју:
+\[
+\varphi = \frac{1 + \sqrt{5}}{2} = 1.6180339887...
+\]
+
+
+\begin{lema}
+Фибоначијев низ расте експоненцијално.
+\end{lema}
+
+\begin{teorema}
+Однос суседних Фибоначијевих бројева конвергира ка златном пресеку:
+\[
+\lim_{n \to \infty} \frac{F_{n+1}}{F_n} = \phi.
+\]
+\end{teorema}
+
+\subsection{Фибоначијева спирала}
+
+\begin{figure}[H]
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{fibonacijev.jpg}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{Фибоначијева спирала}
+\label{fig:fibonacci_spiral}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.5\textwidth}
+\textcolor{red}{\textbf{Фибоначијева спирала}} представља визуелну аппроксимацију златне спирале. 
+Она се често користи као симбол хармоније и равнотеже у природи и уметности. 
+Овај облик је један од најпознатијих математичких симбола.
+\end{minipage}
+\end{figure}
+
+\section{Историјат Фибоначијевог низа}
+
+\begin{figure}[H]
+\begin{minipage}{0.5\textwidth}
+Фибоначијев низ је увео италијански математичар \textcolor{blue}{\textbf{Леонардо из Пизе}}, познатији као
+\textcolor{blue}{\textbf{Фибоначи}}, у 13. веку.  
+Он је овај низ представио у својој књизи \textit{Liber Abaci} (1202), кроз проблем
+размножавања зечева.
+
+Проблем је гласио: ако један пар зечева сваког месеца добија нови пар, колико ће
+парова бити након одређеног броја месеци?  
+Решење овог проблема довело је до низа у коме је сваки број збир претходна два,
+данас познатог као Фибоначијев низ. \\
+
+Фибоначи се у свом раду бавио различитим областима математике и науке, међу којима су:
+
+\begin{enumerate}
+    \item аритметика и рачунање са бројевима
+    \item алгебра и решавање једначина
+    \item геометрија
+    \item теорија бројева
+    \item примена математике у трговини и финансијама
+    \item ширење арапских бројева у Европи
+\end{enumerate}
+
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{Fibonaci.jpg}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{Леонардо Фибоначи}
+\label{fig:fibonacci}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{zecevi.jpg}
+\captionsetup{justification=centering}
+\caption{Илустрација проблема размножавања зечева који је довео до Фибоначијевог низа}
+\label{fig:zecevi}
+\end{figure}
+
+
+\section{Закључак}
+Фибоначијев низ представља један од најпознатијих и најинтересантнијих низова у математици.  
+Његова примена у природним и уметничким структурама показује лепоту и универзалност математике.  
+
+\end{document}

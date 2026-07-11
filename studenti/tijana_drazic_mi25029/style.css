@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #4a3b2a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: #4a3b2a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-kontejner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+}
+.logo {
+    color: #f6f1ea;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+.nav-linkovi {
+    list-style: none;
+    display: flex;
+}
+
+.nav-linkovi li a {
+    color: #f6f1ea;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-size: 18px;
+    border-radius: 12px;    
+    transition: background-color 0.3s ease;
+
+}
+
+.nav-linkovi li a:hover {
+    background-color: #7a5c3e;
+}
+
+.donja-linija {
+    margin-top: auto;
+    background-color: #4a3b2a; 
+    color: #fefae0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+.donja-linija a {
+    color: #a67c52; 
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+.donja-linija a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.naslovna-sekcija {
+    background-color: #f6f1ea;   
+    padding: 70px 20px 60px;
+    text-align: center;
+}
+
+.naslovna-sekcija h1 {
+    font-size: 46px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #4a3b2a;              
+}
+
+.naslovna-sekcija p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a3b2a;
+}
+
+.kartice {
+    display: flex;
+    justify-content: center;   
+    gap: 50px;                 /
+    flex-wrap: wrap;           
+    margin: 0 auto;            
+    padding-top: 60px;         
+    max-width: 1200px;
+}
+
+.kartica {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 40px;             
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    flex: 1 1 320px;
+    max-width: 360px;
+    transition: transform 0.3s ease;
+}
+
+.kartica:hover {
+    transform: translateY(-5px);
+}
+
+.kartica h3 {
+    font-size: 20px;                
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #4a3b2a;
+}
+
+.kartica p {
+    font-size: 15px;                
+    line-height: 1.6;
+    color: #4a3b2a;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.kartica a {
+    padding: 12px 20px;             
+    background-color: #7a5c3e;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 12px;
+    align-self: center;          
+    transition: background-color 0.3s ease;
+}
+
+.kartica a:hover {
+    background-color: #4a3b2a;
+}
+
+.primeri-kontejner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.raspored-primer {
+    display: flex;
+    align-items: flex-start; 
+    gap: 40px; 
+}
+
+.tabela-primer {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 8px;
+    overflow: hidden; 
+    font-family: Arial, sans-serif;
+}
+
+.tabela-primer thead th {
+    background-color: #3a2e24; 
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.tabela-primer tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-primer tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.tabela-primer tbody tr:hover {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.slika-primer {
+    width: 40%;
+    text-align: center;
+}
+
+.slika-primer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+}
+
+.slika-primer h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
+
+.tekst-ispod-tabele {
+    max-width: 1000Px;        
+    margin: 40px auto;       
+    padding: 20px;           
+    text-align: center;      
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.tekst-ispod-tabele a {
+    font-weight: bold;
+    color: #4a3b2a;          
+    text-decoration: none;
+}
+
+.tekst-ispod-tabele a:hover {
+    text-decoration: underline;
+}
+
+.tekst-ispod-tabele mark {
+    background-color: #ffff99;  
+    padding: 0 4px;             
+    border-radius: 4px;         
+}
+
+.mat-model {
+    display: flex;                 
+    justify-content: space-between; 
+    align-items: flex-start;        
+    max-width: 1000px;
+    margin: 0 auto 40px auto;       
+    gap: 30px;                      
+}
+
+.mat-slika {
+    flex: 1;                         
+    text-align: center;
+}
+
+.mat-slika img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mat-slika .caption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.mat-lista {
+    flex: 1;                         
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.mat-lista li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.uvodni-oblacic {
+    border-radius: 50px; 
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #f6f1ea;
+    border: 2px solid #4a3b2a;
+    max-width: 1000px;
+    margin: 60px auto 30px auto;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.oblacic-lista {
+    border-radius: 50px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #fff2e6;
+    border: 2px solid #4a3b2a;
+}
+
+.oblacic-link {
+    border-radius: 50px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #d8cec3;
+    border: 2px solid #4a3b2a;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+.oblacic-link a {
+    font-weight: bold;
+    color: #4a3b2a;
+    text-decoration: none;
+}
+
+.oblacic-link a:hover {
+    text-decoration: underline;
+}
+
+.kontakt {
+    max-width: 600px;           
+    margin: 20px auto;          
+    background-color: #7a5c3e;  
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: #f6f1ea;             
+    font-size: 18px;
+}
+
+.kontaktabel {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #f6f1ea;
+}
+
+.kontakt input,
+.kontakt textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #f6f1ea; 
+    color: #4a3b2a;
+}
+
+.kontakt input:focus,
+.kontakt textarea:focus {
+    outline: 2px solid #4a3b2a;
+}
+
+.kontakt button {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 25px;
+    background-color: #4a3b2a;
+    color: #f6f1ea;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+main h1 {
+    text-align: center;       
+    margin-bottom: 20px;      
+    font-size: 36px;          
+    color: #4a3b2a;          
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.kontakt button:hover {
+    background-color: #3a2e24;
+}

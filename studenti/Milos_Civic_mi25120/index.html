@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web Prezentacija — MI25120. HTML + CSS seminarski projekat." />
+  <title>Web Prezentacija — MI25120</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="site-header" class="header">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true">◆</span>
+      <span class="brand-title">
+        <strong>Portfolio</strong>
+        <span>MI25120 · Informatika</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Glavna navigacija">
+      <a class="nav-link" href="index.html">Početna</a>
+      <a class="nav-link" href="tema.html">Veštine &amp; Projekti</a>
+      <a class="nav-link" href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scroll-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero reveal">
+      <div class="hero-text">
+        <h1 class="title">Portfolio &amp; Web Prezentacija</h1>
+        <h2 class="subtitle">Web • QA • Growth</h2>
+
+        <p class="lead">
+          Gradim elegantna web rešenja, testiram sistematično i merim rezultate.
+          Fokus: <strong>UI/UX</strong>, <strong>QA</strong> i <strong>analitika</strong> — uz premium estetiku i čist kod.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tema.html">Pogledaj dodatne informacije</a>
+          <a class="btn btn-ghost" href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+
+      <figure class="hero-card reveal">
+        <img src="./slike/hero.jpg" alt="Hero fotografija za portfolio naslovnu sekciju" />
+      </figure>
+    </section>
+
+    <section class="page-head reveal" style="margin-top: 10px;">
+      <h2 class="subtitle">Šta radim</h2>
+      <p class="muted">Kratko, fokusirano i merljivo — bez suvišnog teksta.</p>
+    </section>
+
+    <section class="grid reveal-group reveal">
+      <article class="card reveal">
+        <h3>Web &amp; UI</h3>
+        <p>
+          Front-end stranice i web aplikacije sa fokusom na tipografiju, spacing i UX detalje.
+        </p>
+        <ul class="list">
+          <li>Semantički HTML + modularni CSS</li>
+          <li>Responsive layout &amp; micro-interactions</li>
+          <li>Landing stranice i prezentacioni sajtovi</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3>QA &amp; Testing</h3>
+        <p>
+          Manual testing, test scenariji, bug reporting i disciplina u proverama pre isporuke.
+        </p>
+        <ul class="list">
+          <li>Test cases &amp; sanity/regression</li>
+          <li>Jasan opis grešaka + reprodukcija</li>
+          <li>Konzistentan kvalitet isporuke</li>
+        </ul>
+      </article>
+
+      <article class="card reveal">
+        <h3>Growth &amp; Marketing</h3>
+        <p>
+          Kampanje, analitika i optimizacija — fokus na rast i metrike (reach/engagement).
+        </p>
+        <ul class="list">
+          <li>Social media management</li>
+          <li>Reklame (ads) i optimizacija</li>
+          <li>Praćenje rezultata i iteracije</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="strip reveal">
+      <h3>Brzi linkovi</h3>
+      <p>
+        <a class="link" href="tema.html">Veštine &amp; Projekti</a> •
+        <a class="link" href="kontakt.html">Kontakt</a> •
+        <a class="link" href="https://www.matf.bg.ac.rs/" target="_blank" rel="noopener">MATF (spoljašnji link)</a>
+      </p>
+    </section>
+  </main>
+
+  <div id="footer-sentinel" aria-hidden="true"></div>
+
+  <footer class="footer">
+    <div class="footer-mini">© 2026 · MI25120</div>
+
+    <div class="footer-expanded">
+      <div class="footer-inner">
+        <div>
+          <h4>O projektu</h4>
+          <p>Portfolio &amp; Web Prezentacija (HTML + CSS + lokalni resursi). Fokus: UX čistoća, tipografija i mikro-interakcije.</p>
+          <p class="muted">Kontakt forma je demonstrativna.</p>
+        </div>
+
+        <div>
+          <h4>Navigacija</h4>
+          <p><a class="link" href="index.html">Početna</a></p>
+          <p><a class="link" href="tema.html">Veštine &amp; Projekti</a></p>
+          <p><a class="link" href="kontakt.html">Kontakt</a></p>
+        </div>
+
+        <div>
+          <h4>Resursi</h4>
+          <p><a class="link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></p>
+          <p><a class="link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS Validator</a></p>
+          <p><a class="link" href="https://www.matf.bg.ac.rs/" target="_blank" rel="noopener">MATF</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

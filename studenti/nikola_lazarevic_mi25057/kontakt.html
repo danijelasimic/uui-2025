@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Контакт</title>
+	<link rel="stylesheet" type="text/css" href="stil.css">
+	<link rel="icon" type="image/x-icon" href="Slike/logomatf.png">
+</head>
+<body>
+
+<nav>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="index.html"><img src="Slike/home.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="tema.html"><img src="Slike/sifra.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="kriptografija.pdf"><img src="Slike/dokument.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="kontakt.html"><img src="Slike/contact-us.png" alt="Slika" class="ikona"></a>
+	</div>
+	<p class="text1">Почетна</p>
+	<p class="text2">Тема</p>
+	<p class="text3">Више</p>
+	<p class="text4">Контакт</p>
+</nav>
+
+<div id="kontenjer0">
+	<h1>Контакт</h1>	
+	<img src="Slike/logomatf.png" alt="Slika" id="logomatf">
+</div>
+
+<div id="sve">
+	<div id="kontenjer-forma">
+		<form class="tuk">
+			<p class="tekstForma">Име и Презиме:</p><input type="text" name="ImeIPrezime" class="polje">
+			<p class="tekstForma">Е-пошта:</p><input type="text" name="Email" class="polje">
+			<p class="tekstForma">Порука:</p><textarea class="vecepolje"></textarea>
+			<button class="dugme">Пошаљи</button>
+		</form>
+	</div>
+
+</div>
+
+</body>
+<script>
+let nav = document.querySelector('nav');
+let sve = document.getElementById('sve');
+
+function ulaz() {
+    nav.style.width = "260px";
+    sve.style.left = "160px";
+}
+
+function izlaz() {
+   	 	nav.style.width = "100px";
+   		sve.style.left = "0px"; 
+}
+</script>
+</html>

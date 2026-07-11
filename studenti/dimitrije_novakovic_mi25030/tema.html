@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>O Internetu - Detaljna Tema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Početna</a>
+    <a href="tema.html">O Internetu i Kontakt</a>
+</nav>
+
+<section class="main-content">
+    <h1>Detaljan pregled tehnologije</h1>
+
+    <div class="card">
+        <h2>Istorijat</h2>
+        <p>Prenošenje instrukcija između računskih mašina se prvi put ostvareno 1940. godine kada je Džordž Stibitz iskoristio TTY, odnosno tele-mašinu za kucanje, pomoću koje je poslao instrukcije sa njegovog Model K sa univerziteta Dartmut u Nju Hempširu na njegov „kalkulator kompleksnih brojeva“ u Njujorku, te takođe primio rezultate istim putem. Tek 1964. godine, istraživači sa Dartmuta su izumili glavnu mašinu sa deljenim vremenom sa priključenim terminalima. U osnovi terminali su iskorištavali resurse glavnog računara, te pomoću glavnog računara na kojeg su prikopčani dobijali rezultate nazad na terminal.</p>
+	<p>Godine 1969. Univerzitet Kalifornija u Los Angelesu, SRI u Stanfordu, Univerzitet Kalifornije u Santa Barbari i Univerzitet Jute bili su prikopčani na ARPNET mrežu koja je koristila 50 kbit/s mrežna kola. ARPANet je u stvari preteča današnjeg Interneta, iako je bila puno ograničenija nego globalna mreža – internet, ipak je bila prva mreža takve vrste. Kasnije će se tehnologija sve više razvijati te prerasti u današnju mrežu kakvu poznajemo. Internet je globalno dostupna mreža koju čini više međusobno povezanih manjih i većih mreža koje komuniciraju pomoću internet Protokola (IP), a koji su povezani bakarnim kablovima, optičkim kablovima i drugim. Prva internet mreža je stvorena 1. januara 1983, što se smatra i stvaranjem interneta kada je Američka Nacionalna Naučna Fondacija (engl. National Science Fondation) (NSF) napravio univerzitetsku mrežu koja će kasnije postati NSFNet.</p>
+	<p>Verovatno je najvažniji trenutak bio 1983. kad je tadašnja mreža prešla sa NCP-a (Network Control Protocol) na TCP/IP (Transmission Control Protocol / Internet Protocol), što je značilo prelazak na tehnologiju kakva se i danas koristi. 1983. godine manje od 1000 računara je bilo spojeno sa ARPANET koristeći relativno primitivni Netvork Kontrol Protokol, koji je uprkos mnogim ograničenjima, bio upotrebljiv u malim mrežama, i nije bio dovoljno fleksibilan za širu upotrebu. Kako se ARPANET eksponencijalno povećavao, videlo se kako je potreban opštiji pristup komunikacionom protokolu kako bi mogli biti udovoljeni sve veći zahtevi i stvarana sve komplikovanija mreža računara.</p>
+	<p>Prvo predstavljanje javnosti je doživeo 1990-ih godina. U avgustu 1991 CERN u Švajcarskoj je predstavio veb sajt, dok je već pre tri godine Tim Berners-Li počeo stvaranje HTML protokola, HTTP te prve veb stranice na CERN-u u Švajcarskoj. Nacionalni Centar za superračunarske primene je objavio Mosaic veb-pregledač, a 1994. godine se povećava interes javnosti za internet koji je do sad bio isključivo akademsko/tehničke prirode. Internet je sve više uzimao maha, tako da je 1990-ih integrisao većinu tadašnjih postojećih javnih računarskih mreža, što je ostvareno najviše zahvaljujući nedostatku merodavne centralne administracije čime je omogućen nesmetan rast mreže, kao i prilično slobodnu prirodu Interneta i njegovih protokola.</p>
+    </div>
+	
+
+    <div class="card">
+        <h2>IP Adresa</h2>
+        <p>U savremenim računarskim mrežama, osnovu komunikacije između uređaja čine IP adrese i mrežni protokoli. Bez njih internet, lokalne mreže (LAN), pa čak i komunikacija između dva računara u istoj prostoriji, ne bi bili mogući. IP adresa omogućava identifikaciju uređaja u mreži, dok protokoli definišu pravila po kojima se podaci šalju, primaju i tumače.</p>
+	<p>IP adresa (Internet Protocol adresa) je jedinstvena numerička oznaka dodeljena svakom uređaju koji je povezan na mrežu koja koristi Internet Protocol. Njena osnovna funkcija je identifikacija i adresiranje, kao kućna adresa u poštanskom sistemu. Kada pošaljete poruku ili otvorite neku internet stranicu, vaš uređaj koristi IP adresu da bi znao odakle podaci dolaze i gde treba da budu poslati.</p>
+	<p>Postoje dve glavne verzije IP adresa:</p>
+<div class="card">
+        <h2>Poređenje Standarda</h2>
+        <table>
+            <tr><th>Karakteristika</th><th>IPv4</th><th>IPv6</th></tr>
+            <tr><td>Broj bita</td><td>32-bit</td><td>128-bit</td></tr>
+            <tr><td>Format</td><td>Decimalni (192.0.2.1)</td><td>Heksadecimalni (2001:db8::)</td></tr>
+            <tr><td>Sigurnost</td><td>Opciona</td><td>Ugrađena (IPsec)</td></tr>
+        </table>
+    </div>
+</div>
+	<div class="card">
+		<h2>Protokoli</h2>
+		<p>Mrežni protokol je skup pravila koja određuju kako se podaci prenose kroz mrežu. Oni definišu format podataka, način uspostavljanja veze, kontrolu grešaka i prekid komunikacije. Protokoli funkcionišu u slojevima, prema modelima kao što su OSI i TCP/IP model.</p>
+		<p>Jedan od najvažnijih protokola je Transmission Control Protocol (TCP). TCP obezbeđuje pouzdanu komunikaciju – proverava da li su svi paketi podataka stigli i, ako nisu, ponovo ih šalje. Zbog toga se koristi u aplikacijama gde je tačnost važna, kao što su web stranice ili elektronska pošta.</p>
+		<p>Nasuprot njemu, User Datagram Protocol (UDP) je brži, ali ne garantuje isporuku svih paketa. Koristi se u aplikacijama gde je brzina važnija od potpune pouzdanosti, kao što su video-pozivi i online igre.
+
+Za pristup web stranicama koristi se Hypertext Transfer Protocol (HTTP), dok njegova bezbednija verzija, HTTPS, koristi enkripciju radi zaštite podataka. Za slanje elektronske pošte koristi se Simple Mail Transfer Protocol (SMTP), dok se za prijem poruka koriste protokoli poput POP3 i IMAP.</p>
+<div style="text-align: center; margin: 20px 0;">
+            <img src="slike/tema.jpeg" alt="TCP vs UDP" style="width: 100%; max-width: 500px; border-radius: 10px; border: 1px solid cyan;">
+        </div>
+</div>
+        
+
+    </div>
+
+    <div class="card">
+        <h2>Pristup internetu</h2>
+	<p>Internet kao globalna svetska mreža nema cenzuru i nema prepreka. Dostupna je na svakom deliću planete Zemlje uz odgovarajuću opremu.</p>        
+<div class="card">
+    <h2>Načini pristupa Internetu</h2>
+    <p>Da bismo pristupili globalnoj mreži, moramo koristiti jedan od sledećih sistema komunikacije:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Tehnologija</th>
+                <th>Prenosnik / Infrastruktura</th>
+                <th>Maksimalna Brzina / Specifičnost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Analogna linija (Modem)</strong></td>
+                <td>Telefonska parica (PSTN)</td>
+                <td>Do 56 Kbps (analogni signal)</td>
+            </tr>
+            <tr>
+                <td><strong>ISDN</strong></td>
+                <td>Digitalna telefonska linija</td>
+                <td>Do 128 Kbps (digitalni signal)</td>
+            </tr>
+            <tr>
+                <td><strong>ADSL</strong></td>
+                <td>Digitalna pretplatnička linija</td>
+                <td>Asimetričan protok (veći Download)</td>
+            </tr>
+            <tr>
+                <td><strong>Kablovski Internet</strong></td>
+                <td>Infrastruktura kablovske TV</td>
+                <td>Do 1 Gbps (zavisi od broja korisnika)</td>
+            </tr>
+            <tr>
+                <td><strong>Bežični (Wireless)</strong></td>
+                <td>Radio talasi (2.4 / 5 GHz)</td>
+                <td>Do 54 Mbps (neophodna optička vidljivost)</td>
+            </tr>
+            <tr>
+                <td><strong>Satelitski Internet</strong></td>
+                <td>Geostacionarni sateliti</td>
+                <td>Najpouzdaniji sistem (pokriva "Footprint")</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p><br><em>Napomena: Izbor tehnologije zavisi od geografske lokacije i dostupne opreme.</em></p>
+</div>
+    </div>
+
+    <div class="card contact-wrapper" id="kontakt">
+        <h2>Imate pitanje? Pišite nam</h2>
+        <form id="mrezaForma">
+            <div class="form-group">
+                <label>Ime i prezime</label>
+                <input type="text" id="ime" required>
+            </div>
+            <div class="form-group">
+                <label>Email adresa</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label>Vaša poruka</label>
+                <textarea id="poruka" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Pošalji Poruku</button>
+        </form>
+        <div id="formStatus" class="status-msg"></div>
+    </div>
+</section>
+
+<script>
+    window.addEventListener("load", () => { document.body.classList.add("loaded"); });
+
+    document.getElementById("mrezaForma").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const status = document.getElementById("formStatus");
+        status.textContent = "Hvala vam! Poruka je uspešno poslata.";
+        status.style.display = "block";
+        this.reset();
+    });
+</script>
+</body>
+</html>

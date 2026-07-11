@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalji Proizvoda - Gaming Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="komponente.html"><i class="fa-solid fa-arrow-left"></i> Nazad na komponente</a>
+        </div>
+        <div class="nav-cart">
+            <a href="korpa.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i> Korpa</a>
+            <button id="logout-btn" class="logout-link" style="display: none;">
+                <i class="fa-solid fa-right-from-bracket"></i> Odjavi se
+            </button>
+        </div>
+    </nav>
+
+    <section id="detalji-proizvoda">
+        <div id="proizvod-kontejner">
+            <img id="detalji-slika" src="" alt="Proizvod">
+
+            <div class="product-details-right">
+                <h1 id="detalji-naslov"></h1>
+                <div id="detalji-opis-kontejner">
+                    <p id="detalji-opis"></p>
+                </div>
+                <h2 id="detalji-cena"></h2>
+
+                <div id="proizvod-akcije"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="detalji.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

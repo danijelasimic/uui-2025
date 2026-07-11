@@ -1,0 +1,189 @@
+%! Author = Nikola Marinkovic
+%! Date = 13/04/2006
+
+\documentclass[a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage{noto}
+\usepackage[utf8]{inputenc}
+
+\usepackage[serbianc]{babel}
+\usepackage[unicode]{hyperref}
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{teorema}{Теорема}
+\newtheorem{lema}{Лема}
+
+\newcommand{\eng}[1]{
+    (\textit{енг.} #1)
+}
+
+\begin{document}
+
+    \begin{titlepage}
+        \newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+
+        \center
+
+        \textsc{\LARGE Математички факултет}\\[3cm]
+
+        \textsc{\Large Семинарски рад}\\[0.1cm]
+
+        \textsc{\large из увода у информатику}\\[0.5cm]
+
+        \HRule\\[0.4cm]
+
+        {\LARGE\bfseries Алгоритам сортирања уметањем}\\[0.2cm]
+
+        \HRule\\[2cm]
+
+        \vspace{17\baselineskip}
+
+
+
+        \begin{minipage}{0.4\textwidth}
+            \begin{flushleft}
+                \large
+                \textit{Студент}\\
+                Никола Маринковић 52/2025
+            \end{flushleft}
+        \end{minipage}
+        \hspace*{1cm}
+        \begin{minipage}{0.4\textwidth}
+            \begin{flushright}
+                \large
+                \textit{Професор}\\
+                др.\ Данијела Симић
+            \end{flushright}
+        \end{minipage}
+
+
+        \vfill\vfill\vfill\vfill
+
+        {\large Београд, \today}
+
+        \vfill
+
+    \end{titlepage}
+
+    \tableofcontents
+
+    \newpage
+
+    \section{Увод}
+    \label{sec:uvod}
+
+    Одвајкада, једна од насушних потреба свакога ко се бавио рачунарским наукама било је сортирање података.
+    Тежња ка овом циљу изродила је многе алгоритме, сваки са сопственим предностима и манама.
+    Један од таквих алгоритама је алгоритам сортирања уметањем, о коме ће бити речи у овом раду.
+
+    \section{Основни појмови}
+    \label{sec:osn_pojmovi}
+
+    \begin{definicija}
+        Алгоритам сортирања уметањем је алгоритам који пролази кроз низ и сваки елемент убацује на исправну позицију у већ сортираном делу низа.
+    \end{definicija}
+
+    Алгоритам је \color{red}једноставан \color{black} и \color{red}интуитиван\color{black}, и због тога се често користи у образовне сврхе.
+    Његова основна идеја је слична начину на који човек сортира карте у руци: један по један елемент се убацује на одговарајуће место у већ сортирани део низа.
+
+    \subsection{Основне карактеристике}
+    \label{subsec:osn_karakt}
+
+    \begin{itemize}
+        \item Једноставан за имплементацију
+        \item Стабилан алгоритам
+        \item Користи константну количину меморије (\textit{in-place})
+    \end{itemize}
+
+    \subsection{Примене}
+    \label{subsec:primene}
+
+    \begin{enumerate}
+        \item Мали скупови података
+        \item Делимично сортирани низови
+        \item Компонента сложенијих алгоритама
+    \end{enumerate}
+
+
+    \section{Временска сложеност}
+    \label{sec:time_complexity}
+
+    Временска сложеност алгоритма у најгорем случају дата је формулом:
+
+    \begin{equation}
+        \label{eq:vr_sl}
+        T(n) = \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+    \end{equation}
+
+    Позната физичка формула, која овде нема директну примену али служи као пример, гласи:
+
+    \begin{equation}
+        \label{eq:ajnstajn}
+        E = mc^2
+    \end{equation}
+
+    \begin{lema}
+        У најгорем случају, алгоритам сортирања уметањем има квадратну временску сложеност.
+    \end{lema}
+
+
+
+    \section{Поређење сложености}
+    \label{sec:poredjenje}
+
+    \begin{table}[h]
+        \label{table:poredjenje_slozenosti}
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            Алгоритам & Најбољи случај & Најгори случај \\
+            \hline
+            Insertion Sort & $O(n)$ & $O(n^2)$ \\
+            Bubble Sort & $O(n)$ & $O(n^2)$ \\
+            Selection Sort & $O(n^2)$ & $O(n^2)$ \\
+            \hline
+        \end{tabular}
+        \caption{Поређење алгоритама сортирања}
+    \end{table}
+
+
+
+    \section{Илустрација алгоритма}
+    \label{sec:ilustracija}
+
+    \begin{figure}[h]
+        \label{figure:slika}
+        \begin{minipage}{0.4\textwidth}
+            \includegraphics[width=\linewidth]{./slike/insertion_sort.jpg}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.55\textwidth}
+            Алгоритам ради тако што постепено гради сортирани део низа.
+            \textit{Сваком новом елементу} се тражи одговарајуће место.
+        \end{minipage}
+        \caption{Визуелни приказ Insertion Sort алгоритма}
+    \end{figure}
+
+
+    \section{Формална анализа}
+    \label{sec:formalna_analiza}
+
+    \begin{teorema}
+        Ако је улазни низ већ сортиран, алгоритам сортирања уметањем ради у линеарном времену.
+        У том случају, сваки елемент је већ на исправној позицији, па није потребно померање.
+    \end{teorema}
+
+
+
+    \section{Закључак}
+    \label{sec:zakljucak}
+
+    Алгоритам сортирања уметањем је \textbf{једноставан, поучан и користан} у одређеним случајевима.
+    Иако није погодан за велике скупове података, у најбољем случају његова ефикасност и лакоћа имплементације чине га важним алгоритмом у образовању.
+
+
+\end{document}

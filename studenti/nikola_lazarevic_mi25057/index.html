@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Криптографија</title>
+	<link rel="stylesheet" type="text/css" href="stil.css">
+	<link rel="icon" type="image/x-icon" href="Slike/logomatf.png">
+</head>
+<body>
+
+<nav>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="index.html"><img src="Slike/home.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="tema.html"><img src="Slike/sifra.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="kriptografija.pdf"><img src="Slike/dokument.png" alt="Slika" class="ikona"></a>
+	</div>
+	<div class="ikonica" onmouseover="ulaz()" onmouseout="izlaz()">
+		<a href="kontakt.html"><img src="Slike/contact-us.png" alt="Slika" class="ikona"></a>
+	</div>
+	<p class="text1">Почетна</p>
+	<p class="text2">Тема</p>
+	<p class="text3">Више</p>
+	<p class="text4">Контакт</p>
+</nav>
+
+<div id="kontenjer0">
+	<h1>Криптографија – основе за почетнике</h1>	
+	<img src="Slike/logomatf.png" alt="Slika" id="logomatf">
+</div>
+
+<div id="sve">
+	<div id="kontenjer-slika">
+		<div class="tuks">
+			<p class="naslov">Увод</p>
+			<p class="razrada">Без примене криптографских метода, савремени системи као што су електронска пошта, интернет куповина и онлајн банкарство не би могли да функционишу на безбедан начин. Криптографија обезбеђује поверљивост, интегритет и аутентичност података.</p>	
+		</div>
+		<img src="Slike/kriptografija.jpg" id="slika">
+	</div>
+
+	<div id="kontenjer1">
+		<div class="tuk">
+			<p class="naslov">Шта је криптографија?</p>
+			<p class="razrada">Криптографија омогућава да се подаци трансформишу у облик који је нечитљив свима осим онима који поседују одговарајући кључ за дешифровање. На овај начин штите се личне поруке, банковни подаци, лозинке и многе друге осетљиве информације.</p>	
+		</div>
+	</div>
+
+	<div id="kontenjer2">
+		<div class="tuk">
+			<p class="naslov">Где се користи?</p>
+			<p class="razrada">Криптографија је присутна у бројним областима:</p>	
+			<ul class="razrada">
+				<li>заштита комуникације на интернету</li>
+				<li>чување лозинки</li>
+				<li>дигитални потписи</li>
+				<li>безбедност мобилних уређаја</li>
+				<li>војни и државни системи</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="kontenjer3">
+		<div class="tuk">
+			<p class="naslov">Алат CrypTool</p>
+			<p class="razrada">Овај алат омогућава шифровање текста на разне занимљиве начине. Можете посетити њихов <a href="https://www.cryptool.org/en/">сајт</a> и сами преузети апликацију бесплатно.</p>	
+		</div>
+	</div>
+
+</div>
+
+</body>
+<script>
+let nav = document.querySelector('nav');
+let sve = document.getElementById('sve');
+
+function ulaz() {
+    nav.style.width = "260px";
+    sve.style.left = "160px";
+}
+
+function izlaz() {
+   	 	nav.style.width = "100px";
+   		sve.style.left = "0px"; 
+}
+</script>
+</html>

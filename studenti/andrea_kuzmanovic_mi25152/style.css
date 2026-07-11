@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Computer Modern Serif", serif;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    gap: 50px;
+} 
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    background: rgba(255, 0, 179, 0.1);
+    padding: 15px 25px;
+    border: 1px solid #791083b2;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #92296fb2;
+    display: block;
+}
+
+.navbar li:hover {
+    background: #a30b7dce;
+}
+
+.navbar li:hover a {
+    color: rgb(46, 3, 23);
+}
+
+.pi-block {
+    margin: 40px;
+}
+
+.pi-top {
+    display: flex;
+    align-items: baseline;
+}
+
+.pi-symbol {
+    font-size: 200px;
+    line-height: 1;
+}
+
+.pi-digits span {
+    opacity: 0;
+    display: inline-block;
+    font-size: 90px;
+    animation: glowIn 0.3s forwards;
+}
+
+@keyframes glowIn {
+    from {
+        opacity: 0;
+        text-shadow: none;
+    }
+    to {
+        opacity: 1;
+        text-shadow: none;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    color: rgb(153, 21, 98);
+    background: #500436;
+    border-top: 1px solid #92296fb2;
+}
+
+.video-button {
+    padding: 15px 25px;
+    color: rgb(0, 0, 0);
+    background-color: #500436;
+    font-size: 24px;
+    border: 1px solid #92296fb2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-button:hover {
+    background-color: black;
+    color: #500436;
+    border: 1px solid #92296fb2;
+}
+
+.video-button1 {
+    padding: 15px 25px;
+    color: rgb(0, 0, 0);
+    background-color: #500436;
+    font-size: 24px;
+    border: 1px solid #92296fb2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-button1:hover {
+    background-color: black;
+    color: #500436;
+    border: 1px solid #92296fb2;
+}
+
+.video-button2 {
+    padding: 15px 25px;
+    color: rgb(0, 0, 0);
+    background-color: #500436;
+    font-size: 24px;
+    border: 1px solid #92296fb2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-button2:hover {
+    background-color: black;
+    color: #500436;
+    border: 1px solid #92296fb2;
+}
+
+.tema-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #140015;
+    color: #eca7f5; 
+}
+
+.tema-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 55%;
+}
+
+.tema-table {
+    flex: 1;
+    max-width: 40%;
+}
+
+.tema-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2f0021;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.tema-table th {
+    background-color: #660058; 
+    color: #ef97f7; 
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 600;
+}
+
+.tema-table td {
+    padding: 14px 16px;
+    border-top: 1px solid #80007a;
+    font-size: 14px;
+    text-align: left;
+    color: #e0b0ff; 
+}
+
+.tema-table tr:hover {
+    background-color: #af148d; 
+}
+
+@media (max-width: 900px) {
+    .tema-wrapper {
+        flex-direction: column;
+    }
+
+    .tema-text,
+    .tema-table {
+        max-width: 100%;
+    }
+
+    .tema-table {
+        margin-top: 30px;
+    }
+}
+
+.pi-image-block {
+    text-align: center;
+    margin-top: 30px; 
+}
+
+.pi-image {
+    display: inline-block;
+    width: 300px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.pi-image:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.pi-caption {
+    margin-top: 10px;
+    font-family: 'Comic Sans MS', 'Segoe Script', cursive; 
+    font-size: 22px;
+    color: #f5a7ff;
+}
+
+.section-about {
+    padding: 40px;
+    background-color: #61063b;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    color: #e77ff5;
+}
+
+.about-image img {
+    max-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.section-contact {
+     padding: 40px;
+    background-color: #61063b;
+}

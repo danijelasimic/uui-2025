@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт - Истраживање Свемира</title>
+    <meta name="description" content="Контактирајте нас за питања о свемирским истраживањима.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">СВЕМИР</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Почетна</a></li>
+                <li><a href="misije.html" class="nav-link">Мисије</a></li>
+                <li><a href="dokument.html" class="nav-link">Научни рад</a></li>
+                <li><a href="kontakt.html" class="nav-link active">Контакт</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Контактирајте Нас</h1>
+            <p class="page-description">
+                Имате питања о свемиру? Желите да се придружите нашем тиму? Пошаљите нам поруку.
+            </p>
+        </div>
+    </header>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Пошаљите Поруку</h2>
+                
+                <form class="contact-form" action="#" method="post">
+                    
+                    <div class="form-group">
+                        <label for="name">Име и Презиме *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Петар Петровић" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Адреса *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="petar@primer.com" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="+381 60 123 4567"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Тема *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Изаберите тему</option>
+                            <option value="general">Општа питања</option>
+                            <option value="press">Медији</option>
+                            <option value="careers">Каријера</option>
+                            <option value="partnership">Партнерство</option>
+                            <option value="education">Образовање</option>
+                            <option value="other">Остало</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Порука *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            placeholder="Ваша порука..." 
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">Слажем се са политиком приватности *</label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Желим да примам новости и ажурирања</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Пошаљи Поруку
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2 class="section-title">Често Постављана Питања</h2>
+            
+            <div class="faq-grid">
+                
+                <div class="faq-card">
+                    <h3>Како могу да се укључим у свемирска истраживања?</h3>
+                    <p>Постоји много начина да се укључите - од студирања астрономије, инжењеринга или других STEM области, до волонтирања у научним пројектима или праћења NASA и ESA програма.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Да ли нудите образовне програме?</h3>
+                    <p>Да! Имамо различите образовне програме за школе, студенте и све заинтересоване. Контактирајте нас за више информација о тренутним програмима.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Како дуго траје да стигнемо до Марса?</h3>
+                    <p>Са тренутном технологијом, путовање до Марса траје између 6 и 9 месеци, зависно од позиције планета и брзине свемирског брода.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Колико је тешко постати астронаут?</h3>
+                    <p>Постати астронаут је изузетно конкурентно - NASA prima само око 0.04% апликаната. Потребно је образовање у STEM области, одлично физичко здравље и године обуке.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Постоји ли живот ван Земље?</h3>
+                    <p>То је једно од највећих питања науке! Још увек нисмо пронашли директне доказе, али открића воде на Марсу и ocean moon-ови (Европа, Енцеладус) дају наду.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Када ћемо колонизовати Марс?</h3>
+                    <p>Многе агенције планирају прве људске мисије на Марс у 2030-им годинама. Колонизација би била дугорочан процес који би могао почети крајем овог века.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>Пратите Најновије Вести из Свемира</h2>
+                <p>Пријавите се на наш билтен и будите у току са најновијим открићима и мисијама</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input 
+                        type="email" 
+                        placeholder="Ваша email адреса" 
+                        required
+                    >
+                    <button type="submit" class="btn btn-primary">
+                        Пријави се
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>🚀 Истраживање Свемира</h3>
+                <p>Ваш водич кроз космос</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Почетна</a>
+                <a href="misije.html">Мисије</a>
+                <a href="kontakt.html">Контакт</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Истраживање Свемира. Сва права задржана.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

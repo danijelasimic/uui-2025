@@ -1,0 +1,120 @@
+\documentclass[a4paper]{article}
+
+\usepackage{url}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[english,serbianc]{babel}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{float}
+
+\title{\textbf{Мала Фермаова теорема}}
+\author{Јован Гарић}
+\date{\today}
+
+% Окружења
+\newtheorem{definicija}{Дефиниција}
+\newtheorem{teorema}{Теорема}
+\newtheorem{lema}{Лема}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Увод}
+
+Мала Фермаова теорема је део математичке области теорије бројева. У наставку рада говорићемо више о њој и њеном значају, као и математичару који ју је открио и по коме носи име.
+
+\newpage
+
+\section{Мала Фермаова теорема}
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+    \centering
+    \includegraphics[width=0.33\textwidth]{fermat.jpg}
+    \caption{Пјер де Ферма}
+\end{wrapfigure}
+
+Малу Фермаову теорему формулисао је француски математичар \textbf{Пјер де Ферма} у 17. веку, у оквиру својих истраживања о својствима простих бројева. Иако је теорему изнео без доказа, она је касније потврђена од стране више математичара и представља темељ многих савремених алгоритама.
+
+Први математичар који ју је доказао био је \textbf{Готфрид Лајбниц} и његов доказ је пронађен у рукопису без датума.
+
+Пре него што прикажемо теорему, прво ћемо дефинисати појмове конгруенције и простих бројева, на којима се ова теорема заснива.
+
+\subsection{Конгруенције}
+
+\begin{definicija}
+Нека су $a,b,m \in \mathbb{Z}$, $m>0$. Кажемо да су $a$ и $b$
+\textbf{конгруентни по модулу $m$} ако важи
+\[
+a \equiv b \pmod{m}.
+\]
+Ово значи да бројеви $a$ и $b$ дају исти остатак при дељењу бројем $m$.
+\end{definicija}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+$a$ & $m$ & $a \bmod m$ \\
+\hline
+10 & 3 & 1 \\
+25 & 7 & 4 \\
+47 & 5 & 2 \\
+\hline
+\end{tabular}
+\caption{Примери остатака при дељењу.}
+\end{table}
+
+\subsection{Прости бројеви}
+
+Природан број $p > 1$ је \textbf{прост} ако је дељив само {\emсамим собом} и {\em бројем $1$}. Број $1$ \textbf{није} ни прост, ни сложен.
+
+\begin{teorema}[Еуклид]
+Постоји бесконачно много простих бројева.
+\end{teorema}
+
+\begin{lema}
+Ако прост број $p$ дели производ $ab$, онда важи да $p$ дели $a$ или $p$ дели $b$.
+\end{lema}
+
+\subsection{Теорема}
+
+Ако је $p$ {\em прост број} и \textbf{не дели} број $a$, онда је:
+
+\[
+a^{p-1} \equiv 1 \pmod{p}
+\]
+
+Ова теорема има кључну примену у \textbf{криптографији}.
+
+\newpage
+
+\section{Примене}
+
+Неке од примена ове теореме су:
+
+\begin{itemize}
+    \item \textbf{Криптографија(RSA и други алгоритми)}
+    \item \textbf{Убрзање модуларног степеновања}
+    \item \textbf{Фермаов тест простости}
+\end{itemize}
+
+\newpage
+
+\section{Закључак}
+
+У овом раду приказане су конгруенције и прости бројеви, мала Фермаова теорема, као и неке од примена у математичким и рачунарским областима.
+
+\end{document}

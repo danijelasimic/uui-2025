@@ -1,0 +1,128 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* POZADINA STRANICE */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("slike/bg.jpg");
+    color: #333;
+}
+
+/* NAVIGACIJA NA VRHU */
+nav {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* HOVER EFEKAT NA LINKOVIMA */
+nav a:hover {
+    color: #1cc88a;
+    border-bottom: 2px solid #1cc88a;
+}
+
+/* NASLOVI */
+h1 {
+    text-align: center;
+    margin: 30px 0 10px 0;
+    color: #000000;
+    font-size: 36px;
+}
+
+h2 {
+    margin: 20px;
+    color: #161618;
+    font-size: 26px;
+}
+
+/* TEKST */
+p {
+    margin: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* DUGME */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4e73df;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* HOVER EFEKAT NA DUGMETU */
+button:hover {
+    background-color: #3c5da3;
+    transform: scale(1.05);
+}
+
+
+/* Glavni box */
+#box {
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Lista */
+#box ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Stavke */
+#box ul li {
+    padding: 15px 20px;
+    margin: 12px 0;
+    background-color: #f4f6fb;
+    border-left: 6px solid #2c3e50;
+    border-radius: 8px;
+    font-size: 16px;
+    
+}
+
+/* Tabela unutar box-a */
+#box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#box th, #box td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#box th {
+    background-color: #4e5352;
+    color: white;
+}
+
+#box td {
+    background-color: #f4f6fb;
+}
+

@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel} 
+
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{xcolor} 
+\usepackage{amsmath, amsthm} 
+\usepackage{wrapfig} 
+
+
+\hypersetup{
+    colorlinks=true,   
+    linkcolor=blue,    
+    urlcolor=cyan,      
+}
+
+
+\newtheorem{definicija}{Дефиниција}
+
+\begin{document}
+
+
+
+\begin{titlepage}
+    \center 
+    \textsc{\LARGE Математички факултет}\\[2cm] 
+    \textsc{\Large Семинарски рад}\\[0.5cm]
+   
+    \vspace{1cm}
+    {\LARGE\bfseries Дигитални близанци (Digital Twins) \\[0.4cm] \large Виртуелне копије физичких система} \\[1cm]
+    
+    \vspace{4cm}
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+            \textit{Студент:}\\
+            Ђорђе Шљивић 146/2025
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushright} \large
+            \textit{Професор:}\\
+            Данијела Симић
+ \begin{figure}
+            \centering
+          
+            
+            \label{fig:placeholder}
+        \end{figure}
+                \end{flushright}
+    \end{minipage}
+    
+    \vfill
+    {\large Београд, \today} 
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+
+\section{Увод}
+Дигитални близанци (\textit{Digital Twins}) представљају виртуелне репрезентације реалних објеката. Овај концепт омогућава симулацију понашања система у виртуелном окружењу.
+
+\begin{definicija}
+Дигитални близанац је интегрисана виртуелна репрезентација стварног ентитета која је синхронизована са физичким системом у реалном времену.
+\end{definicija}
+
+
+\section{Карактеристике и модели}
+
+\subsection{Математички модел и верност}
+Ефикасност близанца често зависи од функције верности $f(x)$, где се грешка симулације може представити као:
+$$ \epsilon = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 $$
+где је $y_i$ реални податак, а $\hat{y}_i$ вредност из виртуелног модела. Такође, користимо познате релације попут енергетске ефикасности $E = mc^2$ у термодинамичким симулацијама.
+
+\subsection{Визуелизација система}
+
+\begin{wrapfigure}{l}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.35\textwidth]{digital-twin-component-view(1).png} 
+\begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{digital-twin-component-view(1).png}
+        \caption{Enter Caption}
+        \label{fig:placeholder}
+    \end{figure}
+        \caption{Шема симулације}
+\end{wrapfigure}
+Овде видимо како се подаци прикупљени преко сензора шаљу у базу. \textbf{\textcolor{blue}{Плавом бојом}} су означени сигурни преноси, док је \textbf{\textcolor{red}{црвеном}} означен ризик од кашњења. \textit{Кључно је постићи ниску латенцију} како би модел био ажуран.
+
+
+\section{Области примене}
+Дигитални близанци се користе у следећим секторима:
+\begin{itemize}
+    \item \textbf{Индустрија:} Оптимизација линија.
+    \item \textbf{Енергетика:} Контрола мреже.
+    \item \textbf{Медицина:} Моделовање органа.
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\caption{Поређење традиционалне и дигиталне симулације}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Параметар} & \textbf{Традиционално} & \textbf{Дигитални близанац} \\ \hline
+Ажурирање & Статично & Реално време \\ \hline
+Повратна веза & Недостаје & Дво smerна \\ \hline
+Прецизност & Средња & Висока \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Закључак}
+Можемо закључити да су дигитални близанци кључна технологија будућности. Иако је имплементација сложена, користи у виду \textbf{смањења трошкова} и \textit{веће безбедности} су незаменљиве.
+
+\end{document}

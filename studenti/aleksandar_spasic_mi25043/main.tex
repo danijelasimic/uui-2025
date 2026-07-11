@@ -1,0 +1,72 @@
+\documentclass{report}
+\usepackage{graphicx} 
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbianc]{babel}
+\usepackage{amsmath, amsthm}
+\usepackage[export]{adjustbox}
+
+\title{Анализа алгоритма selection sort}
+\author{Александар Спасић}
+\date{Фебруар 2026.}
+
+\theoremstyle{definition}
+
+\newtheorem{teorema}{Теорема}[chapter]
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\clearpage
+\newpage
+\tableofcontents
+\clearpage
+\newpage
+\setcounter{page}{1}
+\chapter{Принцип рада selection sort}
+\section{Увод}
+Алгоритам \textit{selection sort} је један од најосновнијих алгоритама сортирања. Базира се на следећем принципу: ако низ има више од једног елемента, замени почетни елемент са најмањим елементом низа и затим аналогно сортирај остатак низа (елементе иза почетног). У свакој итерацији се на своју позицију доводи следећи по величини елемент низа, тј. у $i$-тој итерацији се $i$-ти по величини елемент доводи на позицију $i$. Ово се може реализовати тако што се пронађе позиција $m$ најмањег елемента од позиције $i$ до краја низа и затим се размене елемент на позицији $i$ и елемент на позицији $m$. Алгоритам се зауставља када се претпоследњи по величини елемент доведе на претпоследњу позицију у низу. \\
+
+\noindent Пример:
+\begin{itemize}
+    \item Прикажимо рад алгоритма на примеру сортирања низа 2 12 10 15 20.
+    \begin{enumerate}
+        \item \textbf{.2} 12 10 15 20, $i = 0, m=4$, \textit{размена елемента 2 и 2}. 
+        \item 2 \textbf{.12} 10 15 20, $i = 1, m=2$, \textit{размена елемента 12 и 10}. 
+        \item 2 10 \textbf{.12} 15 20, $i = 2, m=2$, \textit{размена елемента 10 и 12}.
+    \end{enumerate}
+\end{itemize}
+Визуелни пример рада је приказан на слици \ref{fig:placeholder}.
+\begin{figure}[]
+    \centering
+    \includegraphics[width=0.5\linewidth, left]{slike/Selection-sort-1.png}
+    \caption{Приказ рада алгоритма selection sort.}
+    \label{fig:placeholder}
+\end{figure}
+\subsection{Временска сложеност}
+\begin{teorema}
+    Временска сложеност selection sort алгоритма је
+    \begin{equation}
+        O(n)=n^2
+    \end{equation}
+\end{teorema}
+Значи, овај алгоритам је врло неефикасан. У табели \ref{tab:placeholder} је приказана сложеност алгоритма selection sort у односу на друге алгоритме сортирања:
+\begin{table}[th]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Алгоритам & Временска сложеност \\
+        \hline 
+        Selection sort & $O(n)=n^2$ \\
+        Quick sort & $O(n)=n^2$ \\
+        Bubble sort & $O(n)=n^2$ \\
+        Heap sort & $O(n) = n\log n$ \\
+        Merge sort & $O(n) = n\log n$ \\
+        \hline
+    \end{tabular}
+    \caption{Приказ временских сложености различитих алгоритама.}
+    \label{tab:placeholder}
+\end{table}
+\section{Закључак}
+Ионако алгоритам сортирања selection sort je врло неефикасан, он је врло важан да почетницима покаже елементарне технике писања алгоритама.
+\end{document}

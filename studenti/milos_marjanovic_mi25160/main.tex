@@ -1,0 +1,223 @@
+% ============================================
+% Rivian - Električna vozila budućnosti
+% Autor: Miloš Marjanović
+% Predmet: Uvod u informatiku
+% ============================================
+
+\documentclass[12pt,a4paper]{article}
+
+% Paketi za srpski jezik i ćirilicu
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[serbian]{babel}
+
+% Grafika i slike
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+
+% Matematika
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Boje
+\usepackage{xcolor}
+
+% Tabele
+\usepackage{array}
+\usepackage{booktabs}
+
+% Linkovi
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    urlcolor=orange
+}
+
+% Margine
+\usepackage[margin=2.5cm]{geometry}
+
+% Definisanje boja u stilu Rivian-a
+\definecolor{riviangreen}{RGB}{26, 61, 61}
+\definecolor{rivianorange}{RGB}{244, 165, 0}
+
+% Definisanje teorema, definicija i lema
+\theoremstyle{definition}
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{lema}{Лема}[section]
+
+% ============================================
+% ПОЧЕТАК ДОКУМЕНТА
+% ============================================
+\begin{document}
+
+% Насловна страна
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge\bfseries\color{riviangreen} Ривијан}\\[0.5cm]
+    {\LARGE Електрична возила будућности}\\[2cm]
+    
+    {\Large\textit{Семинарски рад}}\\[1cm]
+    {\large Предмет: Увод у информатику}\\[2cm]
+    
+    \begin{tabular}{rl}
+        \textbf{Аутор:} & Милош Марјановић \\
+        \textbf{Број индекса:} & МИ25160 \\
+        \textbf{Датум:} & \today
+    \end{tabular}
+    
+    \vfill
+    
+    {\large Факултет информатике}\\
+    {\large 2025. година}
+\end{titlepage}
+
+% Садржај
+\tableofcontents
+\newpage
+
+% ============================================
+\section{Увод}
+% ============================================
+
+\textbf{Ривијан} (енг. \textit{Rivian Automotive, Inc.}) је америчка компанија за производњу електричних возила основана \textcolor{rivianorange}{2009. године}. Компанија се фокусира на израду возила дизајнираних за авантуру и истраживање природе.
+
+У овом раду ћемо анализирати технологију електричних возила, математичке принципе који стоје иза њих, као и предности у односу на традиционална возила са мотором са унутрашњим сагоревањем.
+
+\vspace{0.5cm}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.48\textwidth]{slike/r1t.jpg}
+    \caption{Ривијан R1T}
+    \label{fig:r1t}
+\end{wrapfigure}
+
+Ривијан је постао познат по својим иновативним моделима:
+\begin{itemize}
+    \item \textbf{R1T} -- први масовно произведен електрични пикап
+    \item \textbf{R1S} -- електрични СУВ са 7 седишта
+    \item \textbf{ЕДВ} -- доставно возило у партнерству са Амазоном
+\end{itemize}
+
+Мисија компаније је да створи одрживи транспорт који инспирише људе да истражују свет. Компанија верује да је могуће правити возила која су истовремено еколошки одговорна и узбудљива за вожњу.
+
+\vspace{0.5cm}
+\clearpage
+
+% ============================================
+\section{Како функционишу електрична возила?}
+% ============================================
+
+\subsection{Енергија и снага}
+
+Основни физички принципи електричних возила заснивају се на електромагнетизму и претварању енергије. 
+
+\begin{definicija}[Електрична енергија]
+Електрична енергија батерије израчунава се као производ снаге и времена:
+\begin{equation}
+    E = P \cdot t
+\end{equation}
+где је $E$ енергија у киловат-сатима (kWh), $P$ снага у киловатима (kW), а $t$ време у сатима.
+\end{definicija}
+
+За Ривијан R1T са батеријом од 135 kWh и потрошњом од приближно 0.27 kWh/km, теоретски домет се може израчунати као:
+
+\begin{equation}
+    D = \frac{E_{bat}}{E_{cons}} = \frac{135 \text{ kWh}}{0.27 \text{ kWh/km}} = 500 \text{ km}
+\end{equation}
+
+\subsection{Обртни момент електромотора}
+
+\begin{teorema}[Обртни момент]
+Обртни момент електромотора је максималан од нултих обртаја, што даје тренутну акцелерацију:
+\begin{equation}
+    \tau = k \cdot I \cdot \Phi
+\end{equation}
+где је $\tau$ обртни момент, $k$ константа мотора, $I$ јачина струје, а $\Phi$ магнетни флукс.
+\end{teorema}
+
+\begin{lema}[Ефикасност]
+Ефикасност електромотора износи типично 85-95\%, што је значајно више од мотора са унутрашњим сагоревањем (20-30\%):
+\begin{equation}
+    \eta_{EM} = \frac{P_{izlaz}}{P_{ulaz}} \approx 0.90
+\end{equation}
+\end{lema}
+
+% ============================================
+\section{Спецификације возила}
+% ============================================
+
+У следећој табели приказане су техничке спецификације Ривијан модела:
+
+\begin{table}[H]
+\centering
+\caption{Поређење спецификација Ривијан модела}
+\label{tab:specs}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Спецификација} & \textbf{R1T} & \textbf{R1S} & \textbf{ЕДВ 700} \\
+\hline
+Тип возила & Пикап & СУВ & Комби \\
+\hline
+Снага (KS) & \textcolor{rivianorange}{835} & \textcolor{rivianorange}{835} & $\sim$400 \\
+\hline
+Обртни момент (Nm) & 1.231 & 1.231 & $\sim$600 \\
+\hline
+0-100 km/h (s) & \textbf{3.0} & \textbf{3.0} & N/A \\
+\hline
+Домет (km) & до 505 & до 505 & до 240 \\
+\hline
+Батерија (kWh) & 135 & 135 & $\sim$100 \\
+\hline
+Број седишта & 5 & 7 & 2 \\
+\hline
+\end{tabular}
+\end{table}
+
+% ============================================
+\section{Предности електричних возила}
+% ============================================
+
+Електрична возила имају бројне предности:
+
+\begin{enumerate}
+    \item \textbf{Еколошке предности}
+    \begin{itemize}
+        \item Нула директних емисија $\text{CO}_2$
+        \item Мањи укупни угљенични отисак
+        \item Тише функционисање
+    \end{itemize}
+    
+    \item \textcolor{riviangreen}{\textbf{Економске предности}}
+    \begin{itemize}
+        \item Нижи трошкови горива (електрична енергија је јефтинија)
+        \item Мање покретних делова = мање одржавања
+        \item Потенцијални порески подстицаји
+    \end{itemize}
+    
+    \item \textit{Перформансне предности}
+    \begin{itemize}
+        \item Тренутни обртни момент
+        \item Нижи центар тежишта
+        \item Напредне технологије (аутономна вожња)
+    \end{itemize}
+\end{enumerate}
+
+% ============================================
+\section{Закључак}
+% ============================================
+
+Ривијан представља \textcolor{riviangreen}{\textbf{будућност аутомобилске индустрије}}. Комбинацијом иновативног дизајна, напредне технологије и посвећености одрживости, компанија је успела да створи возила која нису само еколошки прихватљива, већ и \textit{узбудљива за вожњу}.
+
+Математички принципи иза електричних возила, као што је Ајнштајнова формула $E = mc^2$ за еквиваленцију масе и енергије, показују колико је енергије заправо садржано у батеријама.
+
+Будућност транспорта је \textcolor{rivianorange}{\textbf{електрична}}, а Ривијан је на челу те револуције.
+
+
+\end{document}

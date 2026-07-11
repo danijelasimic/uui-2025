@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f1f8f4; 
+    color: #1f3d2b;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    grid-area: header;
+}
+
+.navigacija {
+    background-color: #388e3c;
+    grid-area: nav;
+}
+
+.navigacija ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navigacija li {
+    margin: 0 15px;
+}
+
+.navigacija a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+}
+
+.navigacija a:hover {
+    background-color: #2e7d32;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    grid-area: main;
+}
+
+section {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 5px solid #66bb6a;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+h3 {
+    color: #388e3c;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #1b5e20;
+}
+
+a:hover {
+    color: #66bb6a;
+}
+
+aside {
+    padding: 20px;
+    text-align: center;
+    border-color: #66bb6a;
+    grid-area: aside;
+}
+
+aside img {
+    border-radius: 10px;
+    max-width: 100%; 
+    height: auto;
+}
+input[type="email"] {
+    padding: 8px;
+    width: 250px;
+    margin-right: 10px;
+    margin-top: 10px
+}
+
+input[type="submit"] {
+    margin: 10px;
+    padding: 8px 15px;
+    background-color: #66bb6a;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #81c784;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #c8e6c9;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}

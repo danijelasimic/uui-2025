@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="main-body">
+    <div class="header">
+      <img src="slike/disc.png" />
+      <p>Emulatori za Playstation konzole</p>
+    </div>
+    <div class="main">
+      <div class="sidebar">
+        <h5>Sadržaj</h4>
+        <nav>
+          <a href="#" class="active" data-src="./tema.html"
+            >-- Glavna strana</a
+          >
+          <a href="#" data-src="./pcsx.html"">-- PCSX</a>
+          <a href="#" data-src="./pcsx2.html">-- PCSX2</a>
+          <a href="#" data-src="./rpcs3.html">-- RPCS3</a>
+          <a href="#" data-src="./shadPS4.html">-- shadPS4</a>
+        </nav>
+
+        <form action="mailto:vasa@email.com" method="post" enctype="text/plain">
+          <p class="mb">Prepravke i kritike poslati putem forme:</p>
+          <div>
+            <label for="email">Imejl adresa:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="mi25141@alas.matf.bg.ac.rs"
+            />
+          </div>
+
+          <br />
+
+          <div>
+            <label for="poruka">Vaša poruka:</label><br />
+            <textarea
+              id="poruka"
+              name="poruka"
+              rows="5"
+              cols="20"
+              required
+              placeholder="Napišite nešto..."
+            ></textarea>
+          </div>
+
+          <br />
+
+          <button type="submit">Pošaljite</button>
+
+          <br />
+
+          <h3><a target="_blank" href="https://www.emulator-zone.com/">Link ka sajtu o emulatorima</a></h3> 
+        </form>
+      </div>
+      <div class="main-content">
+        <iframe id="contentFrame" src="./tema.html"></iframe>
+
+        <script>
+          const links = document.querySelectorAll(".sidebar nav a");
+          const iframe = document.getElementById("contentFrame");
+
+          links.forEach((link) => {
+            link.addEventListener("click", (e) => {
+              links.forEach((l) => l.classList.remove("active"));
+
+              link.classList.add("active");
+
+              const src = link.getAttribute("data-src");
+              iframe.src = src;
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
