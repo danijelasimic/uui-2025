@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriptografija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Kriptografija</h1>
+
+    <nav class = "navbar">
+        <ul>
+            <li><a href = "index.html">Uvod</a></li>
+            <li><a href = "algoritmi.html">Algoritmi</a></li>
+            <li><a href = "integritet.html">Integritet</a></li>
+            <li><a href = "test_znanja.html">Test znanja</a></li>
+            <li><a href = "rad.pdf">Seminarski rad</a></li>
+
+            <button id="size_button_plus">A+</button>
+            <button id="size_button_minus">A-</button>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <p>
+            U komunikaciji je potrebno obezbediti da poruka nije menjana ili otvarana od strane neovlašćenog lica i da znamo ko ju je poslao.
+        </p>
+        <div>
+
+            <h3>Hash funkcija</h3>
+
+            <p>
+                Kao ulaz hash funkcija ima poruku (veličina poruke nije fiksirana), a kao izlaz daje kriptogram fiksne dužine, koji se naziva <b>hash</b>.<br>
+                Da bi algoritam bio kriptografski prihvatljiv (siguran) za hash funkciju, mora imati sledeće karakteristike:
+                <ul>
+                    <li>mora biti konzistentan, tj. isti ulaz mora uvek davati isti izlaz</li>
+                    <li>mora biti slučajan – ili pseudoslučajan</li>
+                    <li>mora biti jedinstven, tj. mora biti “skoro nemoguće“ naći dve poruke koje daju isti hash</li>
+                    <li>mora biti jednosmeran, tj. ako se zna izlaz, mora biti ekstremno teško, čak nemoguće, proračunati ulaz</li>
+                </ul>
+
+                <img src="slike/hash_illustration.jpg" class="slika" id="img1" alt="hash illustration">
+
+                Primer:<br><br>
+                Korak 1. Korisnik A piše poruku i koristi je kao ulaz za hash funkciju<br>
+                Korak 2. Rezultat hash funkcije je dodat kao “otisak” poruke koja se šalje korisniku B.<br>
+                Korak 3. B razdvaja poruku i otisak, i koristi poruku kao ulaz za istu hash funkciju koju je koristio A.<br>
+                Korak 4. Ako se otisci podudaraju, B može biti siguran da niko nije menjao poruku.<br>
+            </p>
+        </div>
+
+        <div>
+            <h3 id="h3">Digitalni potpis (digital signatures)</h3>
+
+            <p>
+                Kombinacija <b>hash funkcije</b>, kao otiska, sa tehnologijom asimetričnog šifrovanja rezultuje <b>digitalnim potpisom</b>.<br>
+                Digitalni potpis je šifrovan otisak poruke koji se dodaje poruci može se koristiti kao:
+                <p>
+                    <img src="slike/digital_signature.jpg" class="slika" id="img2" alt="digital signature">
+                    <ul>
+                        <li>potvrda identiteta onoga koji šalje i</li>
+                        <li>integriteta poruke</li>
+                    </ul>
+                </p>
+
+                Da bi Boban napravio digitalni potpis moraju biti sprovedeni sledeći koraci:<br><br>
+                Korak 1. Boban generiše par javni/tajni ključ<br>
+                Korak 2. Boban daje svoj javni ključ Anici<br>
+                Korak 3. Boban piše poruku za Anicu i koristi je kao ulaz za jednosmernu hash funkciju<br>
+                Korak 4. Boban šifruje izlaz iz hash funkcije (otisak) svojim privatnim ključem. Taj kriptogram predstavlja digitalni potpis.<br>
+                Boban šalje Anici poruku i digitalni potpis.<br><br>
+
+                Da bi verifikovala da je poruka zaista od Bobana (zapravo da bi verifikovala digitalni potpis) Anica treba da:<br><br>
+                Korak 1. Anica razdvaja poruku i digitalni potpis (šifrovan)<br>
+                Korak 2. Anica koristi Bobanov javni ključ da dešifruje digitalni potpis, što daje originalni otisak<br>
+                Korak 3. Anica kao ulaz, za istu hash funkciju koju je koristio Boban, koristi poruku koju je primila, što daje otisak te poruke.<br>
+                Korak 4. Anica poredi oba otiska<br>
+            </p>
+            <p>
+                Digitalni potpisi ne obezbeđuju tajnost sadržaja poruke, ali često je važnije dokazati ko je izvor poruke nego zaštititi njenu tajnost(npr. online trgovina i bankarske transakcije).
+            </p>
+        </div>
+
+        <div>
+            <h3>Digitalni sertifikati</h3>
+
+            <p>
+                Početna razmena javnih ključeva mora biti sigurna - razlog korišćenja <b>digitalnih sertifikata.</b><br>
+                Digitalni sertifikat je poruka koja je digitalno potpisana privatnim ključem treće strane kojoj možemo verovati, i u kojoj se kaže da dati javni ključ (koji se, takođe, prenosi porukom) pripada nekome sa specificiranim imenom i skupom atributa.<br>
+                Sertifikati zahtevaju određeni format i zasnovani su na ITU-T X.509 standardu.<br>
+                CA (Certificate Authorities) je treća strana, entitet kome možemo verovati, koja garantuje validnost sertifikata - dodeljuje, distribuira, i uklanja (ukoliko informacije koje sadrži nisu više validne) sertifikate. Digitalni sertifikat sadrži sledeće informacije:<br>
+                
+                <img src="slike/digital_certificate.jpg" class="slika" id="img3" alt="digital certificate">
+
+                <ul id="list">
+                    <li>Korisnikov javni ključ!</li>
+                    <li>Korisnikovo ime</li>
+                    <li>Datum isticanja važnosti javnog ključa</li>
+                    <li>Ime izdavaoca ključa (CA koji je izdao digitalni sertifikat)</li>
+                    <li>Serijski broj digitalnog sertifikata</li>
+                    <li>Digitalni potpis izdavaoca ključa</li>
+                </ul>
+                Procedura kojom Boban može dobiti Anicin javni ključ, na bezbedan način, koristeći CA, <b>ima sledeće korake:</b>
+                <ol>
+                    <li>Boban zahteva Anicin digitalni sertifikat od CA </li>
+                    <li>CA šalje Anicin sertifikat, koji je potpisan sa privatnim ključem CA</li>
+                    <li>Boban prima sertifikat i verifikuje potpis CA</li>
+                    <li>Pošto Anicin sertifikat sadrži njen javni ključ, Boban sada ima u posedu “potpisanu” verziju Anicinog javnog ključa</li>
+                </ol>
+
+            </p>
+        </div>
+
+        <div>
+            <h3>MAC / HMAC</h3>
+
+            <p>
+            MAC (Message Authentication Code) je kriptografska vrednost koja se koristi za proveru
+            autentičnosti i integriteta poruke. Kreira se korišćenjem tajnog ključa koji dele pošiljalac i primalac.<br>
+            HMAC (Hash-based Message Authentication Code) je poseban tip MAC-a koji koristi hash funkcije
+            (npr. SHA-256) zajedno sa tajnim ključem, čime se postiže veća sigurnost.
+            </p>
+        
+            <img src="slike/MAC.jpg" class="slika" id="img4" alt="MAC illustration">
+
+            <b>Kako funkcioniše:</b>
+            <ol>
+            <li>Pošiljalac generiše MAC na osnovu poruke i tajnog ključa.</li>
+            <li>Poruka i MAC se šalju primaocu.</li>
+            <li>Primalac ponovo računa MAC koristeći isti ključ.</li>
+            <li>Ako se vrednosti poklapaju, poruka je autentična i nije menjana.</li>
+            </ol>
+        </div>
+
+        <div>
+            <h4 id="h4">Man-in-the-Middle napad</h4>
+
+            <p>
+            Man-in-the-Middle (MITM) napad je situacija u kojoj napadač presreće komunikaciju između dve strane
+            i može da čita, menja ili ubacuje poruke, a da one toga nisu svesne.<br>
+            Napadač se "postavlja između" pošiljaoca i primaoca i predstavlja se kao legitimna strana
+            u komunikaciji.
+            </p>
+
+            <img src="slike/man-in-the-middle.jpg" class="slika" id="img5" alt="man in the middle diagram">
+
+            <b>Primer:</b>
+            <ul>
+            <li>Korisnik misli da komunicira sa serverom.</li>
+            <li>Napadač presreće poruku i može je izmeniti.</li>
+            <li>Server prima izmenjenu poruku misleći da je originalna.</li>
+            </ul>
+            
+            <p>
+            Ovakvi napadi se sprečavaju korišćenjem enkripcije, digitalnih sertifikata i sigurnih protokola (HTTPS).
+            </p>
+        </div>
+
+    </main>
+
+    <script src="tekst_velicina.js"></script>
+
+    
+     
+</body>
+</html>
