@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seminarski projekat — Svemir: putovanje kroz Sunčev sistem, planete i nebesku mehaniku.">
+  <meta name="author" content="Ime Prezime, MI25000">
+  <title>Svemir — Putovanje kroz beskraj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="brand">
+      <span class="orbit-badge" aria-hidden="true">
+        <span class="ring"></span>
+        <span class="core"></span>
+        <span class="moon"></span>
+      </span>
+      SVEMIR // MISIJA-01
+    </div>
+    <nav class="menu">
+      <a href="index.html" aria-current="page">Početna</a>
+      <a href="tema.html">Akademska tema</a>
+      <a href="galerija.html">Galerija</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="stars-layer" aria-hidden="true"></div>
+    <div class="stars-layer twinkle" aria-hidden="true"></div>
+
+    <img class="hero-planet" src="slike/hero_planeta.png"
+         alt="Stilizovana ilustracija ljubičaste planete sa prstenom, simbol ovog projekta">
+
+    <p class="eyebrow">Seminarski rad &middot; Uvod u informatiku</p>
+    <h1>Svemir: putovanje<br>kroz beskraj</h1>
+    <p class="lead">
+      Dobrodošli na malu digitalnu misiju posvećenu Sunčevom sistemu —
+      od usijanog Sunca, preko stenovitih i gasovitih planeta, do zakona
+      koji drže sve to u harmoničnom kretanju.
+    </p>
+
+    <p class="scroll-cue">Skroluj dole<span class="arrow"></span></p>
+  </section>
+
+  <main>
+    <h2><span class="tag">00</span>Uvod u misiju</h2>
+    <p class="lede">
+      Posmatrano sa Zemlje, noćno nebo deluje mirno i nepromenljivo —
+      ali iza tog mira krije se neprestano kretanje: planete kruže oko
+      Sunca, meseci kruže oko planeta, a čitav sistem juri kroz galaksiju
+      brzinom od skoro <strong>230 km/s</strong>.
+    </p>
+    <p>
+      Ovaj projekat je nastao kao seminarski rad iz predmeta
+      <em>Uvod u informatiku</em>, sa ciljem da na zanimljiv i vizuelno
+      živ način predstavi osnovne činjenice o našem Sunčevom sistemu,
+      koristeći isključivo <strong>HTML</strong> i <strong>CSS</strong>
+      tehnologije — bez ijedne spoljne slike ili biblioteke.<br>
+      Sve ilustracije planeta na sajtu su <em>proceduralno generisane</em>
+      posebno za ovaj projekat.
+    </p>
+
+    <h2><span class="tag">01</span>Šta ćete pronaći na sajtu</h2>
+    <div class="card-grid">
+      <div class="card">
+        <p class="num">→ 02</p>
+        <h3>Akademska tema</h3>
+        <p>Detaljan pregled nastanka Sunčevog sistema, Keplerovih zakona i tabela svih planeta.</p>
+      </div>
+      <div class="card">
+        <p class="num">→ 03</p>
+        <h3>Galerija planeta</h3>
+        <p>Vizuelna zbirka svih osam planeta i Sunca, sa kratkim opisima.</p>
+      </div>
+      <div class="card">
+        <p class="num">→ 04</p>
+        <h3>Kontakt</h3>
+        <p>Forma za pitanja i komentare u vezi sa projektom.</p>
+      </div>
+      <div class="card">
+        <p class="num">→ PDF</p>
+        <h3>Prateći rad</h3>
+        <p>Akademski tekst u LaTeX-u: <a href="rad.pdf">rad.pdf</a>, sa formulama, teoremom i zaključkom.</p>
+      </div>
+    </div>
+
+    <h2><span class="tag">02</span>Sunčev sistem u brojkama</h2>
+    <div class="table-wrap">
+      <table>
+        <caption>Brzi pregled osnovnih podataka</caption>
+        <tr>
+          <th>Podatak</th>
+          <th>Vrednost</th>
+        </tr>
+        <tr>
+          <td>Broj planeta</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Starost Sunčevog sistema</td>
+          <td>&asymp; 4,6 milijardi godina</td>
+        </tr>
+        <tr>
+          <td>Najveća planeta</td>
+          <td>Jupiter</td>
+        </tr>
+        <tr>
+          <td>Najbliža planeta Suncu</td>
+          <td>Merkur</td>
+        </tr>
+        <tr>
+          <td>Prosečna udaljenost Zemlje od Sunca</td>
+          <td>~149,6 miliona km (1 AJ)</td>
+        </tr>
+      </table>
+    </div>
+
+    <figure>
+      <img src="slike/sistem_dijagram.png" alt="Dijagram svih osam planeta Sunčevog sistema poređanih po redu od Sunca, sa relativnim veličinama">
+      <figcaption>Sl. 1 — Planete Sunčevog sistema, poređane po redosledu od Sunca (relativne veličine, ne i razmera rastojanja)</figcaption>
+    </figure>
+
+    <h2><span class="tag">03</span>Nastavi istraživanje</h2>
+    <p>Izaberi sledeću destinaciju misije:</p>
+    <div class="btn-row">
+      <a class="btn" href="tema.html">Akademska tema →</a>
+      <a class="btn" href="galerija.html">Galerija planeta →</a>
+      <a class="btn" href="kontakt.html">Kontakt →</a>
+      <a class="btn" href="rad.pdf">Preuzmi rad.pdf →</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 — Seminarski rad iz predmeta Uvod u informatiku &middot; izrađeno u HTML-u, CSS-u i LaTeX-u
+  </footer>
+
+</body>
+</html>

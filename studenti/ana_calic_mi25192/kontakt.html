@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt strana seminarskog projekta o Sunčevom sistemu.">
+  <title>Kontakt — Svemir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="brand">
+      <span class="orbit-badge" aria-hidden="true">
+        <span class="ring"></span>
+        <span class="core"></span>
+        <span class="moon"></span>
+      </span>
+      SVEMIR // MISIJA-01
+    </div>
+    <nav class="menu">
+      <a href="index.html">Početna</a>
+      <a href="tema.html">Akademska tema</a>
+      <a href="galerija.html">Galerija</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="eyebrow">Kontrolna stanica</p>
+    <h1>Pridruži se posadi</h1>
+    <p class="lede">
+      Imaš pitanje, predlog ili si primetio/la grešku na sajtu? Pošalji
+      poruku posadi misije. Forma je demonstrativnog karaktera — ne šalje
+      podatke ni na jedan server, već služi kao primer HTML forme u
+      okviru zahteva seminarskog rada.
+    </p>
+
+    <form class="console" action="#" method="post">
+      <div class="field">
+        <label for="ime">Ime i prezime</label>
+        <input type="text" id="ime" name="ime" placeholder="Unesi ime i prezime" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email adresa</label>
+        <input type="email" id="email" name="email" placeholder="ime@email.com" required>
+      </div>
+
+      <div class="field">
+        <label for="tema-poruke">Tema poruke</label>
+        <select id="tema-poruke" name="tema-poruke">
+          <option value="pitanje">Pitanje o sadržaju</option>
+          <option value="greska">Prijava greške na sajtu</option>
+          <option value="predlog">Predlog za poboljšanje</option>
+          <option value="ostalo">Ostalo</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="poruka">Poruka</label>
+        <textarea id="poruka" name="poruka" rows="5" placeholder="Unesi poruku..."></textarea>
+      </div>
+
+      <button type="submit">Pošalji signal 🛰️</button>
+    </form>
+
+    <h2><span class="tag">→</span>Korisni linkovi</h2>
+    <ul>
+      <li><a href="index.html">Povratak na početnu stranu</a></li>
+      <li><a href="tema.html">Pregled akademske teme</a></li>
+      <li><a href="galerija.html">Galerija planeta</a></li>
+      <li><a href="https://www.nasa.gov/" target="_blank" rel="noopener">NASA — zvanični sajt (spoljašnji link)</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    &copy; 2026 — Seminarski rad iz predmeta Uvod u informatiku &middot; izrađeno u HTML-u, CSS-u i LaTeX-u
+  </footer>
+
+</body>
+</html>
