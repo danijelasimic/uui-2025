@@ -1,0 +1,392 @@
+#container {
+    min-height:92%;
+}
+#main {
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.header-sadrzaj {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.glavno-zaglavlje {
+    padding: 40px 120px;
+    background-color: #8470dd;
+}
+
+.podaci {
+    flex: 1;
+}
+.podaci2{
+    flex:1;
+    text-align: center;
+    
+}
+
+.okvir-za-sliku img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    display: block;
+    margin: 20px 0;
+}
+.MATF-logo img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    
+    background-color: #cfcbcb;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header {
+    background: #8470dd;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main, section {
+    flex: 1;
+}
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #8470dd;
+    color: white;
+}
+
+.footer-sadrzaj {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.footer-sadrzaj a {
+    text-decoration: none;
+    color: white;
+    background-color: #5b43c5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.footer-sadrzaj a:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+}
+
+.semestar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.semestar ul li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.semestar ul li a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #5b43c5;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.semestar ul li a:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+}
+.tnp-tabela {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 70%;
+    background-color: #ffffff;
+    font-size: 1em;
+}
+
+.tnp-tabela th,
+.tnp-tabela td {
+    border: 1px solid #ccc;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.tnp-tabela th {
+    background-color: #8470dd;
+    color: white;
+    width: 30%;
+}
+
+.tnp-tabela a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tnp-tabela a:hover {
+    text-decoration: underline;
+}
+.hobiji {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.hobi {
+    text-align: center;
+}
+
+.hobi img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.hobi img:hover {
+    transform: scale(1.05);
+}
+
+.hobi p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.uvod-hobiji {
+    max-width: 900px;
+    margin: 50px auto 20px auto;
+    text-align: center;
+}
+
+.uvod-hobiji h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.uvod-hobiji p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.centriran-naslov {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.kontakt-sekcija {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.forma-grupa {
+    margin-bottom: 15px;
+}
+
+.forma-grupa label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.forma-grupa input, .forma-grupa textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.dugme-forma {
+    background-color: #5b43c5;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.dugme-forma:hover {
+    background-color: #ff4c4c;
+}
+
+/* Stilovi za navigaciju na vrhu */
+.glavna-navigacija {
+    background-color: #5b43c5; /* Tamnija ljubičasta za kontrast */
+    padding: 15px 0;
+    position: sticky; /* Ostaje na vrhu dok skroluješ */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-sadrzaj {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-sadrzaj a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+
+.nav-sadrzaj a:hover {
+    background-color: #ff4c4c; 
+    transform: translateY(-2px);
+}
+
+
+.glavno-zaglavlje {
+    padding: 20px 120px !important;
+}
+/* Navigacija na samom vrhu stranice */
+.glavna-navigacija {
+    background-color: #5b43c5; /* Tamnije ljubičasta za bolji kontrast */
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-sadrzaj {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav-sadrzaj a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.nav-sadrzaj a:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.glavno-zaglavlje {
+    padding: 30px 120px;
+}
+
+
+.pdf-pregled {
+    max-width: 900px;
+    margin: 20px auto;
+    border: 5px solid #8470dd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.centriran-naslov {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+
+.tnp-tabela {
+    margin: 20px auto;
+    width: 80%;
+}
+
+
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif;
+}
+
+
+.kontakt-sekcija {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.forma-grupa {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.forma-grupa label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5b43c5;
+}
+
+input[type="text"], 
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

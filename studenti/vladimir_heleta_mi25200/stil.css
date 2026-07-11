@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #ff6a00;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  padding: 10px;
+}
+
+nav a, nav button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* KONTEJNER */
+.container {
+  display: flex;
+  gap: 30px;        /* OVO približava div-ove */
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* KARTICE */
+.article {
+  background: white;
+  width: 420px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.article img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* SEMESTRI */
+.semestri {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.semestar {
+  width: 48%;
+  text-align: left;
+}
+
+.mini-naslov {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* LINK */
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff6a00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+.dark-mode header {
+  background: #222;
+}
+
+.dark-mode .article {
+  background: #1e1e1e;
+}
