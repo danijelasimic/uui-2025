@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diskretne strukture 1 - Akademska tema</title>
+    <!-- Obavezan spoljni CSS fajl koji definiše izgled svih stranica -->
+    <link rel="stylesheet" href="style.css">
+
+<style>
+        /* Specifični stilovi za PDF akcije i modal na ovoj stranici */
+        .pdf-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .btn-download {
+            background-color: #1a237e; /* Zelena boja za preuzimanje */
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-download:hover {
+            background-color:#3949ab;
+            transform: translateY(-2px);
+        }
+        .btn-modal {
+            background-color:#ffca28; /* Plava boja za pregled u modalu */
+            color:#1a237e;
+        }
+        .btn-modal:hover {
+            background-color: #ffb300;
+        }
+
+        /* Modal / Lightbox stilovi */
+        .modal {
+            display: none; /* Sakriveno po defaultu */
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7); /* Zatamnjenje pozadine */
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 85%;
+            max-width: 950px;
+            height: 80%;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .close-modal:hover {
+            color: #000;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100% - 30px);
+            border: none;
+            margin-top: 15px;
+        }
+    </style>
+    </head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <!-- Dodata slika/logo u navbar -->
+            <div class="logo-container">
+                <a href="https://www.matf.bg.ac.rs" target="_blank">
+                    <img src="slike/logo-matf.png" alt="Logo Matematičkog fakulteta" class="nav-logo">
+                </a>
+            </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="tema.html">Akademska tema</a></li>
+                <li><a href="pitanja.html">Pitanja</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Teorijski koncepti: Iskazna logika i relacije</h1>
+        
+        <section>
+            <h2>1. Iskazna logika</h2>
+            <p>U okviru matematičke logike, <strong>iskazne formule</strong> se grade od osnovnih elemenata: iskaznih slova, logičke konstante <em>kontradikcije</em> (&perp;) i operacije <em>implikacije</em> (&rarr;).</p>
+            
+            <p>Važan deo ove oblasti je <strong>valuacija</strong>, koja nam omogućava da odredimo istinitost složenih formula. Jedan od ključnih teorijskih rezultata je:</p>
+            <ul>
+                <li><strong>Teorema kompaktnosti:</strong> Povezuje zadovoljivost beskonačnih skupova formula sa njihovim konačnim podskupovima.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Binarne relacije i funkcionalnost</h2>
+            <p>Binarna relacija <em>f</em> između skupova <em>A</em> i <em>B</em> je <strong>funkcionalna</strong> (ili predstavlja parcijalnu funkciju) ako ispunjava strogi uslov da svakom elementu domena odgovara najviše jedan element kodomena.</p>
+            
+            <!-- Lokalna slika sa smislenim alt tekstom -->
+            <img src="slike/relacija.png" alt="Dijagram funkcionalne relacije" width="400">
+            
+            <p>U elementarnoj aritmetici često proučavamo relaciju <strong>deljivosti</strong>. Neke od njenih osnovnih osobina su:</p>
+            <ol>
+                <li><strong>Refleksivnost:</strong> Svaki broj deli samog sebe (<em>n|n</em>).</li>
+                <li><strong>Tranzitivnost:</strong> Ako <em>a|b</em> i <em>b|c</em>, onda <em>a|c</em>.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>3. Značajne teoreme</h2>
+            <p>Jedna od najpoznatijih teorema u teoriji brojeva je <span class="highlight">Vilsonova teorema</span>, koja daje potreban i dovoljan  uslov da prirodan broj<em> n</em> veći od 1 bude prost, izražen preko kongurencije <em>(n-1)! = -1 (mod n)</em></p>
+            <!-- Dva nova dugmeta dodata na kraj sekcije 3 -->
+            <div class="pdf-actions">
+                <a href="rad.pdf" download="rad.pdf" class="btn-download" target="_blank">Preuzmi PDF rad</a>
+                <button id="openModalBtn" class="btn-download btn-modal">Pogledaj rad</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal / Lightbox struktura -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalBtn">&times;</span>
+            <iframe src="rad.pdf" title="Pregled seminarskog rada"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026. Student: Sofija Topalović | <a href="index.html">Nazad na početnu</a></p>
+    </footer>
+
+    <!-- JavaScript za funkcionalnost otvaranja i zatvaranja modala -->
+    <script>
+        var modal = document.getElementById("pdfModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.getElementById("closeModalBtn");
+
+        // Otvaranje modala na klik dugmeta
+        btn.onclick = function() {
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; /* Sprečava skrolovanje pozadinske strane */
+        }
+
+        // Zatvaranje modala na klik na dugme (x)
+        span.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Zatvaranje modala ukoliko korisnik klikne bilo gde van samog prozora rada
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+</body>
+</html>

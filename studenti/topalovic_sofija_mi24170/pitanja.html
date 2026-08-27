@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <!-- Obavezni strukturni elementi i meta tagovi -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Diskretne strukture 1</title>
+    <!-- Povezivanje sa obaveznim spoljnim CSS fajlom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <!-- Dodata slika/logo u navbar -->
+            <div class="logo-container">
+                <a href="https://www.matf.bg.ac.rs" target="_blank">
+                    <img src="slike/logo-matf.png" alt="Logo Matematičkog fakulteta" class="nav-logo">
+                </a>
+            </div>
+        <nav>
+            <!-- Navigacija sa unutrašnjim linkovima ka ostalim stranama -->
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="tema.html">Akademska tema</a></li>
+                <li><a href="pitanja.html">Pitanja</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Pitanje za nas</h1>
+        <p>Ukoliko imate dodatnih pitanja ili nedoumica u vezi sa gradivom, molimo vas da koristite <strong>kontakt formu</strong> ispod.</p>
+
+        <!-- Sekcija sa formom koja sadrži sve obavezne elemente: form, input, textarea, button -->
+        <section>
+            <h2>Pošaljite pitanje</h2>
+            <form action="#">
+                <!-- Input polje za tekst -->
+                <label for="ime">Ime i prezime:</label><br>
+                <input type="text" id="ime" name="ime" placeholder="Vaše ime..."><br><br>
+
+                <!-- Textarea za duže poruke -->
+                <label for="poruka">Vaše pitanje o logici/relacijama:</label><br>
+                <textarea id="poruka" name="poruka" rows="6" cols="40" placeholder="Unesite poruku..."></textarea><br><br>
+
+                <!-- Dugme za slanje -->
+                <button type="submit">Pošalji upit</button>
+            </form>
+        </section>
+
+        <br> <!-- Obavezan prelom reda -->
+
+        <section>
+            <h3>Dodatne informacije</h3>
+            <p>Možete nas kontaktirati i putem zvaničnog sajta fakulteta:</p>
+            <!-- Spoljašnji link -->
+            <a href="https://www.matf.bg.ac.rs" target="_blank">Poseti Matematički fakultet</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026. Student: Sofija Topalović | <a href="index.html">Nazad na početnu</a></p>
+    </footer>
+
+</body>
+</html>

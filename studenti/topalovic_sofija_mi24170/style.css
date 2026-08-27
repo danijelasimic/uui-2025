@@ -1,0 +1,214 @@
+/* style.css */
+#poruka {
+ border-left: 3px solid #1a237e;
+}
+
+/* 1. Osnovni stilovi i pozadina - Obavezan zahtev */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9; /* Svetla siva pozadina */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 2. Navigacija na vrhu (raspored) - Obavezan zahtev */
+header {
+     background: linear-gradient(to right, #b8860b 0%, #e0a800 35%, #ffca28 70%, #ffe082 100%);
+    /* Gradient od tamnije ka svetlijoj zutoj, sa leve strane ka desnoj */
+    color: #1a237e; /* tamno plava, radi citljivosti na zutoj pozadini */
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Logo levo, linkovi desno */
+    align-items: center; /* Vertikalno centriranje */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 45px; /* Kontroliše visinu logotipa u navbaru */
+    width: auto;  /* Automatski prilagođava širinu */
+    display: block;
+    margin: 0; /* Poništava podrazumevano centriranje glavnih slika */
+    border: none; /* Uklanja beli okvir koji imaju slike u sadržaju */
+    box-shadow: none; /* Uklanja senku */
+    transition: 0.3s;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05); /* Blagi efekat pri prelasku mišem */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* 3. Hover efekat na linkovima - Obavezan zahtev */
+nav ul li a:hover {
+    color: white; /* Zlatno-žuta pri prelasku mišem */
+}
+
+/* 4. Stilovi za naslove (različiti nivoi) - Obavezan zahtev */
+h1 {
+    color: #1a237e;
+    text-align: center;
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+h2 {
+    color: #283593;
+    border-left: 5px solid #ffca28;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+h3 {
+    color: #3949ab;
+}
+
+/* 5. Glavni sadržajni blokovi */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Stilovi za tekstualne elemente */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Upotreba class selektora */
+.highlight {
+    background-color: #fff9c4;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* 6. Tabele - Obavezan strukturni element */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #e8eaf6;
+    color: #1a237e;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9ff;
+}
+
+/* 7. Slike - Lokalni resursi */
+img {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* 8. Forme - Obavezni elementi */
+form {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Osigurava da padding ne kvari širinu */
+}
+
+button {
+    background-color: #1a237e;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hover efekat na dugmetu - Obavezan zahtev */
+button:hover {
+    background-color: #3949ab;
+    transform: translateY(-2px);
+}
+
+/* 9. Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #eee;
+    color: #666;
+    margin-top: 50px;
+    font-size: 0.85em;
+}
+
+footer a {
+    color: #d32f2f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
