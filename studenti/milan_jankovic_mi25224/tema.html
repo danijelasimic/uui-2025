@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dajkstrin algoritam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navigation_bar">
+        <header class="site_header">
+            <span class="header_span">
+                <a class="header_link" href="index.html">Pocetna</a>
+                <a class="header_link" href="tema.html">Dajkstra</a>
+                <a class="header_link" href="kontakt.html">Kontakt</a>
+            </span>
+        </header>
+    </div>
+
+    <main>
+        <div class="site_container">
+            <h1>Dajkstrin algoritam</h1>
+
+            <ul>
+                <li>
+                    <h2>Težinski grafovi</h2>
+                    <p class="text">
+                        Kada svakoj grani grafa pridružimo neki broj koji predstavlja njenu "cenu" (na primer, dužinu puta ili vreme potrebno za prelazak), dobijamo <strong>težinski graf</strong>. Takav graf se najčešće čuva ili matricom susedstva u kojoj se, umesto logičke vrednosti, u polju <em>(i, j)</em> čuva težina grane između čvorova <em>i</em> i <em>j</em>, ili listom susedstva u kojoj se pored indeksa suseda čuva i težina grane koja do njega vodi.
+                    </p>
+                    <figure class="graph_figure">
+                        <img src="slike/tezinski_graf.png" alt="Primer težinskog grafa sa upisanim težinama grana">
+                        <figcaption>Primer težinskog grafa</figcaption>
+                    </figure>
+                </li>
+
+                <li>
+                    <h2>Šta rešava Dajkstrin algoritam</h2>
+                    <p class="text">
+                        Dajkstrin algoritam služi za pronalaženje <strong>najkraćih puteva od jednog izabranog (početnog) čvora do svih ostalih čvorova</strong> u težinskom grafu, pod uslovom da nijedna grana nema negativnu težinu. Ako nas zanima najkraći put samo između dva konkretna čvora, algoritam se jednostavno prekine čim se do ciljnog čvora stigne.
+                    </p>
+                </li>
+
+                <li>
+                    <h2>Osnovna ideja</h2>
+                    <p class="text">
+                        Algoritam gradi rešenje postepeno: u svakom koraku "zaključava" jedan čvor za koji je sigurno da je pronađeno njegovo najkraće rastojanje od početnog čvora, i taj čvor dodaje u skup već obrađenih čvorova. Na početku je poznato samo da je rastojanje od početnog čvora do samog sebe jednako nuli, dok su sva ostala rastojanja privremeno postavljena na beskonačno.
+                    </p>
+                    <p class="text">
+                        U svakom narednom koraku bira se neobrađeni čvor sa trenutno najmanjom procenjenom udaljenošću od početnog čvora - za taj čvor se pokazuje da mu je ta procena zapravo i konačna, najkraća moguća vrednost. Nakon što se taj čvor doda u skup obrađenih, proveravaju se svi njegovi susedi: ako je put do nekog suseda preko upravo dodatog čvora kraći od dotadašnje procene, ta procena se ažurira (ovaj korak se naziva <em>relaksacija grane</em>). Postupak se ponavlja sve dok se ne obrade svi čvorovi (ili dok se ne dođe do traženog ciljnog čvora).
+                    </p>
+                    <p class="text">
+                        Za efikasnu implementaciju ovog postupka obično se koristi <strong>red sa prioritetom</strong> (heap), iz kog se u svakom koraku vadi neobrađeni čvor sa najmanjom trenutnom procenom rastojanja, čime se izbegava linearno pretraživanje niza u svakom koraku.
+                    </p>
+                </li>
+
+                <li>
+                    <h2>Pseudokod</h2>
+                    <ol class="text">
+                        <li>Rastojanje do početnog čvora postaviti na 0, a do svih ostalih na beskonačno.</li>
+                        <li>Sve čvorove staviti u red sa prioritetom, uređen po trenutnoj proceni rastojanja.</li>
+                        <li>Dok red nije prazan, izvaditi čvor sa najmanjom procenom rastojanja i proglasiti ga obrađenim.</li>
+                        <li>Za svakog suseda tog čvora proveriti da li je put preko njega kraći od dotadašnje procene, i ako jeste, ažurirati procenu (relaksacija).</li>
+                        <li>Ponavljati korake 3 i 4 dok se ne obrade svi čvorovi.</li>
+                    </ol>
+                </li>
+
+                <li>
+                    <h2>Implementacija</h2>
+                    <p class="text">
+                        Ispod se nalazi jedna moguća implementacija Dajkstrinog algoritma u jeziku C++, uz korišćenje liste susedstva i reda sa prioritetom.
+                    </p>
+
+                    <pre class="code_block"><code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;queue&gt;
+using namespace std;
+
+const int INF = 1e9;
+
+// lista susedstva: susedi[cvor] = {(sused, tezina), ...}
+vector&lt;int&gt; dajkstra(int start, int n, vector&lt;vector&lt;pair&lt;int,int&gt;&gt;&gt;& susedi) {
+    vector&lt;int&gt; dist(n, INF);
+    vector&lt;bool&gt; obradjen(n, false);
+    priority_queue&lt;pair&lt;int,int&gt;, vector&lt;pair&lt;int,int&gt;&gt;, greater&lt;&gt;&gt; red;
+
+    dist[start] = 0;
+    red.push({0, start});
+
+    while (!red.empty()) {
+        auto [tekuceRastojanje, cvor] = red.top();
+        red.pop();
+
+        if (obradjen[cvor]) 
+            continue;
+        obradjen[cvor] = true;
+
+            for (auto [sused, tezina] : susedi[cvor]) {
+                if (dist[cvor] + tezina < dist[sused]) {
+                    dist[sused] = dist[cvor] + tezina;
+                    red.push({dist[sused], sused});
+                }
+            }
+    }
+
+    return dist; // dist[i] = najkrace rastojanje od start do i
+}
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+   <footer class="site_footer">
+        <p>Milan Jankovic - Seminarski rad UUI - tema: Dajkstrin algoritam</p>
+    </footer>
+</body>
+</html>
