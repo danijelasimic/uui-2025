@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marko Graorac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+
+    <header>
+        <h1 id="indeks">135/2025</h1>
+        <h1 id="ime">Marko Graorac</h1>
+        <a href="https://www.matf.bg.ac.rs/" id="aproblem"><img src="slike/matf.png" alt="slikamatfa" id="slikamatfa"></a>
+    </header>
+        <nav class="navigacija">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#linija" id="faks">Fakultetske obaveze</a></li>
+            
+            
+                <div class="interesovanja">
+                    <button>Interesovanja</button>
+                    <div class="sadrzaj">
+                        <li><a href="muzika.html">Muzika</a></li>
+                        <li><a href="film.html">Film</a></li>
+                        <li><a href="sport.html">Sport</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+
+
+    
+
+    <main>
+    <div class="sve">
+
+
+        <span id="divslike">
+            <img src="slike/jauCbe.jpg" alt="Profilna slika" id="slikica_mene">
+        </span>
+
+
+        <span class="tekst" id="tekst1">
+                <h1>O meni</h1>
+                <p>Ja sam Marko Graorac. Student sam Matematičkog fakulteta Univerziteta u Beogradu, informatički smer.
+                    Od malena sam zainteresovan za informatičke tehnologije. Pored informatike, posebno volim i matematiku,
+                    baš zato smatram da je Matematički fakultet u Beogradu pravi izbor za mene.
+                    
+                </p>
+        </span>
+
+        <span class="tekst" id="tekstkontakt">
+                        <h1>Kontakt</h1>
+                <p> ALAS-mail: mi25135@alas.matf.bg.ac.rs <br>
+                    e-mail: mgraorac1@gmail.com
+
+                    
+                </p>
+        </span>
+        <!--
+        <span id="dugmekontakt">
+
+                <button>KONTAKTIRAJ</button>
+        </span>
+    -->
+         <span class="tekst" id="tekst100">
+                <h1>Akademski rad</h1>
+                <p id="akadm"><a href="main.tex" id="akadm" download="main.tex">LaTeX file</a></p>
+                <hr>
+                <p id="akadm"><a href="uui.pdf" id="akadm" target="_blank" rel="noopener noreferrer">pdf file</a></p>
+        </span>
+        
+
+        <span class="tekst" id="interes">
+                    <h1>Interesovanja</h1>
+                <p> 
+                    Pored studija, matematike i informatike, moja interesovanja i hobiji se prostiru
+                    na razne druge oblasti. Samo neke od njih su:
+                </p>
+                <ul>
+                    <li>muzika</li>
+                    <li>film</li>
+                    <li>sport</li>
+                    <li>šah</li>
+                    <li>geografija</li>
+                </ul>
+                <p>Više o nekim od interesovanja nalazi se na posebnim stranicama posvećenim njima.</p>
+        </span>
+
+        <hr id="linija">
+
+
+            <span class="tekst" id="semstar">
+                        <h1>Lista predmeta prvog i drugog semestra:</h1>
+                <ul>
+                    <li>Digitalni zapis podataka</li>
+                    <li>Diskretne strukture 1</li>
+                    <li>Linearna algebra i analitička geometrija</li>
+                    <li>Uvod u informatiku</li>
+                    <li>Uvod u programiranje</li>
+                    <li>Analiza 1</li>
+                    <li>Diskretne strukture 2</li>
+                    <li>Uvod u algoritme</li>
+                    <li>Uvod u organizaciju i arhitekturu računara</li>
+                    <li>Zetetika - kritičko rasuđivanje</li>
+                    <li>Tehničko i naučno pisanje</li>
+
+
+                </ul>
+        </span>
+
+
+        <span class="tekst" id="raspored">
+        <h1>Raspored časova</h1>
+        <table>
+            <tr>
+                <td rowspan="2"></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>08:15 - 09:00</td>
+                <td>09:15 - 10:00</td>
+                <td>10:15 - 11:00</td>
+                <td>11:15 - 12:00</td>
+                <td>12:15 - 13:00</td>
+                <td>13:15 - 14:00</td>
+                <td>14:15 - 15:00</td>
+                <td>15:15 - 16:00</td>
+            </tr>
+            <tr>
+                <td>Ponedeljak</td>
+                <td colspan="3" class="kliknuti"><a href="https://up.matf.bg.ac.rs/">Uvod u programiranje - vežbe</a></td>
+                <td colspan="2" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/ds1.htm">Diskretne strukture 1 - vežbe</a></td>
+                <td id="problemtabele" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~stefan.miskovic/dzp/">Digitalni zapis podataka - vežbe</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Utorak</td>
+                <td></td>
+                <td colspan="3" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/ds1.htm">Diskretne strukture 1 </a></td>
+                <td colspan="3" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/laag.htm">Linearna algebra i analitička geometrija</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sreda</td>
+                <td colspan="2" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~danijela.simic/uui.html">Uvod u informatiku</a></td>
+                <td></td>
+                <td colspan="2" class="kliknuti"><a href="https://www.itkomunikacija.matf.bg.ac.rs/TehnickoINaucnoPisanje.html">Tehničko i naučno pisanje</a></td>
+                <td colspan="3" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~aleksandra.kostic/laag.htm">Linearna algebra i analitička geometrija - vežbe</a></td>
+            </tr>
+            <tr>
+                <td>Četvrtak</td>
+                <td></td>
+                <td></td>
+                <td colspan="3" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~predrag.janicic/">Uvod u programiranje</a></td>
+                <td colspan="2" class="kliknuti"><a href="https://poincare.matf.bg.ac.rs/~stefan.miskovic/dzp/">Digitalni zapis podataka</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Petak</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        </span>
+
+
+
+    </div>
+    </main>
+</body>
+</html>
