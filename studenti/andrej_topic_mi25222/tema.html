@@ -1,18 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akademska Tema | Kvantni racunari</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Akademska Tema | Kvantni Računari</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="header-content">
-        <h1>Kvantni racunari</h1>
-        <p>Neki kratak tekst...</p>
+        <h1>
+          <a href="index.html">Kvantni Računari</a>
+        </h1>
       </div>
 
       <nav class="navbar">
@@ -23,33 +24,136 @@
     </header>
 
     <main class="content">
-      <h2>Kvantni racunari</h2>
+      <h2>Kvantni računari</h2>
 
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus provident quibusdam tempora id. Esse laborum dolore atque, est ullam minus pariatur! Excepturi blanditiis alias placeat libero minus suscipit, officia a?
-      </p>
+       <h3 class="subtitle">Šta su kvantni računari i zašto su nam potrebni?</h3>
 
-      <!-- TODO: dodaj neki sadrzaj -->
-    </main>
+       <p>Razvoj klasičnih računara decenijama je pratio brz napredak, ali su naučnici poput Ričarda Fajnmana još 1981. godine uočili da klasične mašine udaraju u takozvanu <em>„eksponencijalnu barijeru”</em> kada pokušavaju da simuliraju složene prirodne procese. Dodavanjem samo jednog novog atoma ili elementa u sistem, složenost izračunavanja za klasični računar se značajno povećava, zbog čega su neki problemi praktično nerešivi čak i za današnje superračunare. Kvantni računari nastaju sa idejom da umesto prilagođavanja prirode klasičnoj logici nula i jedinica, napravimo mašine koje direktno koriste zakone kvantne mehanike.</p>
+
+
+      <div class="image-row">
+        <img src="./slike/quantum_computer1.jpg" alt="Kvantni računar 1">
+        <img src="./slike/IBM_Quantum_Computer_Demo_at_ITUWTSA_2024,_Delhi_2.jpg" alt="Kvantni računar 2">
+        <img src="./slike/14quantum-01-jwqp-articleLarge.webp" alt="Kvantni računar 3">
+      </div>
+
+
+       <h3 class="subtitle">Osnovni principi rada: Kubiti, superpozicija i upletenost</h3>
+
+       <p>Dok klasični računari koriste bitove koji mogu biti isključivo u stanju 0 ili 1, osnovna jedinica kvantnog računara je <strong>kubit</strong>. Takođe, umesto klasičnog procesora koji koristi logičke kapije zasnovane na zakonima Bulove algebre, kvantni računari koriste tzv. <strong>kvantnu procesorsku jedinicu</strong> (Quantum Processing Unit, QPU). Ono što izdvaja kvantne računare u odnosu na klasične je implementacija 3 kvantna fenomena:</p>
+
+       <ol>
+        <li>Superpozicija</li>
+        <li>Upletenost</li>
+        <li>Interferencija</li>
+       </ol>
+       
+       <p>Zahvaljujući <strong>superpoziciji</strong>, kubit može postojati u oba stanja istovremeno sve dok se ne izvrši merenje. Ovo omogućava kvantnom procesoru (QPU) da paralelno analizira ogroman broj mogućnosti.</p>
+
+       <p>Pored superpozicije, ključni fenomeni su i upletenost i interferencija. <strong>Upletenost (entanglement)</strong> je osobina da više kubita postanu međusobno povezani tako da promena stanja jednog kubita trenutno utiče na ostale, što omogućava masovnu koordinaciju pri kompleksnim proračunima. S druge strane, pomoću <strong>interferencije</strong> dolazimo do tačnog rešenja tih proračuna - to je mehanizam koji pojačava verovatnoću tačnog odgovora (konstruktivna interferencija) i poništava amplitude netačnih rezultata (destruktivna interferencija), čime računar na kraju merenja sa visokom sigurnošću daje tačno rešenje.</p>
+
+      <h3 class="subtitle">Gde kvantni računari prave razliku?</h3>
+
+      <p>Kvantni računari nisu napravljeni da zamene klasične računare za svakodnevne zadatke, već da rešavaju specifične, izuzetno teške probleme kao što su:</p>
+
+      <ul>
+        <li><em>Kriptografija i sajber bezbednost:</em> Algoritmi poput Šorovog omogućavaju brzu faktorizaciju velikih brojeva, što ugrožava današnju RSA enkripciju i podstiče razvoj novih pristupa u enkripciji i sajber bezbednosti uopšte.</li>
+        <li><em>Simulacija prirode i farmacija:</em> Omogućava precizno proučavanje hemijskih reakcija i molekula na atomskom nivou, što može dovesti do revolucije u otkrivanju novih lekova i materijala.</li>
+        <li><em>Pretraga i optimizacija:</em> Groverov algoritam značajno ubrzava pretragu nestrukturiranih baza podataka, dok kvantni sistemi mogu simultano analizirati hiljade ruta u logistici i industriji.</li>
+      </ul>
+
+      <p>U nastavku je data tabela koja demonstrira razliku u vremenskoj složenosti klasičnih i kvantnih računara.</p>
+
+      <table class="complexity-table">
+    <caption>
+        Poređenje vremenske složenosti kod klasičnih i kvantnih računara
+    </caption>
+
+    <thead>
+        <tr>
+            <th>Problem / Algoritam</th>
+            <th>Klasični računar</th>
+            <th>Kvantni računar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Faktorizacija brojeva (Šorov algoritam)</td>
+            <td>
+                Eksponencijalno<br>
+                <i>O(e<sup>n<sup>1/3</sup></sup>)</i>
+            </td>
+            <td>
+                Polinomijalno<br>
+                <i>O(n<sup>3</sup>)</i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Pretraga baze podataka (Groverov algoritam)</td>
+            <td>
+                Linearno<br>
+                <i>O(N)</i>
+            </td>
+            <td>
+                Kvadratni koren<br>
+                <i>O(√N)</i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Simulacija kvantnih sistema (prirode)</td>
+            <td>
+                Eksponencijalno<br>
+                <i>O(2<sup>n</sup>)</i>
+            </td>
+            <td>
+                Polinomijalno<br>
+                <i>O(poly(n))</i>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Diskretni logaritam</td>
+            <td>
+                Eksponencijalno<br>
+                <i>O(e<sup>n<sup>1/3</sup></sup>)</i>
+            </td>
+            <td>
+                Polinomijalno<br>
+                <i>O(n<sup>2</sup> log n)</i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+      <h3 class="subtitle">Trenutni izazovi i budućnost</h3>
+
+      <p>Danas se nalazimo u takozvanoj NISQ eri (Noisy Intermediate-Scale Quantum) - računari poseduju od nekoliko desetina do preko hiljadu kubita, ali su i dalje veoma osetljivi na greške i spoljne uticaje poput promene temperature ili zračenja (dekoherencija). Pored toga, većina QPU procesora zahteva ekstremno hlađenje blizu apsolutne nule (-273°C).</p>
+
+      <p>Budućnost ne pripada potpunom zamenjivanju klasičnih računara, već njihovoj hibridnoj sprezi: klasični superračunari će koristiti kvantne procesore (QPU) kao specijalizovane akceleratore za najsloženije matematičke i naučne izazove.</p>
+      
+    </main> 
 
     <footer class="site-footer">
       <div class="footer-links">
         <div>
-          <h3>Drustvene mreze</h3>
+          <h3>Društvene mreže</h3>
           <a href="https://github.com/">GitHub</a>
           <a href="https://www.linkedin.com/">LinkedIn</a>
           <a href="https://x.com/">X</a>
         </div>
 
         <div>
-          <h3>Mapa sajta</h3>
+          <h3>Navigacija</h3>
           <a href="index.html">Naslovna</a>
           <a href="tema.html">Akademska Tema</a>
           <a href="kontakt.html">Kontakt</a>
         </div>
       </div>
 
-      <p>&copy; 2026 Kvantni racunari</p>
+      <p>&copy; 2026 Kvantni Računari</p>
     </footer>
   </body>
 </html>

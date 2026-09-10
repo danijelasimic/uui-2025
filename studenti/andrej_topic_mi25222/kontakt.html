@@ -1,18 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt | Kvantni Racunari</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Kontakt | Kvantni Računari</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <header class="site-header">
       <div class="header-content">
-        <h1>Kvantni racunari</h1>
-        <p>Neki kratak tekst...</p>
+        <h1>
+          <a href="index.html">Kvantni Računari</a>
+        </h1>
       </div>
 
       <nav class="navbar">
@@ -25,29 +26,79 @@
     <main class="content">
       <h2>Kontakt</h2>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quam sed voluptates temporibus labore harum voluptate quisquam excepturi molestiae voluptas tempore accusantium adipisci itaque, hic rerum porro corrupti perferendis eligendi.</p>
+    <p class="paper-links">Kompletan tekst akademske teme i odgovarajući Latex fajl možete preuzeti na sledećim linkovima:</p>
+    <ul>
+      <li><a href="./main.pdf" target="_blank">tema.pdf</a></li>
+      <li><a href="./main.tex" download>main.tex</a></li>
+    </ul>
 
-      <!-- TODO: dodaj neki sadrzaj -->
+    <p>Sve dodatne informacije o kvantnim računarima možete dobiti pisanjem na mejl.</p>
+
+      <form class="contact-form">
+
+        <div class="form-group">
+            <label for="first-name">Ime</label>
+            <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="last-name">Prezime</label>
+            <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="message">Poruka</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+            ></textarea>
+        </div>
+
+        <button type="submit">Pošalji</button>
+
+    </form>
     </main>
 
     <footer class="site-footer">
       <div class="footer-links">
         <div>
-          <h3>Drustvene mreze</h3>
+          <h3>Društvene mreže</h3>
           <a href="https://github.com/">GitHub</a>
           <a href="https://www.linkedin.com/">LinkedIn</a>
           <a href="https://x.com/">X</a>
         </div>
 
         <div>
-          <h3>Mapa sajta</h3>
+          <h3>Navigacija</h3>
           <a href="index.html">Naslovna</a>
           <a href="tema.html">Akademska Tema</a>
           <a href="kontakt.html">Kontakt</a>
         </div>
       </div>
 
-      <p>&copy; 2026 Kvantni racunari</p>
+      <p>&copy; 2026 Kvantni Računari</p>
     </footer>
   </body>
 </html>
