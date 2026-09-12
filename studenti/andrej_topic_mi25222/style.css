@@ -1,15 +1,17 @@
+/* Global */
+
 @font-face {
-    font-family: "Noto-Sans";
-    src: url("./fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.woff2") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
+  font-family: "Noto-Sans";
+  src: url("./fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Noto-Sans";
-    src: url("./fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.woff2") format("truetype");
-    font-weight: 100 900;
-    font-style: italic;
+  font-family: "Noto-Sans";
+  src: url("./fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
 } 
 
 * {
@@ -24,6 +26,7 @@ body {
   background-color: #FFFFF0;
 }
 
+
 /* Header */
 
 .site-header {
@@ -34,29 +37,29 @@ body {
 .header-content {
   height: 250px;
 
-  background-image: url("/slike/quantum_processor.960_0_1.jpg");
+  background-image: url("./slike/quantum_processor.960_0_1.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: center;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
 .header-content h1 a {
-    font-size: 3.5rem;
-    color: inherit;
-    text-decoration: none;
+  font-size: 3.5rem;
+  color: inherit;
+  text-decoration: none;
 }
 
 .header-content h1 a:hover,
 .header-content h1 a:visited {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
 
 /* Navigation */
 
@@ -70,7 +73,6 @@ body {
 .navbar a {
   color: white;
   text-decoration: none;
-  /* padding: 10px 20px; */
   font-size: 1.1rem;
 }
 
@@ -78,14 +80,13 @@ body {
   text-decoration: underline;
 }
 
+
 /* Main content */
 
 .content {
   min-height: 500px;
-
   max-width: 1000px;
   margin: 0 auto;
-
   padding: 50px 30px;
 }
 
@@ -103,159 +104,149 @@ body {
 }
 
 .button-tema {
-    display: block;
-    width: 120px;
-    margin: 30px auto 0;
-    padding: 10px 20px;
-
-    background-color: #0377fc;
-    color: white;
-
-    text-align: center;
-    text-decoration: none;
-
-    border-radius: 6px;
+  display: block;
+  width: 120px;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  background-color: #0377fc;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 .button-tema:hover {
-    background-color: #2a8bfa;
+  background-color: #2a8bfa;
 }
 
 
-/* akademska tema */
+/* Akademska tema */
+
+#tema-naslov {
+  font-size: 2rem;
+  color: #172a3a;
+  margin-bottom: 25px;
+}
 
 .subtitle {
   margin-top: 20px;
 }
 
 .image-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto;
+  flex-wrap: wrap;
 }
 
 .image-row img {
-    width: 250px;
-    height: auto;
-    border-radius: 4px;
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-row img:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .complexity-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px auto;
-    text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px auto;
+  text-align: center;
 }
 
 .complexity-table caption {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .complexity-table th,
 .complexity-table td {
-    border: 1px solid #ccc;
-    padding: 12px 15px;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
 }
 
 .complexity-table th {
-    background-color: #172a3a;
-    color: white;
-    font-weight: bold;
+  background-color: #172a3a;
+  color: white;
+  font-weight: bold;
 }
 
 .complexity-table td {
-    background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .complexity-table tr:hover td {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 
-/* contact form */
 
-.content ul, ol {
-    margin-left: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+/* Contact form */
+
+.content ul,
+.content ol {
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 40px auto 0;
+  max-width: 600px;
+  margin: 40px auto 0;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 10px;
-
-    font-family: inherit;
-    font-size: 1rem;
-
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form-group textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 .contact-form button {
-    display: block;
-    margin: 10px auto 0;
-    padding: 10px 25px;
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px 25px;
 
-    background-color: #0377fc;
-    color: white;
+  background-color: #0377fc;
+  color: white;
 
-    border: none;
-    border-radius: 6px;
+  border: none;
+  border-radius: 6px;
 
-    font-size: 1rem;
-    cursor: pointer;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .contact-form button:hover {
-    background-color: #53a2fc;
+  background-color: #53a2fc;
 }
-
 
 .paper-links {
-    /* max-width: 600px; */
-    margin: 30px auto 0;
-    /* text-align: center; */
+  margin-top: 30px;
 }
 
-.paper-links a {
-    color: #0377fc;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.paper-links a:hover {
-    color: #53a2fc;
-    text-decoration: underline;
-}
 
 /* Footer */
 
