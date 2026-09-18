@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoVision</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="r-header">
+        <nav>
+            <div class="nav-left">
+                <a class="logo" href="index.html">NeoVision</a>
+                <ul class="nav-destop">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About</a></li>
+                    <li><a href="resources.html" class="nav-links">Resources</a></li>
+                </ul>   
+            </div>
+            <div class="nav-right">
+                <form>
+                    <div class="search-bar">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input class="search-input" type="text" placeholder="I'm looking for...">
+                    </div>
+                </form>
+                <button class="hamburger-btn" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="menu-overlay" id="mobileMenu">
+            <button class="modal-close-x" id="closeMenuBtnX">&times;</button>
+            <div class="menu-content">
+                <div class="mobile-nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="index.html#overview-section">Overview</a>
+                    <a href="about.html#evolution-section">Evolution</a>
+                    <a href="about.html#architecture-section">Architecture</a>
+                    <a href="about.html#application-section">Application</a>
+                </div>
+                <a href="https://github.com/mi25124" target="_blank" class="nav-links logout-btn">GitHub</a>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <p id="result-count"></p>
+        </div>
+</header>
+
+<main class="r-main">
+    <h1 class="r-h1">Documents</h1>
+    <table class="vr-papers-table">
+        <thead>
+            <tr>
+                <th>Naziv rada (Document Name)</th>
+                <th>Jezik (Language)</th>
+                <th>Format & Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Virtualna stvarnost: Arhitektura, evolucija i primena</td>
+                <td>Srpski</td>
+                <td><a href="rad-srpski.pdf" target="_blank">Preuzmi PDF</a></td>
+            </tr>
+            <tr>
+                <td>Virtual Reality: Architecture, Evolution, and Applications</td>
+                <td>English</td>
+                <td><a href="rad-eng.pdf" target="_blank">Download PDF</a></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+    <div class="above-footer">
+        <img class="footer-pic" src="images/footerslika.JPG" alt="footer picture">
+    </div>
+
+    <footer>
+        <a class="logo" href="index.html">NeoVision</a>
+        <section class="f-sec">
+            <div class="f-div">
+                <h3 class="f-h3">Quick links</h3>
+                <ul class="f-ul">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About</a></li>
+                    <li><a href="resources.html" class="nav-links">Resources</a></li>
+                </ul>
+            </div>      
+            <div class="f-div">
+                <h3 class="f-h3">Explore</h3>
+                <ul class="f-ul">
+                    <li><a href="about.html#evolution-section" class="nav-links">Evolution</a></li>
+                    <li><a href="about.html#architecture-section" class="nav-links">Architecture</a></li>
+                    <li><a href="about.html#application-section" class="nav-links">Application</a></li>
+                </ul>
+            </div>
+            <div class="f-div">
+                <h3 class="f-h3">Socials</h3>
+                <ul class="f-ul">
+                    <li><a href="https://github.com/mi25124" target="_blank" class="nav-links">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/aleksandar-milosevic-2b6846380/" target="_blank" class="nav-links">Linkedln</a></li>
+                </ul>
+            </div>
+            <div class="f-div"> 
+                <h3 class="f-h3">Contact</h3>
+                <p>mi25124@alas.matf.bg.ac.rs</p>
+            </div>
+        </section>
+        <div>
+            <p class="copyr">© 2026 Aleksandar Milošević | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/gsap.min.js"></script>
+</body>
+</html>

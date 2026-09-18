@@ -1,0 +1,151 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel} 
+\usepackage{amsmath, amsthm, amssymb} 
+\usepackage{graphicx}
+\usepackage{wrapfig} 
+\usepackage{xcolor} 
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,       
+    urlcolor=blue,
+    citecolor=black,
+    hidelinks
+}
+
+\newtheorem{teorema}{Theorem}[section]
+\newtheorem{definicija}{Definition}[section]
+\newtheorem{lema}{Lemma}[section]
+
+\title{\textbf{Fundamentals, Historical Development, and Applications of Virtual Reality (VR)}}
+\author{Aleksandar Milošević}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\vspace{1cm}
+\hrule
+\vspace{1cm}
+
+\section{Introduction and Historical Development of Virtual Reality}
+
+Virtual Reality (VR) represents one of the most fascinating technological thresholds of the modern era. The \textbf{core idea} of this concept is the complete removal of physical reality from the user's field of view and its replacement with a computer-generated, interactive three-dimensional environment. 
+
+\begin{wrapfigure}{l}{0.38\textwidth}
+  \centering
+  \includegraphics[width=0.36\textwidth]{vr_slika.png}
+  \caption{Display of a modern VR system}
+\end{wrapfigure}
+
+The history of virtual reality spans back decades, long before powerful graphics processors became accessible to the masses. \textit{Pioneering steps} began as early as the 1950s and 1960s. In 1962, Morton Heilig constructed a device called the \textbf{Sensorama}, which was a mechanical cabinet for a multimedia experience—including a stereoscopic screen, fans to simulate wind, scents, and stereo sound. However, the true foundation for hardware-based HMD (Head-Mounted Display) systems was laid by Ivan Sutherland in 1968 when he created the device known as the \textit{``Sword of Damocles''}. This device was so heavy that it had to be suspended from the ceiling, and the graphics consisted of very simple wireframe 3D models generated on a computer.
+
+During the 1980s, the term ``virtual reality'' was officially popularized by Jaron Lanier, the founder of \textit{VPL Research}, which developed the first commercial gloves (DataGlove) and VR goggles. Unfortunately, the hardware of that era fell far short of required performance levels, leading to a financial collapse and a long period known as the ``VR winter''. 
+
+Only with the development of smartphones, microsensors (accelerometers and gyroscopes), and extremely powerful graphics chips did a major renaissance occur in 2012 with the launch of the \textit{Kickstarter} campaign for the \textcolor{blue}{Oculus Rift}. Since then, the technology has experienced explosive growth, expanding beyond the scope of video games into all spheres of society.
+
+\section{Theoretical Foundations and Mathematical Modeling}
+
+To make the virtual world feel convincing and prevent the onset of user disorientation, a series of complex mathematical problems must be solved in real time ($90+$ frames per second).
+
+\subsection{Mathematical Transformations in 3D Space}
+
+In the rendering process, objects are defined in local coordinate systems and then transformed into world and camera coordinates. Every point $P(x, y, z)$ in space is mapped using homogeneous coordinates and matrix multiplication:
+\begin{equation}
+    P' = M_{\text{proj}} \cdot M_{\text{view}} \cdot M_{\text{model}} \cdot P
+\end{equation}
+where $M_{\text{model}}$, $M_{\text{view}}$, and $M_{\text{proj}}$ are the model, view, and projection matrices. In physical simulations, we also frequently use general laws of physics to introduce realism, such as Einstein's famous mass-energy equivalence equation $E = mc^2$ in advanced simulations of particles and explosions within virtual worlds.
+
+\subsection{Formal Definitions, Lemmas, and Theorems}
+
+\begin{definicija}
+Virtual Reality (VR) is an interactive computer-generated environment that uses hardware sensors and displays to create a sense of complete immersion in an artificial space.
+\end{definicija}
+
+\begin{lema}
+To achieve fluid movement without visual stutters, the total system latency (motion-to-photon latency) must be strictly less than the threshold of $20 \text{ ms}$.
+\end{lema}
+
+\begin{teorema}
+If the screen refresh rate is $f \ge 90 \text{ Hz}$ and if the total system latency is less than the critical limit of $20 \text{ ms}$, then the human brain accepts the visual stimulation as a continuous reality without inducing acute kinetosis (motion sickness).
+\end{teorema}
+
+\section{Optical Systems and Perception}
+
+Human spatial perception relies on stereoscopy—the fact that our eyes observe the world from slightly different viewpoints, enabling the brain to calculate depth.
+
+\subsection{Optical Elements and Lenses}
+Early systems used ordinary lenses with significant distortions. Modern devices use:
+\begin{itemize}
+    \item \textbf{Fresnel lenses:} Allow a reduction in the weight and thickness of the optical assembly by using concentric rings.
+    \item \textit{Pancake lenses:} The latest technology that folds light multiple times within the optical path, making devices significantly thinner and more ergonomic.
+\end{itemize}
+
+\subsection{Perception Challenges}
+One of the greatest problems in optical design is the \textbf{vergence-accommodation conflict}. In the real world, our eyes focus on a specific distance (accommodation) while simultaneously converging on a point of interest (vergence). In VR devices, the eyes always focus on a physically close screen (about 2 meters or less), while we send a signal to the brain that the object is miles away, which can lead to prolonged eye strain.
+
+\section{Hardware Architectures and Device Classification}
+
+The VR device market today is diversified according to the degree of mobility and computing power they utilize.
+
+\subsection{System Classification}
+\begin{enumerate}
+    \item \textit{PC VR systems:} Rely on an external high-performance computer (connected via cable or wirelessly). They offer the highest quality graphics and the most precise tracking.
+    \item \textit{Standalone devices:} Contain all components (processor, battery, memory) within the headset housing itself. They are extremely practical due to the absence of cables.
+    \item \textbf{Mobile VR systems:} A historically significant category where a smartphone was used as a screen and processor (e.g., Samsung Gear VR).
+\end{enumerate}
+
+\subsection{Comparative Overview of Leading Model Specifications}
+
+\begin{table}[h]
+\centering
+\caption{Comparative analysis of technical characteristics of current VR devices}
+\vspace{0.2cm}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Device Model} & \textbf{Resolution per Eye} & \textbf{Refresh Rate} & \textbf{Connection Type} \\ \hline
+Meta Quest 3 & $2064 \times 2208$ pixels & $120 \text{ Hz}$ & Standalone / PC \\ \hline
+Valve Index & $1440 \times 1600$ pixels & $144 \text{ Hz}$ & Wired (DisplayPort) \\ \hline
+Apple Vision Pro & $3664 \times 3140$ pixels & $100 \text{ Hz}$ & Standalone / Apple ecosystem \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Position Tracking and Interaction}
+
+Interaction in virtual space requires precise tracking of both head movements and hand positions.
+
+\subsection{Tracking Technologies}
+There are two fundamental approaches to spatial tracking:
+\begin{itemize}
+    \item \textbf{Outside-in tracking:} External base stations or cameras placed in the room track glowing or infrared markers on the headset and controllers.
+    \item \textit{Inside-out tracking:} Cameras built directly into the device observe the environment and use computer vision algorithms (\textit{SLAM - Simultaneous Localization and Mapping}) to create a real-time map of the space.
+\end{itemize}
+
+\section{Applications of Virtual Reality in Various Disciplines}
+
+Although initially tied to entertainment, VR today plays a key role in numerous industries.
+
+\subsection{Medicine and Surgery}
+In the medical sector, VR allows medical students to virtually perform complex operations without risk to actual patients. Additionally, it is used in psychotherapy for the \textcolor{red}{treatment of various phobias and post-traumatic stress disorder} through controlled patient exposure to challenging situations.
+
+\subsection{Engineering and Architecture}
+Engineers use VR to test 3D prototypes of cars, airplanes, or buildings before the expensive physical production or construction process begins, saving millions of euros.
+
+\section{Challenges and the Future of Technology}
+
+Despite incredible progress, serious challenges lie before the industry. The main obstacles include the \textbf{physical weight of the devices}, battery life in standalone devices, as well as the complete elimination of motion sickness for more sensitive users. The future brings deeper integration with artificial intelligence, the development of lighter augmented reality glasses (AR/MR), and even experiments with brain-computer interfaces (BCIs).
+
+\section{Conclusion}
+
+Virtual reality technology has come a long way from bulky laboratory experiments to sophisticated consumer devices that are changing the way we live, work, and communicate. \textit{Although technical and perceptual challenges still exist}, it is unquestionable that VR is no longer just science fiction, but rather a fundamental technological platform of the future that will permanently redefine the boundaries of human experience.
+
+\end{document}
