@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navigation_bar">
+        <header class="site_header">
+            <span class="header_span">
+                <a class="header_link" href="index.html">Pocetna</a>
+                <a class="header_link" href="tema.html">Dajkstra</a>
+                <a class="header_link" href="kontakt.html">Kontakt</a>
+            </span>
+        </header>
+    </div>
+
+    <main>
+        <div class="site_container">
+            <h1>Kontakt</h1>
+
+            <p class="text">
+                Ako imate pitanje ili primedbu u vezi sa ovim seminarskim radom, možete mi poslati poruku putem forme ispod.
+            </p>
+
+            <form class="contact_form" action="#" method="post">
+                <label for="ime">Ime i prezime</label>
+                <input type="text" id="ime" name="ime" placeholder="Unesite ime i prezime" required>
+
+                <label for="email">E-mail adresa</label>
+                <input type="email" id="email" name="email" placeholder="ime@primer.com" required>
+
+                <label for="poruka">Poruka</label>
+                <textarea id="poruka" name="poruka" rows="6" placeholder="Unesite Vašu poruku..." required></textarea>
+
+                <button type="submit" class="submit_btn">Pošalji</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site_footer">
+        <p>Milan Jankovic - Seminarski rad UUI - tema: Dajkstrin algoritam</p>
+    </footer>
+</body>
+</html>

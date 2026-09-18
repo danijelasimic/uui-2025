@@ -1,0 +1,214 @@
+body{
+    background-color:rgb(237, 231, 224);
+    margin: 0%;
+    font-family: sans-serif;
+
+}
+
+.navigation_bar{
+
+    background-color: rgb(128, 168, 98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.header_span{
+    display: flex;
+    gap: 15px;
+    background-color: rgb(128, 168, 98);
+}
+
+.header_link{
+    display: inline-block;
+    width: 60px;
+    padding: 5px;
+
+    font-weight: 550;
+    color: rgb(30, 40, 55);
+    text-decoration: none;
+    transition: color 0.2s, font-weight 0.2s;
+
+}
+
+.header_link:hover{
+    color: whitesmoke;
+    font-weight: 700;
+
+}
+
+.header_button{
+    border-radius: 30px;
+    padding: 3px;
+}
+
+.header_button:hover {
+    background-color: rgb(128, 168, 98);
+}
+
+main{
+    background-color: whitesmoke;
+
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: darkgrey;
+    border-radius: 15px;
+
+}
+
+.site_container{
+    padding: 10px 25px 25px 25px;
+}
+
+h1 {
+    text-align: center;
+}
+h2{
+    color: rgb(30, 40, 55);
+    border-bottom: 2px solid rgb(128, 168, 98);
+    padding-bottom: 4px;
+}
+h3{
+    color: rgb(60, 80, 55);
+}
+p{
+
+}
+
+.text{
+    line-height: 1.5;
+    text-align: justify;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+ul > li{
+    margin-bottom: 30px;
+}
+
+/* slike u tekstu */
+.graph_figure{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.graph_figure img{
+    max-width: 80%;
+    height: auto;
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+}
+
+.graph_figure figcaption{
+    font-style: italic;
+    font-size: 0.9em;
+    color: rgb(80, 80, 80);
+    margin-top: 6px;
+}
+
+/* tabela za poredjenje reprezentacija */
+.compare_table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.compare_table caption{
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.compare_table th, .compare_table td{
+    border: 1px solid darkgrey;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.compare_table th{
+    background-color: rgb(128, 168, 98);
+    color: whitesmoke;
+}
+
+.compare_table tr:nth-child(even){
+    background-color: rgb(237, 231, 224);
+}
+
+.kiaa_link{
+    text-decoration: none;
+    color: rgb(30, 40, 55);;
+}
+
+.code_block{
+    background-color: rgb(30, 40, 55);
+    color: whitesmoke;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-top: 12px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* kontakt forma */
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.contact_form label{
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.contact_form input,
+.contact_form textarea{
+    padding: 8px;
+    border: 1px solid darkgrey;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus{
+    outline: 2px solid rgb(128, 168, 98);
+}
+
+.submit_btn{
+    margin-top: 18px;
+    background-color: rgb(128, 168, 98);
+    color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.submit_btn:hover{
+    background-color: rgb(100, 140, 75);
+}
+
+/* footer */
+.site_footer{
+    text-align: center;
+    color: rgb(80, 80, 80);
+    font-size: 0.85em;
+    margin-top: 20px;
+}

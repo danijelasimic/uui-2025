@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafovi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navigation_bar">
+        <header class="site_header">
+            <span class="header_span">
+                <a class="header_link" href="index.html">Pocetna</a>
+                <a class="header_link" href="tema.html">Dajkstra</a>
+                <a class="header_link" href="kontakt.html">Kontakt</a>
+            </span>
+        </header>
+    </div>
+
+    <main>
+        <div class="site_container">
+            <h1>Grafovi</h1>
+
+            <ul>
+                <li>
+                    <h2>Uvod u grafove</h2>
+                    <p class="text">
+                        Grafovi su jedna od najkorisnijih struktura podataka. Još u davna vremena su korišćeni za predstavljanje mreža puteva između gradova i odgovarajućih mapa, koje su putnici nosili sa sobom tokom putovanja. Poznat je slučaj kopije mape iz petog veka koja je sadržala mrežu puteva Rimskog carstva sa nazivima gradova i dužinama puteva između njih, koja je pružala dovoljno informacija potrebnih da se pronađe najkraći put između dva grada. Još jedna od klasičnih primena grafova (specijalno drveta) je predstavljanje genealogija. Naime, porodična stabla su vekovima korišćena u svrhe odgovora na pravna pitanja poput pitanja dozvoljenih brakova, nasledstva i nasleđivanja vlasti. Naravno, postoji mnogo drugih poznatih primera primena grafova, kao što su predstavljanje strana i ivica poliedara, komunikacione mreže, električna kola, strukturne formule molekula, društvene igre, traženje izlaza iz lavirinta, a u današnje vreme veoma popularna primena je za modelovanje odnosa korisnika na društvenim mrežama.
+                    </p>
+                </li>
+
+                <li>
+                    <h2>Reprezentacija grafova</h2>
+                    <p class="text">
+                        Graf se u računaru najčešće predstavlja na jedan od dva načina: pomoću <strong>matrice susedstva</strong> ili pomoću <strong>liste susedstva</strong>. Izbor reprezentacije zavisi od toga koliko graf ima grana i koje operacije nad njim najčešće izvršavamo.
+                    </p>
+
+                    <h3>Matrica susedstva</h3>
+                    <p class="text">
+                        Ako graf ima <em>n</em> čvorova, matrica susedstva je kvadratna tabela dimenzija <em>n</em> x <em>n</em> u kojoj polje na poziciji <em>(i, j)</em> govori da li postoji grana od čvora i ka čvoru j (obično se beleži sa 1 ili 0, tačno ili netačno). Kod neusmerenog grafa ova matrica je simetrična u odnosu na glavnu dijagonalu. Prednost ovakvog zapisa je što se za konstantno vreme može proveriti da li dva čvora postoje spojena granom, dok je mana što matrica uvek zauzima prostor reda n&sup2;, bez obzira na to koliko graf zapravo ima grana.
+                    </p>
+
+                    <figure class="graph_figure">
+                        <img src="slike/matrica_povezanosti.png" alt="Primer prikaza grafa pomoću matrice susedstva">
+                        <figcaption>Primer predstavljanja grafa matricom susedstva</figcaption>
+                    </figure>
+
+                    <h3>Lista susedstva</h3>
+                    <p class="text">
+                        Kod liste susedstva svakom čvoru grafa dodeljuje se sopstvena lista koja sadrži samo one čvorove do kojih iz njega vodi grana. Za razliku od matrice, ovde se ne pamte nepostojeće grane, pa je ovaj zapis mnogo štedljiviji za tzv. <em>retke grafove</em> - one koji imaju znatno manje grana nego što je teorijski moguće. Cena te uštede prostora je nešto sporija provera da li su dva konkretna čvora povezana granom.
+                    </p>
+
+                    <figure class="graph_figure">
+                        <img src="slike/lista_povezanosti.png" alt="Primer prikaza grafa pomoću liste susedstva">
+                        <figcaption>Primer predstavljanja grafa listom susedstva</figcaption>
+                    </figure>
+
+                    <table class="compare_table">
+                        <caption>Poređenje dve reprezentacije grafa</caption>
+                        <tr>
+                            <th>Osobina</th>
+                            <th>Matrica susedstva</th>
+                            <th>Lista susedstva</th>
+                        </tr>
+                        <tr>
+                            <td>Memorijska složenost</td>
+                            <td>O(n&sup2;)</td>
+                            <td>O(n + m)</td>
+                        </tr>
+                        <tr>
+                            <td>Provera postojanja grane</td>
+                            <td>O(1)</td>
+                            <td>O(stepen čvora)</td>
+                        </tr>
+                        <tr>
+                            <td>Prolazak kroz susede čvora</td>
+                            <td>O(n)</td>
+                            <td>O(stepen čvora)</td>
+                        </tr>
+                        <tr>
+                            <td>Pogodno za</td>
+                            <td>guste grafove</td>
+                            <td>retke grafove</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+            <p>Za više informacija o grafovima videti na sledecem <a class="kiaa_link" href="https://poincare.matf.bg.ac.rs/~filip/kiaa/02%20grafovi/">linku</a></p>
+        </div>
+    </main>
+
+    <footer class="site_footer">
+        <p>Milan Jankovic - Seminarski rad UUI - tema: Dajkstrin algoritam</p>
+    </footer>
+
+</body>
+</html>
