@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamara Spasenovski</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Tamara Spasenovski</h1>
+            <p class="tagline">Matematički fakultet Univerziteta u Beogradu | Smer informatika</p>
+        </div>
+        <nav class="main-navigation">
+            <a href="index.html" class="nav-item active">Početna</a>
+            <a href="tema.html" class="nav-item">Tema</a>
+            <a href="omeni.html" class="nav-item">O meni</a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="profile-section">
+            <div class="profile-card">
+                <img src="slike/slika.jpg" alt="Tamara Spasenovski" class="profile-photo">
+                <div class="profile-info">
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value">tamara.spasenovski@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Smer:</span>
+                        <span class="value">Informatika</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Grupa:</span>
+                        <span class="value">1i2v</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Broj indeksa:</span>
+                        <span class="value">106/2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="content-box">
+    <h2>Kontaktiraj me</h2>
+    <form class="contact-form" action="#" method="post">
+        <div class="form-group">
+            <label for="name">Ime i prezime:</label>
+            <input type="text" id="name" name="name" required placeholder="Vaše ime...">
+        </div>
+        <div class="form-group">
+            <label for="email">Email adresa:</label>
+            <input type="email" id="email" name="email" required placeholder="Vaš email...">
+        </div>
+        <div class="form-group">
+            <label for="message">Poruka:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Unesite vašu poruku..."></textarea>
+        </div>
+        <button type="submit" class="download-btn">Pošalji poruku</button>
+    </form>
+</section>
+
+        <section class="subjects-section">
+            <h2 class="section-heading">Predmeti</h2>
+            
+            <div class="semester-container">
+                <div class="semester-box">
+                    <h3 class="semester-heading">Prvi semestar</h3>
+                    <ul class="subject-list">
+                        <li>Uvod u informatiku</li>
+                        <li>Uvod u programiranje</li>
+                        <li>Digitalni zapis podataka</li>
+                        <li>Linearna algebra i analitička geometrija</li>
+                        <li>Diskretne strukture 1</li>
+                        <li>Tehničko i naučno pisanje</li>
+                    </ul>
+                </div>
+
+                <div class="semester-box">
+                    <h3 class="semester-heading">Drugi semestar</h3>
+                    <ul class="subject-list">
+                        <li>Uvod u algoritme</li>
+                        <li>Uvod u organizaciju i arhitekturu računara</li>
+                        <li>Diskretne strukture 2</li>
+                        <li>Analiza 1</li>
+                        <li>Zetetika - kritičko rasuđivanje</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-access">
+            <div class="links-grid">
+                <a href="omeni.html" class="link-box">
+                    <h3>O meni</h3>
+                    <p>Saznajte više o meni, mojim interesovanjima i hobijima</p>
+                </a>
+                <a href="tema.html" class="link-box">
+                    <h3>Tema</h3>
+                    <p>Moj rad na temu "5G/6G mreže i računarska optimizacija"</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Tamara Spasenovski | Matematički fakultet, Univerzitet u Beogradu</p>
+    </footer>
+</body>
+</html>

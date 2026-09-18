@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[sr-cyrl]{babel}
+\usepackage[T2A]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,     
+    citecolor=blue,      
+    urlcolor=blue        
+}
+
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{lema}{Лема}[section]
+
+\title{\textbf{\Large МАТЕМАТИЧКИ ФАКУЛТЕТ}\\ \vspace{0.5cm} \Huge 5G/6G мреже и рачунарска оптимизација}
+\author{\textbf{Студент:} Тамара Спасеновски (106/2025) \\ \textbf{Професор:} Данијела Симић}
+\date{Београд, 01. 09. 2026.}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{Увод}
+Од првих генерација мобилне телефоније, чија је основна намена била пренос гласа, до данашњих напредних мрежа, мобилне технологије су значајно утицале на савремено друштво. Савемене $5G$ и долазеће $6G$ мреже захтевају изузетно сложен математички апарат и алгоритме рачунаРСке оптимизације како би ефикасно управљале мрежним ресурсима.
+
+\section{Развој и карактеристике мобилних мрежа}
+
+\subsection{Еволуција мобилних генерација}
+\begin{itemize}
+    \item \textbf{1G i 2G:} Аналогни пренос гласа, затим дигитализација и увођење $SMS$ порука.
+    \item \textbf{3G i 4G:} Појава мобилног интернета, а затим $IP$ протокола са брзинамa до $100\text{ Mbps}$.
+    \item \textbf{5G i 6G:} Прелазак на масовну комуникацију машине-ка-машини и екстремне перформансе.
+\end{itemize}
+
+\subsection{Поређење перформанси}
+У табели испод дато је паралелно поређење свих кључних карактеристика.
+
+\begin{table}[h!]
+\centering
+\caption{Поређење $4G$, $5G$ и $6G$ перформанси}
+\vspace{0.2cm}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Карактеристика} & \textbf{4G} & \textbf{5G} & \textbf{6G} \\ \hline
+\textbf{Максимална брзина} & $1\text{ Gbps}$ & $20\text{ Gbps}$ & \textcolor{purple}{\textbf{1 Tbps}} \\ \hline
+\textbf{Кашњење (латенција)} & $50\text{ ms}$ & $< 1\text{ ms}$ & \textcolor{blue}{\textbf{$< 0.1\text{ ms}$}} \\ \hline
+\textbf{Густина уређаја ($/\text{km}^2$)} & $2.000$ & $1.000.000$ & $> 10.000.000$ \\ \hline
+\textbf{Поузданост} & $99.9\%$ & $99.999\%$ & $99.99999\%$ \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Оптимизациони проблеми и математички апарат}
+
+\subsection{Математичка формулација проблеми расподеле ресурса}
+
+\begin{wrapfigure}{l}{0.4\textwidth}
+  \centering
+  \includegraphics[width=0.38\textwidth]{iot.jpg}
+  \caption{Колосалан број $IoT$ уређаја у $5G/6G$ мрежама.}
+\end{wrapfigure}
+
+За успешно управљање великим бројем $IoT$ уређаја, као што је илустровано на слици, морамо дефинисати математичке моделе оптимизације.
+
+\begin{definicija}[Проблем расподеле фреквенција]
+Проблем оптималне расподеле $M$ радио-канала на $N$ корисника уз максимизацију укупног протока дефинише се као:
+\begin{equation}
+\max \sum_{i=1}^{N} \sum_{j=1}^{M} R_{ij} x_{ij}
+\end{equation}
+где је $x_{ij} \in \{0, 1\}$ индикатор алокације, а $R_{ij}$ остварена брзина корисника $i$ на каналу $j$.
+\end{definicija}
+
+\begin{teorema}[Сжетост проблема алокације]
+Проблем оптималне алокације ресурса је $NP$-тежак за општи случај са великим бројем корисника $N \gg 10^3$.
+\end{teorema}
+
+\begin{lema}[Минимизација потрошње енергије]
+Укупна потрошња $K$ базних станица минимизује се функцијом:
+\begin{equation}
+\min \sum_{k=1}^{K} P_k \quad \text{уз услов квалитета сигнала } \text{SINR}_k \ge \gamma_{\min}
+\end{equation}
+\end{lema}
+
+\section{Методе оптимизације и машинско учење}
+За решавање наведених проблема примењују се следећи приступи:
+\begin{enumerate}
+    \item \textbf{\textcolor{darkgray}{Конвексна оптимизација:}} Користи се када функционали имају гарантовани глобални екстремум.
+    \item \textbf{\textcolor{blue}{Учење поткрепљивањем (Reinforcement Learning):}}
+    \begin{enumerate}
+        \item Агент бира акцију у мрежи.
+        \item Окружење враћа нумеричку награду за квалитет одлуке.
+        \item Агент ажурира своју интерну стратегију у реалном времену.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Закључак}
+\textit{\textbf{\textcolor{purple}{5G и 6G мреже}}} представљају темељ будућег дигиталног друштва \cite{ref2}. Примена савремених рачунарских и математичких метода омогућава да се комплексни мрежни ресурси организују аутономно и ефикасно.
+
+\begin{thebibliography}{9}
+\bibitem{ref1} Dahlman, E., Parkvall, S., \& Skold, J. (2020). \textit{5G NR: The Next Generation Wireless Access Technology}. Academic Press.
+\bibitem{ref2} Zhang, Z., et al. (2019). \textit{6G Wireless Networks: Vision, Requirements, Architecture, and Key Technologies}. IEEE Vehicular Technology Magazine.
+\end{thebibliography}
+
+\end{document}
