@@ -1,0 +1,270 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[serbianc]{babel}
+
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{ulem}
+\usepackage{xcolor}
+
+\usepackage[hidelinks]{hyperref}
+
+
+
+\geometry{margin=2.5cm}
+
+\definecolor{myblue}{HTML}{659EC7}
+
+\newtheorem{definition}{Дефиниција}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лема}
+
+\begin{document}
+
+\begin{titlepage}
+
+\centering
+
+\vspace*{2cm}
+
+{\large\bfseries УНИВЕРЗИТЕТ У БЕОГРАДУ}\\[0.3cm]
+{\large\bfseries МАТЕМАТИЧКИ ФАКУЛТЕТ}
+
+\vspace{2cm}
+
+{\large СЕМИНАРСКИ РАД}\\[0.3cm]
+{\large из предмета}
+{\Large\bfseries Увод у информатику}
+
+\vspace{2.5cm}
+\rule{0.75\textwidth}{0.8pt}
+
+\vspace{0.6cm}
+
+{\Large\bfseries МАГИЧНИ КВАДРАТИ}\\[0.35cm]
+
+{\Large\itshape Примена математичких принципа}\\[0.15cm]
+{\Large\itshape у рачунарству}
+
+\vspace{0.6cm}
+
+\rule{0.75\textwidth}{0.8pt}
+\vspace{5cm}
+
+\begin{flushleft}
+\begin{tabular}{ll}
+\textbf{Ментор:} & Данијела Симић \\[0.25cm]
+\textbf{Студент:} & Владана Милетић\\[0.25cm]
+\textbf{Број индекса:} & 213/2025
+\end{tabular}
+\end{flushleft}
+
+\vspace{1.5cm}
+
+{\large Београд, jул 2026.}
+
+\end{titlepage}
+
+
+
+\tableofcontents
+\newpage
+
+
+
+\section{Увод}
+
+
+\textbf{Магични квадрати} представљају занимљиве математичке структуре које
+повезују бројеве, симетрију и логику. Они су један од најпознатијих примера
+дискретне математике.
+
+
+\textcolor{myblue}{Магични квадрати показују како једноставна правила могу створити
+сложене математичке структуре.}
+
+
+Циљ овог рада је да прикаже основне појмове, особине и примене магичних
+квадрата.
+
+
+
+\section{Основни појмови}
+
+
+
+\subsection{Дефиниција магичног квадрата}
+
+
+
+\begin{definition}
+
+Магични квадрат реда $n$ је квадратна табела димензије $n \times n$ у којој је
+збир бројева у сваком реду, колони и дијагонали једнак. Та вредност назива се
+магична константа.
+
+\end{definition}
+
+
+
+Магична константа се израчунава формулом:
+
+
+\[
+M=\frac{n(n^2+1)}{2}
+\]
+
+
+За магични квадрат трећег реда:
+
+
+\[
+M=\frac{3(3^2+1)}{2}=15
+\]
+
+\subsection{\text{Магични квадрат 3 × 3}}
+
+{\color[HTML]{659EC7}
+Најпознатији магични квадрат реда \(3 \times 3\) састоји се од бројева од 1 до 9, при чему се сваки број појављује тачно једном. Збир бројева у сваком реду, свакој колони и на обе дијагонале увек је једнак \textbf{15}. Тај број назива се \textbf{магични збир}.
+}
+
+\vspace{0.5cm}
+
+\begin{center}
+{\color[HTML]{659EC7}
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{18pt}
+\begin{tabular}{|c|c|c|}
+\hline
+\Large\textbf{8} & \Large\textbf{1} & \Large\textbf{6} \\ \hline
+\Large\textbf{3} & \Large\textbf{5} & \Large\textbf{7} \\ \hline
+\Large\textbf{4} & \Large\textbf{9} & \Large\textbf{2} \\ \hline
+\end{tabular}
+}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+{\large\bfseries\color[HTML]{659EC7}Магични збир = 15}
+\end{center}
+
+
+
+
+
+
+
+
+\section{Математичке особине}
+
+
+
+\begin{lemma}
+
+У нормалном магичном квадрату реда $n$ бројеви од $1$ до $n^2$ појављују се
+тачно једанпут.
+
+\end{lemma}
+
+
+
+\begin{theorem}
+
+Збир свих елемената магичног квадрата реда $n$ једнак је:
+
+\[
+S=nM
+\]
+
+где је $M$ магична константа.
+
+\end{theorem}
+
+
+
+
+\section{Примене магичних квадрата}
+
+
+
+Магични квадрати имају примену у различитим областима:
+
+
+\begin{itemize}
+
+\item дискретној математици,
+
+\item комбинаторици,
+
+\item развоју алгоритама.
+
+\end{itemize}
+
+
+
+Према начину конструкције могу се поделити на:
+
+
+\begin{enumerate}
+
+\item магичне квадрате непарног реда,
+
+\item магичне квадрате парног реда,
+
+\item посебне симетричне квадрате.
+
+\end{enumerate}
+
+
+
+\begin{description}
+
+\item[Нормални магични квадрат]
+садржи бројеве од $1$ до $n^2$.
+
+\item[Полумагични квадрат]
+има једнаке збирове само у редовима и колонама.
+
+\end{description}
+
+
+
+
+
+\section{Приказ магичног квадрата}
+
+\flushleft
+\vspace{1cm}
+
+\includegraphics[width=0.6\textwidth]{magic3.png}
+
+\vspace{1cm}
+
+Магични квадрати се могу приказати и графички, што омогућава лакше
+разумевање њихове симетрије и правилности.
+
+
+
+\newpage
+
+
+\section{Закључак}
+
+
+
+Магични квадрати представљају занимљив спој математике, логике и симетрије.
+Иако су настали као математичке загонетке, данас имају примену у различитим
+областима рачунарства и математике.
+\vspace{0.2cm}
+
+\textcolor{red}{\uline{Ова тема показује да се из једноставних математичких правила могу добити веома сложене и занимљиве структуре}}.
+
+
+\end{document}
