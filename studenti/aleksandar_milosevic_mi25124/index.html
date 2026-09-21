@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoVision</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a class="logo" href="index.html">NeoVision</a>
+                <ul class="nav-destop">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About</a></li>
+                    <li><a href="resources.html" class="nav-links">Resources</a></li>
+                </ul>   
+            </div>
+            <div class="nav-right">
+                <form>
+                    <div class="search-bar">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input class="search-input" type="text" placeholder="I'm looking for...">
+                    </div>
+                </form>
+                <button class="hamburger-btn" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="menu-overlay" id="mobileMenu">
+            <button class="modal-close-x" id="closeMenuBtnX">&times;</button>
+            <div class="menu-content">
+                <div class="mobile-nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="index.html#overview-section">Overview</a>
+                    <a href="about.html#evolution-section">Evolution</a>
+                    <a href="about.html#architecture-section">Architecture</a>
+                    <a href="about.html#application-section">Application</a>
+                </div>
+                 <a href="https://github.com/mi25124" target="_blank" class="nav-links logout-btn">GitHub</a>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <p id="result-count"></p>
+        </div>
+
+        <section class="hsec">
+            <div class="left-side">
+                <h2 class="above-h1">Futuristic</h2>
+                <h1>New digital<br>universe</h1>
+                
+                <div class="hero-button">
+                    <button class="cta-1" data-link="about.html">enter now</button>
+                    <button class="cta-2" data-link="resources.html">View Docs</button>
+                </div>
+            </div>
+
+            <div class="right-side"><img src="images/hero-pic.png" alt="women with vr glasses"></div>
+            
+            <div class="line"></div>
+            <div class="line1"></div>
+            <hr class="line2">
+        </section>
+    </header>
+    <main>
+        <section id="section1">
+            <div class="sec-div1">
+                <img src="images/main-pic.png" alt="women" class="main-pic">
+            </div>
+
+            <div class="sec-div2">
+                <h2>VR glasses</h2>
+                <p class="phrase">the digital<br>world</p>
+                <div class="sec-button">
+                    <button class="sec-button1" data-text="text1">
+                        overview
+                    </button>
+                    <button class="sec-button1" data-text="text2">
+                        applications
+                    </button>
+                    <button class="sec-button1" data-text="text3">
+                        experience
+                    </button>
+                </div>
+                <div class="content">
+                    <p id="text1">Virtual Reality (VR) is a technology that immerses users in a simulated digital environment. By using VR headsets and sensors, you can see, hear, and interact with 3D worlds as if they were real.</p>
+                    <p id="text2" class="hidden">VR is used in education, design, healthcare, and entertainment. It helps people learn, create, and experience things that are impossible or impractical in the real world.</p>
+                    <p id="text3" class="hidden">People say VR makes them feel like they are truly inside the digital world. It turns learning, gaming, and exploring into exciting experiences. Users love the interactivity and immersive feeling VR provides</p>
+                </div>
+                <div class="sec-button">
+                    <a id="link" class="sec-button2" href="about.html">Learn More</a></button>
+                    <a href="images/vr_better.mp4" target="_blank" class="video-btn sec-button2">Watch video</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <h1 id="overview-section" class="sec2-h1">Overview</h1>
+            <div class="sec2-div">
+                <div class="sec2-div1">
+                    <span class="icon"></span>
+                    <h3>Displays</h3>
+                    <p class="sec2-p">Discover how high-resolution screens and depth simulation trick your eyes into seeing a 3D world.</p>
+                    <a href="about.html#architecture-section" class="cta">Learn More</a>
+                </div>
+                <div class="sec2-div1">
+                    <span></span>
+                    <h3>Tracking</h3>
+                    <p class="sec2-p">Learn how sensors follow your head and hand movements with incredible precision in real time.</p>
+                    <a href="about.html#architecture-section" class="cta">Learn More</a>
+                </div>
+                <div class="sec2-div1">
+                    <span></span>
+                    <h3>Rendering</h3>
+                    <p class="sec2-p">Explore how powerful graphics processing creates smooth, lifelike virtual environments.</p>
+                    <a href="about.html#architecture-section" class="cta">Learn More</a>
+                </div>
+            </div>
+            <hr class="line4">
+        </section>
+    </main>
+    
+    <div class="com-sec">
+        <div class="com-card"> 
+            <svg viewBox="0 0 1100 520" preserveAspectRatio="none">
+                <path d="
+                    M 35 0 
+                    L 240 0 
+                    C 255 0, 260 18, 275 18 
+                    L 1035 18 
+                    Q 1075 18, 1075 58 
+                    L 1075 462 
+                    Q 1075 502, 1035 502 
+                    L 65 502 
+                    Q 25 502, 25 462 
+                    L 25 58 
+                    C 25 25, 30 0, 35 0 
+                    Z" />
+            </svg>
+
+            <div class="com-content">
+                <div class="com-header">
+                    <span style="display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #00ffcc; margin-bottom: 8px; font-weight: 600;">// Community Feedback</span>
+                    <h2>LEARNER EXPERIENCES</h2>
+                    <div class="com-desc">
+                       Real feedback from students and tech enthusiasts mastering virtual reality concepts and building the future through our resources.
+                    </div>
+                </div>
+
+                <div class="com-body">
+                    <div class="avatars-column">
+                        <div class="avatar" data-index="0"><img src="https://picsum.photos/seed/user1/50" alt="User"></div>
+                        <div class="avatar active" data-index="1"><img src="https://picsum.photos/seed/user2/70" alt="User"></div>
+                        <div class="avatar" data-index="2"><img src="https://picsum.photos/seed/user3/50" alt="User"></div>
+                    </div>
+
+                    <div class="testimonial-box">
+                        <div class="company-tag" id="companyTag">🛡️ Lightbox</div>
+                        <div class="testimonial-text" id="testimonialText">
+                            "The first time I entered the environment, I instinctively reached out to touch what I saw. The textures, the light, the audio — everything felt so authentic that I forgot I was still in my studio. It's a new reality altogether."
+                        </div>
+                        <div class="author-name" id="authorName">Jordan Lee, CEO Lightbox Venture</div>
+                    </div>
+
+                    <div class="nav-arrows">
+                        <div class="arrow-btn" id="prevBtn">↑</div>
+                        <div class="arrow-btn" id="nextBtn">↓</div>
+                    </div>
+                </div>
+
+                <div class="com-footer">
+                    <div class="stat-item">
+                        <h3>98%</h3>
+                        <p>Adoption Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>4.5x</h3>
+                        <p>Return of investment</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>120+</h3>
+                        <p>Project Implement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="above-footer">
+        <img class="footer-pic" src="images/footerslika.JPG" alt="footer picture">
+    </div>
+
+    <footer>
+        <a class="logo" href="index.html">NeoVision</a>
+        <section class="f-sec">
+            <div class="f-div">
+                <h3 class="f-h3">Quick links</h3>
+                <ul class="f-ul">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About</a></li>
+                    <li><a href="resources.html" class="nav-links">Resources</a></li>
+                </ul>
+            </div>      
+            <div class="f-div">
+                <h3 class="f-h3">Explore</h3>
+                <ul class="f-ul">
+                    <li><a href="about.html#evolution-section" class="nav-links">Evolution</a></li>
+                    <li><a href="about.html#architecture-section" class="nav-links">Architecture</a></li>
+                    <li><a href="about.html#application-section" class="nav-links">Application</a></li>
+                </ul>
+            </div>
+            <div class="f-div">
+                <h3 class="f-h3">Socials</h3>
+                <ul class="f-ul">
+                    <li><a href="https://github.com/mi25124" target="_blank" class="nav-links">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/aleksandar-milosevic-2b6846380/" target="_blank" class="nav-links">Linkedln</a></li>
+                </ul>
+            </div>
+            <div class="f-div"> 
+                <h3 class="f-h3">Contact</h3>
+                <p>mi25124@alas.matf.bg.ac.rs</p>
+            </div>
+        </section>
+        <div>
+            <p class="copyr">© 2026 Aleksandar Milošević | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/gsap.min.js"></script>
+</body>
+</html>

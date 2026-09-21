@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoVision</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="r-body">
+    <header class="r-header">
+        <nav>
+            <div class="nav-left">
+                <a class="logo" href="index.html">NeoVision</a>
+                <ul class="nav-destop">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About</a></li>
+                    <li><a href="resources.html" class="nav-links">Resources</a></li>
+                </ul>   
+            </div>
+            <div class="nav-right">
+                <form>
+                    <div class="search-bar">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input class="search-input" type="text" placeholder="I'm looking for...">
+                    </div>
+                </form>
+                <button class="hamburger-btn" id="menuToggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="menu-overlay" id="mobileMenu">
+            <button class="modal-close-x" id="closeMenuBtnX">&times;</button>
+            <div class="menu-content">
+                <div class="mobile-nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="index.html#overview-section">Overview</a>
+                    <a href="about.html#evolution-section">Evolution</a>
+                    <a href="about.html#architecture-section">Architecture</a>
+                    <a href="about.html#application-section">Application</a>
+                </div>
+                <a href="https://github.com/mi25124" target="_blank" class="nav-links logout-btn">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="r-main">
+        <div id="evolution-section" class="cyber-card">
+            <svg viewBox="0 0 753 437" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                <path d="M401.75 387.5L752.27 387.519L751.73 0.500244L460.444 0.5L404.981 57.5H0.5V436.5H348.75L401.75 387.5Z" fill="black" stroke="black"/>
+            </svg>
+            <div class="card-content">
+                <div class="card-content-left">
+                    <figure class="quote-container">
+                        <blockquote class="quote">
+                            "The best way to predict the future is to invent it."
+                        </blockquote>
+                        <figcaption class="quote-autor">— Alan Kay</figcaption>
+                    </figure>
+                    <p class="box-parag">Virtual Reality (VR) is often perceived as a breakthrough of the 21st century,
+                     driven by modern advancements in smartphone manufacturing, micro-displays,
+                     and high-performance graphics processing units (GPUs). However, 
+                     the conceptual roots of immersive artificial environments stretch back decades 
+                     before the advent of consumer-grade headsets. Understanding the current technological landscape 
+                     requires tracing the evolution of VR from mechanical prototypes to sophisticated, computer-generated
+                    stereoscopic simulations.</p>
+                    <p class="box-parag"></p>
+                    <button class="button-learn" onclick="toggleExploreMore()"> explore more</button>
+                    
+                    <div class="explore-drawer" id="exploreDrawer">
+                        <div class="explore-content">
+                            <button class="explore-close" type="button" aria-label="Close explore window" onclick="toggleExploreMore()">&times;</button>
+                            <h3 class="r-h3">The Precursors to Modern VR</h3>
+                            <p class="box-parag">The desire to trick human perception into believing in a synthetic reality dates back long before electronics. Panoramic paintings of the 19th century were designed to fill a viewer's entire field of vision, surrounding them with a continuous narrative scene to induce a sense of presence. However, the true technological lineage of head-mounted displays (HMDs) began in the mid-20th century.</p>
+                            <p class="box-parag">In 1962, cinematographer Morton Heilig patented the Sensorama, a mechanical arcade-like cabinet that engaged multiple human senses simultaneously. The Sensorama provided stereoscopic 3D visuals, body tilting, stereo sound, wind generators, and even olfactory actuators that emitted aromas matching the scene (such as exhaust fumes or sea breeze). While not interactive by modern computational standards, it established the foundational philosophy of VR: immersive multisensory simulation.</p>
+                            <p class="box-parag">Shortly thereafter, in 1968, computer scientist Ivan Sutherland, alongside his student Bob Sproull, created what is widely recognized as the first true head-mounted display system. Dubbed "The Sword of Damocles" due to its immense physical weight, the display was suspended from the ceiling by a mechanical arm because computers of the era could not render wireframe graphics quickly enough to be worn comfortably on the head. This device tracked the user's head position mechanically and optically, updating the computer-generated perspective in real-time—a direct precursor to modern head tracking.</p>
+
+                            <h3 class="r-h3">From Military Research to Sci-Fi and Early Commercialization</h3>
+                            <p class="box-parag">Throughout the 1970s and 1980s, VR development was largely confined to military, aerospace, and academic laboratories. Institutions like NASA utilized early spatial displays for astronaut training, simulation of zero-gravity extravehicular activities, and remote robotics control.</p>
+                            <p class="box-parag">The term "Virtual Reality" itself was popularized in the mid-1980s by Jaron Lanier, founder of VPL Research, a company that commercialized some of the earliest VR peripherals, including the Data Glove and the EyePhone HMD. During this period, popular culture embraced the concept, sparking immense public fascination. However, the technology of the late 1980s and early 1990s suffered from severe hardware limitations:</p>
+        
+                            <ul style="color: #ebe8e8; margin-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: clamp(0.8rem, 1.1vw, 1rem);">
+                                <li><strong>Computational Bottlenecks:</strong> Central Processing Units (CPUs) lacked the raw floating-point performance required to calculate complex polygon meshes at interactive frame rates.</li>
+                                <li><strong>Display Deficiencies:</strong> Cathode-ray tube (CRT) and early liquid-crystal display (LCD) panels were heavy, bulky, possessed low resolutions, and exhibited unacceptable motion blur.</li>
+                                <li><strong>Prohibitive Costs:</strong> Professional systems cost hundreds of thousands of dollars, restricting them strictly to enterprise and research sectors.</li>
+                            </ul>
+        
+                            <p class="box-parag" style="margin-top: 10px;">The subsequent commercial failure of consumer attempts in the mid-1990s—such as Nintendo’s Virtual Boy—led to an era known in the industry as the "VR Winter," during which research slowed significantly outside of niche defense and medical simulations.</p>
+
+                            <h3 class="r-h3">The Contemporary Renaissance</h3>
+                            <p class="box-parag">The modern era of VR was catalyzed in 2012 by the advent of accessible, high-density mobile phone components. The proliferation of smartphones drove mass production of lightweight, high-resolution OLED and LCD panels, highly sensitive micro-electro-mechanical systems (MEMS) gyroscopes and accelerometers, and energy-efficient system-on-chips (SoCs). By repurposing these mass-market components, innovators were able to build high-performance, low-cost headsets that eliminated the traditional barriers to entry, paving the way for the immersive ecosystems we use today.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content-right">
+                    <img src="images/white_vr.JPG" alt="white vr glasses" class="first-vr">
+                </div>
+            </div>
+        </div>
+
+        <div class="pic-section">
+            <p class="pic-p">The apex of immersive engineering</p>
+        </div>
+
+        <div class="vr-glasses-div">
+            <img class="vr-glasses" src="images/vrnaocare.png" alt="vr naocare">
+        </div>
+
+        <div class="cyber-card cyber-card">
+            <svg viewBox="0 0 400 300" preserveAspectRatio="none" style="width: 100%; height: 100%;">
+                <path d="M391 254.5L402.5 240.5L401 20.5L389 9H191L175 0.5H12L0.5 14V231L13 243H244.5L269 254.5H391Z" fill="#000000" />
+            </svg>
+           
+            <div class="card-content">
+                <p class="box-parag2 desktop-text">As we delve deeper into the core architecture of immersive technology, it is essential to examine the foundational layers that make these systems operational. The following sections provide a comprehensive exploration into the underlying mechanics, classifying the diverse hardware frameworks, examining advanced optical engineering principles, and highlighting how these technological advancements successfully translate into real-world applications across various disciplines.</p>
+                <p class="box-parag2 mobile-text">As we explore immersive technology, the following sections examine the underlying mechanics, hardware classifications, and optical principles, highlighting their practical application across various industries.</p>
+            </div>
+        </div>
+
+        <div id="architecture-section" class="text">
+            <h2 class="r-h2">Technical Architecture and Hardware Mechanics of Modern VR Systems</h2>
+            <p class="r-parag">Building a convincing virtual environment requires solving complex engineering challenges across optics, computer graphics, sensor fusion, and human-computer interaction. Unlike traditional flat-panel displays, where the viewer maintains a fixed perspective outside the screen boundary, a Head-Mounted Display (HMD) places the displays centimeters from the eyes, demanding sub-millimeter precision and ultra-low latency processing.</p>
+            
+            <h3 class="r-h3">Optical Systems and Visual Engineering</h3>
+            <p class="r-parag">The primary challenge in VR optics is focusing high-resolution micro-displays that sit immediately in front of the human eye. Because the human eye cannot naturally focus on an object placed just two centimeters away, specialized lenses are inserted between the screen and the eye to refract light rays, allowing the user to focus comfortably at a perceived infinity.</p>
+            
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Feature / Metric</th>
+                        <th>Fresnel Lenses</th>
+                        <th>Pancake Lenses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Profile & Thickness</strong></td>
+                        <td>Bulky, thick circular ridges</td>
+                        <td>Ultra-thin folded optics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Optical Clarity</strong></td>
+                        <td>Good, prone to "god rays"</td>
+                        <td>Superior edge-to-edge sharpness</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Light Efficiency</strong></td>
+                        <td>High light transmittance</td>
+                        <td>High light loss (requires brighter backlight)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li><strong>Fresnel Lenses:</strong> Traditional spherical glass lenses are thick, heavy, and introduce severe optical aberrations. To reduce weight and thickness, modern headsets frequently utilize Fresnel lenses. These lenses collapse a thick continuous curvature into a series of concentric, ridged ring steps. While they significantly lower the headset's physical profile and manufacturing cost, they can produce circular artifacts or light diffraction patterns known as "god rays" in high-contrast scenes.</li>
+                <li><strong>Pancake Lenses:</strong> Representing the next evolution in optical engineering, pancake lenses use folded optics (polarization-based beam splitters) to bounce light back and forth internally before reaching the eye. This allows for a dramatically thinner headset profile and superior edge-to-edge optical clarity, though at the cost of significant light loss, requiring brighter backlighting.</li>
+                <li><strong>Refresh Rates and Persistence:</strong> To maintain visual fluidity, displays must operate at high refresh rates—typically ranging from 90Hz to 144Hz or higher. Furthermore, low-persistence displays use strobed backlighting or rapid pixel flashing to eliminate motion blur during rapid head movements, preventing the visual smear common in older display technologies.</li>
+            </ul>
+            
+            <h3 class="r-h3">Positional Tracking and Spatial Computing</h3>
+            <p class="r-parag">A critical requirement for presence is accurate spatial tracking, ensuring that when a user moves their head, the virtual camera updates instantaneously.</p>
+            
+            <h4 class="r-h4">Degrees of Freedom (DoF)</h4>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>System Type</th>
+                        <th>Tracked Axes</th>
+                        <th>Typical Use Case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>3DoF</strong></td>
+                        <td>Rotation only (Pitch, Yaw, Roll)</td>
+                        <td>Legacy or budget media viewers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6DoF</strong></td>
+                        <td>Rotation + Translation (XYZ movement)</td>
+                        <td>Immersive modern VR gaming and simulation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ul>
+                <li><strong>3DoF Systems:</strong> Track rotational movement only (pitch, yaw, and roll—looking up, down, left, right, and tilting the head). These are characteristic of older or budget viewer attachments.</li>
+                <li><strong>6DoF Systems:</strong> Track both rotation and spatial translation (moving forward, backward, left, right, up, and down in physical space).</li>
+            </ul>
+            
+            <h4 class="r-h4">Inside-Out vs. Outside-In Tracking</h4>
+            <p class="r-parag">Modern standalone and PC-connected HMDs predominantly rely on inside-out tracking. Multiple wide-angle cameras embedded directly into the chassis of the headset observe the physical environment, using computer vision algorithms and Simultaneous Localization and Mapping (SLAM) to calculate the device's precise coordinates in real-time. In contrast, outside-in tracking utilized external infrared cameras or lighthouses placed around a room to monitor active or passive markers on the headset and controllers.</p>
+            
+            <h4 class="r-h4">Inertial Measurement Units (IMUs)</h4>      
+            <p class="r-parag">High-frequency MEMS gyroscopes and accelerometers embedded within the HMD measure linear acceleration and angular velocity thousands of times per second. Because camera-based computer vision tracking can introduce slight computational delays, sensor fusion algorithms combine fast, high-frequency IMU data with slower, drift-corrected camera tracking to achieve instantaneous motion updates.</p> 
+            
+            <h3 class="r-h3">Latency Optimization: The Battle for Motion-to-Photon</h3>
+            <p class="r-parag">Motion-to-photon latency—the total time elapsed from a physical head movement to the corresponding change in pixels illuminating the user's retina—is the single most important metric in VR engineering. If this latency exceeds approximately 20 milliseconds, the brain detects a temporal mismatch between vestibular signals (inner ear balance) and visual input, triggering severe cybersickness (dizziness, nausea, and disorientation). To mitigate this, engineers employ advanced rendering techniques:</p>
+            
+            <h4 class="r-h4">Asynchronous Reprojection (SpaceWarp)</h4>
+            <p class="r-parag">If the graphics processing unit (GPU) fails to render a new frame within the required window (e.g., missing a 90Hz deadline), the system intercepts the previously rendered frame and warps its pixels based on the latest IMU head movement data just milliseconds before display output. This maintains a stable frame rate and masks micro-stutters.</p>
+            
+            <h4 class="r-h4">Foveated Rendering</h4>
+            <p class="r-parag">Human visual acuity is exceptionally sharp only within the small central region of the retina known as the fovea, while peripheral vision is low-resolution. Modern headsets equipped with infrared eye-tracking cameras implement foveated rendering, rendering the exact spot the user is looking at in full resolution while drastically reducing the graphical rendering workload for the peripheral regions, freeing up immense GPU performance.</p>
+        </div>
+
+        
+    <div id="application-section" class="text">
+        <h2 class="r-h2">Industrial and Practical Applications of Virtual Reality</h2>
+        <p class="r-parag">
+            While consumer entertainment and gaming remain the most visible vectors for VR adoption, the technology's transformative impact is most pronounced in professional, industrial, educational, and medical fields where safety, cost efficiency, and spatial visualization are paramount.
+        </p>
+
+        <h3 class="r-h3">Medicine, Healthcare, and Surgical Training</h3>
+        <p class="r-parag">
+            Virtual reality has fundamentally shifted medical education and clinical practice by providing risk-free, highly repeatable environments for complex procedures.
+        </p>
+        
+        <h4 class="r-h4">Surgical Simulation</h4>
+        <p class="r-parag">
+            Medical students and resident surgeons utilize high-fidelity haptic VR simulators to practice intricate procedures—such as neurosurgery, laparoscopy, and orthopedic reconstruction—on patient-specific digital twins before operating on living tissue.
+        </p>
+
+        <h4 class="r-h4">Rehabilitation and Physical Therapy</h4>
+        <p class="r-parag">
+            VR systems combined with motion capture are deployed in neurological rehabilitation, helping stroke survivors or patients with traumatic brain injuries retrain motor pathways through gamified, repetitive physical tasks.
+        </p>
+
+        <h4 class="r-h4">Psychological Therapy and Exposure</h4>
+        <p class="r-parag">
+            Clinical psychologists use controlled virtual environments for Exposure Therapy, successfully treating post-traumatic stress disorder (PTSD), severe phobias, and social anxiety disorders by safely reintroducing patients to triggering stimuli within a clinical setting.
+        </p>
+
+        <h3 class="r-h3">Aerospace, Defense, and Heavy Engineering</h3>
+        <p class="r-parag">
+            Industries dealing with expensive machinery and hazardous operational conditions leverage VR for design validation and workforce training.
+        </p>
+        
+        <h4 class="r-h4">Prototyping and Computer-Aided Design (CAD)</h4>
+        <p class="r-parag">
+            Automotive and aerospace engineers inspect full-scale 3D digital prototypes of aircraft engines or vehicle chassis collaboratively in virtual space long before physical manufacturing begins, identifying ergonomic flaws, wiring conflicts, or structural inefficiencies early in the pipeline.
+        </p>
+
+        <h4 class="r-h4">Mission and Hazard Training</h4>
+        <p class="r-parag">
+            Military organizations and emergency response teams simulate high-risk scenarios—such as urban combat operations, firefighting in enclosed spaces, or emergency evacuation procedures aboard naval vessels—without risking personnel or equipment.
+        </p>
+
+        <h3 class="r-h3">Education and Remote Collaboration</h3>
+        <p class="r-parag">
+            In academic settings, VR transcends the limitations of two-dimensional textbooks by providing experiential, constructivist learning methodologies.
+        </p>
+        
+        <h4 class="r-h4">Virtual Field Trips and Immersive Science</h4>
+        <p class="r-parag">
+            Students can explore microscopic cellular structures, walk across the surface of Mars, or examine reconstructed historical sites in scale-accurate 3D, boosting information retention and engagement.
+        </p>
+
+        <h4 class="r-h4">Spatial Remote Work</h4>
+        <p class="r-parag">
+            Enterprise teams dispersed globally collaborate within shared virtual workspaces, reviewing 3D architectural models, circuit boards, or data visualizations as if standing together in a physical boardroom, overcoming the flat-screen constraints of traditional video conferencing.
+        </p>
+    </div>
+
+
+        <div class="text">
+            <h2 class="r-h2">Challenges, Technical Limitations, and Future Horizons of Virtual Reality</h2>
+            <p class="r-parag">Despite remarkable strides in micro-display manufacturing, optical design, and spatial computing algorithms, virtual reality still faces several formidable technical and physiological roadblocks that prevent it from achieving absolute ubiquity and seamless integration into daily life.</p>
+            
+            <h3 class="r-h3">Physiological Limitations and Cybersickness</h3>
+            <p class="r-parag">The human sensory apparatus has evolved over millions of years to function in a physical world governed by Newtonian physics. When these finely tuned evolutionary mechanisms are decoupled in virtual reality, physiological distress frequently occurs.</p>
+            
+            <h4 class="r-h4">Vergence-Accommodation Conflict</h4>
+            <p class="r-parag">In the natural world, when a human focuses on an object close to them, their eyes converge (turn inward) and simultaneously accommodate (the crystalline lens changes shape to focus light). In stereoscopic VR headsets, the display panel remains at a fixed physical distance (e.g., a few centimeters from the eyes), meaning the eyes accommodate to a static focal plane while converging on virtual objects at varying depths. This persistent neural mismatch causes eye strain, fatigue, and headaches during extended use.</p>
+            
+            <h4 class="r-h4">Vestibular-Visual Mismatch</h4>
+            <p class="r-parag">When an artificial locomotion system moves a user through a virtual world via a handheld joystick while their physical body remains seated or standing completely still, the eyes report motion while the inner ear reports stationarity. This sensory conflict is a primary trigger for nausea, sweating, and dizziness.</p>
+            
+            <h3 class="r-h3">Form Factor and Thermal Constraints</h3>
+            <p class="r-parag">Engineering a standalone VR headset requires packing the computational power of a modern gaming console or high-end smartphone into an enclosure weighing less than 500 grams, balanced evenly across the user's face.</p>
+            
+            <h4 class="r-h4">Thermal Dissipation</h4>
+            <p class="r-parag">High-performance mobile processors and GPUs generate substantial heat under sustained workloads. Because active cooling fans add weight, consume precious battery life, and introduce mechanical noise, manufacturers rely primarily on passive cooling through custom vapor chambers and graphite sheets, which inherently throttle performance to prevent overheating.</p>
+            
+            <h4 class="r-h4">Battery Density</h4>
+            <p class="r-parag">Lithium-ion battery technology has plateaued in energy density gains. Current standalone headsets typically offer between 1.5 to 3 hours of continuous untethered use before requiring a recharge, limiting their viability for prolonged enterprise or educational sessions.</p>
+            
+            <h3 class="r-h3">The Next Frontier: Micro-LEDs, BCI, and Holography</h3>
+            <p class="r-parag">Looking toward the next decade, ongoing research and development aim to dismantle these persistent hardware boundaries through paradigm-shifting technologies:</p>
+            
+            <h4 class="r-h4">Micro-LED Displays</h4>
+            <p class="r-parag">Offering extreme brightness levels exceeding millions of nits, near-zero latency, and exceptional energy efficiency, Micro-LEDs will enable ultra-compact optical stacks without the severe light-loss penalties inherent to current pancake lens designs.</p>
+            
+            <h4 class="r-h4">Brain-Computer Interfaces (BCIs)</h4>
+            <p class="r-parag">Non-invasive neural interfaces, utilizing surface electromyography (sEMG) bands worn on the wrist, are beginning to translate subtle neuromuscular impulses into instant digital actions, bypassing physical controllers entirely and enabling seamless micro-gestural input.</p>
+            
+            <h4 class="r-h4">Light Field Displays</h4>
+            <p class="r-parag">Addressing the vergence-accommodation conflict directly, emerging light field and holographic display prototypes project true three-dimensional light waves into the eye, allowing natural optical focusing without artificial lenses.</p>
+        </div>
+    </main>
+        <div class="above-footer">
+        <img class="footer-pic" src="images/footerslika.JPG" alt="footer picture">
+    </div>
+
+    <footer>
+        <a class="logo" href="index.html">NeoVision</a>
+        <section class="f-sec">
+            <div class="f-div">
+                <h3 class="f-h3">Quick links</h3>
+                <ul class="f-ul">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="about.html" class="nav-links">About</a></li>
+                    <li><a href="resources.html" class="nav-links">Resources</a></li>
+                </ul>
+            </div>      
+            <div class="f-div">
+                <h3 class="f-h3">Explore</h3>
+                <ul class="f-ul">
+                    <li><a href="about.html#evolution-section" class="nav-links">Evolution</a></li>
+                    <li><a href="about.html#architecture-section" class="nav-links">Architecture</a></li>
+                    <li><a href="about.html#application-section" class="nav-links">Application</a></li>
+                </ul>
+            </div>
+            <div class="f-div">
+                <h3 class="f-h3">Socials</h3>
+                <ul class="f-ul">
+                    <li><a href="https://github.com/mi25124" target="_blank"  class="nav-links">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/aleksandar-milosevic-2b6846380/" target="_blank"  class="nav-links">Linkedln</a></li>
+                </ul>
+            </div>
+            <div class="f-div"> 
+                <h3 class="f-h3">Contact</h3>
+                <p>mi25124@alas.matf.bg.ac.rs</p>
+            </div>
+        </section>
+        <div>
+            <p class="copyr">© 2026 Aleksandar Milošević | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="js/gsap.min.js"></script>
+</body>
+</html>
