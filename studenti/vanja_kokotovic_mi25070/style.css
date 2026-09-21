@@ -1,0 +1,440 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #812121;
+    color: rgb(255, 247, 211);
+}
+
+.header-sadrzaj {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.glavno-zaglavlje {
+    padding: 40px 120px;
+    background-color: #661717;
+}
+
+.podaci {
+    flex: 1;
+}
+
+.podaci2 {
+    flex: 1;
+    text-align: center;
+}
+
+.okvir-za-sliku img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    display: block;
+    margin: 20px 0;
+}
+
+.MATF-logo img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ticker {
+    width: 100%;
+    overflow: hidden;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+}
+
+.ticker-tekst {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: pomeranje 15s linear infinite;
+}
+
+@keyframes pomeranje {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.semestri {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.prvi-semestar,
+.drugi-semestar {
+    width: 45%;
+    min-height: 380px;
+    font-size: large;
+    background-color: #dac295;
+    border-radius: 8px;
+    border: 3px solid #ccc;
+    text-align: center;
+    padding-bottom: 40px;
+    color: #162029;
+}
+
+.prvi-semestar a,
+.drugi-semestar a {
+    font-size: 1em;
+    color: #1f130e;
+}
+
+.prvi-semestar ul,
+.drugi-semestar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prvi-semestar ul a,
+.drugi-semestar ul a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 6px 0;
+    background-color: #291d19;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    width: 80%;
+    text-align: center;
+}
+
+.prvi-semestar ul a:hover,
+.drugi-semestar ul a:hover {
+    background-color: #e7c374;
+}
+
+.uvod-sekcija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 120px;
+    gap: 40px;
+}
+
+.tekst-deo {
+    flex: 1;
+}
+
+.ja-slika {
+    flex: 1;
+}
+
+.ja-slika img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ja-slika img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.kontejner-interesovanja {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.hobi-sekcija {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.hobi-sekcija:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.hobi-tekst {
+    flex: 1;
+}
+
+.hobi-tekst h2 {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+.hobi-slika {
+    flex: 1;
+}
+
+.hobi-slika img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hobi-slika img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.navigacija {
+    width: 100%;
+    height: 45px;
+    background-color: #302222;
+    display: flex;
+}
+
+.navigacija a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+}
+
+.navigacija a:last-child {
+    border-right: none;
+}
+
+.navigacija a:hover {
+    background-color: rgba(245, 227, 150, 0.7);
+}
+
+.meni-hobiji {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+}
+
+.meni-hobiji li {
+    padding: 0 25px;
+    border-right: 1px solid #ccc;
+}
+
+.meni-hobiji li:last-child {
+    border-right: none;
+}
+
+.meni-hobiji a {
+    color: #3a0d0d;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.meni-hobiji a:hover {
+    color: #8d2323;
+}
+
+/* Tema */
+
+.tema {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 40px;
+}
+
+.tema-uvod {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 70px;
+}
+
+.tema-uvod h1 {
+    font-size: 36px;
+    color: #3a0d0d;
+    margin-bottom: 25px;
+}
+
+.tema-uvod p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.tema-blok {
+    margin-bottom: 50px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tema-blok h2 {
+    font-size: 28px;
+    color: #3a0d0d;
+    margin-bottom: 20px;
+}
+
+.tema-blok p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.buducnost {
+    margin: 60px auto;
+    max-width: 850px;
+    padding: 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.buducnost h2 {
+    color: #3a0d0d;
+    font-size: 30px;
+}
+
+.buducnost p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.zakljucak {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.zakljucak h2 {
+    color: #3a0d0d;
+}
+
+.zakljucak p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.kontakt-forma {
+    width: 70%;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 50px;
+    box-sizing: border-box;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.kontakt-forma h2 {
+    text-align: center;
+    color: #3a0d0d;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 35px;
+}
+
+.kontakt-forma label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    color: #3a0d0d;
+    font-weight: bold;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.kontakt-forma textarea {
+    resize: vertical;
+}
+
+.kontakt-forma button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 35px;
+    background-color: #3a0d0d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.kontakt-forma button:hover {
+    background-color: #8d2323;
+}
+
+.raspored-mali {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 30px auto;
+    font-size: 14px;
+}
+
+.raspored-mali th,
+.raspored-mali td {
+    border: 1px solid #999;
+    padding: 8px;
+}
+
+.raspored-mali th {
+    background-color: #302222;
+    color: white;
+}
+
+.raspored-mali td:first-child,
+.raspored-mali td:nth-child(2) {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.raspored-mali td {
+    background-color: white;
+}
+
+.raspored-mali td:hover {
+    background-color: #f5e7e7;
+}
