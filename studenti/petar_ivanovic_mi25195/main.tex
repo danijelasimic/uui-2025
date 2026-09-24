@@ -1,0 +1,198 @@
+% !TEX program = xelatex
+\documentclass[12pt,a4paper]{article}
+
+% ---- Ćirilica i fontovi ----
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}      % podržava ćirilicu, dostupan na Overleafu
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% ---- Jezik ----
+\usepackage{polyglossia}
+\setdefaultlanguage{serbian}
+
+% ---- Paketi ----
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% ---- Boje ----
+\definecolor{plava}{RGB}{48,105,152}
+\definecolor{zelena}{RGB}{40,130,80}
+\definecolor{crvena}{RGB}{170,40,40}
+
+% ---- Teoreme, definicije, leme (na srpskom) ----
+\usepackage{amsthm}
+\newtheorem{teorema}{Теорема}[section]
+\newtheorem{definicija}{Дефиниција}[section]
+\newtheorem{lema}{Лема}[section]
+
+% ---- Zaglavlje/podnožje ----
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\small Петар Ивановић, mi25195}
+\lhead{\small Семинарски рад — Python}
+\cfoot{\thepage}
+
+% ---- Naslov ----
+\title{\textbf{\color{plava}Програмски језик Python}\\
+       \large Историја, примена и значај}
+\author{Петар Ивановић \\ \small Математички факултет, информатички смер \\ \small Број индекса: mi25195}
+\date{Септембар 2026.}
+
+% =========================================================
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% ---- Садржај ----
+\tableofcontents
+\newpage
+
+% =========================================================
+\section{Увод}
+
+\textbf{Python} је програмски језик високог нивоа, опште намене, који је
+створио \textit{Гвидо ван Росум} крајем осамдесетих година 20. века.
+Његова основна филозофија је \textcolor{zelena}{једноставност, читљивост и
+продуктивност}. Данас се користи у веома широком спектру области — од
+веб развоја, преко науке о подацима, до вештачке интелигенције.
+
+Један од најпознатијих примера једноставности језика је чувена
+формула еквиваленције масе и енергије, која се у физици записује као
+$E = mc^2$, а у Python-у би се израчунала у једној линији:
+
+\begin{center}
+\texttt{energija = masa * brzina\_svetlosti ** 2}
+\end{center}
+
+% =========================================================
+\section{Историја језика}
+
+\subsection{Настанак}
+
+Python је настао као наследник језика \textbf{ABC}, који је ван Росум
+развијао у истраживачком центру CWI у Холандији. Прва јавна верзија,
+Python 0.9.0, објављена је \textbf{1991. године}.
+
+\subsection{Верзије}
+
+У табели \ref{tab:verzije} приказане су најважније верзије језика.
+
+\begin{table}[h!]
+\centering
+\caption{Значајне верзије Python-а}
+\label{tab:verzije}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Верзија} & \textbf{Година} & \textbf{Кључна новина} \\
+\midrule
+0.9.0  & 1991. & Прво јавно издање \\
+2.0    & 2000. & Листе разумевања, Unicode \\
+3.0    & 2008. & Прекид компатибилности са Python 2 \\
+3.10   & 2021. & Структурно поклапање (match/case) \\
+3.12   & 2023. & Бржи интерпретер, боље грешке \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Филозофија језика}
+
+Основна начела Python-а описана су у документу \textit{The Zen of Python}:
+
+\begin{itemize}
+    \item \textit{Лепо је боље од ружног.}
+    \item \textit{Јасно је боље од нејасног.}
+    \item \textit{Једноставно је боље од сложеног.}
+\end{itemize}
+
+Поред тога, постоје и практични савети:
+
+\begin{enumerate}
+    \item Користити увлачење од четири размака.
+    \item Писати читљив код.
+    \item Документовати функције.
+\end{enumerate}
+
+% =========================================================
+\section{Примена}
+
+\subsection{Области примене}
+
+Python се данас примењује у следећим областима:
+
+\begin{itemize}
+    \item \textbf{Веб развој} (Django, Flask, FastAPI)
+    \item \textbf{Наука о подацима} (NumPy, Pandas, Matplotlib)
+    \item \textbf{Вештачка интелигенција} (TensorFlow, PyTorch)
+    \item \textbf{Аутоматизација} скрипти и задатака
+    \item \textbf{Образовање} — као уводни језик у програмирање
+\end{itemize}
+
+\subsection{Пример: слика и текст}
+
+\begin{wrapfigure}{l}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.30\textwidth]{slike/python-logo.png}
+    \caption{Лого Python-а}
+    \label{fig:logo}
+\end{wrapfigure}
+
+На слици \ref{fig:logo} приказан је препознатљиви лого Python-а, који
+чине две испреплетане змије — плава и жута. Овај симбол је постао
+један од најпрепознатљивијих знакова у свету програмирања. Захваљујући
+једноставној синтакси и великој заједници, Python је данас један од
+најпопуларнијих језика на свету.
+
+Поред логотипа, за Python су везани и многи алати као што су
+\texttt{pip}, \texttt{virtualenv} и \texttt{Jupyter Notebook}, који
+додатно олакшавају рад програмерима.
+
+% =========================================================
+\section{Теоријски оквир}
+
+У овом одељку наведени су основни математички и логички појмови
+релевантни за анализу алгоритама.
+
+\begin{definicija}
+\textbf{Алгоритам} је коначан низ јасно дефинисаних корака који доводе
+до решења неког проблема.
+\end{definicija}
+
+\begin{teorema}[о сложености]
+Ако алгоритам има сложеност $O(n \log n)$, тада је бржи од алгоритма
+сложености $O(n^2)$ за довољно велико $n$.
+\end{teorema}
+
+\begin{proof}
+Следи директно из особина логаритамске функције и дефиниције
+асимптотске сложености.
+\end{proof}
+
+\begin{lema}
+Сваки проблем који се може решити у полиномијалном времену припада
+класи $P$.
+\end{lema}
+
+% =========================================================
+\section{Закључак}
+
+Python представља један од најзначајнијих програмских језика данашњице.
+Његова једноставност, читљивост и огромна библиотека чине га идеалним
+избором како за почетнике, тако и за искусне програмере. Од свог
+настанка 1991. године до данас, Python је прошао дуг пут и постао
+незаобилазан алат у науци, индустрији и образовању.
+
+\vspace{1cm}
+\noindent\textit{\textcolor{crvena}{Напомена:}} Овај рад је израђен као
+део семинарског рада из предмета \textbf{Увод у информатику}.
+
+\end{document}

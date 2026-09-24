@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Petar Ivanović">
+    <title>Python — Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="istorija.html">Istorija</a></li>
+            <li><a href="primena.html">Primena</a></li>
+            <li><a href="kontakt.html" class="aktivna">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Kontakt</h1>
+
+        <p>
+            Ako imaš pitanja, predloge ili komentare u vezi sa ovim
+            seminarskim radom, slobodno popuni formu ispod.
+        </p>
+
+        <h2>Podaci o autoru</h2>
+
+        <ul>
+            <li><strong>Ime i prezime:</strong> Petar Ivanović</li>
+            <li><strong>Broj indeksa:</strong> mi25195</li>
+            <li><strong>Fakultet:</strong> Matematički fakultet</li>
+            <li><strong>Smer:</strong> Informatika</li>
+            <li><strong>Email:</strong> <a href="mailto:petar.ivanovic@example.com">petar.ivanovic@example.com</a></li>
+        </ul>
+
+        <h2>Kontakt forma</h2>
+
+        <form action="#" method="post">
+            <label for="ime">Ime i prezime:</label>
+            <input type="text" id="ime" name="ime" placeholder="Unesi ime i prezime" required>
+
+            <label for="email">Email adresa:</label>
+            <input type="email" id="email" name="email" placeholder="primer@email.com" required>
+
+            <label for="poruka">Poruka:</label>
+            <textarea id="poruka" name="poruka" rows="6" placeholder="Unesi poruku..." required></textarea>
+
+                    <button type="submit">Pošalji poruku</button>
+        </form>
+
+        <p class="napomena">
+            <em>Napomena:</em> ovo je samo pokazna forma i ne šalje
+            stvarne podatke — napravljena je isključivo u okviru
+            seminarskog rada.
+        </p>
+
+        <p>
+            Povratak na <a href="index.html">početnu stranu</a>.
+        </p>
+    </main>
+
+    <footer>
+        &copy; 2026 Petar Ivanović, mi25195 — Matematički fakultet
+    </footer>
+
+</body>
+</html>
