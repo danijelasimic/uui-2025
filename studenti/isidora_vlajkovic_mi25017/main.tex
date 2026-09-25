@@ -1,0 +1,225 @@
+\documentclass[A4, 11pt]{article}
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{color}
+\usepackage{url}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, serbianc]{babel}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{wrapfig}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tocloft}
+\usepackage{gensymb}
+\usepackage{svg}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\hypersetup{colorlinks,citecolor=CarnationPink,filecolor=black,linkcolor=black,urlcolor=CarnationPink}
+\captionsetup{font=small}
+\newtheorem{theorem}{Теорема}
+\newtheorem{corollary}{Дефиниција}
+\newtheorem{lemma}{Лема}
+
+\begin{document}
+\pagenumbering{arabic}
+
+    \begin{titlepage}
+        \newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
+        \centering
+        \textsc{\LARGE Математички факултет\\[0.2cm]}
+        \vspace{3cm}
+        \textsc{\Large Семинарски рад}\\[0.1cm]
+        \textsc{\large из Увода у информатику}\\[0.5cm] 
+\HRule\\[0.4cm]
+{\LARGE\bfseries Представљавање боја у рачунару}\\[0.2cm] 
+	
+\HRule\\[2cm]
+\vspace{1cm}
+\vspace{14\baselineskip}
+	\begin{minipage}{0.4\textwidth}
+		\begin{center}
+		    \Large
+			\textit{Студент}\\
+			Исидора Влајковић 17/2025
+		\end{center}
+	\end{minipage}
+	
+	
+\vfill\vfill\vfill\vfill 
+
+{\large Београд, \textit{март 2026.}} 
+	
+\vfill 
+	
+\end{titlepage}
+
+\large{\tableofcontents}
+
+\section{Увод}
+Перцепција боја представља важан аспекат људског вида и основу за развој система за приказ боја у дигиталним уређајима. У просеку, људско око је у стању да распозна око милион различитих нијанси боја, а разликовање боја омогућава мрежњача (ретина) ока. У њој се налазе фоторецептори који реагују на различите таласне дужине светлости и омогућавају перцепцију великог броја нијанси. Како би се ове боје (и још много других!) могле приказати и обрађивати у рачунарима, развијени су различити модели за представљање боја који дефинишу начин на који оне математички описују и комбинују.
+
+\section{Модели за представљање боја}
+Два основна модела за представљање боја у рачунару су
+\textbf{адитивни} и \textbf{суптрактивни}. У наставку ће бити представљена четири најкоришћенија модела следећим редоследом: 
+\begin{enumerate}
+    \item RGB модел;
+    \item HSB/HSV модел;
+    \item HSL модел;
+    \item CMYK модел.
+\end{enumerate}
+
+\subsection{Адитивни модели}
+Адитивни модел је онај у коме се сабирањем свих основних добија бела боја.
+
+\subsubsection{RGB модел}
+\noindent RGB адитивни модел настаје додавањем (адицијом) три основне боје – \textcolor{red}{црвене}, \textcolor{green}{зелене} и \textcolor{blue}{плаве}. Назив потиче од почетних слова одговарајућих енглеских назива боја – R (\textit{red}), G (\textit{green}) и B (\textit{blue}). Све остале боје се могу добити њиховом комбинацијом.
+Одсуство свих боја даје црну, а присуство свих белу боју. Мешањем црвене и плаве се добија \textcolor{magenta}{магента} (пурпурна боја), црвене и зелене \colorbox{gray}{\textcolor{yellow}{жута}}, а плаве и зелене \textcolor{cyan}{цијан} (плавозелена
+боја), као што је приказано на слици \ref{rgb-kocka}.
+\\ Свака од ове три компоненте у рачунару је представљена једним бајтом и има $2^8 = 256$ различитих нијанси, па је укупан број комбинација боја $256^3$, што је преко 16 милиона. Свака боја се у бинарном систему може представити са 24 бита (три бајта), али се у пракси сваки бајт због компактнијег приказа представља двоцифреним хексадекадним бројем. Тиме се свака боја може приказати шестоцифреним хексадекадним бројем. У табели \ref{rgb-tabela} су приказани примери представљања неких од поменутих боја.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+{\color[HTML]{000000} Назив боје} & {\color[HTML]{000000} Запис боје} \\ \hline
+\rowcolor[HTML]{FE0000} 
+{\color[HTML]{000000} црвена}     & {\color[HTML]{000000} FF0000}     \\ \hline
+\rowcolor[HTML]{00FF00} 
+{\color[HTML]{000000} зелена}     & {\color[HTML]{000000} 00FF00}     \\ \hline
+\rowcolor[HTML]{0000FF} 
+{\color[HTML]{FFFFFF} плава}      & {\color[HTML]{FFFFFF} 0000FF}     \\ \hline
+\rowcolor[HTML]{FFFF00} 
+{\color[HTML]{000000} жута}       & {\color[HTML]{000000} FFFF00}     \\ \hline
+\rowcolor[HTML]{FF00FF} 
+{\color[HTML]{000000} магента}    & {\color[HTML]{000000} FF00FF}     \\ \hline
+\rowcolor[HTML]{00FFFF} 
+{\color[HTML]{000000} цијан}      & {\color[HTML]{000000} 00FFFF}     \\ \hline
+\rowcolor[HTML]{FFFFFF} 
+{\color[HTML]{000000} бела}       & FFFFFF                            \\ \hline
+\rowcolor[HTML]{000000} 
+{\color[HTML]{FFFFFF} црна}       & {\color[HTML]{FFFFFF} 000000}     \\ \hline
+\end{tabular}
+\caption{Неке од боја и њихови хексадецимални кодови у RGB систему.}
+\label{rgb-tabela}
+\end{table}
+
+\begin{figure}
+    \centering
+    \includesvg[width=1\linewidth]{rgb_cube}
+    \caption{Простор RGB боја шематиран у облику коцке. Темена чине чиста црвена, плава, зелена, магента, цијан, жута, бела и црна боја. Вредности координата тачака коцке се повећавају удаљавањем од црне боје (лева коцка), а смањују удаљавањем од беле боје (средишња коцка). На десној коцки приказано је рачунање координата сложених боја.}
+    \label{rgb-kocka}
+\end{figure}
+
+\subsubsection{HSB (HSV) модел}
+\noindent HSB је адитивни модел који је одређен:
+\begin{itemize}
+\item тоном (H – \textit{hue}), 
+\item засићеношћу (S – \textit{saturation}) и 
+\item осветљеношћу (B – \textit{brightness, V - \textit{value}}).
+\end{itemize} Тон одређује нијансу боје и описује се у колорном кругу, где угао од $0\degree$ представља црвену боју, $120\degree$ зелену, а $240\degree$ плаву (слика \ref{hsl-hsv-parametri}). Засићеност одређује интензитет боје и изражава се у процентима, при чему итензитет од 0\% представља белу, црну или сиву боју (у зависности од осветљености), а итензитет од 100\% чисту боју.
+Осветљеност представља проценат црне или беле боје која се меша са одговарајућом бојом (субјективни дојам количине светлости) и такође се изражава у процентима. Осветљеност од 0\% је увек црна боја, док вредност од 100\% представља чисту боју (уколико је засићеност максимална) или белу боју (уколико је засићеност минимална).
+
+\subsubsection{HSL модел}
+\noindent Поред HSB модела, често се користи и HSL адитивни модел, дефинисан тоном (H –
+\textit{hue}), засићеношћу (S – \textit{saturation}) и \textbf{светлином} (L – \textit{lightness}). Попут осталих модела заснованих на колорном кругу, тон се изражава у степенима, а засићеност у процентима. Специфичност овог модела је у дефинисању светлине:
+вредност од 0\% увек представља црну боју, вредност од 50\% представља чисту боју (пуни интензитет
+тона), док вредност од 100\% представља чисту белу боју, без обзира на ниво засићености. \\
+HSB и HSL модели су развијени за интуитивније искуство бирања боја од стране корисника. HSB модел је идеалан за креативне алате за одабир боја (нпр. Adobe, Figma) јер се фокусира на живaхност боја, док се HSL модел користи више у веб дизајну, нудећи симетричан приступ између светлог и тамног (што се може видети код двоструког конуса у горњем-десном делу слике \ref{hsl-hsb-3d}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Hsl-hsv_models.svg.png}
+    \caption{Графички приказ 3D модела (а и е) и појединачних параметара (слајдери b, d, f, h и колорни кругови c, g) HSL (лево) и HSV/HSB модела (десно). }
+    \label{hsl-hsv-parametri}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{Color_solid_comparison_hsl_hsv_rgb_cone_sphere_cube_cylinder.png}
+    \caption{Приказ разлика између 3D модела у виду цилиндра и купе HSL (горе) и HSB модела (доле).}
+    \label{hsl-hsb-3d}
+\end{figure}
+\newpage
+\subsection{Суптрактивни модел (CMYK модел)}
+\begin{wrapfigure}{o}{0.5\textwidth}
+    \centering
+    \includesvg[width=0.5\linewidth]{CMYK_subtractive_color_mixing}
+    \caption{Приказ мешања боја из CMYK система путем Веновог дијаграма.}
+    \label{cmyk-model}
+\end{wrapfigure}
+Суптрактивни модел настаје одузимањем боја. CMYK модел има четири основне боје: цијан, магенту, жуту и црну. Попут RGB модела, име му се такође везује за скраћену верзију енглеских назива боја – C (\textit{cyan}), M (\textit{magenta}), Y \textit{yellow}) и K (\textit{black}). У питању је суптрактивно мешање боја, јер се у стварном животу додавањем боја одузима од светлине белог папира. Што више боје додајемо, папир је све тамнији док на крају не постане црн. Ово у теорији важи, међутим, ако искористимо 100\% од три нијансе - цијан, магенте и жуте, у стварности добијамо црвенкасто-браон боју, а не црну. Зато се уводи четврта боја - црна. Како се овај модел највише користи за штампу, постоји и један логичан, економски разлог за увођење црне боје. Најчешће код штампања књига имамо само црну боју. у том случају, да се не би користиле три основне боје, користи се само једна, црна.
+\\ \noindent Мешањем магенте и жуте добија се црвена, жуте и цијан зелена, а цијан и магенте плава боја, док све три дају несавршену црну боју (слика \ref{cmyk-model}).
+
+\section{Конвертовање између различитих модела}
+
+\begin{corollary}
+RGB модел представља начин описивања боја помоћу три компоненте: црвене (R), зелене (G) и плаве (B). Свака боја се у овом моделу представља као уређена тројка реалних бројева 
+$$(R,G,B),\quad R,G,B \in [0,1]$$
+која одређује интензитет одговарајуће примарне боје.
+\end{corollary}
+
+\begin{corollary}
+HSB модел представља боју помоћу три параметра: 
+\begin{itemize}
+    \item H – нијанса боје, изражена на кругу боја, $H \in [0\degree, 360\degree]$ 
+    \item S – засиђеност боје, $S \in [0, 1]$ 
+    \item B - осветљеност боје, $B \in [0, 1]$ 
+\end{itemize}
+\end{corollary}
+
+\begin{corollary}
+HSL модел представља боју помоћу три параметра: 
+\begin{itemize}
+    \item H – нијанса боје, изражена на кругу боја, $H \in [0\degree, 360\degree]$ 
+    \item S – засиђеност боје, $S \in [0, 1]$ 
+    \item L - светлина боје, $L \in [0, 1]$ 
+\end{itemize}
+\end{corollary}
+
+\begin{lemma}
+\label{lema_rgb_hsb}
+За сваку боју представљену у RGB моделу постоји одговарајућа репрезентација у HSB моделу.
+\end{lemma}
+
+\begin{theorem}
+Трансформација између RGB и HSB модела боја је обрнута трансформација (инвертибилна) за све боје код којих $S \neq 0$.
+\end{theorem}
+
+\subsection{Конверзија из RGB модела}
+
+\subsubsection*{Конверзија из RGB у HSB систем}
+Нека су улазне компоненте боје у стандардном RGB моделу  $R, G, B \in [0, 255]$. Први корак је конверзија у нормализовани опсег $[0, 1]$:$$r = \frac{R}{255}, \quad g = \frac{G}{255}, \quad b = \frac{B}{255}.$$ Дефинишемо максимуме, минимуме и хроматску разлику (хроматски распон) редом: $$M = \max(r, g, b), \quad m = \min(r, g, b), \quad \Delta = M - m$$
+Параметри HSB модела се даље рачунају на следећи начин:
+\begin{align}
+    &H = \begin{cases}  0^\circ, & \text{ако је } \Delta = 0 \text{ (акроматска боја / сива)} \\ 60^\circ \times \left( \frac{g - b}{\Delta} \bmod 6 \right), & \text{ако је } M = r \\ 60^\circ \times \left( \frac{b - r}{\Delta} + 2 \right), & \text{ако је } M = g \\ 60^\circ \times \left( \frac{r - g}{\Delta} + 4 \right), & \text{ако је } M = b  \end{cases} \nonumber \\
+    &S_{HSB} = \begin{cases}    0, & \text{ако је } M = 0 \\   \frac{\Delta}{M}, & \text{ако је } M > 0    \end{cases} \nonumber \\
+    &B = M \nonumber
+\end{align} 
+\noindent *\textit{Напомена}: Уколико добијена вредност за $H$ буде негативна ($H < 0^\circ$), корекција се врши додавањем $360^\circ$.\\
+\subsubsection*{Конверзија из RGB у HSL систем}
+Нијансу добијамо на исти начин. Засићеност и светлину добијамо следећим формулама:
+\begin{align}
+ &L = \frac{M + m}{2} \nonumber \\
+ &S_{HSL} = \begin{cases}    0, & \text{ако је } L = 0 \lor L = 1 \lor \Delta = 0 \\   \frac{\Delta}{1 - \vert{}2L - 1\vert{}}, & \text{у супротном}   \end{cases} \nonumber 
+\end{align}
+
+\subsection{HSB и HSB систем}
+Пошто је нијанса $H$ једнака у оба модела ($H_{HSB} = H_{HSL}$), прелазак између HSB ($H, S_{HSB}, V$) i HSL ($H, S_{HSL}, L$) може се извршити без враћања на RGB компоненте. \\
+
+\begin{flalign}
+\text{HSB $\rightarrow$ HSL} \nonumber \\ &
+L = V \left(1 - \frac{S_{HSB}}{2}\right) \nonumber \\ &
+S_{HSL} = \begin{cases}     0, & \text{ако је } L = 0 \text{ или } L = 1 \\    \frac{V - L}{\min(L, 1 - L)}, & \text{у супротном}    \end{cases} \nonumber &
+\end{flalign}
+
+\begin{flalign}
+\text{HSL $\rightarrow$ HSB} \nonumber \\ &
+V = L + S_{HSL} \min(L, 1 - L) \nonumber \\ &
+S_{HSB} = \begin{cases}     0, & \text{ако је } V = 0 \\    2 \left(1 - \frac{L}{V}\right), & \text{у супротном}    \end{cases} \nonumber &
+\end{flalign}
+
+\section{Закључак}
+Представљање боја у рачунару заснива се на математичким моделима прилагођеним специфичним потребама технологије и корисника. Док су RGB и CMYK директно везани за физичке медијуме приказа (екране и штампу), HSB и HSL олакшавају рад човеку кроз интуитивне параметре попут нијансе и засићености. Описани алгоритми конверзије премошћују разлике између ових простора и обезбеђују тачност и конзистентност при обради графичких података. Разумевање ових трансформација представља темељ савремене рачунарске графике и визуелних технологија.
+\end{document}

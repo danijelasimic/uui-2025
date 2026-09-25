@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk:MORF,SHLN@0..45,0..100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+:root {
+    --base-color: #7f7f7f;
+    --text-color: black;
+}
+
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+    margin: 0;
+    background: linear-gradient(rgb(177, 177, 177), rgb(44, 44, 44));
+    min-height: 250vh;
+    font-weight: 200;
+    font-style: normal;
+    font-size: calc((.4em + 1vmin) + (.4em + 1vmax));
+    box-sizing: border-box;
+
+
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+h1, h2, h3, .nav-stranica, .mobile-stranica, .kontakt-forma button {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 0;
+    text-decoration: none;
+    font-palette: --myPalette;
+}
+
+
+@font-palette-values --myPalette {
+  font-family: "Honk";
+  base-palette: 0;
+  override-colors:
+  2 #CCCCCC,
+  3 #AFAFAF,
+  4 #989898,
+  5 #7F7F7F,
+  6 #5F5F5F,
+  7 #383838
+}
+
+
+@font-palette-values --myPalette2 {
+  font-family: "Honk";
+  base-palette: 0;
+  override-colors:
+  2 #F7F7F7,
+  3 #F5D1D1,
+  4 #F3A2A2,
+  5 #F17373,
+  6 #EE3B3B,
+  7 #EB0000
+}
+
+
+@font-palette-values --myPalette3 {
+  font-family: "Honk";
+  base-palette: 7;
+}
+
+
+
+
+p {
+  font-style: black;
+  font-weight: 500;
+}
+
+
+.show {
+  display: block!important;
+}
+
+
+.top {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 4
+}
+
+
+.navigacioni-meni {
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 0 5px 5px 0 #0000007d;
+    display: inline-flex;
+    justify-content: center;
+    padding: auto;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+
+.nav-ikonica {
+    text-align: left;
+    white-space: normal;
+    padding: 12px 24px!important;
+    float: right!important;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    color: var(--base-color);
+    font-size: 22px;
+    cursor: pointer;
+    text-decoration: none;
+}  
+
+
+.nav-stranica {
+    width: auto;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: none;
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: var(--base-color);
+    text-decoration: none;
+    font-size: larger;
+}
+
+.drustvene-mreze a:hover {
+   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+   -webkit-background-clip: text;
+   background-clip: text;
+ 
+   color: transparent;
+   font-size: 40px;
+   display: inline-block;
+   padding: 2%;
+   text-decoration: none;
+}
+
+.kontakt-forma button:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    transform: scale(1.05);
+    animation: animate 5s linear infinite;
+ }
+
+h1:hover, h2:hover, .nav-stranica:hover, .drustvene-mreze a:hover, .kontakt-forma button:hover  {
+   font-variation-settings:
+    "MORF" 15,
+    "SHLN" 0;
+    font-palette: --myPalette2;
+    animation: animate 5s linear infinite;
+}
+
+
+.nav-stranica::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+
+.nav-stranica:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
+
+
+
+
+.drustvene-mreze {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+
+
+.drustvene-mreze a {
+   background: linear-gradient(45deg, rgb(177, 177, 177), rgb(44, 44, 44));
+   -webkit-background-clip: text;
+   background-clip: text;
+ 
+   color: transparent;
+   font-size: 40px;
+   display: inline-block;
+   padding: 2%;
+   text-decoration: none;
+}
+
+
+.drustvene-mreze a:hover {
+    transform: scale(1.1);
+
+
+}
+
+
+.mobilni-meni {
+    position: fixed;
+    top: 7vh;
+    width: 100%;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    outline: 0;
+    background-color: var(--text-color);
+    display: none;
+    z-index: 2;
+}
+
+
+.mobile-stranica {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    white-space: normal;
+    float: none;
+    outline: 0;
+    border-radius: 30px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+.sekcija-spolja{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
+
+.sekcija-unutra {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    padding: 6rem;
+}
+
+
+.tekst-levo {
+    display: flex;
+    flex-direction: column;
+    max-width: 30vw;
+    margin: 0;
+    flex: 1
+}
+
+.tema {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    margin: 0;
+    flex: 1
+}
+
+
+.naslov {
+    font-size: 300%;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.opis {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+
+.tekst-desno {
+    max-width: 30vw;
+    font-size: 3rem;
+    line-height: 1.6;
+    text-align: right;
+    flex: 1
+}
+
+
+.kocka {
+    margin-top: 0;
+    position: relative;
+    transform: skewY(-20deg);
+    animation: animate 5s linear infinite;
+    .kockica {
+        position: relative;
+        z-index: 2;
+        &:nth-child(2) {
+            z-index: 1;
+            translate: -6vw -6vw;
+        }
+        &:nth-child(3) {
+            z-index: 3;
+            translate: 6vw 6vw;
+        }
+        div {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 3vw;
+            translate: calc(-7vw * var(--x)) calc(-6vw * var(--y));
+            span {
+                position: relative;
+                display: inline-block;
+                width: 5vw;
+                height: 5vw;
+                background: #dcdcdc;
+                z-index: calc(1 * var(--i));
+                transition: 1.5s;
+                &:hover {
+                    transition: 0s;
+                    background: #ef4149;
+                    filter: drop-shadow(0 0 30px #ef4149);
+                    &:before,
+                    &:after {
+                        transition: 0s;
+                        background: #ef4149;
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -4vw;
+                    width: 4vw;
+                    height: 100%;
+                    background: #fff;
+                    transform-origin: right;
+                    transform: skewY(45deg);
+                    transition: 1.5s;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -4vw;
+                    left: 0px;
+                    width: 100%;
+                    height: 4vw;
+                    background: #f2f2f2;
+                    transform-origin: bottom;
+                    transform: skewX(45deg);
+                    transition: 1.5s;
+                }
+            }
+        }
+    }
+}
+
+
+.tabela-sekcija {
+    display: flex;
+    justify-content: center;
+    margin: 20vh 0;  
+    overflow-x: auto;
+}
+
+
+.tabela {
+    border-collapse: collapse;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: 7px solid black;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin: 0 auto
+}
+
+
+.tabela th {
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 6rem;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "MORF" 15,
+    "SHLN" 0;
+    text-decoration: none;
+    font-palette: --myPalette;
+    background: linear-gradient(rgb(177, 177, 177), rgb(44, 44, 44));
+}
+
+
+.tabela th:hover, .tabela td.naslov-kolone:hover {
+   font-variation-settings:
+    "MORF" 15,
+    "SHLN" 0;
+    font-palette: --myPalette2;
+    animation: animate 5s linear infinite;
+}
+
+tr:nth-child(3) td:first-child { background: red; }
+tr:nth-child(4) td:first-child { background: rgb(0, 255, 0); }
+tr:nth-child(5) td:first-child { background: blue; }
+tr:nth-child(6) td:first-child { background: cyan; }
+tr:nth-child(7) td:first-child { background: magenta; }
+tr:nth-child(8) td:first-child { background: yellow; }
+tr:nth-child(9) td:first-child { background: white}
+tr:nth-child(10) td:first-child { background: black}
+
+
+
+.tabela td.naslov-reda {
+        font-family: "Honk", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+        "MORF" 15,
+        "SHLN" 0;
+        font-size: 4rem;
+        text-decoration: none;
+        font-palette: --myPalette3;
+} 
+
+.tabela td.naslov-kolone {
+        font-family: "Honk", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+        "MORF" 15,
+        "SHLN" 0;
+        font-size: 4rem;
+        text-decoration: none;
+        font-palette: --myPalette;
+}
+
+
+.tabela td {
+    border: 3px solid black;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: white;
+    font-weight: 500;
+    background: linear-gradient(rgb(177, 177, 177), rgb(44, 44, 44));
+}
+
+
+.tekst {
+    z-index: 1;
+    margin-top: 15vh;
+    margin-left: 5rem;
+    padding: 1rem 2rem;
+    text-align: left;
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+.kontakt-forma {
+  flex: 1;
+  text-align: left;
+  font-family: "Funnel Sans", sans-serif;
+}
+.kontakt-forma h2 {
+  margin-bottom: 15px;
+}
+.kontakt-forma form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+.kontakt-forma label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.kontakt-forma input,
+.kontakt-forma textarea {
+  width: 100%;       
+  box-sizing: border-box; 
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 7px solid black;
+  background-color: rgba(0, 0, 0, 0.073);
+  font-size: 16px;
+  font-family: Arial;
+}
+.kontakt-forma button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background: var(--secondary-color);
+  color: white;
+  font-weight: 700;
+  font-size: larger;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slika-sekcija {
+    display: flex;
+    justify-content: center;   
+    margin: 10vh 0 20vh;
+    padding: 0 1rem;
+}
+
+.slika-blok {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;      
+    text-align: center;
+    max-width: 800px;
+}
+
+.slika {
+    width: 100%;
+    max-width: 500px;          
+    height: auto;
+    border-radius: 1px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: 7px solid black;
+}
+
+.opis-slike {
+    width: 80vw;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    color: black;
+    text-align: left;
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+
+@media (min-width: 768px) {
+    .hide-large {
+        display: none!important
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hide-small{
+        display: none!important
+    }
+
+
+    .nav-stranica {
+        font-size: larger;
+        padding: 12px 24px!important;
+        float: left!important;
+    }
+
+
+    .navigacioni-meni {
+        height: 7vh;
+        display: inline-block;
+    }
+
+
+   
+    .sekcija-unutra {
+      flex-direction: column;
+      text-align: center;
+    }
+
+
+    .tekst-levo,
+    .tekst-desno {
+      max-width: 600px;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .tabela-sekcija {
+    display: block;          
+    margin: 10vh 0 20vh;
+    padding: 0 1rem;
+    overflow-x: auto; }
+
+    .tekst {
+        max-width: 100vw;
+    }
+
+}
+
+    .link {
+        text-decoration: none;
+        color:black;
+        text-decoration: underline;
+    }
+    .link:hover{
+        color:#ef4149;
+        transform: scale(1.05);
+        animation: animate 5s linear infinite;
+    }
