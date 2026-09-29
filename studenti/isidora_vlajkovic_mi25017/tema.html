@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Isidora Vlajković</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+
+<div class="top">
+  <div class="navigacioni-meni">
+    <a class="nav-ikonica hide-large"
+       href="javascript:void(0)"
+       onclick="toggleMenu()">☰</a>
+
+
+    <a href="index.html" class="nav-stranica">POČETNA</a>
+    <a href="tema.html" class="nav-stranica hide-small">AKADEMSKA TEMA</a>
+    <a href="kontakt.html" class="nav-stranica hide-small">KONTAKT</a>
+</div>
+</div>
+
+
+<div id="Mobilni-meni"
+     class="mobilni-meni hide-large">
+  <a href="index.html" class="mobile-stranica" onclick="toggleMenu()">POČETNA</a>
+  <a href="tema.html" class="mobile-stranica" onclick="toggleMenu()">AKADEMSKA TEMA</a>
+  <a href="kontakt.html" class="mobile-stranica" onclick="toggleMenu()">KONTAKT</a>
+</div>
+
+
+
+
+<section class="sekcija-spolja">
+  <div class="sekcija-unutra">
+
+
+    <div class="tema">
+      <h2 class="naslov">Predstavljanje boja u računaru</h2>
+      <p class="opis"><a class="link" href="rad.pdf" download>Ovaj rad</a> bavi se opisom, uporednim prikazom osnovnih modela za predstavljanje boja u računarskim sistemima: RGB, HSB/HSV, HSL i CMYK. Takođe navodi neke od načina konverzije između modela.</p>
+    </div>
+    </div>
+</section>
+
+<object data="rad.pdf" type="application/pdf" style="width: 80%; height: 85vh; min-height: 600px; display: block; margin: 0 auto;">
+<p>Vaš pregledač ne podržava direktan prikaz PDF fajlova. 
+Možete ga <a href="rad.pdf" download>preuzeti ovde</a>.
+</p>
+</object>
+
+<script>
+function toggleMenu() {
+  var x = document.getElementById("Mobilni-meni");
+  if (x.className.indexOf("show") === -1) {
+    x.className += " show";
+  } else {
+    x.className = x.className.replace(" show", "");
+  }
+}
+</script>
+
+
+</body>
+</html>
