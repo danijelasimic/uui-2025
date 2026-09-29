@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222222;
+}
+
+header {
+    background-color: #2d3250;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 20px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #676f9d;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #2d3250;
+    border-bottom: 2px solid #676f9d;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+main a {
+    color: #4a55a2;
+}
+
+main a:hover {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2d3250;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2d3250;
+    color: white;
+}
+
+.profil-slika {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2d3250;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #676f9d;
+}
